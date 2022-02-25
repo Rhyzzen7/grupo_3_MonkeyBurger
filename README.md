@@ -22,6 +22,10 @@ El equipo de desarrollo está integrado por personas que le otorgan una impronta
 
 ### Lourdes Celli
 
+100% taurina, persistente, curiosa y amante de las aplicaciones que nos facilitan el día a día, sobre todo las de delivery.
+En lo laboral, me encuentro como coordinadora a cargo de un equipo administrativo y técnico en el rubro de servicio para el mantenimiento de heladeras exhibidoras de compañias como Aguas Danone, Mc Cain y Cerveceria, entre otros. 
+Me motiva mantenerme actualizada y mejorar constantemente. Cada tanto pueden aparecer frustraciones por lo nuevo pero ya me ven, cero en técnologia hasta hace poco y aquí me ven pusheando este archivo!! 
+
 ### Thiago Ferraro
 
 ### Victor Celedón
