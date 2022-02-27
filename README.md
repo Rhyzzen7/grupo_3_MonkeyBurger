@@ -31,6 +31,8 @@ En lo laboral, me encuentro como coordinadora a cargo de un equipo administrativ
 Me motiva mantenerme actualizada y mejorar constantemente. Cada tanto pueden aparecer frustraciones por lo nuevo pero ya aquí estoy, cero en técnologia hasta no mucho y aquí me ven pusheando este archivo!! 
 
 *** Thiago Ferraro ***
+Toda la vida santafesino pero el año pasado vine a vivir a rosario. Soy un loco apasionado por el futbol y el deporte. Juego en las inferiores de newells oll boys de rosario en busca de llegar a mi sueño, ser un futbolista profesional. Entre mis pasatiempos esta hacer futbol, jugar en la compu o estar con familia y amigos
+Con muchas ganas de aprender programación por las puertas que abre y porque me llevo muy bien con la tecnologia y me gusta todo lo moderno, Este es mi plan B, pero siempre esforzándome en todo lo que hago, en especial para conseguir el Plan A, q es el futbol.
 
 *** Victor Celedón ***
 
