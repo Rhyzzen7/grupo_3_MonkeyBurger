@@ -32,8 +32,8 @@ Me motiva mantenerme actualizada y mejorar constantemente. Cada tanto pueden apa
 
 *** Thiago Ferraro ***
 
-Toda la vida santafesino pero el año pasado vine a vivir a rosario. Soy un loco apasionado por el futbol y el deporte. Juego en las inferiores de newells oll boys de rosario en busca de llegar a mi sueño, ser un futbolista profesional. Entre mis pasatiempos esta hacer futbol, jugar en la compu o estar con familia y amigos
-Con muchas ganas de aprender programación por las puertas que abre y porque me llevo muy bien con la tecnologia y me gusta todo lo moderno, Este es mi plan B, pero siempre esforzándome en todo lo que hago, en especial para conseguir el Plan A, q es el futbol.
+Toda la vida viví en Santa Fe pero el año pasado vine a vivir a Rosario. Soy un loco apasionado por el fútbol y el deporte. Juego en las inferiores de Newell's Old Boys de Rosario en busca de llegar a mi sueño, ser un futbolista profesional. Entre mis pasatiempos está hacer fútbol, jugar y stremear en la computadora o compartir con mi familia y amigos.
+Con muchas ganas de aprender programación por las puertas y posibilidades que abre, porque me llevo muy bien con la tecnología y me gusta todo lo moderno. Este es mi plan B, pero siempre esforzándome en todo lo que hago, en especial para conseguir el Plan A, q es el fútbol.
 
 *** Victor Celedón ***
 
