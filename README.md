@@ -1,5 +1,7 @@
 # grupo_3_MonkeyBurger
 
+![ImageText](https://github.com/Rhyzzen7/grupo_3_MonkeyBurger/blob/main/images/logoMokeyBurger.jpg)
+
 E-commerce de hamburguesas de autor
 
 URL del repositorio https://github.com/Rhyzzen7/grupo_3_MonkeyBurguer
