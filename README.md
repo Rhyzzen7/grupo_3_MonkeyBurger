@@ -6,15 +6,10 @@ E-commerce de hamburguesas de autor
 
 URL del repositorio https://github.com/Rhyzzen7/grupo_3_MonkeyBurguer
 
-## Descripción
+## Descripción del negocio
 
-Sitio para presentar la oferta disponible en la tienda además de acceder a la opción delivery a cargo de nuestra tienda o a través de la aplicaciones conocidas de compra digital.
-
-Tenés la opción de seleccionar los ingredientes, aderezos, opcionales y lo que quieras.
-
-Entre las variedades de hambuerguesas tenemos de carne vacuna, porcina, pollo, pescados.
-
-El sitio está orientado al público en general que desea probar sabores gourmet, con opciones para niños y libres de TACC.
+Monkey Burger es una cadena de comida rápida con 4 sucursales en Capital Federal. Ofrece hamburguesas caseras, tapas y bebidas, y apunta a un público objetivo joven, amante de lo casero y sabroso.
+El sitio web se construye a fin de crear la identidad virtual de la marca y dar a conocer su oferta. También pretende contar con una sección de e-commerce para ofrecer el servicio de delivery de sus productos. Esta sección ofrecerá el menú disponible y le permitirá al usuario seleccionar los productos que desea recibir, agregar ingredientes adicionales y comentarios para personalizar su pedido.
 
 ## Equipo de desarrollo
 
@@ -48,7 +43,7 @@ Espero que los sitios sean ágiles, simplistas, de interés para el usuario y qu
 
 ## Referencias
 
-Exploramos los siguientes sitios con el objetivo de ofrecer una propuesta superadora para un sitio particular llamado CARNE: http://www.carnehamburguesas.com/es/
+Exploramos los siguientes sitios con el objetivo de explorar el sector:
 
 ### Mc Donald's
 https://www.mcdonalds.com.ar/
