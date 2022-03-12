@@ -1,0 +1,23 @@
+{
+  "name": "grupo_3_monkeyburger",
+  "version": "1.0.0",
+  "description": "![ImageText](https://github.com/Rhyzzen7/grupo_3_MonkeyBurger/blob/main/images/logoMokeyBurger.jpg)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rhyzzen7/grupo_3_MonkeyBurger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rhyzzen7/grupo_3_MonkeyBurger/issues"
+  },
+  "homepage": "https://github.com/Rhyzzen7/grupo_3_MonkeyBurger#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
