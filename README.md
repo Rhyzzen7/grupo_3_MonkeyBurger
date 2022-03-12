@@ -6,6 +6,8 @@ E-commerce de hamburguesas de autor
 
 URL del repositorio https://github.com/Rhyzzen7/grupo_3_MonkeyBurguer
 
+URL del tablero de tareas https://trello.com/b/BR7yKSwY/monkey-burger
+
 ## Descripción del negocio
 
 Monkey Burger es una cadena de comida rápida con 4 sucursales en Capital Federal. Ofrece hamburguesas caseras, tapas y bebidas, y apunta a un público objetivo joven, amante de lo casero y sabroso.
