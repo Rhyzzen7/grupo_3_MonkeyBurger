@@ -28,6 +28,6 @@ app.get("/haceTuPedido.html", (req, res) => {
 app.get("/productCar.html", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/productCar.html"));
 });
-app.get("/register.html", (req, res) => {
+app.get("/register", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/register.html"));
 });
