@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Marvel:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gris-oscuro: #cfdbd5;
+  --gris-claro: #e8eddf;
+  --amarillo: #f5cb5c;
+  --negro-humo: #333533;
+  --negro-carbon: #242423;
+}
+
+/*CEntrar información.*/
+
+header,
+body,
+footer {
+  margin: auto;
+}
+
+/*Marvel Bold - Esta fuente se utilizará para el logo.*/
+
+h1 {
+  font-family: "Marvel", sans-serif;
+}
+
+/*Antonio Bold – Esta fuente se utilizará para los títulos.*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Antonio", sans-serif;
+}
+
+/*Antonio Thin – Eta fuente se utilizará para los textos.*/
+
+p {
+  font-family: "Antonio", sans-serif;
+}
+
+/*Quitar estilos de listas a los menúes.*/
+
+nav ul {
+  list-style: none;
+}
+
+/*Quitar estilos de hipervínculos a los enlaces.*/
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/*Manejar bloques en líneas todas las cajas de la cabecera.*/
+
+.cabecera {
+  display: inline-block;
+}
+
+/*Manejar como bloques en líneas la barra de navegación.*/
+
+.barra-navegacion ul li {
+  display: inline-block;
+}
+
+/*Manejar bloques en líneas todas las cajas de la cabecera.*/
+
+.pie-pagina {
+  display: inline-block;
+}
+
+/*Manejar como bloques en líneas la barra de navegación.*/
+
+.pie-navegacion ul li {
+  display: inline-block;
+}
