@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://kit.fontawesome.com/c96dfd1d0b.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c96dfd1d0b.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Carrito de producto</title>
     <link rel="icon" href="/img/icono.png" />
   </head>
@@ -20,9 +23,9 @@
     - Sección para el carrito y Login.-->
     <header style="border: 1px solid gray; margin: 10px">
       <!--Contenedor para el logo-->
-      <div>
+      <div class="cabecera">
         <img
-          src="/img/logo/imagotipo-blanco-fondonegro.png"
+          src="/img/imagotipo-negro-fondo-transparente.png"
           alt="Logo"
           width="20%"
         />
@@ -79,40 +82,53 @@
     - Precio total
      - Botón para agregar más productos.
      - Botón para continuar con el proceso de pago.-->
-<main style="border: 1px solid gray; margin: 10px">
-	<h2> MI CARRITO DE PRODUCTO </h2>
+    <main style="border: 1px solid gray; margin: 10px">
+      <h2>MI CARRITO DE PRODUCTO</h2>
       <!--Productos seleccionados-->
-<section class="contenedor-carrito">
+      <section class="contenedor-carrito">
         <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
-    <img src= "/img/menu/aros1.jpg" alt="foto de Aros de Cebolla" width= 50px />
-    <h4> Aros de Cebolla </h4>
-    <div> Unidades: 1 </div> 
-    <div> Precio unitario: $ 1.000 </div>
-    <div> Precio total: $ 1.000 </div> <i class="fa-solid fa-trash"></i>
-</section>
-<section class="contenedor-carrito">
-<!--Serán mostradas sólo 3 selecciones en el ejemplo-->
-<img src= "\img\menu\mono1.jpg" alt="foto de Aros de Cebolla" width= 50px />
-    <h4> Hamburguesa Mono </h4>
-    <div> Unidades: 2 </div> 
-    <div> Precio unitario: $ 900 </div>
-    <div> Precio total: $ 1.800 </div> <i class="fa-solid fa-trash"></i>
-</section>
-<section class="contenedor-carrito">
-    <img src="/img/menu/combomonita1.jpg" alt="foto combo Monita" width= 50px />
-    <h4> Combo Monita </h4>
-    <div> Unidades: 1 </div> 
-    <div> Precio unitario: $ 7.500 </div>
-    <div> Precio total: $ 7.500 </div> <i class="fa-solid fa-trash"></i>
-</section>
-<section class="contenedor-total-carrito">
- TOTAL COMPRA: $ 10.300
-</section>
+        <img
+          src="/img/menu/aros1.jpg"
+          alt="foto de Aros de Cebolla"
+          width="50px"
+        />
+        <h4>Aros de Cebolla</h4>
+        <div>Unidades: 1</div>
+        <div>Precio unitario: $ 1.000</div>
+        <div>Precio total: $ 1.000</div>
+        <i class="fa-solid fa-trash"></i>
+      </section>
+      <section class="contenedor-carrito">
+        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
+        <img
+          src="\img\menu\mono1.jpg"
+          alt="foto de Aros de Cebolla"
+          width="50px"
+        />
+        <h4>Hamburguesa Mono</h4>
+        <div>Unidades: 2</div>
+        <div>Precio unitario: $ 900</div>
+        <div>Precio total: $ 1.800</div>
+        <i class="fa-solid fa-trash"></i>
+      </section>
+      <section class="contenedor-carrito">
+        <img
+          src="/img/menu/combomonita1.jpg"
+          alt="foto combo Monita"
+          width="50px"
+        />
+        <h4>Combo Monita</h4>
+        <div>Unidades: 1</div>
+        <div>Precio unitario: $ 7.500</div>
+        <div>Precio total: $ 7.500</div>
+        <i class="fa-solid fa-trash"></i>
+      </section>
+      <section class="contenedor-total-carrito">TOTAL COMPRA: $ 10.300</section>
 
-<section class="botones-carrito"> 
-	<h4><a href="#">CONTINUAR</a></h4>
-	<h4><a href="#">AGREGAR MAS PRODUCTOS</a></h4>
-</section>    
+      <section class="botones-carrito">
+        <h4><a href="#">CONTINUAR</a></h4>
+        <h4><a href="#">AGREGAR MAS PRODUCTOS</a></h4>
+      </section>
     </main>
     <!--Pie de página de la web.
     En este espacio deberá colocarse:
@@ -150,4 +166,3 @@
     </footer>
   </body>
 </html>
-
