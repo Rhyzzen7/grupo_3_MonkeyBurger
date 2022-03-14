@@ -23,7 +23,7 @@ app.get("/nosotros", (req, res) => {
 app.get("/haceTuPedido", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/haceTuPedido.html"));
 });
-app.get("/haceTuPedido", (req, res) => {
+app.get("/productCar", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/productCar.html"));
 });
 
