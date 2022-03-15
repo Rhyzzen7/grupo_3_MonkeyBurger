@@ -59,14 +59,38 @@ nav ul li a {
 
 /*Manejar bloques en líneas todas las cajas de la cabecera.*/
 
-.cabecera {
-  display: inline-block;
+/*.cabecera {
+  display: flex;
+  justify-content: space-between;
+}*/
+
+/*Manejar la barra con display flex queda mejor.*/
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+/*Dimensionar el logo al 20% de la pantalla*/
+.cabecera-logo {
+  width: 20%;
+}
+/*Logo ocupar el contenedor*/
+.cabecera-logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+/*Tamaño de barra 30%*/
+.cabecera-barra {
+  width: 30%;
 }
 
 /*Manejar como bloques en líneas la barra de navegación.*/
 
-.barra-navegacion ul li {
-  display: inline-block;
+.barra-navegacion ul {
+  display: flex;
+  justify-content: space-around;
 }
 
 /*Manejar bloques en líneas todas las cajas de la cabecera.*/
