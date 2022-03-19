@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
     <script
-      src="https://kit.fontawesome.com/c96dfd1d0b.js"
+      src="https://kit.fontawesome.com/1f2014748d.js"
       crossorigin="anonymous"
     ></script>
-    <title>Carrito de producto</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Bienvenidos a Monkey Burger</title>
     <link rel="icon" href="/img/icono.png" />
   </head>
   <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
@@ -23,65 +23,80 @@
     - Sección para el carrito y Login.-->
     <header style="border: 1px solid gray; margin: 10px">
       <!--Contenedor para el logo-->
-      <div class="cabecera">
+      <div class="cabecera-logo">
         <img
           src="/img/imagotipo-negro-fondo-transparente.png"
           alt="Logo"
-          width="20%"
+          class="mobile"
+        />
+        <img
+          src="/img/Isotipo-amarillo-fondotransparente.png"
+          alt="Logo"
+          class="laptop"
         />
       </div>
-      <!-- Contenedor para el nombre de la empresa-->
-      <div>
-        <h1>MONKEY BURGER</h1>
-        <h3>HAMBURGUESAS GOURMET</h3>
+      <!--Cabecera central-->
+      <div class="cabecera-centro">
+        <!-- Contenedor para el nombre de la empresa-->
+        <div class="marca">
+          <h1>MONKEY BURGER</h1>
+          <h3>HAMBURGUESAS GOURMET</h3>
+        </div>
+        <!--Contenedor para la barra de navegación-->
+        <div class="cabecera-barra">
+          <nav class="barra-navegacion">
+            <ul>
+              <li>
+                <h4><a href="nosotros.html">NOSOTROS</a></h4>
+              </li>
+              <li>
+                <h4><a href="menu.html">MENÚ</a></h4>
+              </li>
+              <li>
+                <h4><a href="haceTuPedido.html">HACE TU PEDIDO</a></h4>
+              </li>
+              <li>
+                <h4><a href="#">CONTACTO</a></h4>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--Barra de navegación mobile-->
+        <div class="cabecera-mobile">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
       </div>
-      <!--Contenedor para la barra de navegación-->
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <h4><a href="#">NOSOTROS</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">MENÚ</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">HACE TU PEDIDO</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CONTACTO</a></h4>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <!--Contenedor para el carrito de compras-->
-      <div>
-        <img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />
-        <h3>CARRITO</h3>
-      </div>
-      <!--Contenedor para el usuario-->
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <h4><a href="#">INICIAR SESIÓN</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CREAR CUENTA</a></h4>
-            </li>
-          </ul>
-        </nav>
+      <!--Cabecera derecha-->
+      <div class="cabecera-derecha">
+        <!--Contenedor para el usuario-->
+        <div class="usuario">
+          <!--<nav>
+            <ul>
+              <li>
+                <h4><a href="#">INICIAR SESIÓN</a></h4>
+              </li>
+              <li>
+                <h4><a href="register.html">CREAR CUENTA</a></h4>
+              </li>
+            </ul>
+          </nav>-->
+            <button><h4><a href="#">INICIAR SESIÓN</a></h4></button>
+            <button><h4><a href="register.html">CREAR CUENTA</a></h4></button>
+        </div>
+        <!--Contenedor para el carrito de compras-->
+        <div class="compra">
+          <!--<img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />-->
+          <div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div>
+          <button><h4><a href="productCar.html">CARRITO</a></h4>
+          </button>
       </div>
     </header>
     <!--Principal de cuerpo de la página web.
     En este espacio deberá colocarse:
-    - Los diferentes productos seleccionados.
-    - Imagen y descripción del producto.
-    - Cantidad unidades seleccionadas
-    - Precio unitario.
-    - Precio total
-     - Botón para agregar más productos.
-     - Botón para continuar con el proceso de pago.-->
+    - Carrete de promociones.
+    - Mosaicos con productos destacados.
+    - Mosaicos con actividades varias de la empresa.
+    - Novedades.-->
     <main style="border: 1px solid gray; margin: 10px">
       <h2>MI CARRITO DE PRODUCTO</h2>
       <!--Productos seleccionados-->
