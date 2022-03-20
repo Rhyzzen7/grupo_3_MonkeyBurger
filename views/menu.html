@@ -4,260 +4,563 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/estilo-menu.css" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Marvel:wght@700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Menú</title>
   </head>
   <body>
-    <header>
-      <div class="cabecera">
-        <img
-          src="/img/imagotipo-negro-fondo-transparente.png"
-          alt="Logo"
-          width="20%"
-        />
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <h4><a href="#">NOSOTROS</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">MENÚ</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">HACE TU PEDIDO</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CONTACTO</a></h4>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />
-        <h3>CARRITO</h3>
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <h4><a href="#">INICIAR SESIÓN</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CREAR CUENTA</a></h4>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
     <main>
       <h1>INFARTATE CON NUESTRO MENÚ</h1>
-      <ul>
-        <li><a href="#">HAMBURGUESAS</a></li>
-        <li><a href="#">TAPAS</a></li>
-        <li><a href="#">BEBIDAS</a></li>
-        <li><a href="#">COMBOS DEL MES</a></li>
+      <ul class="navbar">
+        <li class="lista"><a class="borrarlink" href="/">HAMBURGUESAS</a></li>
+        <li class="lista"><a class="borrarlink" href="/">TAPAS</a></li>
+        <li class="lista"><a class="borrarlink" href="/">BEBIDAS</a></li>
+        <li class="lista"><a class="borrarlink" href="/">COMBOS DEL MES</a></li>
       </ul>
       <h2>HAMBURGUESAS</h2>
-      <seccion class="contenedor-producto">
-        <h3>MONKEY BURGER</h3>
-        <div>La Monkey Burger es una explosión de sabor que difícilmente puedas olvidar. La armamos con un increíble pan de papa horneado en el día y un medallón de carne angus y bondiola de 200gr. No puede faltar el cheddar, la cebolla caramelizada, los pepinillos agridulces y la salsa barbacoa caserita. El ingrediente secreto? La salsa Monkey!! Es apta para celíacos y viene con unas re papas!</div>
-        <div>$ 1.200</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/monkey1.jpg" alt="foto de Hamburguesa Monkey" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>GUENON BURGER</h3>
-        <div>El mejor estilo francés en tu mesa! Te vamos a sorprender con un pan delicatessen de trigo y almendras recién sacado del horno y un medallón angus de 200gr al punto justo. También tendrás una explosión de sabor y texturas con un blend de 4 quesos (azul, reggianito, mozzarella y provolone) que completarán la experiencia. Lo infaltable en este sensacional plato? Unas cebollas caramelizadas para chuparse los dedos y papas fritas, obvio!</div>
-        <div>$ 1.000</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/guenon1.jpg" alt="foto de Hamburguesa Guenon" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>SCIMMIA BURGER</h3>
-        <div>Recientemente agregada al menú, esta hamburguesa viene para quedarse. Pan de masa madre horneando en el día y un medallón angus de 200gr. Siguiendo el mejor estilo mediterráneo, la acompañamos con tomates secos hidratados en vino blanco, rúcula orgánica y olivas negras. Todo esto con una increíble salsa de finas hierbas hecha por los cocineros genios de Monkey Burger. Y como no podía ser de otra maneras, la acompañamos con unas buenas papas fritas.</div>
-        <div>$ 980</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/scimmia1.jpg" alt="foto de Hamburguesa Scimmia" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>AFFE BURGER</h3>
-        <div>La bomba alemana que no podía faltar en el menú. Pan de masa madre horneado en el día con un medallón de carnes angus de 200gr. Infaltable el chucrut casero de repollo blanco y la mostaza con granitos (una receta súper secreta de Monkey Burger). También vas a sentir el crunchy de la panceta recién tostada. La acompañamos con papas fritas, y por favor no te olvides de una buena cerveza para una digestión como corresponde.</div>
-        <div>$ 990</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/affe1.jpg" alt="foto de Hamburguesa Affe" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>MACACO BURGER</h3>
-        <div>Agridulce sí, agridulce no. Esa es la verdadera grieta! En esta opción para valientes te traemos una hamburguesa de carne angus de 200gr en pan de masa madre horneado en el día. Agregamos mozzarella, tomates frescos, salsa Monkey, y el ingrediente estrella de este plato: ananá caramelizado a la plancha para que enloquezcas! Viene con papas? Obviamente viene con papas!</div>
-        <div>$ 1.100</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/macaco1.jpg" alt="foto de Hamburguesa Macaco" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>MONO BURGER</h3>
-        <div>Para aquellos amantes de las tradiciones y nuestros exquisitos sabores locales, traemos una hamburguesa bien argenta para chuparse los dedos. Empezamos con pan de masa madre del día y un medallón de carne angus de 200gr. Sumamos lechuga, tomate, mozzarella, huevo frito, salsa Monkey, y finalizamos con una salsa criolla que difícilmente olvides. Viene con papas? Sí, señor! No pueden faltar las papas.</div>
-        <div>$ 900</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/mono1.jpg" alt="foto de Hamburguesa Mono" />
-      </seccion>
+
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto">
+          <h3>MONKEY BURGER</h3>
+          <div>
+            La Monkey Burger es una explosión de sabor que difícilmente puedas
+            olvidar. La armamos con un increíble pan de papa horneado en el día
+            y un medallón de carne angus y bondiola de 200gr. No puede faltar el
+            cheddar, la cebolla caramelizada, los pepinillos agridulces y la
+            salsa barbacoa caserita. El ingrediente secreto? La salsa Monkey!!
+            Es apta para celíacos y viene con unas re papas!
+          </div>
+          <h4>$ 1.200</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/monkey1.jpg"
+          alt="foto de Hamburguesa Monkey"
+        />
+      </div>
+
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto info-a-la-derecha">
+          <h3>GUENON BURGER</h3>
+          <div>
+            El mejor estilo francés en tu mesa! Te vamos a sorprender con un pan
+            delicatessen de trigo y almendras recién sacado del horno y un
+            medallón angus de 200gr al punto justo. También tendrás una
+            explosión de sabor y texturas con un blend de 4 quesos (azul,
+            reggianito, mozzarella y provolone) que completarán la experiencia.
+            Lo infaltable en este sensacional plato? Unas cebollas caramelizadas
+            para chuparse los dedos y papas fritas, obvio!
+          </div>
+          <h4>$ 1.000</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/guenon1.jpg"
+          alt="foto de Hamburguesa Guenon"
+        />
+      </div>
+
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto">
+          <h3>SCIMMIA BURGER</h3>
+          <div>
+            Recientemente agregada al menú, esta hamburguesa viene para
+            quedarse. Pan de masa madre horneando en el día y un medallón angus
+            de 200gr. Siguiendo el mejor estilo mediterráneo, la acompañamos con
+            tomates secos hidratados en vino blanco, rúcula orgánica y olivas
+            negras. Todo esto con una increíble salsa de finas hierbas hecha por
+            los cocineros genios de Monkey Burger. Y como no podía ser de otra
+            maneras, la acompañamos con unas buenas papas fritas.
+          </div>
+          <h4>$ 980</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/scimmia1.jpg"
+          alt="foto de Hamburguesa Scimmia"
+        />
+      </div>
+
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto info-a-la-derecha">
+          <h3>AFFE BURGER</h3>
+          <div>
+            La bomba alemana que no podía faltar en el menú. Pan de masa madre
+            horneado en el día con un medallón de carnes angus de 200gr.
+            Infaltable el chucrut casero de repollo blanco y la mostaza con
+            granitos (una receta súper secreta de Monkey Burger). También vas a
+            sentir el crunchy de la panceta recién tostada. La acompañamos con
+            papas fritas, y por favor no te olvides de una buena cerveza para
+            una digestión como corresponde.
+          </div>
+          <h4>$ 990</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/affe1.jpg"
+          alt="foto de Hamburguesa Affe"
+        />
+      </div>
+
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto">
+          <h3>MACACO BURGER</h3>
+          <div>
+            Agridulce sí, agridulce no. Esa es la verdadera grieta! En esta
+            opción para valientes te traemos una hamburguesa de carne angus de
+            200gr en pan de masa madre horneado en el día. Agregamos mozzarella,
+            tomates rescos, salsa Monkey, y el ingrediente estrella de este
+            plato: ananá caramelizado a la plancha para que enloquezcas! Viene
+            con papas? Obviamente viene con papas!
+          </div>
+          <h4>$ 1.100</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/macaco1.jpg"
+          alt="foto de Hamburguesa Macaco"
+        />
+      </div>
+
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto info-a-la-derecha">
+          <h3>MONO BURGER</h3>
+          <div>
+            Para aquellos amantes de las tradiciones y nuestros exquisitos
+            sabores locales, traemos una hamburguesa bien argenta para chuparse
+            los dedos. Empezamos con pan de masa madre del día y un medallón de
+            carne angus de 200gr. Sumamos lechuga, tomate, mozzarella, huevo
+            frito, salsa Monkey, y finalizamos con una salsa criolla que
+            difícilmente olvides. Viene con papas? Sí, señor! No pueden faltar
+            las papas.
+          </div>
+          <h4>$ 900</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/mono1.jpg"
+          alt="foto de Hamburguesa Mono"
+        />
+      </div>
+
       <h2>TAPAS</h2>
-      <seccion class="contenedor-producto">
-        <h3>PAPAS MONKEY</h3>
-        <div>Las Papas Monkey son básicamente las reinas del tapeo en Monkey Burger. Por qué? Porque simplemente son todo lo que está bien a la hora de picar algo, compartir con amigos y tomar una birra. Son papas cortadas a mano y fritas en el momento, con una salsa de 4 quesos frescos (cheddar, reggianito, mozzarella y provolone), verdeo y panceta salteados. Las acompañan la tremenda salsa Monkey, barbacoa casera y criolla.</div>
-        <div>$ 700</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/papas1.jpg" alt="foto de Papas Monkey" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>MONKEY ONIONS</h3>
-        <div>Sin lugar a dudas, los mejores aritos de cebolla del país están en Monkey Burger. Lo hacemos con un mix de cebollas moradas y blancas, y las rebozamos en panco. Sí, sí! Para rechuparse los dedos! Vienen acompañadas con salsa Monkey, barbacoa casera y criolla. Ideal para que piquen 4 o coman 2. Un recomendación? Quedan increíbles con la birra Weisse de Patagonia, fíjate en la sección de Bebidas!</div>
-        <div>$ 1.000</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/aros1.jpg" alt="foto de Aros de Cebolla" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>MOZZA MONKEY</h3>
-        <div>No podia faltar una opción de quesos en las tapas de Monkey Burger, no? Por eso traemos estos dados de mozzarella empanizados con panco y fritos en el momento para que tu encuentro con amigos sea más que ideal.  Los recibirás acompañadas con salsa Monkey, barbacoa casera y criolla. La porción es ideal para 3 personas, aunque seguramente van a pedir una segunda vuelta porque son una locura!</div>
-        <div>$ 1.100</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/mozza1.jpg" alt="foto de Mozzarelas" />
-      </seccion>
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto">
+          <h3>PAPAS MONKEY</h3>
+          <div>
+            Las Papas Monkey son básicamente las reinas del tapeo en Monkey
+            Burger. Por qué? Porque simplemente son todo lo que está bien a la
+            hora de picar algo, compartir con amigos y tomar una birra. Son
+            papas cortadas a mano y fritas en el momento, con una salsa de 4
+            quesos frescos (cheddar, reggianito, mozzarella y provolone), verdeo
+            y panceta salteados. Las acompañan la tremenda salsa Monkey,
+            barbacoa casera y criolla.
+          </div>
+          <h4>$ 700</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/papas1.jpg"
+          alt="foto de Papas Monkey"
+        />
+      </div>
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto info-a-la-derecha">
+          <h3>MONKEY ONIONS</h3>
+          <div>
+            Sin lugar a dudas, los mejores aritos de cebolla del país están en
+            Monkey Burger. Lo hacemos con un mix de cebollas moradas y blancas,
+            y las rebozamos en panco. Sí, sí! Para rechuparse los dedos! Vienen
+            acompañadas con salsa Monkey, barbacoa casera y criolla. Ideal para
+            que piquen 4 o coman 2. Un recomendación? Quedan increíbles con la
+            birra Weisse de Patagonia, fíjate en la sección de Bebidas!
+          </div>
+          <h4>$ 1.000</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/aros1.jpg"
+          alt="foto de Aros de Cebolla"
+        />
+      </div>
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto">
+          <h3>MOZZA MONKEY</h3>
+          <div>
+            No podia faltar una opción de quesos en las tapas de Monkey Burger,
+            no? Por eso traemos estos dados de mozzarella empanizados con panco
+            y fritos en el momento para que tu encuentro con amigos sea más que
+            ideal. Los recibirás acompañadas con salsa Monkey, barbacoa casera y
+            criolla. La porción es ideal para 3 personas, aunque seguramente van
+            a pedir una segunda vuelta porque son una locura!
+          </div>
+          <h4>$ 1.100</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/mozza1.jpg"
+          alt="foto de Mozzarelas"
+        />
+      </div>
       <h2>BEBIDAS</h2>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-bonaqua-sin-gas.jpg" alt="logo Bonaqua sin gas" />
-        <h3>AGUA SIN GAS - BON AQUA - 500ML</h3>
-        <div>$ 250</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-bonaqua-con-gas.jpg" alt="logo Bonaqua con gas" />
-        <h3>AGUA CON GAS - BON AQUA - 500ML</h3>
-        <div>$ 250</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-cocacola.jpg" alt="logo Cocacola" />
-        <h3>COCA COLA - 500ML</h3>
-        <div>$ 250</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-cocazero.jpg" alt="logo Cocacola Zero" />
-        <h3>COCA-COLA ZERO - 500ML</h3>
-        <div>$ 250</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-sprite.jpg" alt="logo Sprite" />
-        <h3>SPRITE - 500ML</h3>
-        <div>$ 250</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-sprite-zero.jpg" alt="logo Sprite Zero" />
-        <h3>SPRITE ZERO - 500ML</h3>
-        <div>$ 250</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-amber-lagger.jpg" alt="logo Amber Lager" />
-        <h3>AMBER LAGER - PATAGONIA - 410ML</h3>
-        <div>$ 350/div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-weisse.jpg" alt="logo Weisse" />
-        <h3>WEISSE - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <div>LA QUIERO YA!</div>
-       
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-pilsener.jpg" alt="logo Pilsener" />
-        <h3>BOHEMIAN PILSENER - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <div>LA QUIERO YA!</div>
-    </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-hoppy-lagger.jpg" alt="logo Hoppy Lager" />
-        <h3>HOPPY LAGER - PATAGONIA</h3>
-        <div>$ 350</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-km24.jpg" alt="logo km24" />
-        <h3>KM 24.7 - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-kune.jpg" alt="logo Kune" />
-        <h3>KÜNE - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-porter.jpg" alt="logo Porter" />
-        <h3>PORTER - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-ipa.jpg" alt="logo Ipa" />
-        <h3>VERA IPA - PATAGONIA - 420ML</h3>
-        <div>$ 350</div>
-        <div>LA QUIERO YA!</div>
-      </seccion>
+      <div class="bebidas">
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-bonaqua-sin-gas.jpg"
+            alt="logo Bonaqua sin gas"
+          />
+          <div class="info-bebidas">
+            <h3>AGUA SIN GAS - BON AQUA - 500ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 250</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-bonaqua-con-gas.jpg"
+            alt="logo Bonaqua con gas"
+          />
+          <div class="info-bebidas">
+            <h3>AGUA CON GAS - BON AQUA - 500ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 250</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-cocacola.jpg"
+            alt="logo Cocacola"
+          />
+          <div class="info-bebidas">
+            <h3>COCA COLA - 500ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 250</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-cocazero.jpg"
+            alt="logo Cocacola Zero"
+          />
+          <div class="info-bebidas">
+            <h3>COCA-COLA ZERO - 500ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 250</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-sprite.jpg"
+            alt="logo Sprite"
+          />
+          <div class="info-bebidas">
+            <h3>SPRITE - 500ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 250</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-sprite-zero.jpg"
+            alt="logo Sprite Zero"
+          />
+          <div class="info-bebidas">
+            <h3>SPRITE ZERO - 500ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 250</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-amber-lagger.jpg"
+            alt="logo Amber Lager"
+          />
+          <div class="info-bebidas">
+            <h3>AMBER LAGER - PATAGONIA - 410ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 350</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-weisse.jpg"
+            alt="logo Weisse"
+          />
+          <div class="info-bebidas">
+            <h3>WEISSE - PATAGONIA - 410ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 350</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-pilsener.jpg"
+            alt="logo Pilsener"
+          />
+          <div class="info-bebidas">
+            <h3>BOHEMIAN PILSENER - PATAGONIA - 410ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 350</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-hoppy-lagger.jpg"
+            alt="logo Hoppy Lager"
+          />
+          <div class="info-bebidas">
+            <h3>HOPPY LAGER - PATAGONIA</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 350</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-km24.jpg"
+            alt="logo km24"
+          />
+          <div class="info-bebidas">
+            <h3>KM 24.7 - PATAGONIA - 410ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 350</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-kune.jpg"
+            alt="logo Kune"
+          />
+          <div class="info-bebidas">
+            <h3>KÜNE - PATAGONIA - 410ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 350</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-porter.jpg"
+            alt="logo Porter"
+          />
+          <div class="info-bebidas">
+            <h3>PORTER - PATAGONIA - 410ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 350</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="/img/menu/logo-ipa.jpg"
+            alt="logo Ipa"
+          />
+          <div class="info-bebidas">
+            <h3>VERA IPA - PATAGONIA - 420ML</h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 350</h4>
+              <div class="contenedor-boton-la-quiero-ya">
+                <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h2>COMBOS DEL MES</h2>
-      <seccion class="contenedor-producto">
-        <h3>COMBO BANANA</h3>
-        <div>Son 4 amigos de buen comer? No se diga más! En Monkey Burger nos aseguramos de que se alimenten como corresponde. El Combo Banana incluye 4 Monkey Burgers con sus respectivas papas, 1 porción de Monkey Onions, 1 porción de Papas Monkey y 4 latas de birra Patagonia Amber Lager. Porque panza llena, corazón contento! No sé, vos me dirás después de llevarte este combo. </div>
-        <div>$ 6.500</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/combobanana1.jpg" alt="foto combo Banana" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>COMBO PALMERA</h3>
-        <div>Este mes llegó el Combo Palmera para esos grupos de amigos donde no es fácil ponerse de acuerdo. Por eso, incluimos 4 hamburguesas a elección con sus respectivas papas (Monkey, Guenon, Scimmia, Affe, Macaco o Mono) y 4 latas de birra Patagonia también a elección (Amber Lager, Weisse, Boemian Pilsener, Hoppy Lager, KM 24.7, Kune, Porter o Vera IPA). Y no me digas que no te damos opciones!</div>
-        <div>$ 5.200</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/combopalmera1.jpg" alt="foto combo Palmera" />
-      </seccion>
-      <seccion class="contenedor-producto">
-        <h3>COMBO MONITA</h3>
-        <div>Este combo nos vuela la cabeza! Llevate 6 Mono Burgers con sus papas, 2 papas Monkey y 6 latas de birra Amber Lager de Patagonia con un descuento zarpado. Además, este mes nos volvimos locos y cada 5 Combos Monita que preparamos, 1 se lleva unos Monkey Onions y 6 birras Patagonia extras de regalo! Viste? Yo te dije que te volaba la cabeza!</div>
-        <div>$ 7.500</div>
-        <div>LA QUIERO YA!</div>
-        <img src="/img/menu/combomonita1.jpg" alt="foto combo Monita" />
-      </seccion>
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto info-a-la-derecha">
+          <h3>COMBO BANANA</h3>
+          <div>
+            Son 4 amigos de buen comer? No se diga más! En Monkey Burger nos
+            aseguramos de que se alimenten como corresponde. El Combo Banana
+            incluye 4 Monkey Burgers con sus respectivas papas, 1 porción de
+            Monkey Onions, 1 porción de Papas Monkey y 4 latas de birra
+            Patagonia Amber Lager. Porque panza llena, corazón contento! No sé,
+            vos me dirás después de llevarte este combo.
+          </div>
+          <h4>$ 6.500</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/combobanana1.jpg"
+          alt="foto combo Banana"
+        />
+      </div>
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto">
+          <h3>COMBO PALMERA</h3>
+          <div>
+            Este mes llegó el Combo Palmera para esos grupos de amigos donde no
+            es fácil ponerse de acuerdo. Por eso, incluimos 4 hamburguesas a
+            elección con sus respectivas papas (Monkey, Guenon, Scimmia, Affe,
+            Macaco o Mono) y 4 latas de birra Patagonia también a elección
+            (Amber Lager, Weisse, Boemian Pilsener, Hoppy Lager, KM 24.7, Kune,
+            Porter o Vera IPA). Y no me digas que no te damos opciones!
+          </div>
+          <h4>$ 5.200</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/combopalmera1.jpg"
+          alt="foto combo Palmera"
+        />
+      </div>
+      <div class="contenedor-producto">
+        <div class="subcontenedor-infoproducto info-a-la-derecha">
+          <h3>COMBO MONITA</h3>
+          <div>
+            Este combo nos vuela la cabeza! Llevate 6 Mono Burgers con sus
+            papas, 2 papas Monkey y 6 latas de birra Amber Lager de Patagonia
+            con un descuento zarpado. Además, este mes nos volvimos locos y cada
+            5 Combos Monita que preparamos, 1 se lleva unos Monkey Onions y 6
+            birras Patagonia extras de regalo! Viste? Yo te dije que te volaba
+            la cabeza!
+          </div>
+          <h4>$ 7.500</h4>
+          <div class="contenedor-boton-la-quiero-ya">
+            <a class="boton-la-quiero-ya" href="/">LA QUIERO YA!</a>
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="/img/menu/combomonita1.jpg"
+          alt="foto combo Monita"
+        />
+      </div>
     </main>
-    <footer>
-            <div>
-              <p>Facebook</p>
-              <p>Instagram</p>
-              <p>Whatsapp</p>
-            </div>
-            <div>
-              <nav>
-                <ul>
-                  <li>
-                    <h4><a href="#">POLITICA</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">DEFENSA AL CONSUMIDOR</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">PROTECCION DE DATOS</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">CONTACTANOS</a></h4>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div><p>Desarrolladores DH</p></div>
-    </footer>
+
   </body>
 </html>
