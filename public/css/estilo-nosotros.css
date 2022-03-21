@@ -1,0 +1,124 @@
+/* Colores:
+Gris oscuro: #CFDBD5 
+Gris claro: #E8EDDF 
+Amarillo: #FFC000 
+Negro: #242423
+Negro claro: #333533 */
+
+* {
+  color: #e8eddf;
+  font-family: "Antonio";
+  font-style: normal;
+  background-color: #242423;
+}
+
+h1,
+h2 {
+  font-family: "marvel";
+  font-weight: bold;
+  color: #e8eddf;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px;
+  padding: 0px;
+}
+
+h2 {
+  background-color: #333533;
+  padding: 0px;
+  padding-left: 30px;
+}
+
+h3 {
+  font-family: "marvel";
+  font-style: normal;
+  margin: 0px;
+  color: #ffc000;
+  background-color: #333533;
+}
+
+.nuestra-historia,
+.nuestros-objetivos,
+.nuestras-sucursales {
+  background-color: #333533;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.historia {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 15px;
+  background-color: #333533;
+  margin: 15px;
+}
+
+.texto-historia {
+  text-align: left;
+  background-color: #333533;
+  margin-top: 15px;
+}
+
+.mision {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #333533;
+}
+
+.vision {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #333533;
+}
+
+.texto-mision-vision,
+.texto-sucursales {
+  background-color: #333533;
+}
+
+.sucursal {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  background-color: #333533;
+}
+
+.texto-suc {
+  background-color: #333533;
+}
+
+.lista-sucursales {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #333533;
+}
+
+.nuestras-sucursales {
+  display: flex;
+  flex-direction: column;
+}
+.texto-nuestras-sucursales {
+  background-color: #333533;
+  padding: 15px;
+}
+
+@media (min-width: 700px) {
+  .historia {
+    flex-direction: row;
+  }
+  .texto-historia {
+    margin-right: 15px;
+  }
+  .foto-historia {
+    width: 50%;
+  }
+}
