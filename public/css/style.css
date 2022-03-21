@@ -166,13 +166,13 @@ main {
 .noticias,
 .destacados {
   display: flex;
-  width: inherit;
+  /*width: inherit;*/
   justify-content: space-around;
   flex-direction: column;
   border-top: 1px var(--gris-oscuro) solid;
 }
 .foto {
-  width: inherit;
+  /*width: inherit;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -373,7 +373,9 @@ footer {
   body,
   footer,
   .carrete,
-  .novedades {
+  .novedades,
+  .noticias,
+  .destacados {
     max-width: 1200px;
   }
   .imagenes-carrete {

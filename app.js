@@ -37,4 +37,3 @@ app.get("/login", (req, res) => {
 app.get("/contacto", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/contacto.html"));
 });
-
