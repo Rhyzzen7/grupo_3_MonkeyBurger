@@ -49,6 +49,11 @@ h1 {
   text-align: center;
 }
 
+.lista:hover {
+  box-shadow: 0 0 11px #e8eddf;
+  font-weight: 600;
+}
+
 .borrarlink{
   text-decoration: none;
   color: #000000;
@@ -95,7 +100,7 @@ h4 {
   order: 1;
 }
 
-.boton-la-quiero-ya {
+.boton-hace-tu-pedido {
   background-color: #ffc000;
   color: #242423;
   text-decoration: none;
@@ -105,7 +110,12 @@ h4 {
   max-width: 150px;
 }
 
-.contenedor-boton-la-quiero-ya {
+.boton-hace-tu-pedido:hover{
+  box-shadow: 0 0 11px #e8eddf;
+  font-weight: 600;
+}
+
+.contenedor-boton-hace-tu-pedido{
   flex: 1;
   display: flex;
   flex-direction: column;
