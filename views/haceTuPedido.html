@@ -4,249 +4,321 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://kit.fontawesome.com/c96dfd1d0b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/estilo-creatupedido.css" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Marvel:wght@700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Menú</title>
   </head>
   <body>
-    <header>
-      <div class="cabecera">
-        <img
-          src="/img/imagotipo-negro-fondo-transparente.png"
-          alt="Logo"
-          width="20%"
-        />
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <h4><a href="#">NOSOTROS</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">MENÚ</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">HACE TU PEDIDO</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CONTACTO</a></h4>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />
-        <h3>CARRITO</h3>
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <h4><a href="#">INICIAR SESIÓN</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CREAR CUENTA</a></h4>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
     <main>
       <h1>HACÉ TU PEDIDO</h1>
-      <ul>
-        <li><a href="#">HAMBURGUESAS</a></li>
-        <li><a href="#">TAPAS</a></li>
-        <li><a href="#">BEBIDAS</a></li>
-        <li><a href="#">COMBOS DEL MES</a></li>
+      <ul class="navbar">
+        <li class="lista"><a class="borrarlink" href="/">HAMBURGUESAS</a></li>
+        <li class="lista"><a class="borrarlink" href="/">TAPAS</a></li>
+        <li class="lista"><a class="borrarlink" href="/">BEBIDAS</a></li>
+        <li class="lista"><a class="borrarlink" href="/">COMBOS DEL MES</a></li>
       </ul>
       <h2>HAMBURGUESAS</h2>
-        <seccion class="contenedor-producto">
-            <img src="/img/menu/monkey1.jpg" alt="foto de Hamburguesa Monkey" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>MONKEY BURGER</h3>
-            <div>$ 1.200</div>
-        </seccion>
-        <seccion class="contenedor-producto">
-            <img src="/img/menu/guenon1.jpg" alt="foto de Hamburguesa Guenon" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>GUENON BURGER</h3>
-            <div>$ 1.000</div>
-        </seccion>
-          <seccion class="contenedor-producto">
-            <img src="/img/menu/scimmia1.jpg" alt="foto de Hamburguesa Scimmia" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>SCIMMIA BURGER</h3>
-            <div>$ 980</div>
-        </seccion>
-        <seccion class="contenedor-producto">
-            <img src="/img/menu/affe1.jpg" alt="foto de Hamburguesa Affe" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>AFFE BURGER</h3>
-            <div>$ 990</div>
-        </seccion>
-        <seccion class="contenedor-producto">
-            <img src="/img/menu/macaco1.jpg" alt="foto de Hamburguesa Macaco" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>MACACO BURGER</h3>
-            <div>$ 1.100</div>
-        </seccion>
-        <seccion class="contenedor-producto">
-            <img src="/img/menu/mono1.jpg" alt="foto de Hamburguesa Mono" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>MONO BURGER</h3>
-            <div>$ 900</div>
-        </seccion>
+      <div class="hamburguesas">
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/monkey1.jpg"
+            alt="foto de Hamburguesa Monkey"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>MONKEY BURGER</h3>
+          <h4>$ 1.200</h4>
+        </div>
+
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/guenon1.jpg"
+            alt="foto de Hamburguesa Guenon"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>GUENON BURGER</h3>
+          <h4>$ 1.000</h4>
+        </div>
+
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/scimmia1.jpg"
+            alt="foto de Hamburguesa Scimmia"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>SCIMMIA BURGER</h3>
+          <h4>$ 980</h4>
+        </div>
+
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/affe1.jpg"
+            alt="foto de Hamburguesa Affe"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>AFFE BURGER</h3>
+          <h4>$ 990</h4>
+        </div>
+
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/macaco1.jpg"
+            alt="foto de Hamburguesa Macaco"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>MACACO BURGER</h3>
+          <h4>$ 1.100</h4>
+        </div>
+
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/mono1.jpg"
+            alt="foto de Hamburguesa Mono"
+          /><a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>MONO BURGER</h3>
+          <h4>$ 900</h4>
+        </div>
+      </div>
       <h2>TAPAS</h2>
-        <seccion class="contenedor-producto">
-            <img src="/img/menu/papas1.jpg" alt="foto de Papas Monkey" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>PAPAS MONKEY</h3>
-            <div>$ 700</div>
-        </seccion>
-        <seccion class="contenedor-producto">
-            <img src="/img/menu/aros1.jpg" alt="foto de Aros de Cebolla" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>MONKEY ONIONS</h3>
-            <div>$ 1.000</div>
-        </seccion>
-        <seccion class="contenedor-producto">
-            <img src="/img/menu/mozza1.jpg" alt="foto de Mozzarelas" />
-            <i class="fas fa-cart-plus"></i>
-            <h3>MOZZA MONKEY</h3>
-            <div>$ 1.100</div>
-      </seccion>
+      <div class="tapas">
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/papas1.jpg"
+            alt="foto de Papas Monkey"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>PAPAS MONKEY</h3>
+          <h4>$ 700</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/aros1.jpg"
+            alt="foto de Aros de Cebolla"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>MONKEY ONIONS</h3>
+          <h4>$ 1.000</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/mozza1.jpg"
+            alt="foto de Mozzarelas"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>MOZZA MONKEY</h3>
+          <h4>$ 1.100</h4>
+        </div>
+      </div>
       <h2>BEBIDAS</h2>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-bonaqua-sin-gas.jpg" alt="logo Bonaqua sin gas" />
-        <h3>AGUA SIN GAS - BON AQUA - 500ML</h3>
-        <div>$ 250</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-bonaqua-con-gas.jpg" alt="logo Bonaqua con gas" />
-        <h3>AGUA CON GAS - BON AQUA - 500ML</h3>
-        <div>$ 250</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-cocacola.jpg" alt="logo Cocacola" />
-        <h3>COCA COLA - 500ML</h3>
-        <div>$ 250</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-cocazero.jpg" alt="logo Cocacola Zero" />
-        <h3>COCA-COLA ZERO - 500ML</h3>
-        <div>$ 250</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-sprite.jpg" alt="logo Sprite" />
-        <h3>SPRITE - 500ML</h3>
-        <div>$ 250</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-sprite-zero.jpg" alt="logo Sprite Zero" />
-        <i class="fas fa-cart-plus"></i>
-        <h3>SPRITE ZERO - 500ML</h3>
-        <div>$ 250</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-amber-lagger.jpg" alt="logo Amber Lager" />
-        <h3>AMBER LAGER - PATAGONIA - 410ML</h3>
-        <div>$ 350/div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-weisse.jpg" alt="logo Weisse" />
-        <h3>WEISSE - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-pilsener.jpg" alt="logo Pilsener" />
-        <h3>BOHEMIAN PILSENER - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <i class="fas fa-cart-plus"></i>
-    </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-hoppy-lagger.jpg" alt="logo Hoppy Lager" />
-        <h3>HOPPY LAGER - PATAGONIA</h3>
-        <div>$ 350</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-km24.jpg" alt="logo km24" />
-        <h3>KM 24.7 - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-kune.jpg" alt="logo Kune" />
-        <h3>KÜNE - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-porter.jpg" alt="logo Porter" />
-        <h3>PORTER - PATAGONIA - 410ML</h3>
-        <div>$ 350</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
-      <seccion class="contenedor-bebida">
-        <img src="/img/menu/logo-ipa.jpg" alt="logo Ipa" />
-        <h3>VERA IPA - PATAGONIA - 420ML</h3>
-        <div>$ 350</div>
-        <i class="fas fa-cart-plus"></i>
-      </seccion>
+      <div class="bebidas">
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-bonaqua-sin-gas.jpg"
+            alt="logo Bonaqua sin gas"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>AGUA SIN GAS - BON AQUA - 500ML</h3>
+          <h4>$ 250</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-bonaqua-con-gas.jpg"
+            alt="logo Bonaqua con gas"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>AGUA CON GAS - BON AQUA - 500ML</h3>
+          <h4>$ 250</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-cocacola.jpg"
+            alt="logo Cocacola"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>COCA COLA - 500ML</h3>
+          <h4>$ 250</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-cocazero.jpg"
+            alt="logo Cocacola Zero"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>COCA-COLA ZERO - 500ML</h3>
+          <h4>$ 250</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-sprite.jpg"
+            alt="logo Sprite"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>SPRITE - 500ML</h3>
+          <h4>$ 250</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-sprite-zero.jpg"
+            alt="logo Sprite Zero"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>SPRITE ZERO - 500ML</h3>
+          <h4>$ 250</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-amber-lagger.jpg"
+            alt="logo Amber Lager"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>AMBER LAGER - PATAGONIA - 410ML</h3>
+          <h4>$ 350</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-weisse.jpg"
+            alt="logo Weisse"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>WEISSE - PATAGONIA - 410ML</h3>
+          <h4>$ 350</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-pilsener.jpg"
+            alt="logo Pilsener"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>BOHEMIAN PILSENER - PATAGONIA - 410ML</h3>
+          <h4>$ 350</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-hoppy-lagger.jpg"
+            alt="logo Hoppy Lager"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>HOPPY LAGER - PATAGONIA</h3>
+          <h4>$ 350</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-km24.jpg"
+            alt="logo km24"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>KM 24.7 - PATAGONIA - 410ML</h3>
+          <h4>$ 350</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-kune.jpg"
+            alt="logo Kune"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>KÜNE - PATAGONIA - 410ML</h3>
+          <h4>$ 350</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-porter.jpg"
+            alt="logo Porter"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>PORTER - PATAGONIA - 410ML</h3>
+          <h4>$ 350</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/logo-ipa.jpg"
+            alt="logo Ipa"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>VERA IPA - PATAGONIA - 420ML</h3>
+          <h4>$ 350</h4>
+        </div>
+      </div>
+
       <h2>COMBOS DEL MES</h2>
-      <seccion class="contenedor-producto">
-        <img src="/img/menu/combobanana1.jpg" alt="foto combo Banana" />
-        <i class="fas fa-cart-plus"></i>
-        <h3>COMBO BANANA</h3>
-        <div>$ 6.500</div>
-      </seccion>
-      <seccion class="contenedor-producto">
-        <img src="/img/menu/combopalmera1.jpg" alt="foto combo Palmera" />
-        <i class="fas fa-cart-plus"></i>
-        <h3>COMBO PALMERA</h3>
-        <div>$ 5.200</div>
-      </seccion>
-      <seccion class="contenedor-producto">
-        <img src="/img/menu/combomonita1.jpg" alt="foto combo Monita" />
-        <i class="fas fa-cart-plus"></i>
-        <h3>COMBO MONITA</h3>
-        <div>$ 7.500</div>
-      </seccion>
+
+      <div class="combos">
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/combobanana1.jpg"
+            alt="foto combo Banana"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>COMBO BANANA</h3>
+          <h4>$ 6.500</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/combopalmera1.jpg"
+            alt="foto combo Palmera"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>COMBO PALMERA</h3>
+          <h4>$ 5.200</h4>
+        </div>
+        <div class="contenedor-producto">
+          <img
+            class="fotoproducto"
+            src="/img/menu/combomonita1.jpg"
+            alt="foto combo Monita"
+          />
+          <a href="/"><i class="fas fa-cart-plus"></i> </a>
+          <h3>COMBO MONITA</h3>
+          <h4>$ 7.500</h4>
+        </div>
+      </div>
     </main>
-    <footer>
-            <div>
-              <p>Facebook</p>
-              <p>Instagram</p>
-              <p>Whatsapp</p>
-            </div>
-            <div>
-              <nav>
-                <ul>
-                  <li>
-                    <h4><a href="#">POLITICA</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">DEFENSA AL CONSUMIDOR</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">PROTECCION DE DATOS</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">CONTACTANOS</a></h4>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div><p>Desarrolladores DH</p></div>
-    </footer>
   </body>
 </html>
