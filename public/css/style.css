@@ -18,11 +18,11 @@
 
 header,
 body,
+main,
 footer {
   margin: auto;
   color: var(--negro-carbon);
 }
-
 /*Marvel Bold - Esta fuente se utilizará para el logo.*/
 
 h1 {
@@ -101,23 +101,117 @@ header {
 .cabecera-barra {
   display: none;
 }
+
 /*Menú para dispositivos móviles*/
 .cabecera-mobile {
   display: flex;
   font-size: 10vw;
   margin: auto;
 }
-
-/*Manejar bloques en líneas todas las cajas de la cabecera.*/
+.cabecera-mobile a {
+  text-decoration: none;
+  color: var(--negro-carbon);
+}
+/*Manejar la barra con display flex queda mejor.*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+/*Main*/
+/*Carrete*/
+.carrete {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  margin: 10px auto;
+  position: relative;
+}
+.imagenes-carrete {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  object-fit: cover;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+.imagenes-carrete img {
+  width: 100%;
+  height: auto;
+}
+.botones-carrete {
+  display: none;
+}
+.posicion {
+  display: none;
+}
+/*Novedades*/
+.novedades {
+  width: 90vw;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 10px auto;
+}
+.noticias,
+.destacados {
+  display: flex;
+  width: inherit;
+  justify-content: space-around;
+  flex-direction: column;
+  border-top: 1px var(--gris-oscuro) solid;
+}
+.foto {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.foto img {
+  width: 100%;
+}
+.foto,
+.texto {
+  padding: 10px;
+}
+/*Manejar la barra con display flex queda mejor.*/
+footer {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+  border-top: 2px black solid;
+}
+/*iconos a las redes.*/
 
 .pie-pagina {
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
+}
+.pie-pagina p {
+  padding: 2px;
 }
 
-/*Manejar como bloques en líneas la barra de navegación.*/
+/*links de contactos.*/
 
-.pie-navegacion ul li {
-  display: inline-block;
+.pie-navegacion ul {
+  display: none;
+}
+/*desarrolladores*/
+.desarrolladores {
+  display: none;
 }
 
 /*Dispositivos tabletas*/
@@ -148,6 +242,11 @@ header {
     display: flex;
     flex-direction: column;
   }
+  .marca h1,
+  .marca h3 {
+    width: 200px;
+    text-align: center;
+  }
   .cabecera-barra {
     display: flex;
     padding-top: 10px;
@@ -164,9 +263,7 @@ header {
   .barra-navegacion ul li {
     padding: 2px;
   }
-
   /*botones de la derecha*/
-
   .compra,
   .usuario {
     display: flex;
@@ -185,6 +282,88 @@ header {
     font-size: 20px;
     margin: auto;
   }
+  .imagenes-carrete {
+    max-height: 400px;
+  }
+  .botones-carrete {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+  }
+  .izquierda {
+    position: absolute;
+    left: 5vw;
+    top: 50%;
+    font-size: 30px;
+    color: var(--gris-claro);
+  }
+  .derecha {
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    font-size: 30px;
+    color: var(--gris-claro);
+  }
+  .pedi {
+    position: absolute;
+    right: 1vw;
+    top: 30%;
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: var(--amarillo);
+    padding: 4px 2px;
+  }
+  .pedi a {
+    text-decoration: none;
+    color: var(--negro-carbon);
+  }
+  .posicion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    padding: 2px;
+  }
+  .bolas {
+    margin: 0px 2px;
+    font-size: 10px;
+  }
+  /*novedades*/
+  .noticias {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .destacados {
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+  .foto {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  /*footer mejorado*/
+  footer {
+    justify-content: space-around;
+  }
+
+  /*links de contactos.*/
+
+  .pie-navegacion ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pie-navegacion ul li {
+    margin: 0px 5px;
+  }
+  /*desarrolladores*/
+  .desarrolladores {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .desarrolladores p {
+    font-size: 0.5em;
+  }
 }
 
 /*Dispositivos laptop*/
@@ -192,10 +371,22 @@ header {
 @media (min-width: 840px) {
   header,
   body,
-  footer {
+  footer,
+  .carrete,
+  .novedades {
     max-width: 1200px;
+  }
+  .imagenes-carrete {
+    max-height: 600px;
   }
   .barra-navegacion ul li {
     padding: 2px 10px;
+  }
+  .izquierda,
+  .derecha {
+    font-size: 50px;
+  }
+  .pedi {
+    padding: 10px;
   }
 }

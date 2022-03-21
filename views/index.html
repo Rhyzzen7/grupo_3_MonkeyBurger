@@ -14,14 +14,14 @@
     <link rel="icon" href="/img/icono.png" />
   </head>
   <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
-  <body style="background-color: lightgray">
+  <body >
     <!--Encabezado de la página web.
     En este espacio deberá colocarse: 
     - El logo de la empresa.
     - Nombre de la empresa.
     - Menú de navegación.
     - Sección para el carrito y Login.-->
-    <header style="border: 1px solid gray; margin: 10px">
+    <header>
       <!--Contenedor para el logo-->
       <div class="cabecera-logo">
         <img
@@ -97,33 +97,34 @@
     - Mosaicos con productos destacados.
     - Mosaicos con actividades varias de la empresa.
     - Novedades.-->
-    <main style="border: 1px solid gray; margin: 10px">
+    <main>
       <!--Carrete de promociones-->
-      <section>
+      <section class="carrete">
         <!--Serán mostradas sólo 5 promociones-->
-        <div>Carrete de imagenes</div>
+        <div class="imagenes-carrete"><img src="/img/producto/combomonkey2.jpg">
+        </div>
         <!--Botones de acción-->
-        <div>
-          <div>Anterior</div>
-          <div>Siguiente</div>
-          <div>PEDI AHORA</div>
+        <div class="botones-carrete">
+          <div class="izquierda"><i class="fa-solid fa-caret-left"></i></div>
+          <div class="derecha"><i class="fa-solid fa-caret-right"></i></div>
+          <div class="pedi"><h4><a href="#">PEDÍ AHORA</a></h4></div>
         </div>
         <!--posición en el carrete-->
-        <div>
-          <div>(1)</div>
-          <div>(2)</div>
-          <div>(3)</div>
-          <div>(4)</div>
-          <div>(5)</div>
+        <div class="posicion">
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
         </div>
       </section>
       <!--Mosaicos de destacados y novedades-->
-      <section>
+      <section class="novedades">
         <h2>NUESTRAS NOVEDADES</h2>
-        <!--Novedades-->
-        <article>
-          <div>Imagen</div>
-          <div>
+        <!--Destacados-->
+        <article class="destacados">
+          <div class="foto"><img src="/img/producto/lata-ipa.jpg"></div>
+          <div class="texto">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Molestiae vero possimus ea quos labore, doloribus, consectetur
@@ -132,9 +133,10 @@
             </p>
           </div>
         </article>
-        <!--Destacados-->
-        <article>
-          <div>
+        <!--Novedades-->
+        <article class="noticias">
+          <div class="foto"><img src="img/producto/mozza2.jpg"></div>
+          <div class="texto">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Molestiae vero possimus ea quos labore, doloribus, consectetur
@@ -142,7 +144,6 @@
               corrupti odit quibusdam quaerat quod!
             </p>
           </div>
-          <div>Imagen</div>
         </article>
       </section>
     </main>
@@ -152,33 +153,33 @@
     - Enlaces de interés.
     - Contacto.
     - Referencia a desarrolladores.-->
-    <footer style="border: 1px solid gray; margin: 10px">
+    <footer >
       <!--Redes sociales-->
       <div class="pie-pagina">
-        <p>Facebook</p>
-        <p>Instagram</p>
-        <p>Whatsapp</p>
+        <p><i class="fa-brands fa-facebook"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-brands fa-whatsapp"></i></p>
       </div>
       <!--Enlaces-->
       <div class="pie-pagina">
         <nav class="pie-navegacion">
           <ul>
             <li>
-              <h4><a href="#">POLITICA</a></h4>
+              <h5><a href="#">POLITICA</a></h5>
             </li>
             <li>
-              <h4><a href="#">DEFENSA AL CONSUMIDOR</a></h4>
+              <h5><a href="#">DEFENSA AL CONSUMIDOR</a></h5>
             </li>
             <li>
-              <h4><a href="#">PROTECCION DE DATOS</a></h4>
+              <h5><a href="#">PROTECCION DE DATOS</a></h5>
             </li>
             <li>
-              <h4><a href="#">CONTACTANOS</a></h4>
+              <h5><a href="#">CONTACTANOS</a></h5>
             </li>
           </ul>
         </nav>
       </div>
-      <div><p>Desarrolladores DH</p></div>
+      <div class="desarrolladores"><p>Desarrolladores DH</p></div>
     </footer>
   </body>
 </html>
