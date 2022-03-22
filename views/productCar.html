@@ -9,19 +9,19 @@
       src="https://kit.fontawesome.com/1f2014748d.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="\css\estiloproductCar.css" />
     <title>Bienvenidos a Monkey Burger</title>
     <link rel="icon" href="/img/icono.png" />
   </head>
   <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
-  <body style="background-color: lightgray">
+  <body">
     <!--Encabezado de la página web.
     En este espacio deberá colocarse: 
     - El logo de la empresa.
     - Nombre de la empresa.
     - Menú de navegación.
     - Sección para el carrito y Login.-->
-    <header style="border: 1px solid gray; margin: 10px">
+    <header>
       <!--Contenedor para el logo-->
       <div class="cabecera-logo">
         <img
@@ -97,52 +97,63 @@
     - Mosaicos con productos destacados.
     - Mosaicos con actividades varias de la empresa.
     - Novedades.-->
-    <main style="border: 1px solid gray; margin: 10px">
-      <h2>MI CARRITO DE PRODUCTO</h2>
+    <main>
+      <h1 class="titulo-carrito">MI CARRITO DE PRODUCTO</h1>
       <!--Productos seleccionados-->
       <section class="contenedor-carrito">
         <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
-        <img
+        <div class="foto-producto-carrito"><img
           src="/img/menu/aros1.jpg"
           alt="foto de Aros de Cebolla"
-          width="50px"
+          width="150px"
         />
-        <h4>Aros de Cebolla</h4>
-        <div>Unidades: 1</div>
-        <div>Precio unitario: $ 1.000</div>
-        <div>Precio total: $ 1.000</div>
+        <h4 class="nombre-producto-carrito">Aros de Cebolla</h4>
+      </div>
+        <article class="info-compra-carrito">
+        <div class="unidades-carrito">Unidades: 1</div>
+        <div class="precio-producto-carrito">Precio unitario: $ 1.000</div>
+        <div class="total-compra-carrito">Precio total: $ 1.000</div>
         <i class="fa-solid fa-trash"></i>
+      </article>
       </section>
       <section class="contenedor-carrito">
         <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
-        <img
+        <div class="foto-producto-carrito"><img
           src="\img\menu\mono1.jpg"
-          alt="foto de Aros de Cebolla"
-          width="50px"
+          alt="Hamburguesa Mono"
+          width="150px"
         />
-        <h4>Hamburguesa Mono</h4>
-        <div>Unidades: 2</div>
-        <div>Precio unitario: $ 900</div>
-        <div>Precio total: $ 1.800</div>
+        <h4 class="nombre-producto-carrito">Hamburguesa Mono</h4>
+      </div>
+        <article class="info-compra-carrito">
+        <div class="unidades-carrito">Unidades: 2</div>
+        <div class="precio-producto-carrito">Precio unitario: $ 900</div>
+        <div class="total-compra-carrito">Precio total: $ 1.800</div>
         <i class="fa-solid fa-trash"></i>
+      </article>
       </section>
       <section class="contenedor-carrito">
-        <img
+        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
+        <div class="foto-producto-carrito"><img
           src="/img/menu/combomonita1.jpg"
-          alt="foto combo Monita"
-          width="50px"
+          alt="Combo Monita"
+          width="150px"
         />
-        <h4>Combo Monita</h4>
-        <div>Unidades: 1</div>
-        <div>Precio unitario: $ 7.500</div>
-        <div>Precio total: $ 7.500</div>
+        <h4 class="nombre-producto-carrito">Combo Monita</h4>
+      </div>
+        <article class="info-compra-carrito">
+        <div class="unidades-carrito">Unidades: 1</div>
+        <div class="precio-producto-carrito">Precio unitario: $ 7.500</div>
+        <div class="total-compra-carrito">Precio total: $ 7.500</div>
         <i class="fa-solid fa-trash"></i>
+      </article>
       </section>
-      <section class="contenedor-total-carrito">TOTAL COMPRA: $ 10.300</section>
-
-      <section class="botones-carrito">
-        <h4><a href="#">CONTINUAR</a></h4>
-        <h4><a href="#">AGREGAR MAS PRODUCTOS</a></h4>
+      <section class="totalproducto-carrito">
+        <div class="totales-carrito">TOTAL COMPRA: $ 10.300</div>
+      </section>
+      <section class="contenedor-botones-carrito">
+        <h4 class="boton-agregarmas-carrito">AGREGAR MAS PRODUCTOS</h4>
+        <h4 class="boton-continuar-carrito">CONTINUAR</h4>
       </section>
     </main>
     <!--Pie de página de la web.
@@ -151,33 +162,8 @@
     - Enlaces de interés.
     - Contacto.
     - Referencia a desarrolladores.-->
-    <footer style="border: 1px solid gray; margin: 10px">
-      <!--Redes sociales-->
-      <div>
-        <p>Facebook</p>
-        <p>Instagram</p>
-        <p>Whatsapp</p>
-      </div>
-      <!--Enlaces-->
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <h4><a href="#">POLITICA</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">DEFENSA AL CONSUMIDOR</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">PROTECCION DE DATOS</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CONTACTANOS</a></h4>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div><p>Desarrolladores DH</p></div>
+    <footer>
+
     </footer>
   </body>
 </html>

@@ -1,0 +1,135 @@
+/* Colores:
+Gris oscuro: #CFDBD5 
+Gris claro: #E8EDDF 
+Amarillo: #FFC000 
+Negro: #242423
+Negro claro: #333533 */
+
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Marvel:wght@700&display=swap");
+
+
+* {
+    color: #e8eddf;
+    font-family: "Antonio";
+    font-style: normal;
+    background-color: #242423;
+  }
+
+  h1,
+  h2 {
+    font-family: "marvel";
+    font-weight: bold;
+    color: #e8eddf;
+    padding: 50px;
+  }
+  
+  .titulo-carrito {
+    text-align: center;
+    margin: 30px;
+    padding-bottom: 0px;
+    padding-top: 5%;
+  }
+  
+  h2 {
+    margin-left: 60px;
+  }
+  
+  h3 {
+    font-family: "Antonio";
+    font-style: normal;
+    margin: 0px;
+    color: #333533;
+    background-color: #cfdbd5;
+  }
+
+  .contenedor-carrito {
+      display: flex;
+      background-color: #242423;
+     font-family: "Antonio";
+     font-style: normal;
+     position:relative;
+     margin-bottom: 10px;
+  }
+
+  .info-compra-carrito{
+    display: flex;
+    justify-content: space-between;
+  }
+
+    .foto-producto-carrito {
+        margin-bottom: 20px;
+        padding-left: 5%;
+        padding-top: 3%;
+  }
+
+  .info-compra-carrito {
+      display: flex;
+      border: solid 2px #333533;
+      padding: 5%;
+      margin: 5%;
+      flex: auto;
+      justify-content: space-between;
+} 
+
+ .nombre-producto-carrito{ 
+    
+    font-family: "Antonio";
+    font-style: normal;
+    margin: 0px;
+    color: #333533;
+    background-color: #cfdbd5;
+    text-align: center;
+ }
+ 
+ 
+ .unidades-carrito, 
+ .precio-producto-carrito, 
+ .total-compra-carrito {
+     display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    flex-wrap: wrap;
+
+}
+
+.contenedor-botones-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5px;
+    padding-bottom: 5%;
+}
+
+.boton-continuar-carrito, 
+.boton-agregarmas-carrito {
+list-style: none;
+list-style-type: none;
+background-color: #ffc000;
+color: #242423;
+  font-size: 20px;
+  padding: 8px;
+  border: solid 2px #ffc000;
+  border-radius: 10px;
+  align-self: center;
+  text-align: center;
+  margin: 10px;
+}
+
+.totalproducto-carrito {
+    display: flex;
+    margin-bottom: 5px;
+    padding-bottom: 5%;
+    justify-content: end;
+}
+
+.totales-carrito {
+    text-align: right;
+    text-decoration: solid;
+    align-self: center;
+    font-size: 16px;
+    color: #ffc000;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+
+}
