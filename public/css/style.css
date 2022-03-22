@@ -22,11 +22,13 @@ main,
 footer {
   margin: auto;
   color: var(--negro-carbon);
+  background-color: var(--negro-carbon);
 }
 /*Marvel Bold - Esta fuente se utilizará para el logo.*/
 
 h1 {
   font-family: "Marvel", sans-serif;
+  color: var(--gris-claro);
 }
 
 /*Antonio Bold – Esta fuente se utilizará para los títulos.*/
@@ -37,12 +39,14 @@ h4,
 h5,
 h6 {
   font-family: "Antonio", sans-serif;
+  color: var(--gris-claro);
 }
 
 /*Antonio Thin – Eta fuente se utilizará para los textos.*/
 
 p {
   font-family: "Antonio", sans-serif;
+  color: var(--gris-claro);
 }
 
 /*Quitar estilos de listas a los menúes.*/
@@ -55,7 +59,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--negro-carbon);
+  color: unset;
 }
 
 /*Manejar bloques en líneas todas las cajas de la cabecera.*/
@@ -271,6 +275,14 @@ footer {
     padding: 5px;
     width: 90px;
   }
+  button {
+    background-color: var(--amarillo);
+    border: 2px var(--negro-carbon) solid;
+    border-radius: 15px;
+    padding: 10px;
+    width: 100px;
+  }
+
   button a {
     text-decoration: none;
     color: var(--negro-carbon);
@@ -308,10 +320,10 @@ footer {
     position: absolute;
     right: 1vw;
     top: 30%;
-    border: 2px black solid;
-    border-radius: 5px;
+    border: 2px var(--negro-carbon) solid;
+    border-radius: 15px;
     background-color: var(--amarillo);
-    padding: 4px 2px;
+    padding: 10px;
   }
   .pedi a {
     text-decoration: none;
