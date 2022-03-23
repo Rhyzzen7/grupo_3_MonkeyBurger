@@ -114,7 +114,7 @@ header {
 }
 .cabecera-mobile a {
   text-decoration: none;
-  color: var(--negro-carbon);
+  color: var(--gris-claro);
 }
 /*Manejar la barra con display flex queda mejor.*/
 main {
@@ -158,7 +158,7 @@ main {
 /*Novedades*/
 .novedades {
   width: 90vw;
-  border: 1px solid black;
+  /*border: 1px solid var(--gris-oscuro);*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -174,6 +174,8 @@ main {
   justify-content: space-around;
   flex-direction: column;
   border-top: 1px var(--gris-oscuro) solid;
+  background-color: var(--negro-humo);
+  margin: 10px auto;
 }
 .foto {
   /*width: inherit;*/
@@ -196,7 +198,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   margin: 10px auto;
-  border-top: 2px black solid;
+  border-top: 2px var(--negro-humo) solid;
 }
 /*iconos a las redes.*/
 
@@ -279,7 +281,7 @@ footer {
     background-color: var(--amarillo);
     border: 2px var(--negro-carbon) solid;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     width: 100px;
   }
 
