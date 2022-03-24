@@ -69,7 +69,7 @@ a:link {
   border: solid 2px #242423;
   border-radius: 15px;
   padding: 10px;
-  width: 100px;
+  width: 130px;
   text-align: center;
 }
 
@@ -127,4 +127,9 @@ a:link {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+/* Para que funcionen el header y footer */
+h1.monkey {
+  padding: 0;
 }

@@ -9,7 +9,7 @@
 :root {
   --gris-oscuro: #cfdbd5;
   --gris-claro: #e8eddf;
-  --amarillo: #f5cb5c;
+  --amarillo: #ffc000;
   --negro-humo: #333533;
   --negro-carbon: #242423;
 }
@@ -295,6 +295,12 @@ footer {
     text-decoration: none;
     color: var(--negro-carbon);
   }
+
+  .boton:hover, .pedi:hover,  .carrito:hover{
+    box-shadow: 0 0 11px #e8eddf;
+    font-weight: 600;
+  }
+
   .cabecera-mobile {
     display: none;
   }
@@ -303,6 +309,7 @@ footer {
     margin: auto;
     color: var(--gris-claro);
   }
+
   .imagenes-carrete {
     max-height: 400px;
   }
