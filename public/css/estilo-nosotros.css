@@ -5,7 +5,7 @@ Amarillo: #FFC000
 Negro: #242423
 Negro claro: #333533 */
 
-* {
+* main {
   color: #e8eddf;
   font-family: "Antonio";
   font-style: normal;
@@ -121,4 +121,19 @@ h3 {
   .foto-historia {
     width: 50%;
   }
+}
+
+main h2 {
+  padding-top: 20px;
+}
+
+/* Para que funcionen el header y footer */
+h1.monkey {
+  padding: 0;
+  margin: 0;
+}
+
+header h4,
+.gourmet {
+  color: #e8eddf;
 }

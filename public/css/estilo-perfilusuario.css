@@ -10,7 +10,7 @@ Negro Claro: #333533
   background-color: #242423;
   color: #e8eddf;
   font-family: "Antonio";
-  padding: 15px;
+ 
 }
 
 h1,
@@ -314,7 +314,7 @@ p {
   outline: none;
   white-space: nowrap;
   user-select: none;
-  padding:10px;
+  padding: 10px;
 }
 
 .custom-file-input:active::before {
@@ -324,4 +324,36 @@ p {
 .custom-file-input:hover::before {
   box-shadow: 0 0 11px #e8eddf;
   font-weight: 600;
+}
+
+/* Para que funcionen el header y footer */
+h1.monkey {
+  padding: 0;
+}
+
+header h4,
+.gourmet {
+  color: #e8eddf;
+}
+
+main h2, main h3{
+  padding: 20px;
+}
+
+main h1{
+  text-align: center;
+  padding-top: 50px;;
+}
+
+header h4, header .boton h4 a{
+  background-color: #ffc000;
+}
+
+li h4{
+  background-color: #242423;
+  padding:0px;
+}
+
+header h4 {
+  padding: 0px;
 }
