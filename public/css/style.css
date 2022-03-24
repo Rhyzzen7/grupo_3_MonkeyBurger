@@ -25,7 +25,6 @@ footer {
   background-color: var(--negro-carbon);
 }
 /*Marvel Bold - Esta fuente se utilizará para el logo.*/
-
 h1 {
   font-family: "Marvel", sans-serif;
   color: var(--gris-claro);
@@ -75,6 +74,12 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
+  border-bottom: 2px var(--negro-humo) solid;
+  padding: 5px;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
 }
 .cabecera-centro,
 .cabecera-derecha {
@@ -123,6 +128,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
+  margin-top: 130px;
 }
 /*Main*/
 /*Carrete*/
@@ -274,8 +280,8 @@ footer {
   .usuario {
     display: flex;
     flex-direction: column;
-    padding: 5px;
-    width: 90px;
+    /*padding: 5px;*/
+    width: 100px;
   }
   button {
     background-color: var(--amarillo);
@@ -295,6 +301,7 @@ footer {
   .carrito {
     font-size: 20px;
     margin: auto;
+    color: var(--gris-claro);
   }
   .imagenes-carrete {
     max-height: 400px;

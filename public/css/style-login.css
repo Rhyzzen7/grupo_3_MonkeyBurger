@@ -1,0 +1,44 @@
+.mosaico-login {
+  border-top: 1px var(--gris-oscuro) solid;
+  background-color: var(--negro-humo);
+  margin: 20px;
+  padding: 20px;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  max-width: 250px;
+}
+.ingresar {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100px;
+}
+button {
+  background-color: var(--amarillo);
+  border: 2px var(--negro-carbon) solid;
+  border-radius: 15px;
+  padding: 5px;
+  width: 100px;
+}
+button a {
+  text-decoration: none;
+  color: var(--negro-carbon);
+}
+.acciones {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+}
+.acciones ul {
+  display: flex;
+  justify-content: space-between;
+}
+.acciones ul li {
+  padding: 10px;
+}
