@@ -25,8 +25,8 @@ app.get("/nosotros", (req, res) => {
 app.get("/haceTuPedido", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/haceTuPedido.html"));
 });
-app.get("/productCar", (req, res) => {
-  res.sendFile(path.join(path.resolve(__dirname), "./views/productCar.html"));
+app.get("/productCart", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/productCart.html"));
 });
 app.get("/register", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/register.html"));
