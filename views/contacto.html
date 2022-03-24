@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="https://kit.fontawesome.com/841275cf5f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css"/> 
-        <link rel="stylesheet" href="css/register.css">
+        <link rel="stylesheet" href="css/contacto.css">
     </HEAD>
     <BODY>
         <header>
@@ -49,7 +49,7 @@
                 </div>
         </header>
         <main>
-            <h1 class="sesion">CREAR CUENTA</h1>
+            <h1 class="contacto">CONTACTO</h1>
             <ul>
                 <li class="input-nombre">
                     <label for="nombre"></label>
@@ -63,10 +63,6 @@
                     <label for="email"></label>
                     <input type="email" name="email" placeholder="Correo Electronico">
                 </li>
-                <li class="input-usuario">
-                    <label for="usuario"></label>
-                    <input type="text" name="usuario" placeholder="Nombre de Usuario">
-                </li>
                 <li class="input-telefono">
                     <label for="telefono"></label>
                     <input type="tel" name="telefono" placeholder="Teléfono">
@@ -75,25 +71,28 @@
                     <label for="domicilio"></label>
                     <input type="text" name="domicilio" placeholder="Domicilio">
                 </li>
-                <li class="input-localidad">
-                    <label for="localidad/provincia"></label>
-                    <input type="text" name="localidad/lrovincia" placeholder="Localidad/Provincia">
+                <li class="input-asunto">
+                    <!-- <label for="asunto"></label> !-->
+                    <div>
+                        <select name="opciones" class="select-opciones">
+                            <option value="Problemas">Problemas</option>
+                            <option value="Problemas">Consultas</option>
+                            <option value="Problemas">Preguntas</option>
+                            <option value="Problemas">Mala Facturación</option>
+                            <option value="Problemas">El producto no llegó</option>
+                            <option value="Problemas">Otros</option>
+                        </select>
+                    </div>
+                     <!-- <input  type="text" name="asunto" placeholder="Asunto"> !-->
+                </input>
                 </li>
-                <li class="input-codigoPostal">
-                    <label for="codigo postal"></label>
-                    <input type="text" name="codigo postal" placeholder="Codigo Postal">
-                </li>
-                <li class="input-contraseña">
-                    <label for="contraseña"></label>
-                    <input type="password" name="Contraseña" placeholder="Contraseña">
-                </li>
-                <li class="input-confirmarContra">
-                    <label for="confirmarContraseña"></label>
-                    <input type="password" name="confirmarContraseña" placeholder="Confirmar Contraseña">
+                <li class="input-mensaje">
+                    <label for="mensaje"></label>
+                    <input type="text" name="Mensaje" placeholder="Mensaje">
                 </li>
             </ul>
             <div class="boton">
-                <button type="submit" id="boton">Ingresar</button>
+                <button type="submit" id="boton">Enviar</button>
             </div>
         </main>
         <footer>

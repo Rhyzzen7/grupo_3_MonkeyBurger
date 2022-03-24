@@ -6,10 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="https://kit.fontawesome.com/841275cf5f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css"/> 
+        <link rel=StyleSheet href="css/login.css"> 
     </HEAD>
     <BODY>
         <header>
-            <div>
+            <div class="logo">
                 <img src="/public/img/logo/imagotipo-blanco-fondonegro.png" alt="logo"/> 
             </div>
             <div>
@@ -48,22 +49,30 @@
                 </div>
         </header>
         <main>
-            <h1>INICIAR SESIÓN</h1>
-            <ul>
-                <li>
-                    <p>Nombre de usuario/Correo electrónico</p><img 
-                    href="/public/img/logo/imagotipo-blanco-fondonegro.png" 
-                    src="logo"/>
-                    <p>Contraseña</p>
+            <h1 class="sesion">INICIAR SESIÓN</h1>
+            <div class="iniciar-sesion">
+                <ul>
+                <li class="input-user">
+                    <label for="usuario"></label>
+                    <input type="text" name="usuario" placeholder="Nombre de usuario/Correo electrónico" id="usuario">
+                </li>
+                </ul>
+                <ul>
+                    <li class="input-password">
+                    <label for="Contraseña"></label>
+                    <input type="password" name="password" placeholder="Contraseña" id="Contraseña">
                 </li>
             </ul>
-            <h4>Ingresar</h4>
-            <ul>
-                <li>
-                    <p>Restablecer Contraseña</p>
-                    <p>Crear Nuevo Usuario</p>
-                </li>
-            </ul>
+        </div>
+        <div class="boton">
+            <button type="submit" id="boton">Ingresar</button>
+        </div>
+        <div class="opciones">
+                <span class="restablecer-contra"><a href="#"> Restablecer Contraseña</a></span>
+                <span class="crear-usuario"><a href="#">Crear Nuevo Usuario</a></span>
+        </div>
+                
+                
         </main>
         <footer>
             <div>
