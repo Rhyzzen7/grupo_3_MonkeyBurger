@@ -123,6 +123,10 @@ h3 {
   }
 }
 
+main h2 {
+  padding-top: 20px;
+}
+
 /* Para que funcionen el header y footer */
 h1.monkey {
   padding: 0;
