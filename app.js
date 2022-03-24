@@ -37,3 +37,8 @@ app.get("/login", (req, res) => {
 app.get("/contacto", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/contacto.html"));
 });
+
+app.get("/usuario", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/perfil-usuario.html"));
+});
+
