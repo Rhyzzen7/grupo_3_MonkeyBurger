@@ -12,6 +12,15 @@
   padding: 10px;
   max-width: 250px;
 }
+.formulario label {
+  width: 100%;
+}
+.formulario h5 {
+  text-align: left;
+}
+.formulario i {
+  text-align: right;
+}
 .ingresar {
   display: flex;
   justify-content: center;
