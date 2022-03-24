@@ -5,68 +5,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/css/style.css" />
     <title>Bienvenidos a Monkey Burger</title>
     <link rel="icon" href="/img/icono.png" />
   </head>
   <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
-  <body style="background-color: lightgray">
+  <body>
     <!--Encabezado de la página web.
     En este espacio deberá colocarse: 
     - El logo de la empresa.
     - Nombre de la empresa.
     - Menú de navegación.
     - Sección para el carrito y Login.-->
-    <header style="border: 1px solid gray; margin: 10px">
+    <header>
       <!--Contenedor para el logo-->
-      <div class="cabecera">
+      <div class="cabecera-logo">
         <img
-          src="/img/imagotipo-negro-fondo-transparente.png"
+          src="/img/imagotipo-negro-fondo-transparente-inv3.png"
           alt="Logo"
-          width="20%"
+          class="mobile"
+        />
+        <img
+          src="/img/Isotipo-amarillo-fondotransparente-inv3.png"
+          alt="Logo"
+          class="laptop"
         />
       </div>
-      <!-- Contenedor para el nombre de la empresa-->
-      <div class="cabecera">
-        <h1>MONKEY BURGER</h1>
-        <h3>HMABURGUESAS GOURMET</h3>
+      <!--Cabecera central-->
+      <div class="cabecera-centro">
+        <!-- Contenedor para el nombre de la empresa-->
+        <div class="marca">
+          <h1>MONKEY BURGER</h1>
+          <h3>HAMBURGUESAS GOURMET</h3>
+        </div>
+        <!--Contenedor para la barra de navegación-->
+        <div class="cabecera-barra">
+          <nav class="barra-navegacion">
+            <ul>
+              <li>
+                <h4><a href="nosotros">NOSOTROS</a></h4>
+              </li>
+              <li>
+                <h4><a href="menu">MENÚ</a></h4>
+              </li>
+              <li>
+                <h4><a href="haceTuPedido">HACE TU PEDIDO</a></h4>
+              </li>
+              <li>
+                <h4><a href="contacto">CONTACTO</a></h4>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--Barra de navegación mobile-->
+        <div class="cabecera-mobile">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
       </div>
-      <!--Contenedor para la barra de navegación-->
-      <div class="cabecera">
-        <nav class="barra-navegacion">
-          <ul>
-            <li>
-              <h4><a href="nosotros.html">NOSOTROS</a></h4>
-            </li>
-            <li>
-              <h4><a href="menu.html">MENÚ</a></h4>
-            </li>
-            <li>
-              <h4><a href="haceTuPedido.html">HACE TU PEDIDO</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CONTACTO</a></h4>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <!--Contenedor para el carrito de compras-->
-      <div class="cabecera">
-        <img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />
-        <h3><a href="productCar.html">CARRITO</a></h3>
-      </div>
-      <!--Contenedor para el usuario-->
-      <div class="cabecera">
-        <nav>
-          <ul>
-            <li>
-              <h4><a href="#">INICIAR SESIÓN</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">CREAR CUENTA</a></h4>
-            </li>
-          </ul>
-        </nav>
+      <!--Cabecera derecha-->
+      <div class="cabecera-derecha">
+        <!--Contenedor para el usuario-->
+        <div class="usuario">
+          <!--<nav>
+            <ul>
+              <li>
+                <h4><a href="#">INICIAR SESIÓN</a></h4>
+              </li>
+              <li>
+                <h4><a href="register.html">CREAR CUENTA</a></h4>
+              </li>
+            </ul>
+          </nav>-->
+          <button class="boton">
+            <h4><a href="login">INICIAR SESIÓN</a></h4>
+          </button>
+          <button class="boton">
+            <h4><a href="register">CREAR CUENTA</a></h4>
+          </button>
+        </div>
+        <!--Contenedor para el carrito de compras-->
+        <div class="compra">
+          <!--<img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />-->
+          <div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div>
+          <button class="boton">
+            <h4><a href="productCart">CARRITO</a></h4>
+          </button>
+        </div>
       </div>
     </header>
     <!--Principal de cuerpo de la página web.
@@ -75,33 +103,37 @@
     - Mosaicos con productos destacados.
     - Mosaicos con actividades varias de la empresa.
     - Novedades.-->
-    <main style="border: 1px solid gray; margin: 10px">
+    <main>
       <!--Carrete de promociones-->
-      <section>
+      <section class="carrete">
         <!--Serán mostradas sólo 5 promociones-->
-        <div>Carrete de imagenes</div>
+        <div class="imagenes-carrete">
+          <img src="/img/producto/combomonkey2.jpg" />
+        </div>
         <!--Botones de acción-->
-        <div>
-          <div>Anterior</div>
-          <div>Siguiente</div>
-          <div>PEDI AHORA</div>
+        <div class="botones-carrete">
+          <div class="izquierda"><i class="fa-solid fa-caret-left"></i></div>
+          <div class="derecha"><i class="fa-solid fa-caret-right"></i></div>
+          <div class="pedi">
+            <h4><a href="#">PEDÍ AHORA</a></h4>
+          </div>
         </div>
         <!--posición en el carrete-->
-        <div>
-          <div>(1)</div>
-          <div>(2)</div>
-          <div>(3)</div>
-          <div>(4)</div>
-          <div>(5)</div>
+        <div class="posicion">
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
         </div>
       </section>
       <!--Mosaicos de destacados y novedades-->
-      <section>
+      <section class="novedades">
         <h2>NUESTRAS NOVEDADES</h2>
-        <!--Novedades-->
-        <article>
-          <div>Imagen</div>
-          <div>
+        <!--Destacados-->
+        <article class="destacados">
+          <div class="foto"><img src="/img/producto/lata-ipa.jpg" /></div>
+          <div class="texto">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Molestiae vero possimus ea quos labore, doloribus, consectetur
@@ -110,9 +142,10 @@
             </p>
           </div>
         </article>
-        <!--Destacados-->
-        <article>
-          <div>
+        <!--Novedades-->
+        <article class="noticias">
+          <div class="foto"><img src="img/producto/mozza2.jpg" /></div>
+          <div class="texto">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Molestiae vero possimus ea quos labore, doloribus, consectetur
@@ -120,7 +153,6 @@
               corrupti odit quibusdam quaerat quod!
             </p>
           </div>
-          <div>Imagen</div>
         </article>
       </section>
     </main>
@@ -130,33 +162,33 @@
     - Enlaces de interés.
     - Contacto.
     - Referencia a desarrolladores.-->
-    <footer style="border: 1px solid gray; margin: 10px">
+    <footer>
       <!--Redes sociales-->
       <div class="pie-pagina">
-        <p>Facebook</p>
-        <p>Instagram</p>
-        <p>Whatsapp</p>
+        <p><i class="fa-brands fa-facebook"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-brands fa-whatsapp"></i></p>
       </div>
       <!--Enlaces-->
       <div class="pie-pagina">
         <nav class="pie-navegacion">
           <ul>
             <li>
-              <h4><a href="#">POLITICA</a></h4>
+              <h5><a href="#">POLITICA</a></h5>
             </li>
             <li>
-              <h4><a href="#">DEFENSA AL CONSUMIDOR</a></h4>
+              <h5><a href="#">DEFENSA AL CONSUMIDOR</a></h5>
             </li>
             <li>
-              <h4><a href="#">PROTECCION DE DATOS</a></h4>
+              <h5><a href="#">PROTECCION DE DATOS</a></h5>
             </li>
             <li>
-              <h4><a href="#">CONTACTANOS</a></h4>
+              <h5><a href="#">CONTACTANOS</a></h5>
             </li>
           </ul>
         </nav>
       </div>
-      <div><p>Desarrolladores DH</p></div>
+      <div class="desarrolladores"><p>Desarrolladores DH</p></div>
     </footer>
   </body>
 </html>

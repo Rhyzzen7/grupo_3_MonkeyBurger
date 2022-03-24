@@ -1,125 +1,130 @@
 <!DOCTYPE html>
-<HTML lang="en">
-    <HEAD>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <script src="https://kit.fontawesome.com/841275cf5f.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css"/> 
-        <link rel="stylesheet" href="css/contacto.css">
-    </HEAD>
-    <BODY>
-        <header>
-            <div>
-                <img src="/public/img/logo/imagotipo-blanco-fondonegro.png" alt="logo"/> 
-            </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <h4><a href="#">NOSOTROS</a></h4>
-                        </li>
-                        <li>
-                            <h4><a href="#">MENÚ</a></h4>
-                        </li>
-                        <li>
-                            <h4><a href="#">HACE TU PEDIDO</a></h4>
-                        </li>
-                        <li>
-                            <h4><a href="#">CONTACTO</a></h4>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-                <div>
-                    <i class="fa-solid fa-cart-shopping"></i> 
-                    <h4>CARRITO</h4>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <h4><a href="#"> INICIAR SESIÓN</a></h4>
-                            </li>
-                            <li>
-                                <h4><a href="#">CREAR CUENTA</a></h4>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-        </header>
-        <main>
-            <h1 class="contacto">CONTACTO</h1>
-            <ul>
-                <li class="input-nombre">
-                    <label for="nombre"></label>
-                    <input type="text" name="nombre" placeholder="Nombre">
-                </li>
-                <li class="input-apellido">
-                    <label for="apellido"></label>
-                    <input type="text" name="apellido" placeholder="Apellido">
-                </li>
-                <li class="input-email">
-                    <label for="email"></label>
-                    <input type="email" name="email" placeholder="Correo Electronico">
-                </li>
-                <li class="input-telefono">
-                    <label for="telefono"></label>
-                    <input type="tel" name="telefono" placeholder="Teléfono">
-                </li>
-                <li class="input-domicilio">
-                    <label for="domicilio"></label>
-                    <input type="text" name="domicilio" placeholder="Domicilio">
-                </li>
-                <li class="input-asunto">
-                    <!-- <label for="asunto"></label> !-->
-                    <div>
-                        <select name="opciones" class="select-opciones">
-                            <option value="Problemas">Problemas</option>
-                            <option value="Problemas">Consultas</option>
-                            <option value="Problemas">Preguntas</option>
-                            <option value="Problemas">Mala Facturación</option>
-                            <option value="Problemas">El producto no llegó</option>
-                            <option value="Problemas">Otros</option>
-                        </select>
-                    </div>
-                     <!-- <input  type="text" name="asunto" placeholder="Asunto"> !-->
-                </input>
-                </li>
-                <li class="input-mensaje">
-                    <label for="mensaje"></label>
-                    <input type="text" name="Mensaje" placeholder="Mensaje">
-                </li>
-            </ul>
-            <div class="boton">
-                <button type="submit" id="boton">Enviar</button>
-            </div>
-        </main>
-        <footer>
-            <div>
-              <p>Facebook</p>
-              <p>Instagram</p>
-              <p>Whatsapp</p>
-            </div>
-            <div>
-              <nav>
-                <ul>
-                  <li>
-                    <h4><a href="#">POLITICA</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">DEFENSA AL CONSUMIDOR</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">PROTECCION DE DATOS</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">CONTACTANOS</a></h4>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div><p>Desarrolladores DH</p></div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/841275cf5f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="/public/img/logo/imagotipo-blanco-fondonegro.png"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <h4><a href="#">NOSOTROS</a></h4>
+            </li>
+            <li>
+              <h4><a href="#">MENÚ</a></h4>
+            </li>
+            <li>
+              <h4><a href="#">HACE TU PEDIDO</a></h4>
+            </li>
+            <li>
+              <h4><a href="#">CONTACTO</a></h4>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h4>CARRITO</h4>
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <h4><a href="#"> INICIAR SESIÓN</a></h4>
+            </li>
+            <li>
+              <h4><a href="#">CREAR CUENTA</a></h4>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="contacto">CONTACTO</h1>
+      <ul>
+        <li class="input-nombre">
+          <label for="nombre"></label>
+          <input type="text" name="nombre" placeholder="Nombre" />
+        </li>
+        <li class="input-apellido">
+          <label for="apellido"></label>
+          <input type="text" name="apellido" placeholder="Apellido" />
+        </li>
+        <li class="input-email">
+          <label for="email"></label>
+          <input type="email" name="email" placeholder="Correo Electronico" />
+        </li>
+        <li class="input-telefono">
+          <label for="telefono"></label>
+          <input type="tel" name="telefono" placeholder="Teléfono" />
+        </li>
+        <li class="input-domicilio">
+          <label for="domicilio"></label>
+          <input type="text" name="domicilio" placeholder="Domicilio" />
+        </li>
+        <li class="input-asunto">
+          <!-- <label for="asunto"></label> !-->
+          <div>
+            <select name="opciones" class="select-opciones">
+              <option value="Problemas">Problemas</option>
+              <option value="Problemas">Consultas</option>
+              <option value="Problemas">Preguntas</option>
+              <option value="Problemas">Mala Facturación</option>
+              <option value="Problemas">El producto no llegó</option>
+              <option value="Problemas">Otros</option>
+            </select>
+          </div>
+          <!-- <input  type="text" name="asunto" placeholder="Asunto"></input> !-->
+        </li>
+        <li class="input-mensaje">
+          <label for="mensaje"></label>
+          <input type="text" name="Mensaje" placeholder="Mensaje" />
+        </li>
+      </ul>
+      <div class="boton">
+        <button type="submit" id="boton">Enviar</button>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <p>Facebook</p>
+        <p>Instagram</p>
+        <p>Whatsapp</p>
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <h4><a href="#">POLITICA</a></h4>
+            </li>
+            <li>
+              <h4><a href="#">DEFENSA AL CONSUMIDOR</a></h4>
+            </li>
+            <li>
+              <h4><a href="#">PROTECCION DE DATOS</a></h4>
+            </li>
+            <li>
+              <h4><a href="#">CONTACTANOS</a></h4>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div><p>Desarrolladores DH</p></div>
     </footer>
-    </BODY>
-    </HTML>
+  </body>
+</html>

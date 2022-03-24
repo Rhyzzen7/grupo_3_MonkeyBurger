@@ -1,104 +1,136 @@
 <!DOCTYPE html>
-<HTML lang="en">
-    <HEAD>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <script src="https://kit.fontawesome.com/841275cf5f.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css"/> 
-        <link rel=StyleSheet href="css/login.css"> 
-    </HEAD>
-    <BODY>
-        <header>
-            <div class="logo">
-                <img src="/public/img/logo/imagotipo-blanco-fondonegro.png" alt="logo"/> 
-            </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <h4><a href="#">NOSOTROS</a></h4>
-                        </li>
-                        <li>
-                            <h4><a href="#">MENÚ</a></h4>
-                        </li>
-                        <li>
-                            <h4><a href="#">HACE TU PEDIDO</a></h4>
-                        </li>
-                        <li>
-                            <h4><a href="#">CONTACTO</a></h4>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-                <div>
-                    <i class="fa-solid fa-cart-shopping"></i> 
-                    <h4>CARRITO</h4>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <h4><a href="#"> INICIAR SESIÓN</a></h4>
-                            </li>
-                            <li>
-                                <h4><a href="#">CREAR CUENTA</a></h4>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-        </header>
-        <main>
-            <h1 class="sesion">INICIAR SESIÓN</h1>
-            <div class="iniciar-sesion">
-                <ul>
-                <li class="input-user">
-                    <label for="usuario"></label>
-                    <input type="text" name="usuario" placeholder="Nombre de usuario/Correo electrónico" id="usuario">
-                </li>
-                </ul>
-                <ul>
-                    <li class="input-password">
-                    <label for="Contraseña"></label>
-                    <input type="password" name="password" placeholder="Contraseña" id="Contraseña">
-                </li>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style-login.css" />
+    <title>Bienvenidos a Monkey Burger</title>
+    <link rel="icon" href="/img/icono.png" />
+  </head>
+  <body>
+    <header>
+      <div class="cabecera-logo">
+        <img
+          src="/img/imagotipo-negro-fondo-transparente-inv3.png"
+          alt="Logo"
+          class="mobile"
+        />
+        <img
+          src="/img/Isotipo-amarillo-fondotransparente-inv3.png"
+          alt="Logo"
+          class="laptop"
+        />
+      </div>
+      <div class="cabecera-centro">
+        <div class="marca">
+          <h1>MONKEY BURGER</h1>
+          <h3>HAMBURGUESAS GOURMET</h3>
+        </div>
+        <div class="cabecera-barra">
+          <nav class="barra-navegacion">
+            <ul>
+              <li>
+                <h4><a href="nosotros">NOSOTROS</a></h4>
+              </li>
+              <li>
+                <h4><a href="menu">MENÚ</a></h4>
+              </li>
+              <li>
+                <h4><a href="haceTuPedido">HACE TU PEDIDO</a></h4>
+              </li>
+              <li>
+                <h4><a href="#">CONTACTO</a></h4>
+              </li>
             </ul>
+          </nav>
         </div>
-        <div class="boton">
-            <button type="submit" id="boton">Ingresar</button>
+        <div class="cabecera-mobile">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
         </div>
-        <div class="opciones">
-                <span class="restablecer-contra"><a href="#"> Restablecer Contraseña</a></span>
-                <span class="crear-usuario"><a href="#">Crear Nuevo Usuario</a></span>
+      </div>
+      <div class="cabecera-derecha">
+        <div class="usuario">
+          <button>
+            <h4><a href="login">INICIAR SESIÓN</a></h4>
+          </button>
+          <button>
+            <h4><a href="register">CREAR CUENTA</a></h4>
+          </button>
         </div>
-                
-                
-        </main>
-        <footer>
-            <div>
-              <p>Facebook</p>
-              <p>Instagram</p>
-              <p>Whatsapp</p>
-            </div>
-            <div>
-              <nav>
-                <ul>
-                  <li>
-                    <h4><a href="#">POLITICA</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">DEFENSA AL CONSUMIDOR</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">PROTECCION DE DATOS</a></h4>
-                  </li>
-                  <li>
-                    <h4><a href="#">CONTACTANOS</a></h4>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div><p>Desarrolladores DH</p></div>
+        <div class="compra">
+          <div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div>
+          <button>
+            <h4><a href="productCar">CARRITO</a></h4>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h2 class="novedades">INICIAR SESIÓN</h2>
+      <!--acá es necesario generar un formulario-->
+      <div class="mosaico-login">
+        <form class="formulario" action="/LOGIN.HTML" method="POST">
+          <label for="usuario"
+            ><h5>
+              Nombre de usuario/Correo electrónico
+              <i class="fa-solid fa-user"></i></h5
+          ></label>
+          <input type="text" id="usuario" />
+          <label for="contrasena"
+            ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
+          ></label>
+          <input type="password" id="contrasena" />
+        </form>
+        <div class="ingresar">
+          <button name="ingresar" type="submit">
+            <h4><a>INGRESAR</a></h4>
+          </button>
+        </div>
+        <nav class="acciones">
+          <ul>
+            <li>
+              <h6>Restablecer Contraseña</h6>
+            </li>
+            <li>
+              <h6>Crear Nuevo Usuario</h6>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+    <footer>
+      <!--Redes sociales-->
+      <div class="pie-pagina">
+        <p><i class="fa-brands fa-facebook"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-brands fa-whatsapp"></i></p>
+      </div>
+      <!--Enlaces-->
+      <div class="pie-pagina">
+        <nav class="pie-navegacion">
+          <ul>
+            <li>
+              <h5><a href="#">POLITICA</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">DEFENSA AL CONSUMIDOR</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">PROTECCION DE DATOS</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">CONTACTANOS</a></h5>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="desarrolladores"><p>Desarrolladores DH</p></div>
     </footer>
-    </BODY>
-    </HTML>
+  </body>
+</html>
