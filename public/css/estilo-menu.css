@@ -15,6 +15,7 @@ main {
   background-color: #242423;
 }
 
+
 h1,
 h2 {
   font-family: "marvel";
@@ -60,11 +61,12 @@ h1 {
   text-align: center;
 }
 
-h3,
-h4 {
+main h3,
+main h4 {
   font-family: "marvel";
   font-weight: bold;
   color: #ffc000;
+  margin: 15px
 }
 
 .subcontenedor-infoproducto {
