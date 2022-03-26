@@ -25,6 +25,19 @@ app.get("/nosotros", (req, res) => {
 app.get("/haceTuPedido", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/haceTuPedido.html"));
 });
-app.get("/productCar", (req, res) => {
-  res.sendFile(path.join(path.resolve(__dirname), "./views/productCar.html"));
+app.get("/productCart", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/productCart.html"));
+});
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/register.html"));
+});
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/login.html"));
+});
+app.get("/contacto", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/contacto.html"));
+});
+
+app.get("/usuario", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/perfil-usuario.html"));
 });

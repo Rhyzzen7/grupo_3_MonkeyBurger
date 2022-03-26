@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Cabecera de la página principal e inicio-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/img/icono.png" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="\css\estiloproductCart.css" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Marvel:wght@700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Bienvenidos a Monkey Burger</title>
+    <link rel="icon" href="/img/icono.png" />
+  </head>
+  <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
+  <body>
+    <!--Encabezado de la página web.
+    En este espacio deberá colocarse: 
+    - El logo de la empresa.
+    - Nombre de la empresa.
+    - Menú de navegación.
+    - Sección para el carrito y Login.-->
+    <header>
+      <div class="cabecera-logo">
+        <a href="/">
+          <img
+            src="/img/imagotipo-negro-fondo-transparente-inv3.png"
+            alt="Logo"
+            class="mobile"
+          />
+        </a>
+        <a href="/">
+          <img
+            src="/img/Isotipo-amarillo-fondotransparente-inv3.png"
+            alt="Logo"
+            class="laptop"
+          />
+        </a>
+      </div>
+      <div class="cabecera-centro">
+        <div class="marca">
+          <h1 class="monkey">MONKEY BURGER</h1>
+          <h3 class="gourmet">HAMBURGUESAS GOURMET</h3>
+        </div>
+        <div class="cabecera-barra">
+          <nav class="barra-navegacion">
+            <ul>
+              <li>
+                <h4><a href="nosotros">NOSOTROS</a></h4>
+              </li>
+              <li>
+                <h4><a href="menu">MENÚ</a></h4>
+              </li>
+              <li>
+                <h4><a href="haceTuPedido">HACE TU PEDIDO</a></h4>
+              </li>
+              <li>
+                <h4><a href="contacto">CONTACTO</a></h4>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="cabecera-mobile">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </div>
+      <div class="cabecera-derecha">
+        <div class="usuario">
+          <button class="boton">
+            <h4><a href="login">INICIAR SESIÓN</a></h4>
+          </button>
+          <button class="boton">
+            <h4><a href="register">CREAR CUENTA</a></h4>
+          </button>
+        </div>
+        <div class="compra">
+          <div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div>
+          <button class="boton">
+            <h4><a href="productCart">CARRITO</a></h4>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!--Principal de cuerpo de la página web.
+    En este espacio deberá colocarse:
+    - Carrete de promociones.
+    - Mosaicos con productos destacados.
+    - Mosaicos con actividades varias de la empresa.
+    - Novedades.-->
+    <main>
+      <h1 class="titulo-carrito">MI CARRITO</h1>
+      <!--Productos seleccionados-->
+      <section class="contenedor-carrito">
+        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
+        <div class="foto-producto-carrito">
+          <img
+            src="/img/menu/aros1.jpg"
+            alt="foto de Aros de Cebolla"
+            width="150px"
+          />
+          <h4 class="nombre-producto-carrito">Aros de Cebolla</h4>
+        </div>
+        <article class="info-compra-carrito">
+          <div class="unidades-carrito">Unidades: 1</div>
+          <div class="precio-producto-carrito">Precio unitario: $ 1.000</div>
+          <div class="total-compra-carrito">Precio total: $ 1.000</div>
+          <i class="fa-solid fa-trash"></i>
+        </article>
+      </section>
+      <section class="contenedor-carrito">
+        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
+        <div class="foto-producto-carrito">
+          <img src="\img\menu\mono1.jpg" alt="Hamburguesa Mono" width="150px" />
+          <h4 class="nombre-producto-carrito">Hamburguesa Mono</h4>
+        </div>
+        <article class="info-compra-carrito">
+          <div class="unidades-carrito">Unidades: 2</div>
+          <div class="precio-producto-carrito">Precio unitario: $ 900</div>
+          <div class="total-compra-carrito">Precio total: $ 1.800</div>
+          <i class="fa-solid fa-trash"></i>
+        </article>
+      </section>
+      <section class="contenedor-carrito">
+        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
+        <div class="foto-producto-carrito">
+          <img
+            src="/img/menu/combomonita1.jpg"
+            alt="Combo Monita"
+            width="150px"
+          />
+          <h4 class="nombre-producto-carrito">Combo Monita</h4>
+        </div>
+        <article class="info-compra-carrito">
+          <div class="unidades-carrito">Unidades: 1</div>
+          <div class="precio-producto-carrito">Precio unitario: $ 7.500</div>
+          <div class="total-compra-carrito">Precio total: $ 7.500</div>
+          <i class="fa-solid fa-trash"></i>
+        </article>
+      </section>
+      <section class="totalproducto-carrito">
+        <div class="totales-carrito">TOTAL COMPRA: $ 10.300</div>
+      </section>
+      <section class="contenedor-botones-carrito">
+        <h4 class="boton-agregarmas-carrito">AGREGAR MAS PRODUCTOS</h4>
+        <h4 class="boton-continuar-carrito">CONTINUAR</h4>
+      </section>
+    </main>
+    <!--Pie de página de la web.
+    En este espacio deberá colocarse:
+    - Enlace a redes sociales.
+    - Enlaces de interés.
+    - Contacto.
+    - Referencia a desarrolladores.-->
+    <footer>
+      <!--Redes sociales-->
+      <div class="pie-pagina">
+        <p><i class="fa-brands fa-facebook"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-brands fa-whatsapp"></i></p>
+      </div>
+      <!--Enlaces-->
+      <div class="pie-pagina">
+        <nav class="pie-navegacion">
+          <ul>
+            <li>
+              <h5><a href="#">POLITICA</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">DEFENSA AL CONSUMIDOR</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">PROTECCION DE DATOS</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">CONTACTANOS</a></h5>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="desarrolladores"><p>Desarrolladores DH</p></div>
+    </footer>
+  </body>
+</html>

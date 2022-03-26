@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style-login.css" />
+    <title>Bienvenidos a Monkey Burger</title>
+    <link rel="icon" href="/img/icono.png" />
+  </head>
+  <body>
+    <header>
+      <!--Contenedor para el logo-->
+      <div class="cabecera-logo">
+        <img
+          src="/img/imagotipo-negro-fondo-transparente-inv3.png"
+          alt="Logo"
+          class="mobile"
+        />
+        <img
+          src="/img/Isotipo-amarillo-fondotransparente-inv3.png"
+          alt="Logo"
+          class="laptop"
+        />
+      </div>
+      <!--Cabecera central-->
+      <div class="cabecera-centro">
+        <!-- Contenedor para el nombre de la empresa-->
+        <div class="marca">
+          <h1>MONKEY BURGER</h1>
+          <h3>HAMBURGUESAS GOURMET</h3>
+        </div>
+        <!--Contenedor para la barra de navegación-->
+        <div class="cabecera-barra">
+          <nav class="barra-navegacion">
+            <ul>
+              <li>
+                <h4><a href="nosotros">NOSOTROS</a></h4>
+              </li>
+              <li>
+                <h4><a href="menu">MENÚ</a></h4>
+              </li>
+              <li>
+                <h4><a href="haceTuPedido">HACE TU PEDIDO</a></h4>
+              </li>
+              <li>
+                <h4><a href="#">CONTACTO</a></h4>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--Barra de navegación mobile-->
+        <div class="cabecera-mobile">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </div>
+      <!--Cabecera derecha-->
+      <div class="cabecera-derecha">
+        <!--Contenedor para el usuario-->
+        <div class="usuario">
+          <!--<nav>
+            <ul>
+              <li>
+                <h4><a href="#">INICIAR SESIÓN</a></h4>
+              </li>
+              <li>
+                <h4><a href="register.html">CREAR CUENTA</a></h4>
+              </li>
+            </ul>
+          </nav>-->
+          <button>
+            <h4><a href="login">INICIAR SESIÓN</a></h4>
+          </button>
+          <button>
+            <h4><a href="register">CREAR CUENTA</a></h4>
+          </button>
+        </div>
+        <!--Contenedor para el carrito de compras-->
+        <div class="compra">
+          <!--<img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />-->
+          <div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div>
+          <button>
+            <h4><a href="productCar">CARRITO</a></h4>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h2 class="novedades">CREAR CUENTA</h2>
+      <!--Crear un formulario a partir de esta instancia-->
+      <div class="mosaico-login">
+        <form class="formulario" action="" method="POST">
+          <label for="nombre"
+            ><h5>Nombre <i class="fa-solid fa-id-card"></i></h5
+          ></label>
+          <input type="text" id="nombre" />
+          <label for="apellido"
+            ><h5>Apellido <i class="fa-solid fa-id-card"></i></h5
+          ></label>
+          <input type="text" id="apellido" />
+          <label for="correo"
+            ><h5>Correo electrónico <i class="fa-solid fa-at"></i></h5
+          ></label>
+          <input type="email" id="correo" />
+          <label for="usuario"
+            ><h5>Nombre de usuario <i class="fa-solid fa-user"></i></h5
+          ></label>
+          <input type="text" id="usuario" />
+          <label for="telefono"
+            ><h5>Número de teléfono <i class="fa-solid fa-phone"></i></h5
+          ></label>
+          <input type="number" id="telefono" />
+          <label for="domicilio"
+            ><h5>Domicilio <i class="fa-solid fa-earth-americas"></i></h5
+          ></label>
+          <input type="text" id="domicilio" />
+          <label for="provincia"
+            ><h5>
+              Localidad / Provincia
+              <i class="fa-solid fa-earth-americas"></i></h5
+          ></label>
+          <input type="text" id="provincia" />
+          <label for="postal"
+            ><h5>Código Postal <i class="fa-solid fa-envelope"></i></h5
+          ></label>
+          <input type="number" id="postal" />
+          <label for="contrasena"
+            ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
+          ></label>
+          <input type="password" id="contrasena" />
+          <label for="confirmar"
+            ><h5>Confirmar contraseña <i class="fa-solid fa-key"></i></h5
+          ></label>
+          <input type="password" id="confirmar" />
+        </form>
+      </div>
+      <div class="ingresar">
+        <button name="enviar" type="submit">
+          <h4><a href="usuario">ENVIAR</a></h4>
+        </button>
+      </div>
+    </main>
+    <footer>
+      <!--Redes sociales-->
+      <div class="pie-pagina">
+        <p><i class="fa-brands fa-facebook"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-brands fa-whatsapp"></i></p>
+      </div>
+      <!--Enlaces-->
+      <div class="pie-pagina">
+        <nav class="pie-navegacion">
+          <ul>
+            <li>
+              <h5><a href="#">POLITICA</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">DEFENSA AL CONSUMIDOR</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">PROTECCION DE DATOS</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">CONTACTANOS</a></h5>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="desarrolladores"><p>Desarrolladores DH</p></div>
+    </footer>
+  </body>
+</html>
