@@ -1,10 +1,12 @@
-let express = require("express");
-let app = express();
-let path = require("path");
+const express = require("express");
+const app = express();
+const path = require("path");
+
+const PORT = process.env.PORT || 4000;
 
 app.use(express.static(path.join(path.resolve(__dirname), "./public")));
 
-app.listen(4000, () => console.log("Servidor corriendo en puerto 4000"));
+app.listen(PORT, () => console.log("Servidor corriendo en puerto " + PORT));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/index.html"));
@@ -39,5 +41,7 @@ app.get("/contacto", (req, res) => {
 });
 
 app.get("/usuario", (req, res) => {
-  res.sendFile(path.join(path.resolve(__dirname), "./views/perfil-usuario.html"));
+  res.sendFile(
+    path.join(path.resolve(__dirname), "./views/perfil-usuario.html")
+  );
 });
