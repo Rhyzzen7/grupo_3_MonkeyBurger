@@ -10,7 +10,6 @@ Negro Claro: #333533
   background-color: #242423;
   color: #e8eddf;
   font-family: "Antonio";
- 
 }
 
 h1,
@@ -18,6 +17,11 @@ h2,
 h3,
 h4 {
   font-family: "marvel";
+}
+
+h2 {
+  padding: 30px;
+  margin:30px;
 }
 
 h3 {
@@ -43,6 +47,7 @@ h4 {
 }
 .titulo-pedido {
   background-color: #242423;
+  margin:30px;
 }
 
 .item-pedido {
@@ -110,18 +115,17 @@ h4 {
   .contenedor-botones-modificar-cancelar {
     text-align-last: center;
   }
-  .botones-direcciones {
-    justify-content: center;
-  }
 }
 
 .fa-map-location-dot,
 .fa-cc-visa {
   color: #ffc000;
+  padding: 20px;
   font-size: 50px;
   flex-grow: 0;
   background-color: #333533;
 }
+
 .detalle-direccion {
   display: flex;
   flex-direction: column;
@@ -146,7 +150,7 @@ h4 {
 }
 
 .botones-direcciones {
-  text-align-last: justify;
+  text-align: center;
 }
 
 .info-tarjeta {
@@ -155,6 +159,7 @@ h4 {
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: #333533;
+  width: 200px;
 }
 
 .tarjeta {
@@ -162,12 +167,14 @@ h4 {
   flex-direction: column;
   margin: 15px;
   background-color: #333533;
+  padding: 10px;
 }
 
 .contenedor-tarjetas {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .fondo-negroclaro {
@@ -213,6 +220,7 @@ h4 {
   margin: auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .titulo-datospersonales {
@@ -220,10 +228,21 @@ h4 {
   margin: 15px;
 }
 
+.contenedor-cargar-foto{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.texto-cargar-foto{
+  margin: 15px;
+}
+
 .contrasena {
   background-color: #333533;
   max-width: 700px;
   margin: auto;
+  padding: 30px;
+  margin-bottom: 30px;
 }
 
 p {
@@ -298,6 +317,7 @@ p {
 
 .custom-file-input {
   color: transparent;
+  margin:15px;
 }
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
@@ -336,22 +356,24 @@ header h4,
   color: #e8eddf;
 }
 
-main h2, main h3{
-  padding: 20px;
+main h2,
+main h3 {
+  padding: 5px;
 }
 
-main h1{
+main h1 {
   text-align: center;
-  padding-top: 50px;;
+  padding-top: 50px;
 }
 
-header h4, header .boton h4 a{
+header h4,
+header .boton h4 a {
   background-color: #ffc000;
 }
 
-li h4{
+li h4 {
   background-color: #242423;
-  padding:0px;
+  padding: 0px;
 }
 
 header h4 {
