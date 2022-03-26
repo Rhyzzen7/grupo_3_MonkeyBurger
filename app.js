@@ -10,23 +10,23 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/index.html"));
 });
 
-app.get("/productDetail.html", (req, res) => {
+app.get("/productDetail", (req, res) => {
   res.sendFile(
     path.join(path.resolve(__dirname), "./views/productDetail.html")
   );
 });
 
-app.get("/menu.html", (req, res) => {
+app.get("/menu", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/menu.html"));
 });
-app.get("/nosotros.html", (req, res) => {
+app.get("/nosotros", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/nosotros.html"));
 });
-app.get("/haceTuPedido.html", (req, res) => {
+app.get("/haceTuPedido", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/haceTuPedido.html"));
 });
-app.get("/productCar.html", (req, res) => {
-  res.sendFile(path.join(path.resolve(__dirname), "./views/productCar.html"));
+app.get("/productCart", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/productCart.html"));
 });
 app.get("/register", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/register.html"));
@@ -38,3 +38,6 @@ app.get("/contacto", (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), "./views/contacto.html"));
 });
 
+app.get("/usuario", (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), "./views/perfil-usuario.html"));
+});

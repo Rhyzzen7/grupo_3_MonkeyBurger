@@ -9,7 +9,7 @@
 :root {
   --gris-oscuro: #cfdbd5;
   --gris-claro: #e8eddf;
-  --amarillo: #f5cb5c;
+  --amarillo: #ffc000;
   --negro-humo: #333533;
   --negro-carbon: #242423;
 }
@@ -18,14 +18,16 @@
 
 header,
 body,
+main,
 footer {
   margin: auto;
+  color: var(--negro-carbon);
+  background-color: var(--negro-carbon);
 }
-
 /*Marvel Bold - Esta fuente se utilizará para el logo.*/
-
 h1 {
   font-family: "Marvel", sans-serif;
+  color: var(--gris-claro);
 }
 
 /*Antonio Bold – Esta fuente se utilizará para los títulos.*/
@@ -36,12 +38,14 @@ h4,
 h5,
 h6 {
   font-family: "Antonio", sans-serif;
+  color: var(--gris-claro);
 }
 
 /*Antonio Thin – Eta fuente se utilizará para los textos.*/
 
 p {
   font-family: "Antonio", sans-serif;
+  color: var(--gris-claro);
 }
 
 /*Quitar estilos de listas a los menúes.*/
@@ -54,7 +58,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: black;
+  color: unset;
 }
 
 /*Manejar bloques en líneas todas las cajas de la cabecera.*/
@@ -67,40 +71,352 @@ nav ul li a {
 /*Manejar la barra con display flex queda mejor.*/
 header {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
+  border-bottom: 2px var(--negro-humo) solid;
+  padding: 5px;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+}
+.cabecera-centro,
+.cabecera-derecha {
+  display: flex;
+  margin: auto;
+  width: 100%;
 }
 /*Dimensionar el logo al 20% de la pantalla*/
 .cabecera-logo {
-  width: 20%;
+  width: 100%;
+  margin: auto;
+}
+.cabecera-logo .mobile {
+  display: flex;
+}
+.cabecera-logo .laptop {
+  display: none;
 }
 /*Logo ocupar el contenedor*/
 .cabecera-logo img {
-  height: 100%;
   width: 100%;
   object-fit: contain;
 }
-/*Tamaño de barra 30%*/
+/*Deshabilitar cabecera*/
+.marca,
+.compra,
+.usuario,
 .cabecera-barra {
-  width: 30%;
+  display: none;
 }
 
-/*Manejar como bloques en líneas la barra de navegación.*/
+/*Menú para dispositivos móviles*/
+.cabecera-mobile {
+  display: flex;
+  font-size: 10vw;
+  margin: auto;
+}
+.cabecera-mobile a {
+  text-decoration: none;
+  color: var(--gris-claro);
+}
+/*Manejar la barra con display flex queda mejor.*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  margin-top: 130px;
+}
+/*Main*/
+/*Carrete*/
+.carrete {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  margin: 10px auto;
+  position: relative;
+}
+.imagenes-carrete {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  object-fit: cover;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+.imagenes-carrete img {
+  width: 100%;
+  height: auto;
+}
+.botones-carrete {
+  display: none;
+}
+.posicion {
+  display: none;
+}
+/*Novedades*/
+.novedades {
+  width: 90vw;
+  /*border: 1px solid var(--gris-oscuro);*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 10px auto;
+}
+.noticias,
+.destacados {
+  display: flex;
+  /*width: inherit;*/
+  justify-content: space-around;
+  flex-direction: column;
+  border-top: 1px var(--gris-oscuro) solid;
+  background-color: var(--negro-humo);
+  margin: 10px auto;
+}
+.foto {
+  /*width: inherit;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.foto img {
+  width: 100%;
+}
+.foto,
+.texto {
+  padding: 10px;
+}
+/*Manejar la barra con display flex queda mejor.*/
+footer {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+  border-top: 2px var(--negro-humo) solid;
+}
+/*iconos a las redes.*/
 
-.barra-navegacion ul {
+.pie-pagina {
   display: flex;
   justify-content: space-around;
 }
-
-/*Manejar bloques en líneas todas las cajas de la cabecera.*/
-
-.pie-pagina {
-  display: inline-block;
+.pie-pagina p {
+  padding: 2px;
 }
 
-/*Manejar como bloques en líneas la barra de navegación.*/
+/*links de contactos.*/
 
-.pie-navegacion ul li {
-  display: inline-block;
+.pie-navegacion ul {
+  display: none;
+}
+/*desarrolladores*/
+.desarrolladores {
+  display: none;
+}
+
+/*Dispositivos tabletas*/
+@media (min-width: 480px) {
+  .cabecera-logo {
+    width: 20%;
+  }
+  .cabecera-centro {
+    width: 60%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cabecera-derecha {
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cabecera-logo .mobile {
+    display: none;
+  }
+  .cabecera-logo .laptop {
+    display: flex;
+    max-width: 70px;
+    margin: auto;
+  }
+  .marca {
+    display: flex;
+    flex-direction: column;
+  }
+  .marca h1,
+  .marca h3 {
+    width: 200px;
+    text-align: center;
+  }
+  .cabecera-barra {
+    display: flex;
+    padding-top: 10px;
+    justify-content: flex-end;
+  }
+  /*Manejar como bloques en líneas la barra de navegación.*/
+  .barra-navegacion {
+    max-width: 360px;
+  }
+  .barra-navegacion ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .barra-navegacion ul li {
+    padding: 2px;
+  }
+  /*botones de la derecha*/
+  .compra,
+  .usuario {
+    display: flex;
+    flex-direction: column;
+    /*padding: 5px;*/
+    width: 100px;
+  }
+  button {
+    background-color: var(--amarillo);
+    border: 2px var(--negro-carbon) solid;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+  }
+
+  button a {
+    text-decoration: none;
+    color: var(--negro-carbon);
+  }
+
+  .boton:hover, .pedi:hover,  .carrito:hover{
+    box-shadow: 0 0 11px #e8eddf;
+    font-weight: 600;
+  }
+
+  .cabecera-mobile {
+    display: none;
+  }
+  .carrito {
+    font-size: 20px;
+    margin: auto;
+    color: var(--gris-claro);
+  }
+
+  .imagenes-carrete {
+    max-height: 400px;
+  }
+  .botones-carrete {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+  }
+  .izquierda {
+    position: absolute;
+    left: 5vw;
+    top: 50%;
+    font-size: 30px;
+    color: var(--gris-claro);
+  }
+  .derecha {
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    font-size: 30px;
+    color: var(--gris-claro);
+  }
+  .pedi {
+    position: absolute;
+    right: 1vw;
+    top: 30%;
+    border: 2px var(--negro-carbon) solid;
+    border-radius: 15px;
+    background-color: var(--amarillo);
+    padding: 10px;
+  }
+  .pedi a {
+    text-decoration: none;
+    color: var(--negro-carbon);
+  }
+  .posicion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    padding: 2px;
+  }
+  .bolas {
+    margin: 0px 2px;
+    font-size: 10px;
+  }
+  /*novedades*/
+  .noticias {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .destacados {
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+  .foto {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  /*footer mejorado*/
+  footer {
+    justify-content: space-around;
+  }
+
+  /*links de contactos.*/
+
+  .pie-navegacion ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pie-navegacion ul li {
+    margin: 0px 5px;
+  }
+  /*desarrolladores*/
+  .desarrolladores {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .desarrolladores p {
+    font-size: 0.5em;
+  }
+}
+
+/*Dispositivos laptop*/
+/*Dispositivos tabletas*/
+@media (min-width: 840px) {
+  header,
+  body,
+  footer,
+  .carrete,
+  .novedades,
+  .noticias,
+  .destacados {
+    max-width: 1200px;
+  }
+  .imagenes-carrete {
+    max-height: 600px;
+  }
+  .barra-navegacion ul li {
+    padding: 2px 10px;
+  }
+  .izquierda,
+  .derecha {
+    font-size: 50px;
+  }
+  .pedi {
+    padding: 10px;
+  }
 }
