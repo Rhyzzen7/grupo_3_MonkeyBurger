@@ -92,6 +92,10 @@ header {
   width: 100%;
   margin: auto;
 }
+.cabecera-logo a {
+  text-decoration: none;
+  color: unset;
+}
 .cabecera-logo .mobile {
   display: flex;
 }
@@ -296,7 +300,9 @@ footer {
     color: var(--negro-carbon);
   }
 
-  .boton:hover, .pedi:hover,  .carrito:hover{
+  .boton:hover,
+  .pedi:hover,
+  .carrito:hover {
     box-shadow: 0 0 11px #e8eddf;
     font-weight: 600;
   }
