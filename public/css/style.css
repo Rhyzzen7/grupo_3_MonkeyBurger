@@ -80,12 +80,14 @@ header {
   top: 0px;
   z-index: 100;
   width: 100%;
+  height: 50px;
 }
 .cabecera-izquierda,
 .cabecera-centro,
 .cabecera-derecha {
   display: flex;
   margin: auto;
+  height: 100%;
 }
 .cabecera-izquierda {
   width: 10%;
@@ -101,11 +103,11 @@ header {
 
 /*Dimensionar el logo al 20% de la pantalla*/
 .cabecera-logo-mobile {
-  width: 100%;
+  height: 100%;
   margin: auto;
 }
 .cabecera-logo-laptop {
-  width: 100%;
+  height: 100%;
   margin: auto;
 }
 .cabecera-logo-mobile a,
@@ -121,7 +123,7 @@ header {
 }
 /*Logo ocupar el contenedor*/
 .cabecera-logo-mobile img {
-  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 /*Deshabilitar cabecera*/
@@ -136,7 +138,7 @@ header {
 .cerrar-navegacion,
 .carrito {
   display: flex;
-  font-size: 8vw;
+  font-size: 16px;
   margin: auto;
 }
 .cabecera-mobile a,
