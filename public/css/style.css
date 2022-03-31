@@ -81,50 +81,99 @@ header {
   z-index: 100;
   width: 100%;
 }
+.cabecera-izquierda,
 .cabecera-centro,
 .cabecera-derecha {
   display: flex;
   margin: auto;
-  width: 100%;
 }
+.cabecera-izquierda {
+  width: 10%;
+}
+.cabecera-centro {
+  width: 70%;
+  flex-direction: column;
+}
+
+.cabecera-derecha {
+  width: 10%;
+}
+
 /*Dimensionar el logo al 20% de la pantalla*/
-.cabecera-logo {
+.cabecera-logo-mobile {
   width: 100%;
   margin: auto;
 }
-.cabecera-logo a {
+.cabecera-logo-laptop {
+  width: 100%;
+  margin: auto;
+}
+.cabecera-logo-mobile a,
+.cabecera-logo-laptop a {
   text-decoration: none;
   color: unset;
 }
-.cabecera-logo .mobile {
+.mobile {
   display: flex;
 }
-.cabecera-logo .laptop {
+.laptop {
   display: none;
 }
 /*Logo ocupar el contenedor*/
-.cabecera-logo img {
+.cabecera-logo-mobile img {
   width: 100%;
   object-fit: contain;
 }
 /*Deshabilitar cabecera*/
 .marca,
 .compra,
-.usuario,
-.cabecera-barra {
+.usuario {
   display: none;
 }
 
 /*Menú para dispositivos móviles*/
-.cabecera-mobile {
+.cabecera-mobile,
+.cerrar-navegacion,
+.carrito {
   display: flex;
-  font-size: 10vw;
+  font-size: 8vw;
   margin: auto;
 }
-.cabecera-mobile a {
+.cabecera-mobile a,
+.cerrar-navegacion a,
+.carrito a {
   text-decoration: none;
   color: var(--gris-claro);
 }
+.barra-navegacion {
+  position: relative;
+  padding: 5%;
+  width: 60vw;
+  background-color: var(--negro-humo);
+  border-radius: 5%;
+}
+.barra-navegacion li {
+  padding: 5%;
+  margin: 10% 0%;
+}
+.cabecera-barra {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 2%;
+  pointer-events: none;
+  transition: all 1s;
+}
+.cerrar-navegacion {
+}
+#modal-navegacion:target {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
 /*Manejar la barra con display flex queda mejor.*/
 main {
   display: flex;
@@ -232,8 +281,10 @@ footer {
 
 /*Dispositivos tabletas*/
 @media (min-width: 480px) {
-  .cabecera-logo {
+  .cabecera-izquierda {
     width: 20%;
+    flex-direction: column;
+    align-items: stretch;
   }
   .cabecera-centro {
     width: 60%;
@@ -245,11 +296,17 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
-  .cabecera-logo .mobile {
+  .laptop {
+    display: flex;
+    width: 100%;
+  }
+  .mobile,
+  .carrito,
+  .cabecera-logo-mobile,
+  .cerrar-navegacion {
     display: none;
   }
-  .cabecera-logo .laptop {
+  .cabecera-logo-laptop {
     display: flex;
     max-width: 70px;
     margin: auto;
@@ -267,10 +324,19 @@ footer {
     display: flex;
     padding-top: 10px;
     justify-content: flex-end;
+    position: relative;
+    top: unset;
+    left: unset;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
   }
+
   /*Manejar como bloques en líneas la barra de navegación.*/
   .barra-navegacion {
     max-width: 360px;
+    background-color: unset;
+    padding: 0;
   }
   .barra-navegacion ul {
     display: flex;
@@ -412,11 +478,23 @@ footer {
   .destacados {
     max-width: 1200px;
   }
+  .cabecera-izquierda {
+    width: 20%;
+  }
+  .cabecera-centro {
+    width: 65%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .cabecera-derecha {
+    width: 15%;
+  }
   .imagenes-carrete {
     max-height: 600px;
   }
   .barra-navegacion ul li {
-    padding: 2px 10px;
+    padding: 2px 7px;
   }
   .izquierda,
   .derecha {

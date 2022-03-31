@@ -23,17 +23,20 @@
     - Sección para el carrito y Login.-->
     <header>
       <!--Contenedor para el logo-->
-      <div class="cabecera-logo">
-        <a href="/">
-          <img
-            src="/img/imagotipo-negro-fondo-transparente-inv3.png"
-            alt="Logo"
-            class="mobile" />
-          <img
-            src="/img/Isotipo-amarillo-fondotransparente-inv3.png"
-            alt="Logo"
-            class="laptop"
-        /></a>
+      <div class="cabecera-izquierda">
+        <!--Barra de navegación mobile-->
+        <div class="cabecera-mobile">
+          <a href="#modal-navegacion"><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <!--Logo laptop-->
+        <div class="cabecera-logo-laptop">
+          <a href="/">
+            <img
+              src="/img/Isotipo-amarillo-fondotransparente-inv3.png"
+              alt="Logo"
+              class="laptop"
+          /></a>
+        </div>
       </div>
       <!--Cabecera central-->
       <div class="cabecera-centro">
@@ -42,8 +45,20 @@
           <h1>MONKEY BURGER</h1>
           <h3>HAMBURGUESAS GOURMET</h3>
         </div>
+        <div class="cabecera-logo-mobile">
+          <a href="/">
+            <img
+              src="/img/imagotipo-negro-fondo-transparente-inv3.png"
+              alt="Logo"
+              class="mobile"
+            />
+          </a>
+        </div>
         <!--Contenedor para la barra de navegación-->
-        <div class="cabecera-barra">
+        <div id="modal-navegacion" class="cabecera-barra">
+          <div class="cerrar-navegacion">
+            <a href="/"><i class="fa-solid fa-xmark"></i></a>
+          </div>
           <nav class="barra-navegacion">
             <ul>
               <li>
@@ -60,10 +75,6 @@
               </li>
             </ul>
           </nav>
-        </div>
-        <!--Barra de navegación mobile-->
-        <div class="cabecera-mobile">
-          <a href="/"><i class="fa-solid fa-bars"></i></a>
         </div>
       </div>
       <!--Cabecera derecha-->
@@ -88,9 +99,11 @@
           </button>
         </div>
         <!--Contenedor para el carrito de compras-->
+        <div class="carrito">
+          <a href="productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
         <div class="compra">
           <!--<img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />-->
-          <div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div>
           <button class="boton">
             <h4><a href="productCart">CARRITO</a></h4>
           </button>
