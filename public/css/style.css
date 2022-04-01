@@ -90,24 +90,26 @@ header {
   height: 100%;
 }
 .cabecera-izquierda {
-  width: 10%;
+  width: 20%;
 }
 .cabecera-centro {
-  width: 70%;
+  width: 60%;
   flex-direction: column;
 }
 
 .cabecera-derecha {
-  width: 10%;
+  width: 20%;
 }
 
 /*Dimensionar el logo al 20% de la pantalla*/
 .cabecera-logo-mobile {
   height: 100%;
+  width: 100%;
   margin: auto;
 }
 .cabecera-logo-laptop {
   height: 100%;
+  width: 100%;
   margin: auto;
 }
 .cabecera-logo-mobile a,
@@ -123,8 +125,11 @@ header {
 }
 /*Logo ocupar el contenedor*/
 .cabecera-logo-mobile img {
-  height: 100%;
-  object-fit: contain;
+  height: 110%;
+  width: 67%;
+  object-fit: cover;
+  margin: auto;
+  overflow: hidden;
 }
 /*Deshabilitar cabecera*/
 .marca,
@@ -149,31 +154,36 @@ header {
 }
 .barra-navegacion {
   position: relative;
-  padding: 5%;
-  width: 60vw;
+  padding: 5px;
   background-color: var(--negro-humo);
-  border-radius: 5%;
+  border-radius: 2%;
 }
 .barra-navegacion li {
   padding: 5%;
-  margin: 10% 0%;
+  margin-left: 20px;
 }
 .cabecera-barra {
   position: fixed;
-  top: 20%;
-  left: 20%;
+  top: 0px;
+  left: 1%;
+  width: 98%;
   opacity: 0;
   visibility: hidden;
   padding: 2%;
   pointer-events: none;
-  transition: all 1s;
+  transition: all 2s;
 }
 .cerrar-navegacion {
+  position: fixed;
+  top: 70px;
+  left: 25px;
+  z-index: 99;
 }
 #modal-navegacion:target {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
+  top: 50px;
 }
 
 /*Manejar la barra con display flex queda mejor.*/
@@ -183,7 +193,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
-  margin-top: 130px;
+  margin-top: 50px;
 }
 /*Main*/
 /*Carrete*/
@@ -283,18 +293,21 @@ footer {
 
 /*Dispositivos tabletas*/
 @media (min-width: 480px) {
+  header {
+    height: 105px;
+  }
+  main {
+    margin-top: 105px;
+  }
   .cabecera-izquierda {
-    width: 20%;
     flex-direction: column;
     align-items: stretch;
   }
   .cabecera-centro {
-    width: 60%;
     flex-direction: column;
     align-items: stretch;
   }
   .cabecera-derecha {
-    width: 20%;
     flex-direction: column;
     align-items: center;
   }
@@ -346,6 +359,7 @@ footer {
   }
   .barra-navegacion ul li {
     padding: 2px;
+    margin: 0;
   }
   /*botones de la derecha*/
   .compra,
@@ -491,6 +505,10 @@ footer {
   }
   .cabecera-derecha {
     width: 15%;
+  }
+  .laptop {
+    height: 100%;
+    width: unset;
   }
   .imagenes-carrete {
     max-height: 600px;
