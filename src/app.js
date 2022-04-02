@@ -13,31 +13,31 @@ app.get("/", (req, res) => {
 });
 
 app.get("/productDetail", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/productDetail.html"));
+  res.sendFile(path.join(__dirname, "./views/products/productDetail.html"));
 });
 
 app.get("/menu", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/menu.html"));
+  res.sendFile(path.join(__dirname, "./views/products/menu.html"));
 });
 app.get("/nosotros", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/nosotros.html"));
+  res.sendFile(path.join(__dirname, "./views/users/nosotros.html"));
 });
 app.get("/haceTuPedido", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/haceTuPedido.html"));
+  res.sendFile(path.join(__dirname, "./views/products/haceTuPedido.html"));
 });
 app.get("/productCart", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/productCart.html"));
+  res.sendFile(path.join(__dirname, "./views/products/productCart.html"));
 });
 app.get("/register", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/register.html"));
+  res.sendFile(path.join(__dirname, "./views/users/register.html"));
 });
 app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/login.html"));
+  res.sendFile(path.join(__dirname, "./views/users/login.html"));
 });
 app.get("/contacto", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/contacto.html"));
+  res.sendFile(path.join(__dirname, "./views/users/contacto.html"));
 });
 
 app.get("/usuario", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/perfil-usuario.html"));
+  res.sendFile(path.join(__dirname, "./views/users/perfil-usuario.html"));
 });
