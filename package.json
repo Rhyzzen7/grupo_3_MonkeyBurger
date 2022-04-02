@@ -4,7 +4,8 @@
   "description": "![ImageText](https://github.com/Rhyzzen7/grupo_3_MonkeyBurger/blob/main/images/logoMokeyBurger.jpg)",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,11 @@
   },
   "homepage": "https://github.com/Rhyzzen7/grupo_3_MonkeyBurger#readme",
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "express": "^4.17.3",
+    "node": "^17.7.2"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }
