@@ -4,8 +4,8 @@
   "description": "![ImageText](https://github.com/Rhyzzen7/grupo_3_MonkeyBurger/blob/main/images/logoMokeyBurger.jpg)",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
