@@ -170,7 +170,7 @@ header {
   opacity: 0;
   visibility: hidden;
   padding: 2%;
-  pointer-events: none;
+  /*  pointer-events: none;*/
   transition: all 2s;
 }
 .cerrar-navegacion {
