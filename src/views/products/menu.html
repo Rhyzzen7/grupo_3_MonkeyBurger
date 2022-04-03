@@ -40,90 +40,73 @@
   <body>
     <header>
       <!--Contenedor para el logo-->
-      <div class="cabecera-izquierda">
-        <!--Barra de navegación mobile-->
-        <div class="cabecera-mobile">
-          <a href="#modal-navegacion"><i class="fa-solid fa-bars"></i></a>
+      <div class="top-header">
+        <!--mobile: hamburger menu, brand, buy cart-->
+        <div class="hamburger-menu">
+          <!--cabecera-mobile -->
+          <a href="#modal-nav"><i class="fa-solid fa-bars"></i></a>
+          <!--modal-navegacion -->
         </div>
-        <!--Logo laptop-->
-        <div class="cabecera-logo-laptop">
+        <div class="brand-max">
           <a href="/">
             <img
-              src="/img/Isotipo-amarillo-fondotransparente-inv3.png"
+              src="/img/Isotipo-fondotransparente.png"
               alt="Logo"
-              class="laptop"
+              class="brand-logo-max"
           /></a>
         </div>
-      </div>
-      <!--Cabecera central-->
-      <div class="cabecera-centro">
-        <!-- Contenedor para el nombre de la empresa-->
-        <div class="marca">
-          <h1>MONKEY BURGER</h1>
-          <h3>HAMBURGUESAS GOURMET</h3>
-        </div>
-        <div class="cabecera-logo-mobile">
+        <div class="brand">
+          <!--marca -->
+          <a href="/"><h1 class="brand-name">MONKEY BURGER</h1></a>
+          <a href="/"><h2 class="brand-type">HAMBURGUESAS GOURMET</h2></a>
           <a href="/">
             <img
               src="/img/imagotipo-negro-fondo-transparente-inv3.png"
               alt="Logo"
-              class="mobile"
-            />
-          </a>
+              class="brand-logo"
+          /></a>
         </div>
-        <!--Contenedor para la barra de navegación-->
-        <div id="modal-navegacion" class="cabecera-barra">
-          <div class="cerrar-navegacion">
-            <a href="/"><i class="fa-solid fa-xmark"></i></a>
-          </div>
-          <nav class="barra-navegacion">
-            <ul>
+        <div class="buy-cart">
+          <a href="productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+      <div class="bottom-header">
+        <div id="modal-nav" class="header-bar">
+          <!--modal-navegacion, cabecera-barra -->
+          <nav class="nav-bar">
+            <div class="close-nav">
+              <!--cerrar-navegacion -->
+              <a href="/"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <!--barra-navegacion -->
+            <ul class="menu-bar">
               <li>
-                <h4><a href="nosotros">NOSOTROS</a></h4>
+                <h3 class="menu-text"><a href="nosotros">NOSOTROS</a></h3>
               </li>
               <li>
-                <h4><a href="menu">MENÚ</a></h4>
+                <h3 class="menu-text"><a href="menu">MENÚ</a></h3>
               </li>
               <li>
-                <h4><a href="haceTuPedido">HACE TU PEDIDO</a></h4>
+                <h3 class="menu-text">
+                  <a href="haceTuPedido">HACE TU PEDIDO</a>
+                </h3>
               </li>
               <li>
-                <h4><a href="contacto">CONTACTO</a></h4>
+                <h3 class="menu-text"><a href="contacto">CONTACTO</a></h3>
+              </li>
+            </ul>
+            <ul class="users-bar">
+              <li class="users">
+                <h4 class="users-text"><a href="login">INICIAR SESIÓN</a></h4>
+              </li>
+              <li class="users">
+                <h4 class="users-text"><a href="register">CREAR CUENTA</a></h4>
+              </li>
+              <li class="buy">
+                <h4 class="buy-text"><a href="productCart">CARRITO</a></h4>
               </li>
             </ul>
           </nav>
-        </div>
-      </div>
-      <!--Cabecera derecha-->
-      <div class="cabecera-derecha">
-        <!--Contenedor para el usuario-->
-        <div class="usuario">
-          <!--<nav>
-            <ul>
-              <li>
-                <h4><a href="#">INICIAR SESIÓN</a></h4>
-              </li>
-              <li>
-                <h4><a href="register.html">CREAR CUENTA</a></h4>
-              </li>
-            </ul>
-          </nav>-->
-          <button class="boton">
-            <h4><a href="login">INICIAR SESIÓN</a></h4>
-          </button>
-          <button class="boton">
-            <h4><a href="register">CREAR CUENTA</a></h4>
-          </button>
-        </div>
-        <!--Contenedor para el carrito de compras-->
-        <div class="carrito">
-          <a href="productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="compra">
-          <!--<img src="/img/bolsa.png" alt="Bolsa de compras" width="40px" />-->
-          <button class="boton">
-            <h4><a href="productCart">CARRITO</a></h4>
-          </button>
         </div>
       </div>
     </header>
