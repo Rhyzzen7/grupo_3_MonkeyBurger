@@ -15,6 +15,7 @@ main {
   background-color: #242423;
 }
 
+
 h1,
 h2 {
   font-family: "marvel";
@@ -27,7 +28,7 @@ h1 {
   text-align: center;
 }
 
-.navbar{
+.navbar {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -37,15 +38,15 @@ h1 {
 
 .lista {
   list-style-type: none;
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
   background-color: #ffc000;
   color: #242423;
   text-decoration: none;
   border: solid 2px #242423;
   border-radius: 15px;
   padding: 10px;
-  width: 100px;
+  width: 130px;
   text-align: center;
 }
 
@@ -54,16 +55,18 @@ h1 {
   font-weight: 600;
 }
 
-.borrarlink{
+.borrarlink {
   text-decoration: none;
   color: #000000;
+  text-align: center;
 }
 
-h3,
-h4 {
+main h3,
+main h4 {
   font-family: "marvel";
   font-weight: bold;
   color: #ffc000;
+  margin: 15px
 }
 
 .subcontenedor-infoproducto {
@@ -110,12 +113,12 @@ h4 {
   max-width: 150px;
 }
 
-.boton-hace-tu-pedido:hover{
+.boton-hace-tu-pedido:hover {
   box-shadow: 0 0 11px #e8eddf;
   font-weight: 600;
 }
 
-.contenedor-boton-hace-tu-pedido{
+.contenedor-boton-hace-tu-pedido {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -156,4 +159,13 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+/* Para que funcionen el header y footer */
+h1.monkey {
+  padding: 0;
+}
+
+header h4, .gourmet{
+  color: #e8eddf;
 }

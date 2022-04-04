@@ -62,10 +62,10 @@ h3 {
 }
 
 .selector-extras:hover,
-.selector-notas:hover{
+.selector-notas:hover {
   background: #ffc000;
   box-shadow: 0 0 11px #333533;
-  border:  #ffc000 solid 4px;
+  border: #ffc000 solid 4px;
 }
 
 .boton-mas-menos {
@@ -75,10 +75,10 @@ h3 {
   width: 20px;
 }
 
-.boton-mas-menos:hover{
+.boton-mas-menos:hover {
   background: #ffc000;
   box-shadow: 0 0 11px #333533;
-  border:  #ffc000 solid 4px;
+  border: #ffc000 solid 4px;
   border-radius: 4px;
   font-weight: 600;
 }
@@ -112,7 +112,6 @@ h3 {
   text-align: center;
   align-self: center;
 }
-
 
 .descripcion-producto {
   align-self: center;
@@ -173,16 +172,42 @@ h3 {
   margin: 10px;
 }
 
-.boton-agregar-al-carrito:hover{
+.boton-agregar-al-carrito:hover {
   font-weight: 550;
-  box-shadow: 0 0 11px #cfdbd5; 
+  box-shadow: 0 0 11px #cfdbd5;
 }
-
-
 
 @media (min-width: 480px) {
   .producto {
     flex-direction: row;
     padding: 25px;
   }
+}
+
+/* Para que funcionen el header y footer */
+h1.monkey {
+  padding: 0;
+  margin: 0px;
+}
+
+header h4,
+.gourmet {
+  color: #e8eddf;
+  background-color: #333533;
+}
+header h4, header .boton h4 a{
+  background-color: #ffc000;
+}
+
+li h4{
+  background-color: #242423;
+  padding:0px;
+}
+
+header h4 {
+  padding: 0px;
+}
+
+main h1{
+  padding: 50px;
 }
