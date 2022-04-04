@@ -29,6 +29,17 @@ function carousel(contenedor) {
       }
     }
   });
+  let interval = setInterval(() => {
+    let img = contenedor.querySelector("img");
+    if (cont < images.length) {
+      img.src = images[cont];
+      cont++;
+    } else {
+      img.src = images[0];
+      cont = 0;
+    }
+  }, 2000);
+  console.log("Cambio de imágenes: " + interval);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

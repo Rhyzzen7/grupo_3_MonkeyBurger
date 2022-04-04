@@ -180,6 +180,7 @@ main {
 .imagenes-carrete {
   display: flex;
   justify-content: center;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   align-items: center;
@@ -391,7 +392,7 @@ footer {
   }
 
   .imagenes-carrete {
-    max-height: 400px;
+    height: 300px;
   }
   .botones-carrete {
     display: flex;
@@ -523,7 +524,7 @@ footer {
   }
   /*------------------------------------------*/
   .imagenes-carrete {
-    max-height: 600px;
+    height: 400px;
   }
   .barra-navegacion ul li {
     padding: 2px 7px;
