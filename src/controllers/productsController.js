@@ -2,13 +2,13 @@ const path = require("path");
 
 const productsController = {
   productDetail: function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/products/productDetail.html"));
+    res.render("./products/productDetail");
   },
   menu: function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/products/menu.html"));
+    res.render("./products/menu");
   },
   order: function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/products/order.html"));
+    res.render("./products/order");
   },
 };
 
