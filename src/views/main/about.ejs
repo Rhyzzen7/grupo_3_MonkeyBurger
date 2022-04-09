@@ -170,30 +170,14 @@
           nuestros locales para que enloquezcas con nuestras hamburguesas:
         </div>
         <div class="lista-sucursales">
-          <div class="sucursal">
-            <h3>CABALLITO</h3>
-            <div class="texto-suc">Rosario 274, CABA</div>
-            <div class="texto-suc">Tel. 011 2077 6431</div>
-            <div class="texto-suc">De Martes a Domingos de 18 a 02hs.</div>
+          <% markets.forEach(market => { %>
+            <div class="sucursal">
+            <h3><%=market.name%></h3>
+            <div class="texto-suc"><%=market.address%></div>
+            <div class="texto-suc">Tel. <%=market.phone%></div>
+            <div class="texto-suc"><%=market.schedule%>.</div>
           </div>
-          <div class="sucursal">
-            <h3>PARQUE PATRICIOS</h3>
-            <div class="texto-suc">Monteagudo 109, CABA</div>
-            <div class="texto-suc">Tel. 011 3047 4553</div>
-            <div class="texto-suc">De Martes a Domingos de 18 a 02hs.</div>
-          </div>
-          <div class="sucursal">
-            <h3>PALERMO</h3>
-            <div class="texto-suc">Av. del Libertador 3883, CABA</div>
-            <div class="texto-suc">Tel. 011 4033 3546</div>
-            <div class="texto-suc">De Martes a Domingos de 18 a 02hs.</div>
-          </div>
-          <div class="sucursal">
-            <h3>NÚÑEZ</h3>
-            <div class="texto-suc">Av. García del Río 2662, CABA</div>
-            <div class="texto-suc">Tel. 011 4702 3683</div>
-            <div class="texto-suc">De Martes a Domingos de 18 a 02hs.</div>
-          </div>
+          <% }) %>
         </div>
       </div>
     </main>

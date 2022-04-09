@@ -275,7 +275,8 @@ footer {
   .brand {
     position: fixed;
     top: 0px;
-    right: 10%;
+    right: 25%;
+    width: 70%;
   }
   .brand-logo {
     display: flex;
@@ -449,6 +450,9 @@ footer {
   .foto {
     max-width: 300px;
     max-height: 300px;
+  }
+  .texto {
+    width: 60%;
   }
   /*footer mejorado*/
   footer {
