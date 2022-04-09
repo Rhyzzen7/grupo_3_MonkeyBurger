@@ -2,10 +2,10 @@ const path = require("path");
 
 const sessionController = {
   login: function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/users/login.html"));
+    res.render("./users/login");
   },
   register: function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/users/register.html"));
+    res.render("./users/register");
   },
 };
 
