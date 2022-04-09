@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--Cabecera de la página principal e inicio-->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,11 +10,7 @@
     ></script>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="icon" href="/img/icono.png" />
-    <script
-      src="https://kit.fontawesome.com/1f2014748d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/css/estiloproductCart.css" />
+    <link rel="stylesheet" href="/css/estilo-nosotros.css" />
     <script
       src="https://kit.fontawesome.com/1f2014748d.js"
       crossorigin="anonymous"
@@ -41,17 +36,9 @@
       rel="stylesheet"
     />
 
-    <title>Bienvenidos a Monkey Burger</title>
-    <link rel="icon" href="/img/icono-blanco.png" />
+    <title>Nosotros</title>
   </head>
-  <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
   <body>
-    <!--Encabezado de la página web.
-    En este espacio deberá colocarse: 
-    - El logo de la empresa.
-    - Nombre de la empresa.
-    - Menú de navegación.
-    - Sección para el carrito y Login.-->
     <header>
       <!--Contenedor para el logo-->
       <div class="top-header">
@@ -81,7 +68,7 @@
           /></a>
         </div>
         <div class="buy-cart">
-          <a href="productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
       </div>
       <div class="bottom-header">
@@ -95,18 +82,18 @@
             <!--barra-navegacion -->
             <ul class="menu-bar">
               <li>
-                <h3 class="menu-text"><a href="nosotros">NOSOTROS</a></h3>
+                <h3 class="menu-text"><a href="about">NOSOTROS</a></h3>
               </li>
               <li>
                 <h3 class="menu-text"><a href="menu">MENÚ</a></h3>
               </li>
               <li>
                 <h3 class="menu-text">
-                  <a href="haceTuPedido">HACE TU PEDIDO</a>
+                  <a href="order">HACE TU PEDIDO</a>
                 </h3>
               </li>
               <li>
-                <h3 class="menu-text"><a href="contacto">CONTACTO</a></h3>
+                <h3 class="menu-text"><a href="contact">CONTACTO</a></h3>
               </li>
             </ul>
             <ul class="users-bar">
@@ -117,83 +104,93 @@
                 <h4 class="users-text"><a href="register">CREAR CUENTA</a></h4>
               </li>
               <li class="buy">
-                <h4 class="buy-text"><a href="productCart">CARRITO</a></h4>
+                <h4 class="buy-text"><a href="cart">CARRITO</a></h4>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <!--Principal de cuerpo de la página web.
-    En este espacio deberá colocarse:
-    - Carrete de promociones.
-    - Mosaicos con productos destacados.
-    - Mosaicos con actividades varias de la empresa.
-    - Novedades.-->
     <main>
-      <h1 class="titulo-carrito">MI CARRITO</h1>
-      <!--Productos seleccionados-->
-      <section class="contenedor-carrito">
-        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
-        <div class="foto-producto-carrito">
+      <h1>NOSOTROS</h1>
+      <div class="nuestra-historia">
+        <h2>NUESTRA HISTORIA</h2>
+        <div class="historia">
+          <div class="texto-historia">
+            Monkey Burger tiene sus orígenes allá por el 2010, cuando Pedro y
+            Pablo, dos amigos de Piedradura, quisieron cocinar hamburguesas para
+            sorprender a sus queridísimas Vilma y Betty. Como estaban con tiempo
+            de sobra, decidieron comprar la carne y hacer ellos mismos sus
+            propias hamburguesas. Obviamente, ya estaban cansados de los
+            sándwiches de pterodáctilo industrial que comían habitualmente. Fue
+            así como comenzaron a experimentar con diferentes ingredientes y no
+            sólo dejaron contentas a Vilma y Betty, sino que además comenzaron
+            con una tradición a la que se fueron sumando más y más amigos. Muy
+            pronto, se fue corriendo la voz y todos en Piedradura querían esas
+            hamburguesas.
+          </div>
           <img
-            src="/img/menu/aros1.jpg"
-            alt="foto de Aros de Cebolla"
-            width="150px"
+            class="foto-historia"
+            src="/img/varias/varias18.JPG"
+            alt="foto de Amigos Monkey Burger"
           />
-          <h4 class="nombre-producto-carrito">Aros de Cebolla</h4>
         </div>
-        <article class="info-compra-carrito">
-          <div class="unidades-carrito">Unidades: 1</div>
-          <div class="precio-producto-carrito">Precio unitario: $ 1.000</div>
-          <div class="total-compra-carrito">Precio total: $ 1.000</div>
-          <i class="fa-solid fa-trash"></i>
-        </article>
-      </section>
-      <section class="contenedor-carrito">
-        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
-        <div class="foto-producto-carrito">
-          <img src="\img\menu\mono1.jpg" alt="Hamburguesa Mono" width="150px" />
-          <h4 class="nombre-producto-carrito">Hamburguesa Mono</h4>
+      </div>
+      <div class="nuestros-objetivos">
+        <h2>NUESTROS OBJETIVOS</h2>
+        <div class="mision-vision">
+          <div class="mision">
+            <h3>NUESTRA MISIÓN</h3>
+            <div class="texto-mision-vision">
+              Queremos ser la cadena de hamburgueserías número 1 en Capital
+              Federal, ofreciendo siempre el mejor sabor, la mejor calidad y una
+              experiencia única para todos aquellos que eligen Monkey Burger.
+            </div>
+          </div>
+          <div class="vision">
+            <h3>NUESTRA VISIÓN</h3>
+            <div class="texto-mision-vision">
+              Una vez que nuestros clientes prueban nuestras hamburguesas, ya no
+              ha vuelta atrás. Por esto, trabajamos día y noche para llevar esta
+              revolución de sabor a todos los rincones de nuestro país.
+            </div>
+          </div>
         </div>
-        <article class="info-compra-carrito">
-          <div class="unidades-carrito">Unidades: 2</div>
-          <div class="precio-producto-carrito">Precio unitario: $ 900</div>
-          <div class="total-compra-carrito">Precio total: $ 1.800</div>
-          <i class="fa-solid fa-trash"></i>
-        </article>
-      </section>
-      <section class="contenedor-carrito">
-        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
-        <div class="foto-producto-carrito">
-          <img
-            src="/img/menu/combomonita1.jpg"
-            alt="Combo Monita"
-            width="150px"
-          />
-          <h4 class="nombre-producto-carrito">Combo Monita</h4>
+      </div>
+      <div class="nuestras-sucursales">
+        <h2>NUESTRAS SUCURSALES</h2>
+        <div class="texto-nuestras-sucursales">
+          Estás en Capital Federal? Vení a visitarnos! Estos son los datos de
+          nuestros locales para que enloquezcas con nuestras hamburguesas:
         </div>
-        <article class="info-compra-carrito">
-          <div class="unidades-carrito">Unidades: 1</div>
-          <div class="precio-producto-carrito">Precio unitario: $ 7.500</div>
-          <div class="total-compra-carrito">Precio total: $ 7.500</div>
-          <i class="fa-solid fa-trash"></i>
-        </article>
-      </section>
-      <section class="totalproducto-carrito">
-        <div class="totales-carrito">TOTAL COMPRA: $ 10.300</div>
-      </section>
-      <section class="contenedor-botones-carrito">
-        <h4 class="boton-agregarmas-carrito">AGREGAR MAS PRODUCTOS</h4>
-        <h4 class="boton-continuar-carrito">CONTINUAR</h4>
-      </section>
+        <div class="lista-sucursales">
+          <div class="sucursal">
+            <h3>CABALLITO</h3>
+            <div class="texto-suc">Rosario 274, CABA</div>
+            <div class="texto-suc">Tel. 011 2077 6431</div>
+            <div class="texto-suc">De Martes a Domingos de 18 a 02hs.</div>
+          </div>
+          <div class="sucursal">
+            <h3>PARQUE PATRICIOS</h3>
+            <div class="texto-suc">Monteagudo 109, CABA</div>
+            <div class="texto-suc">Tel. 011 3047 4553</div>
+            <div class="texto-suc">De Martes a Domingos de 18 a 02hs.</div>
+          </div>
+          <div class="sucursal">
+            <h3>PALERMO</h3>
+            <div class="texto-suc">Av. del Libertador 3883, CABA</div>
+            <div class="texto-suc">Tel. 011 4033 3546</div>
+            <div class="texto-suc">De Martes a Domingos de 18 a 02hs.</div>
+          </div>
+          <div class="sucursal">
+            <h3>NÚÑEZ</h3>
+            <div class="texto-suc">Av. García del Río 2662, CABA</div>
+            <div class="texto-suc">Tel. 011 4702 3683</div>
+            <div class="texto-suc">De Martes a Domingos de 18 a 02hs.</div>
+          </div>
+        </div>
+      </div>
     </main>
-    <!--Pie de página de la web.
-    En este espacio deberá colocarse:
-    - Enlace a redes sociales.
-    - Enlaces de interés.
-    - Contacto.
-    - Referencia a desarrolladores.-->
     <footer>
       <!--Redes sociales-->
       <div class="pie-pagina">

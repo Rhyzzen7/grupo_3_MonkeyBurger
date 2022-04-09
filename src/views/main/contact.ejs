@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      src="https://kit.fontawesome.com/1f2014748d.js"
+      src="https://kit.fontawesome.com/841275cf5f.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/style-login.css" />
-    <title>Bienvenidos a Monkey Burger</title>
-    <link rel="icon" href="/img/icono.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
   </head>
   <body>
     <header>
@@ -43,7 +41,7 @@
           /></a>
         </div>
         <div class="buy-cart">
-          <a href="productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
       </div>
       <div class="bottom-header">
@@ -57,18 +55,18 @@
             <!--barra-navegacion -->
             <ul class="menu-bar">
               <li>
-                <h3 class="menu-text"><a href="nosotros">NOSOTROS</a></h3>
+                <h3 class="menu-text"><a href="about">NOSOTROS</a></h3>
               </li>
               <li>
                 <h3 class="menu-text"><a href="menu">MENÚ</a></h3>
               </li>
               <li>
                 <h3 class="menu-text">
-                  <a href="haceTuPedido">HACE TU PEDIDO</a>
+                  <a href="order">HACE TU PEDIDO</a>
                 </h3>
               </li>
               <li>
-                <h3 class="menu-text"><a href="contacto">CONTACTO</a></h3>
+                <h3 class="menu-text"><a href="contact">CONTACTO</a></h3>
               </li>
             </ul>
             <ul class="users-bar">
@@ -79,7 +77,7 @@
                 <h4 class="users-text"><a href="register">CREAR CUENTA</a></h4>
               </li>
               <li class="buy">
-                <h4 class="buy-text"><a href="productCart">CARRITO</a></h4>
+                <h4 class="buy-text"><a href="cart">CARRITO</a></h4>
               </li>
             </ul>
           </nav>
@@ -87,36 +85,49 @@
       </div>
     </header>
     <main>
-      <h2 class="novedades">INICIAR SESIÓN</h2>
-      <!--acá es necesario generar un formulario-->
-      <div class="mosaico-login">
-        <form class="formulario" action="/LOGIN.HTML" method="POST">
-          <label for="usuario"
-            ><h5>
-              Nombre de usuario/Correo electrónico
-              <i class="fa-solid fa-user"></i></h5
-          ></label>
-          <input type="text" id="usuario" />
-          <label for="contrasena"
-            ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
-          ></label>
-          <input type="password" id="contrasena" />
-        </form>
-        <div class="ingresar">
-          <button name="ingresar" type="submit">
-            <h4><a href="usuario">INGRESAR</a></h4>
-          </button>
-        </div>
-        <nav class="acciones">
-          <ul>
-            <li>
-              <h6>Restablecer Contraseña</h6>
-            </li>
-            <li>
-              <h6>Crear Nuevo Usuario</h6>
-            </li>
-          </ul>
-        </nav>
+      <h1 class="contacto">CONTACTO</h1>
+      <ul>
+        <li class="input-nombre">
+          <label for="nombre"></label>
+          <input type="text" name="nombre" placeholder="Nombre" />
+        </li>
+        <li class="input-apellido">
+          <label for="apellido"></label>
+          <input type="text" name="apellido" placeholder="Apellido" />
+        </li>
+        <li class="input-email">
+          <label for="email"></label>
+          <input type="email" name="email" placeholder="Correo Electronico" />
+        </li>
+        <li class="input-telefono">
+          <label for="telefono"></label>
+          <input type="tel" name="telefono" placeholder="Teléfono" />
+        </li>
+        <li class="input-domicilio">
+          <label for="domicilio"></label>
+          <input type="text" name="domicilio" placeholder="Domicilio" />
+        </li>
+        <li class="input-asunto">
+          <!-- <label for="asunto"></label> !-->
+          <div>
+            <select name="opciones" class="select-opciones">
+              <option value="Problemas">Problemas</option>
+              <option value="Problemas">Consultas</option>
+              <option value="Problemas">Preguntas</option>
+              <option value="Problemas">Mala Facturación</option>
+              <option value="Problemas">El producto no llegó</option>
+              <option value="Problemas">Otros</option>
+            </select>
+          </div>
+          <!-- <input  type="text" name="asunto" placeholder="Asunto"></input> !-->
+        </li>
+        <li class="input-mensaje">
+          <label for="mensaje"></label>
+          <input type="text" name="Mensaje" placeholder="Mensaje" />
+        </li>
+      </ul>
+      <div class="boton">
+        <button type="submit" id="boton">Enviar</button>
       </div>
     </main>
     <footer>
