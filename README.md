@@ -1,6 +1,6 @@
 # grupo_3_MonkeyBurger
 
-![ImageText](https://github.com/Rhyzzen7/grupo_3_MonkeyBurger/blob/main/images/logoMokeyBurger.jpg)
+![ImageText](https://github.com/Rhyzzen7/grupo_3_MonkeyBurger/blob/main/public/img/logo/logoMokeyBurger.jpg)
 
 E-commerce de hamburguesas de autor
 
