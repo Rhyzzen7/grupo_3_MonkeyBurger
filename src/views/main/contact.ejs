@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/841275cf5f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
+  <body>
+    <header>
+      <!--Contenedor para el logo-->
+      <div class="top-header">
+        <!--mobile: hamburger menu, brand, buy cart-->
+        <div class="hamburger-menu">
+          <!--cabecera-mobile -->
+          <a href="#modal-nav"><i class="fa-solid fa-bars"></i></a>
+          <!--modal-navegacion -->
+        </div>
+        <div class="brand-max">
+          <a href="/">
+            <img
+              src="/img/Isotipo-fondotransparente.png"
+              alt="Logo"
+              class="brand-logo-max"
+          /></a>
+        </div>
+        <div class="brand">
+          <!--marca -->
+          <a href="/"><h1 class="brand-name">MONKEY BURGER</h1></a>
+          <a href="/"><h2 class="brand-type">HAMBURGUESAS GOURMET</h2></a>
+          <a href="/">
+            <img
+              src="/img/imagotipo-negro-fondo-transparente-inv3.png"
+              alt="Logo"
+              class="brand-logo"
+          /></a>
+        </div>
+        <div class="buy-cart">
+          <a href="productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+      <div class="bottom-header">
+        <div id="modal-nav" class="header-bar">
+          <!--modal-navegacion, cabecera-barra -->
+          <nav class="nav-bar">
+            <div class="close-nav">
+              <!--cerrar-navegacion -->
+              <a href="/"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <!--barra-navegacion -->
+            <ul class="menu-bar">
+              <li>
+                <h3 class="menu-text"><a href="nosotros">NOSOTROS</a></h3>
+              </li>
+              <li>
+                <h3 class="menu-text"><a href="menu">MENÚ</a></h3>
+              </li>
+              <li>
+                <h3 class="menu-text">
+                  <a href="haceTuPedido">HACE TU PEDIDO</a>
+                </h3>
+              </li>
+              <li>
+                <h3 class="menu-text"><a href="contacto">CONTACTO</a></h3>
+              </li>
+            </ul>
+            <ul class="users-bar">
+              <li class="users">
+                <h4 class="users-text"><a href="login">INICIAR SESIÓN</a></h4>
+              </li>
+              <li class="users">
+                <h4 class="users-text"><a href="register">CREAR CUENTA</a></h4>
+              </li>
+              <li class="buy">
+                <h4 class="buy-text"><a href="productCart">CARRITO</a></h4>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1 class="contacto">CONTACTO</h1>
+      <ul>
+        <li class="input-nombre">
+          <label for="nombre"></label>
+          <input type="text" name="nombre" placeholder="Nombre" />
+        </li>
+        <li class="input-apellido">
+          <label for="apellido"></label>
+          <input type="text" name="apellido" placeholder="Apellido" />
+        </li>
+        <li class="input-email">
+          <label for="email"></label>
+          <input type="email" name="email" placeholder="Correo Electronico" />
+        </li>
+        <li class="input-telefono">
+          <label for="telefono"></label>
+          <input type="tel" name="telefono" placeholder="Teléfono" />
+        </li>
+        <li class="input-domicilio">
+          <label for="domicilio"></label>
+          <input type="text" name="domicilio" placeholder="Domicilio" />
+        </li>
+        <li class="input-asunto">
+          <!-- <label for="asunto"></label> !-->
+          <div>
+            <select name="opciones" class="select-opciones">
+              <option value="Problemas">Problemas</option>
+              <option value="Problemas">Consultas</option>
+              <option value="Problemas">Preguntas</option>
+              <option value="Problemas">Mala Facturación</option>
+              <option value="Problemas">El producto no llegó</option>
+              <option value="Problemas">Otros</option>
+            </select>
+          </div>
+          <!-- <input  type="text" name="asunto" placeholder="Asunto"></input> !-->
+        </li>
+        <li class="input-mensaje">
+          <label for="mensaje"></label>
+          <input type="text" name="Mensaje" placeholder="Mensaje" />
+        </li>
+      </ul>
+      <div class="boton">
+        <button type="submit" id="boton">Enviar</button>
+      </div>
+    </main>
+    <footer>
+      <!--Redes sociales-->
+      <div class="pie-pagina">
+        <p><i class="fa-brands fa-facebook"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-brands fa-whatsapp"></i></p>
+      </div>
+      <!--Enlaces-->
+      <div class="pie-pagina">
+        <nav class="pie-navegacion">
+          <ul>
+            <li>
+              <h5><a href="#">POLITICA</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">DEFENSA AL CONSUMIDOR</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">PROTECCION DE DATOS</a></h5>
+            </li>
+            <li>
+              <h5><a href="#">CONTACTANOS</a></h5>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="desarrolladores"><p>Desarrolladores DH</p></div>
+    </footer>
+  </body>
+</html>
