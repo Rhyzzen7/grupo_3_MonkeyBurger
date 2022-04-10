@@ -16,12 +16,12 @@ main {
 }
 
 
-h1,
-h2 {
+main.h1,
+main.h2 {
   font-family: "marvel";
   font-weight: bold;
   color: #e8eddf;
-  padding: 50px;
+  margin: 50px;
 }
 
 h1 {
@@ -162,10 +162,19 @@ main h4 {
 }
 
 /* Para que funcionen el header y footer */
-h1.monkey {
-  padding: 0;
+
+h2.brand-type,
+h1.brand-logo  {
+  padding: 0px, 0px;
+  background: none;
 }
 
-header h4, .gourmet{
-  color: #e8eddf;
+#tapas, 
+#hamburguesas,
+#bebidas,
+#combos
+#title {
+  margin-left: 20px;
+  margin-top: 20px;
 }
+
