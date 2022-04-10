@@ -128,335 +128,77 @@
       </ul>
       <h2 id="hamburguesas">HAMBURGUESAS</h2>
       <div class="hamburguesas">
+        <% burgers.forEach(burger => { %>
         <div class="contenedor-producto">
           <a href="/productDetail">
             <img
               class="fotoproducto"
-              src="/img/menu/monkey1.jpg"
-              alt="foto de Hamburguesa Monkey"
+              src="<%=burger.image%>"
+              alt="foto de <%=burger.name%>"
             />
           </a>
           <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>MONKEY BURGER</h3></a>
-          <h4>$ 1.200</h4>
+          <a href="/productDetail"><h3><%=burger.name%></h3></a>
+          <h4>$ <%=burger.price%></h4>
         </div>
 
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/guenon1.jpg"
-              alt="foto de Hamburguesa Guenon"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>GUENON BURGER</h3></a>
-          <h4>$ 1.000</h4>
-        </div>
-
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/scimmia1.jpg"
-              alt="foto de Hamburguesa Scimmia"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>SCIMMIA BURGER</h3></a>
-          <h4>$ 980</h4>
-        </div>
-
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/affe1.jpg"
-              alt="foto de Hamburguesa Affe"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>AFFE BURGER</h3></a>
-          <h4>$ 990</h4>
-        </div>
-
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/macaco1.jpg"
-              alt="foto de Hamburguesa Macaco"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>MACACO BURGER</h3></a>
-          <h4>$ 1.100</h4>
-        </div>
-
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/mono1.jpg"
-              alt="foto de Hamburguesa Mono"
-            /> </a
-          ><a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>MONO BURGER</h3></a>
-          <h4>$ 900</h4>
-        </div>
+        <% }) %>
       </div>
       <h2 id="tapas">TAPAS</h2>
       <div class="tapas">
+        <% chips.forEach(chip => { %>
         <div class="contenedor-producto">
           <a href="/productDetail"
             ><img
               class="fotoproducto"
-              src="/img/menu/papas1.jpg"
-              alt="foto de Papas Monkey"
+              src="<%=chip.image%>"
+              alt="foto de <%=chip.name%>"
             />
           </a>
           <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>PAPAS MONKEY</h3></a>
-          <h4>$ 700</h4>
+          <a href="/productDetail"><h3><%=chip.name%></h3></a>
+          <h4>$ <%=chip.price%></h4>
         </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/aros1.jpg"
-              alt="foto de Aros de Cebolla"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>MONKEY ONIONS</h3></a>
-          <h4>$ 1.000</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/mozza1.jpg"
-              alt="foto de Mozzarelas"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>MOZZA MONKEY</h3></a>
-          <h4>$ 1.100</h4>
-        </div>
+        <% }) %>
       </div>
+
       <h2 id="bebidas">BEBIDAS</h2>
       <div class="bebidas">
+        <% drinks.forEach(drink => { %>
         <div class="contenedor-producto">
           <a href="/productDetail"
             ><img
               class="fotoproducto"
-              src="/img/menu/logo-bonaqua-sin-gas.jpg"
-              alt="logo Bonaqua sin gas"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>AGUA SIN GAS - BON AQUA - 500ML</h3></a>
-          <h4>$ 250</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-bonaqua-con-gas.jpg"
-              alt="logo Bonaqua con gas"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>AGUA CON GAS - BON AQUA - 500ML</h3></a>
-          <h4>$ 250</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail">
-            <img
-              class="fotoproducto"
-              src="/img/menu/logo-cocacola.jpg"
-              alt="logo Cocacola"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>COCA COLA - 500ML</h3></a>
-          <h4>$ 250</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-cocazero.jpg"
-              alt="logo Cocacola Zero"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>COCA-COLA ZERO - 500ML</h3></a>
-          <h4>$ 250</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-sprite.jpg"
-              alt="logo Sprite"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>SPRITE - 500ML</h3></a>
-          <h4>$ 250</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-sprite-zero.jpg"
-              alt="logo Sprite Zero"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>SPRITE ZERO - 500ML</h3></a>
-          <h4>$ 250</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-amber-lagger.jpg"
-              alt="logo Amber Lager"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>AMBER LAGER - PATAGONIA - 410ML</h3></a>
-          <h4>$ 350</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-weisse.jpg"
-              alt="logo Weisse"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>WEISSE - PATAGONIA - 410ML</h3></a>
-          <h4>$ 350</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-pilsener.jpg"
-              alt="logo Pilsener"
+              src="<%=drink.image%>"
+              alt="logo <%=drink.name%>"
             />
           </a>
           <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
           <a href="/productDetail"
-            ><h3>BOHEMIAN PILSENER - PATAGONIA - 410ML</h3></a
+            ><h3><%=drink.name%> - <%=drink.detail%></h3></a
           >
-          <h4>$ 350</h4>
+          <h4>$ <%=drink.price%></h4>
         </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-hoppy-lagger.jpg"
-              alt="logo Hoppy Lager"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>HOPPY LAGER - PATAGONIA</h3></a>
-          <h4>$ 350</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-km24.jpg"
-              alt="logo km24"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>KM 24.7 - PATAGONIA - 410ML</h3></a>
-          <h4>$ 350</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-kune.jpg"
-              alt="logo Kune"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>KÜNE - PATAGONIA - 410ML</h3></a>
-          <h4>$ 350</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-porter.jpg"
-              alt="logo Porter"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>PORTER - PATAGONIA - 410ML</h3></a>
-          <h4>$ 350</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/logo-ipa.jpg"
-              alt="logo Ipa"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>VERA IPA - PATAGONIA - 420ML</h3></a>
-          <h4>$ 350</h4>
-        </div>
+        <% }) %>
       </div>
 
       <h2 id="combos">COMBOS DEL MES</h2>
 
       <div class="combos">
+        <% comboc.forEach(combo => { %>
         <div class="contenedor-producto">
           <a href="/productDetail"
             ><img
               class="fotoproducto"
-              src="/img/menu/combobanana1.jpg"
-              alt="foto combo Banana"
+              src="<%=combo.image%>"
+              alt="foto combo <%=combo.name%>"
             />
           </a>
           <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>COMBO BANANA</h3></a>
-          <h4>$ 6.500</h4>
+          <a href="/productDetail"><h3><%=combo.name%></h3></a>
+          <h4>$ <%=combo.price%></h4>
         </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/combopalmera1.jpg"
-              alt="foto combo Palmera"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>COMBO PALMERA</h3></a>
-          <h4>$ 5.200</h4>
-        </div>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="/img/menu/combomonita1.jpg"
-              alt="foto combo Monita"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3>COMBO MONITA</h3></a>
-          <h4>$ 7.500</h4>
-        </div>
+        <% }) %>
       </div>
     </main>
     <footer>

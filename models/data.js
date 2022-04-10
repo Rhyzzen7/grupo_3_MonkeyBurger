@@ -43,14 +43,14 @@ const burgers = [
     name: "MONKEY BURGER",
     detail:
       "La Monkey Burger es una explosión de sabor que difícilmente puedas olvidar. La armamos con un increíble pan de papa horneado en el día y un medallón de carne angus y bondiola de 200gr. No puede faltar el cheddar, la cebolla caramelizada, los pepinillos agridulces y la salsa barbacoa caserita. El ingrediente secreto? La salsa Monkey!! Es apta para celíacos y viene con unas re papas!",
-    price: "1.200",
+    price: "1200",
     image: "./img/menu/monkey1.jpg",
   },
   {
     name: "GUENON BURGER",
     detail:
       "El mejor estilo francés en tu mesa! Te vamos a sorprender con un pan delicatessen de trigo y almendras recién sacado del horno y un medallón angus de 200gr al punto justo. También tendrás una explosión de sabor y texturas con un blend de 4 quesos (azul, reggianito, mozzarella y provolone) que completarán la experiencia. Lo infaltable en este sensacional plato? Unas cebollas caramelizadas para chuparse los dedos y papas fritas, obvio!",
-    price: "1.000",
+    price: "1000",
     image: "./img/menu/guenon1.jpg",
   },
   {
@@ -71,7 +71,7 @@ const burgers = [
     name: "MACACO BURGER",
     detail:
       "Agridulce sí, agridulce no. Esa es la verdadera grieta! En esta opción para valientes te traemos una hamburguesa de carne angus de 200gr en pan de masa madre horneado en el día. Agregamos mozzarella, tomates rescos, salsa Monkey, y el ingrediente estrella de este plato: ananá caramelizado a la plancha para que enloquezcas! Viene con papas? Obviamente viene con papas!",
-    price: "1.100",
+    price: "1100",
     image: "./img/menu/macaco1.jpg",
   },
   {
@@ -180,14 +180,14 @@ const chips = [
     name: "MONKEY ONIONS",
     detail:
       "Sin lugar a dudas, los mejores aritos de cebolla del país están en Monkey Burger. Lo hacemos con un mix de cebollas moradas y blancas, y las rebozamos en panco. Sí, sí! Para rechuparse los dedos! Vienen acompañadas con salsa Monkey, barbacoa casera y criolla. Ideal para que piquen 4 o coman 2. Un recomendación? Quedan increíbles con la birra Weisse de Patagonia, fíjate en la sección de Bebidas!",
-    price: "1.000",
+    price: "1000",
     image: "./img/menu/aros1.jpg",
   },
   {
     name: "MOZZA MONKEY",
     detail:
       "No podia faltar una opción de quesos en las tapas de Monkey Burger, no? Por eso traemos estos dados de mozzarella empanizados con panco y fritos en el momento para que tu encuentro con amigos sea más que ideal. Los recibirás acompañadas con salsa Monkey, barbacoa casera y criolla. La porción es ideal para 3 personas, aunque seguramente van a pedir una segunda vuelta porque son una locura!",
-    price: "1.100",
+    price: "1100",
     image: "./img/menu/mozza1.jpg",
   },
 ];
@@ -196,21 +196,21 @@ const comboc = [
     name: "COMBO BANANA",
     detail:
       "Son 4 amigos de buen comer? No se diga más! En Monkey Burger nos aseguramos de que se alimenten como corresponde. El Combo Banana incluye 4 Monkey Burgers con sus respectivas papas, 1 porción de Monkey Onions, 1 porción de Papas Monkey y 4 latas de birra Patagonia Amber Lager. Porque panza llena, corazón contento! No sé, vos me dirás después de llevarte este combo.",
-    price: "6.500",
+    price: "6500",
     image: "./img/menu/combobanana1.jpg",
   },
   {
     name: "COMBO PALMERA",
     detail:
       "Este mes llegó el Combo Palmera para esos grupos de amigos donde no es fácil ponerse de acuerdo. Por eso, incluimos 4 hamburguesas a elección con sus respectivas papas (Monkey, Guenon, Scimmia, Affe, Macaco o Mono) y 4 latas de birra Patagonia también a elección (Amber Lager, Weisse, Boemian Pilsener, Hoppy Lager, KM 24.7, Kune, Porter o Vera IPA). Y no me digas que no te damos opciones!",
-    price: "5.200",
+    price: "5200",
     image: "./img/menu/combopalmera1.jpg",
   },
   {
     name: "COMBO MONITA",
     detail:
       "Este combo nos vuela la cabeza! Llevate 6 Mono Burgers con sus papas, 2 papas Monkey y 6 latas de birra Amber Lager de Patagonia con un descuento zarpado. Además, este mes nos volvimos locos y cada 5 Combos Monita que preparamos, 1 se lleva unos Monkey Onions y 6 birras Patagonia extras de regalo! Viste? Yo te dije que te volaba la cabeza!",
-    price: "7.500",
+    price: "7500",
     image: "./img/menu/combomonita1.jpg",
   },
 ];
