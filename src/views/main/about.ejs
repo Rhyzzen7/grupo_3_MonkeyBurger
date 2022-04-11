@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<%- include("../partials/head.ejs") %> >
+    <%- include("../partials/head.ejs") %> >
     <link rel="stylesheet" href="/css/estilo-nosotros.css" />
     <title>Nosotros</title>
   </head>
   <body>
-<%- include("../partials/header.ejs") %> 
-      <main>
+    <%- include("../partials/header.ejs") %>
+    <main>
       <h1>NOSOTROS</h1>
       <div class="nuestra-historia">
         <h2>NUESTRA HISTORIA</h2>
@@ -61,7 +61,7 @@
         </div>
         <div class="lista-sucursales">
           <% markets.forEach(market => { %>
-            <div class="sucursal">
+          <div class="sucursal">
             <h3><%=market.name%></h3>
             <div class="texto-suc"><%=market.address%></div>
             <div class="texto-suc">Tel. <%=market.phone%></div>
@@ -71,6 +71,6 @@
         </div>
       </div>
     </main>
-    <%- include("../partials/footer.ejs") %> 
+    <%- include("../partials/footer.ejs") %>
   </body>
 </html>
