@@ -129,12 +129,10 @@ main h2 {
 }
 
 /* Para que funcionen el header y footer */
-h1.monkey {
-  padding: 0;
-  margin: 0;
+
+h2.brand-type  {
+  padding-left:0px;
+  background: none;
 }
 
-header h4,
-.gourmet {
-  color: #e8eddf;
-}
+

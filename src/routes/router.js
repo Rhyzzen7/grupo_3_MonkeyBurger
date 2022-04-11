@@ -13,10 +13,12 @@ router.get("/about", aboutController.about);
 router.get("/contact", contactController.contact);
 router.get("/menu", productsController.menu);
 router.get("/order", productsController.order);
-router.get("/product", productsController.productDetail);
+router.get("/productDetail", productsController.productDetail);
 router.get("/cart", cartController.cart);
 router.get("/login", sessionController.login);
 router.get("/register", sessionController.register);
 router.get("/user", userController.userProfile);
+router.get("/editProduct", productsController.editProduct);
+router.get("/newProduct", productsController.newProduct);
 
 module.exports = router;
