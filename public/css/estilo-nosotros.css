@@ -135,4 +135,23 @@ h2.brand-type  {
   background: none;
 }
 
+.menu-bar,
+.menu-text
+ {
+  color: var(--gris-claro);
+  margin-bottom: 1px;
+  background-color: #242423;
+  font-weight: bold;
+}
+
+
+.menu-text:hover{ 
+  font-weight: 600px;
+  color: var(--amarillo);
+  text-shadow: var(--gris-claro) 0px 0px 16px;
+}
+
+
+
+  
 
