@@ -10,6 +10,12 @@ const productsController = {
   order: function (req, res) {
     res.render("./products/order");
   },
+  editProduct: function (req, res) {
+    res.render("./products/editProduct");
+  },
+  newProduct: function (req, res) {
+    res.render("./products/newProduct");
+  },
 };
 
 module.exports = productsController;
