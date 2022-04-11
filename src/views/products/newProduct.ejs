@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="/img/icono.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Marvel:wght@700&family=Sansita+Swashed:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo Producto</title>
+    <link rel="stylesheet" href="/css/estilo-editproduct.css" />
+  </head>
+  <body>
+    <h1>NUEVO PRODUCTO</h1>
+    <form action="" method="POST">
+      <div class="editar-producto">
+        <div class="campo">
+          <label required>Categoría del producto:</label>
+          <select class="campo-completar" name="categoria" required>
+            <option value="hamburguesas">Hamburguesas</option>
+            <option value="Tapas">Tapas</option>
+            <option value="bebidas">Bebidas</option>
+            <option value="combos">Combos</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="nombre">Nombre:</label>
+          <input
+            class="campo-completar"
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Ingresá el nombre"
+            required
+          />
+        </div>
+        <div class="campo">
+          <label for="descripcion">Descripción:</label>
+          <textarea
+            class="campo-completar"
+            name="descripcion"
+            id="descripcion"
+            placeholder="Descripción del nuevo producto"
+            required
+          >
+          </textarea>
+        </div>
+        <div class="campo">
+          <label for="precio">Precio:</label>
+          <input
+            class="campo-completar"
+            type="text"
+            name="precio"
+            id="precio"
+            placeholder="Ingreesá el precio"
+            required
+          />
+        </div>
+        <div class="campo">
+          <label>Foto:</label>
+          <input type="file" name="foto-producto" accept="image/*" required />
+        </div>
+        <div class="button-container">
+          <div>
+            <button class="button" type="submit">
+              <h4><a href="">CREAR PRODUCTO</a></h4>
+            </button>
+          </div>
+          <div>
+            <button class="button" type="reset">
+              <h4><a href="">BORRAR TODO</a></h4>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
