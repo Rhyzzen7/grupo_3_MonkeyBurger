@@ -43,6 +43,11 @@ h3 {
   margin: 0px;
 }
 
+h4 {
+  color: #242423;
+  background-color: #ffc000;
+}
+
 .contenedor-carrito {
   display: flex;
   background-color: #242423;
@@ -163,5 +168,26 @@ h1.brand-logo  {
 
 #modal-nav.header-bar {
   border-bottom: solid 1px #333533;
+}
+
+li h4 a {
+  color: #242423;
+  margin-bottom: 1px;
+  background-color: #ffc000;
+}
+
+.buy-text,
+.users-text{
+  color: var(--negro-carbon);
+  margin-bottom: 1px;
+  background-color: #ffc000;
+}
+
+.buy-text:hover,
+.users-text:hover{ 
+  font-weight: 600px;
+  color: var(--gris-claro);
+  text-shadow: var(--gris-claro) 0px 0px 16px;
+  background-color: #ffc000;
 }
 

@@ -12,6 +12,7 @@ Negro claro: #333533 */
 
 body {
   background-color: #242423;
+  margin-top: 10%;
 }
 
 button {
@@ -112,4 +113,6 @@ label {
   margin: 10px;
   border-radius: 5px;
   padding:5px;
+
+  
 }

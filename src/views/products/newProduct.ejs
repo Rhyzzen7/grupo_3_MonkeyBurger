@@ -1,42 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/1f2014748d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="icon" href="/img/icono.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Sansita+Swashed:wght@400;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Josefin+Sans:ital@1&family=Lato:ital,wght@1,700&family=Marvel:wght@700&family=Sansita+Swashed:wght@400;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include("../partials/head.ejs") %>
+    <%- include("../partials/letras.ejs") %>
     <title>Nuevo Producto</title>
     <link rel="stylesheet" href="/css/estilo-editproduct.css" />
   </head>
   <body>
+    <%- include("../partials/header.ejs") %>
     <h1>NUEVO PRODUCTO</h1>
     <form action="" method="POST">
       <div class="editar-producto">
@@ -100,5 +71,6 @@
         </div>
       </div>
     </form>
+    <%- include("../partials/footer.ejs") %>
   </body>
 </html>
