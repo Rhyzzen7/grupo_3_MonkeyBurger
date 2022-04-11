@@ -55,33 +55,29 @@
       <section class="novedades">
         <h2>NUESTRAS NOVEDADES</h2>
         <!--Destacados-->
+        <% proms.forEach(prom => { %>
         <article class="destacados">
           <div class="foto">
-            <img src="/img/producto/lata-ipa.jpg" alt="destacados" />
+            <img src="<%=prom.image%>" alt="destacados" />
           </div>
           <div class="texto">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestiae vero possimus ea quos labore, doloribus, consectetur
-              ipsam beatae aliquid laudantium sequi delectus quam enim incidunt
-              corrupti odit quibusdam quaerat quod!
-            </p>
+            <h4><%=prom.title%></h4>
+            <p><%=prom.detail%></p>
           </div>
         </article>
+        <% }) %>
         <!--Novedades-->
+        <% news.forEach(notice => { %>
         <article class="noticias">
           <div class="foto">
-            <img src="img/producto/mozza2.jpg" alt="novedades" />
+            <img src="<%=notice.image%>" alt="novedades" />
           </div>
           <div class="texto">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestiae vero possimus ea quos labore, doloribus, consectetur
-              ipsam beatae aliquid laudantium sequi delectus quam enim incidunt
-              corrupti odit quibusdam quaerat quod!
-            </p>
+            <h4><%=notice.title%></h4>
+            <p><%=notice.detail%></p>
           </div>
         </article>
+        <% }) %>
       </section>
     </main>
     <!--Pie de página de la web.
