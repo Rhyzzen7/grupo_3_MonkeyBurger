@@ -34,44 +34,16 @@
       <div class="hamburguesas">
         <% burgers.forEach(burger => { %>
         <div class="contenedor-producto">
-          <form action="/productDetail" method="get" name="burgers">
-            <input
-              type="text"
-              name="name"
-              value="<%=burger.name%>"
-              style="visibility: hidden"
+          <a href="/productDetail">
+            <img
+              class="fotoproducto"
+              src="<%=burger.image%>"
+              alt="foto de <%=burger.name%>"
             />
-            <input
-              type="image"
-              name="image"
-              value="<%=burger.image%>"
-              style="visibility: hidden"
-            />
-            <input
-              type="number"
-              name="price"
-              value="<%=burger.price%>"
-              style="visibility: hidden"
-            />
-            <input
-              type="text"
-              name="detail"
-              value="<%=burger.detail%>"
-              style="visibility: hidden"
-            />
-            <a href="/productDetail">
-              <img
-                class="fotoproducto"
-                src="<%=burger.image%>"
-                alt="foto de <%=burger.name%>"
-              />
-            </a>
-            <button type="submit">
-              <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-            </button>
-            <a href="/productDetail"><h3><%=burger.name%></h3></a>
-            <h4>$ <%=burger.price%></h4>
-          </form>
+          </a>
+          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
+          <a href="/productDetail"><h3><%=burger.name%></h3></a>
+          <h4>$ <%=burger.price%></h4>
         </div>
 
         <% }) %>
