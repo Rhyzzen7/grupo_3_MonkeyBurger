@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <%- include("../partials/head.ejs") %>
-        <link rel="stylesheet" href="/css/estilo-menu.css" />
-        <%- include("../partials/letras.ejs") %>
+    <link rel="stylesheet" href="/css/estilo-menu.css" />
+    <%- include("../partials/letras.ejs") %>
     <title>Menú</title>
   </head>
   <body>
@@ -30,7 +30,7 @@
         <% burgers.forEach(burger => { %>
         <div class="subcontenedor-infoproducto">
           <h3><%=burger.name%></h3>
-          <div><%=burger.detail%></div>
+          <div><%=burger.description%></div>
           <h4>$ <%=burger.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
             <a class="boton-hace-tu-pedido" href="/order">HACÉ TU PEDIDO</a>
@@ -49,7 +49,7 @@
         <% chips.forEach(chip => { %>
         <div class="subcontenedor-infoproducto">
           <h3><%=chip.name%></h3>
-          <div><%=chip.detail%></div>
+          <div><%=chip.description%></div>
           <h4>$ <%=chip.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
             <a class="boton-hace-tu-pedido" href="/order">HACÉ TU PEDIDO</a>
@@ -73,7 +73,7 @@
             alt="logo <%=drink.name%>"
           />
           <div class="info-bebidas">
-            <h3><%=drink.name%> - <%=drink.detail%></h3>
+            <h3><%=drink.name%> - <%=drink.description%></h3>
             <div class="precio-boton-bebidas">
               <h4>$ 250</h4>
               <div class="contenedor-boton-hace-tu-pedido">
@@ -90,7 +90,7 @@
         <% comboc.forEach(combo => { %>
         <div class="subcontenedor-infoproducto info-a-la-derecha">
           <h3><%=combo.name%></h3>
-          <div><%=combo.detail%></div>
+          <div><%=combo.description%></div>
           <h4>$ <%=combo.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
             <a class="boton-hace-tu-pedido" href="/order">HACÉ TU PEDIDO</a>
@@ -104,6 +104,6 @@
         <% }) %>
       </div>
     </main>
-    <%- include("../partials/footer.ejs") %> 
+    <%- include("../partials/footer.ejs") %>
   </body>
 </html>
