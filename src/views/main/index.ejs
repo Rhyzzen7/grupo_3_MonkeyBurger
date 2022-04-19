@@ -2,7 +2,7 @@
 <html lang="en">
   <!--Cabecera de la página principal e inicio-->
   <head>
-   <%- include("../partials/head.ejs") %>
+    <%- include("../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/style.css" />
     <title>Bienvenidos a Monkey Burger</title>
     <link rel="icon" href="/img/icono-blanco.png" />
@@ -41,14 +41,14 @@
             <h4><a href="cart">PEDÍ AHORA</a></h4>
           </div>
         </div>
-        <!--posición en el carrete-->
+        <!--posición en el carrete
         <div class="posicion">
           <div class="bolas"><i class="fa-solid fa-circle"></i></div>
           <div class="bolas"><i class="fa-solid fa-circle"></i></div>
           <div class="bolas"><i class="fa-solid fa-circle"></i></div>
           <div class="bolas"><i class="fa-solid fa-circle"></i></div>
           <div class="bolas"><i class="fa-solid fa-circle"></i></div>
-        </div>
+        </div>-->
       </section>
 
       <!--Mosaicos de destacados y novedades-->
@@ -61,8 +61,8 @@
             <img src="<%=prom.image%>" alt="destacados" />
           </div>
           <div class="texto">
-            <h4><%=prom.title%></h4>
-            <p><%=prom.detail%></p>
+            <h4><%=prom.name%></h4>
+            <p><%=prom.description%></p>
           </div>
         </article>
         <% }) %>
@@ -73,8 +73,8 @@
             <img src="<%=notice.image%>" alt="novedades" />
           </div>
           <div class="texto">
-            <h4><%=notice.title%></h4>
-            <p><%=notice.detail%></p>
+            <h4><%=notice.name%></h4>
+            <p><%=notice.description%></p>
           </div>
         </article>
         <% }) %>
@@ -86,6 +86,6 @@
     - Enlaces de interés.
     - Contacto.
     - Referencia a desarrolladores.-->
-    <%- include("../partials/footer.ejs") %> 
+    <%- include("../partials/footer.ejs") %>
   </body>
 </html>
