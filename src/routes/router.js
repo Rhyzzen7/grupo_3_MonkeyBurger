@@ -12,7 +12,7 @@ router.get("/", homeController.home);
 router.get("/about", aboutController.about);
 router.get("/contact", contactController.contact);
 router.get("/menu", productsController.menu);
-router.get("/order", productsController.order);
+router.get("/order/:id", productsController.order);
 router.get("/productDetail", productsController.productDetail);
 router.get("/cart", cartController.cart);
 router.get("/login", sessionController.login);
