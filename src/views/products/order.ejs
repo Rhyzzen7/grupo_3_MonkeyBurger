@@ -34,14 +34,14 @@
       <div class="hamburguesas">
         <% burgers.forEach(burger => { %>
         <div class="contenedor-producto">
-          <a href="/productDetail">
             <img
               class="fotoproducto"
               src="<%=burger.image%>"
               alt="foto de <%=burger.name%>"
             />
           </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
+          <label for="boton">boton cart</label>
+          <form type="submit" id="submit" name="submit"><i class="fas fa-shopping-cart"></i> </a></form>
           <a href="/productDetail"><h3><%=burger.name%></h3></a>
           <h4>$ <%=burger.price%></h4>
         </div>
