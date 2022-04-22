@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/estilo-creatupedido.css" />
+    <%- include("../partials/letras.ejs") %>
+    <title>Menú</title>
+    <script
+      src="https://kit.fontawesome.com/1f2014748d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/img/icono.png" />
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <h1 id="title">HACÉ TU PEDIDO</h1>
+      <ul class="navbar">
+        <li class="lista">
+          <a class="borrarlink" href="/order#hamburguesas">HAMBURGUESAS</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="/order#tapas">TAPAS</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="/order#bebidas">BEBIDAS</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="/order#combos">COMBOS DEL MES</a>
+        </li>
+      </ul>
+      <h2 id="hamburguesas">HAMBURGUESAS</h2>
+      <div class="hamburguesas">
+        <% burgers.forEach(burger => { %>
+        <div class="contenedor-producto">
+          <a href="/productDetail">
+            <img
+              class="fotoproducto"
+              src="<%=burger.image%>"
+              alt="foto de <%=burger.name%>"
+            />
+          </a>
+          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
+          <a href="/productDetail"><h3><%=burger.name%></h3></a>
+          <h4>$ <%=burger.price%></h4>
+        </div>
+
+        <% }) %>
+      </div>
+      <h2 id="tapas">TAPAS</h2>
+      <div class="tapas">
+        <% chips.forEach(chip => { %>
+        <div class="contenedor-producto">
+          <a href="/productDetail"
+            ><img
+              class="fotoproducto"
+              src="<%=chip.image%>"
+              alt="foto de <%=chip.name%>"
+            />
+          </a>
+          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
+          <a href="/productDetail"><h3><%=chip.name%></h3></a>
+          <h4>$ <%=chip.price%></h4>
+        </div>
+        <% }) %>
+      </div>
+
+      <h2 id="bebidas">BEBIDAS</h2>
+      <div class="bebidas">
+        <% drinks.forEach(drink => { %>
+        <div class="contenedor-producto">
+          <a href="/productDetail"
+            ><img
+              class="fotoproducto"
+              src="<%=drink.image%>"
+              alt="logo <%=drink.name%>"
+            />
+          </a>
+          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
+          <a href="/productDetail"
+            ><h3><%=drink.name%> - <%=drink.detail%></h3></a
+          >
+          <h4>$ <%=drink.price%></h4>
+        </div>
+        <% }) %>
+      </div>
+
+      <h2 id="combos">COMBOS DEL MES</h2>
+
+      <div class="combos">
+        <% comboc.forEach(combo => { %>
+        <div class="contenedor-producto">
+          <a href="/productDetail"
+            ><img
+              class="fotoproducto"
+              src="<%=combo.image%>"
+              alt="foto combo <%=combo.name%>"
+            />
+          </a>
+          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
+          <a href="/productDetail"><h3><%=combo.name%></h3></a>
+          <h4>$ <%=combo.price%></h4>
+        </div>
+        <% }) %>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %> >
+  </body>
+</html>

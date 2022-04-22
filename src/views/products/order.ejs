@@ -2,109 +2,121 @@
 <html lang="en">
   <head>
     <%- include("../partials/head.ejs") %>
-    <link rel="stylesheet" href="/css/estilo-creatupedido.css" />
+    <link rel="stylesheet" href="/css/estilo-producto.css" />
     <%- include("../partials/letras.ejs") %>
-    <title>Menú</title>
-    <script
-      src="https://kit.fontawesome.com/1f2014748d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="icon" href="/img/icono.png" />
+    <title>Producto</title>
   </head>
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <h1 id="title">HACÉ TU PEDIDO</h1>
-      <ul class="navbar">
-        <li class="lista">
-          <a class="borrarlink" href="/order#hamburguesas">HAMBURGUESAS</a>
-        </li>
-        <li class="lista">
-          <a class="borrarlink" href="/order#tapas">TAPAS</a>
-        </li>
-        <li class="lista">
-          <a class="borrarlink" href="/order#bebidas">BEBIDAS</a>
-        </li>
-        <li class="lista">
-          <a class="borrarlink" href="/order#combos">COMBOS DEL MES</a>
-        </li>
-      </ul>
-      <h2 id="hamburguesas">HAMBURGUESAS</h2>
-      <div class="hamburguesas">
-        <% burgers.forEach(burger => { %>
-        <div class="contenedor-producto">
+      <form action="/cart/:id?_method=PUT" name="cartAdding" method="POST">
+        <h1><%=product.name%></h1>
+        <div class="producto">
+          <div class="foto-precio">
             <img
-              class="fotoproducto"
-              src="<%=burger.image%>"
-              alt="foto de <%=burger.name%>"
+              class="foto"
+              src="../../<%=product.image%>"
+              alt="Foto producto elegido"
             />
-          </a>
-          <label for="boton">boton cart</label>
-          <form type="submit" id="submit" name="submit"><i class="fas fa-shopping-cart"></i> </a></form>
-          <a href="/productDetail"><h3><%=burger.name%></h3></a>
-          <h4>$ <%=burger.price%></h4>
-        </div>
-
-        <% }) %>
-      </div>
-      <h2 id="tapas">TAPAS</h2>
-      <div class="tapas">
-        <% chips.forEach(chip => { %>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="<%=chip.image%>"
-              alt="foto de <%=chip.name%>"
+            <h3 class="precio">$ <%=product.price%></h3>
+          </div>
+          <div class="info-producto">
+            <div class="descripcion-producto"><%=product.description%></div>
+            <div class="contenedor-unidades">
+              <h3>Unidades</h3>
+              <div class="selector-unidades">
+                <div class="boton-mas-menos menosItems">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <div class="visor-unidades">
+                  <input
+                    type="number"
+                    name="quantity"
+                    value="1"
+                    for="cartAdding"
+                  />
+                </div>
+                <div class="boton-mas-menos masItems">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="contenedor-extras">
+              <h3>Ingredientes Extras</h3>
+              <div class="selector-extras">
+                <p>Papas fritas monkey</p>
+                <input
+                  type="checkbox"
+                  name="extras-1"
+                  value="Papas fritas monkey"
+                  for="cartAdding"
+                />
+                <p>Bastones de muzzarella</p>
+                <input
+                  type="checkbox"
+                  name="extras-2"
+                  value="Bastones de muzzarella"
+                  for="cartAdding"
+                />
+                <p>Salsa especial</p>
+                <input
+                  type="checkbox"
+                  name="extras-3"
+                  value="Salsa especial"
+                  for="cartAdding"
+                />
+              </div>
+            </div>
+            <div class="contenedor-notas">
+              <h3>Notas del pedido</h3>
+              <div class="selector-notas">
+                <input
+                  type="textarea"
+                  name="notes"
+                  placeholder="Agregar"
+                  for="cartAdding"
+                />
+              </div>
+            </div>
+            <input
+              type="hidden"
+              name="product"
+              value="<%=product%>"
+              for="cartAdding"
             />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3><%=chip.name%></h3></a>
-          <h4>$ <%=chip.price%></h4>
-        </div>
-        <% }) %>
-      </div>
 
-      <h2 id="bebidas">BEBIDAS</h2>
-      <div class="bebidas">
-        <% drinks.forEach(drink => { %>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="<%=drink.image%>"
-              alt="logo <%=drink.name%>"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"
-            ><h3><%=drink.name%> - <%=drink.detail%></h3></a
-          >
-          <h4>$ <%=drink.price%></h4>
+            <button type="submit" class="boton-agregar-al-carrito">
+              AGREGAR AL CARRITO
+            </button>
+          </div>
         </div>
-        <% }) %>
-      </div>
-
-      <h2 id="combos">COMBOS DEL MES</h2>
-
-      <div class="combos">
-        <% comboc.forEach(combo => { %>
-        <div class="contenedor-producto">
-          <a href="/productDetail"
-            ><img
-              class="fotoproducto"
-              src="<%=combo.image%>"
-              alt="foto combo <%=combo.name%>"
-            />
-          </a>
-          <a href="/productDetail"><i class="fas fa-shopping-cart"></i> </a>
-          <a href="/productDetail"><h3><%=combo.name%></h3></a>
-          <h4>$ <%=combo.price%></h4>
-        </div>
-        <% }) %>
-      </div>
+        <!--Botones de acción mas y menos-->
+        <script>
+          let itemsContent = document.querySelector(".selector-unidades");
+          itemsContent.addEventListener("click", (e) => {
+            let items = document.querySelector(".visor-unidades input");
+            let value = parseInt(items.attributes.value.textContent);
+            let plus = document.querySelector(".masItems i");
+            let minus = document.querySelector(".menosItems i");
+            let tgt = e.target;
+            if (value != 0) {
+              if (tgt == plus) {
+                items.attributes.value.textContent = value + 1;
+              } else if (tgt == minus) {
+                items.attributes.value.textContent = value - 1;
+              } else {
+                console.log("click out of action buttons");
+              }
+            } else {
+              if (tgt == plus) {
+                items.attributes.value.textContent = value + 1;
+                console.log(items.textContent);
+              }
+            }
+          });
+        </script>
+      </form>
     </main>
-    <%- include("../partials/footer.ejs") %> >
+    <%- include("../partials/footer.ejs") %>
   </body>
 </html>
