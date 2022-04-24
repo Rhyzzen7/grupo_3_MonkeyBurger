@@ -3,9 +3,7 @@
   <!--Cabecera de la página principal e inicio-->
   <head>
     <%- include("../partials/head.ejs") %>
-    <link rel="stylesheet" href="/css/style.css" />
     <title>Bienvenidos a Monkey Burger</title>
-    <link rel="icon" href="/img/icono-blanco.png" />
   </head>
   <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
   <body>
@@ -24,19 +22,19 @@
     - Novedades.-->
     <main>
       <!--Carrete de promociones-->
-      <section class="carrete">
+      <section class="wheel">
         <!--Serán mostradas sólo 5 promociones-->
-        <div class="imagenes-carrete">
+        <div class="images-wheel">
           <img src="/img/producto/combomonkey2.jpg" alt="carrete" />
-          <div class="izquierda"><i class="fa-solid fa-caret-left"></i></div>
-          <div class="derecha"><i class="fa-solid fa-caret-right"></i></div>
+          <div class="left"><i class="fa-solid fa-caret-left"></i></div>
+          <div class="right"><i class="fa-solid fa-caret-right"></i></div>
         </div>
         <script src="/js/carousel.js"></script>
         <!--Inicio implementación Bootstrap-->
 
         <!--Fin implementación Bootstrap-->
         <!--Botones de acción-->
-        <div class="botones-carrete">
+        <div class="button-wheel">
           <div class="pedi">
             <h4><a href="cart">PEDÍ AHORA</a></h4>
           </div>
@@ -52,15 +50,15 @@
       </section>
 
       <!--Mosaicos de destacados y novedades-->
-      <section class="novedades">
+      <section class="news">
         <h2>NUESTRAS NOVEDADES</h2>
         <!--Destacados-->
         <% proms.forEach(prom => { %>
-        <article class="destacados">
-          <div class="foto">
+        <article class="highlighted">
+          <div class="photo">
             <img src="<%=prom.image%>" alt="destacados" />
           </div>
-          <div class="texto">
+          <div class="text">
             <h4><%=prom.name%></h4>
             <p><%=prom.description%></p>
           </div>
@@ -68,11 +66,11 @@
         <% }) %>
         <!--Novedades-->
         <% news.forEach(notice => { %>
-        <article class="noticias">
-          <div class="foto">
+        <article class="proms">
+          <div class="photo">
             <img src="<%=notice.image%>" alt="novedades" />
           </div>
-          <div class="texto">
+          <div class="text">
             <h4><%=notice.name%></h4>
             <p><%=notice.description%></p>
           </div>

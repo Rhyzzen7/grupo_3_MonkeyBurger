@@ -79,7 +79,7 @@ header {
   position: fixed;
   top: 0px;
   z-index: 100;
-  width: 100%;
+  width: 100vw;
   height: 50px;
 }
 
@@ -167,7 +167,7 @@ main {
 }
 /*Main*/
 /*Carrete*/
-.carrete {
+.wheel {
   width: 90vw;
   display: flex;
   flex-wrap: wrap;
@@ -177,7 +177,7 @@ main {
   margin: 10px auto;
   position: relative;
 }
-.imagenes-carrete {
+.images-wheel {
   display: flex;
   justify-content: center;
   height: 200px;
@@ -187,18 +187,18 @@ main {
   overflow: hidden;
   z-index: 1;
 }
-.imagenes-carrete img {
+.images-wheel img {
   width: 100%;
   height: auto;
 }
-.botones-carrete {
+.button-wheel {
   display: none;
 }
 .posicion {
   display: none;
 }
 /*Novedades*/
-.novedades {
+.news {
   width: 90vw;
   /*border: 1px solid var(--gris-oscuro);*/
   display: flex;
@@ -209,8 +209,9 @@ main {
   position: relative;
   margin: 10px auto;
 }
-.noticias,
-.destacados {
+.proms,
+.highlighted,
+.products {
   display: flex;
   /*width: inherit;*/
   justify-content: space-around;
@@ -219,18 +220,19 @@ main {
   background-color: var(--negro-humo);
   margin: 10px auto;
 }
-.foto {
+.photo {
   /*width: inherit;*/
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-.foto img {
+.photo img {
   width: 100%;
 }
-.foto,
-.texto {
+.photo,
+.text,
+.info-products {
   padding: 10px;
 }
 /*Manejar la barra con display flex queda mejor.*/
@@ -392,22 +394,22 @@ footer {
     font-weight: 600;
   }
 
-  .imagenes-carrete {
+  .images-wheel {
     height: 300px;
   }
-  .botones-carrete {
+  .button-wheel {
     display: flex;
     width: 100%;
     z-index: 2;
   }
-  .izquierda {
+  .left {
     position: absolute;
     left: 5vw;
     top: 50%;
     font-size: 30px;
     color: var(--gris-claro);
   }
-  .derecha {
+  .right {
     position: absolute;
     right: 5vw;
     top: 50%;
@@ -439,19 +441,21 @@ footer {
     font-size: 10px;
   }
   /*novedades*/
-  .noticias {
+  .proms,
+  .products {
     justify-content: space-around;
     flex-direction: row;
   }
-  .destacados {
+  .highlighted {
     justify-content: space-around;
     flex-direction: row-reverse;
   }
-  .foto {
+  .photo {
     max-width: 300px;
     max-height: 300px;
   }
-  .texto {
+  .text,
+  .info-products {
     width: 60%;
   }
   /*footer mejorado*/
@@ -485,10 +489,11 @@ footer {
   header,
   body,
   footer,
-  .carrete,
-  .novedades,
-  .noticias,
-  .destacados {
+  .wheel,
+  .news,
+  .proms,
+  .highlighted,
+  .products {
     max-width: 1200px;
   }
 
@@ -527,14 +532,14 @@ footer {
     margin-left: 30%;
   }
   /*------------------------------------------*/
-  .imagenes-carrete {
+  .images-wheel {
     height: 400px;
   }
   .barra-navegacion ul li {
     padding: 2px 7px;
   }
-  .izquierda,
-  .derecha {
+  .left,
+  .right {
     font-size: 50px;
   }
   .pedi {
