@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;700&family=Marvel:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gris-oscuro: #cfdbd5;
+  --gris-claro: #e8eddf;
+  --amarillo: #ffc000;
+  --negro-humo: #333533;
+  --negro-carbon: #242423;
+}
+
+/*CEntrar información.*/
+
+header,
+body,
+main,
+footer {
+  margin: auto;
+  color: var(--negro-carbon);
+  background-color: var(--negro-carbon);
+}
+/*Marvel Bold - Esta fuente se utilizará para el logo.*/
+h1 {
+  font-family: "Marvel", sans-serif;
+  color: var(--gris-claro);
+}
+
+/*Antonio Bold – Esta fuente se utilizará para los títulos.*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Antonio", sans-serif;
+  color: var(--gris-claro);
+}
+
+/*Antonio Thin – Eta fuente se utilizará para los textos.*/
+
+p {
+  font-family: "Antonio", sans-serif;
+  color: var(--gris-claro);
+}
+
+/*Quitar estilos de listas a los menúes.*/
+
+nav ul {
+  list-style: none;
+}
+
+/*Quitar estilos de hipervínculos a los enlaces.*/
+
+nav ul li a {
+  text-decoration: none;
+  color: unset;
+}
+
+/*Manejar bloques en líneas todas las cajas de la cabecera.*/
+
+/*.cabecera {
+  display: flex;
+  justify-content: space-between;
+}*/
+
+/*Manejar la barra con display flex queda mejor.*/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px var(--negro-humo) solid;
+  padding: 5px;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+  height: 50px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+.hamburger-menu,
+.buy-cart,
+.close-nav {
+  width: 20px;
+  font-size: 20px;
+  margin: auto 10px;
+}
+.hamburger-menu a,
+.buy-cart a,
+.brand a,
+.close-nav a {
+  text-decoration: none;
+  color: var(--gris-claro);
+}
+.brand {
+  width: 100%;
+  z-index: 2;
+}
+.brand-name {
+  display: flex;
+  justify-content: center;
+}
+.brand-max,
+.brand-type,
+.brand-logo {
+  display: none;
+}
+.bottom-header {
+  display: flex;
+}
+
+#modal-nav:target {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.header-bar {
+  position: fixed;
+  top: 50px;
+  left: 1%;
+  width: 98%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 2%;
+  transition: all 1s;
+}
+.nav-bar {
+  background-color: var(--negro-humo);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.close-nav {
+  margin-top: 5px;
+  margin-left: 8px;
+}
+.menu-bar,
+.users-bar {
+  margin-left: 10px;
+  padding: 15px;
+}
+.buy {
+  display: none;
+}
+
+/*Manejar la barra con display flex queda mejor.*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  margin-top: 50px;
+}
+/*Main*/
+/*Carrete*/
+.carrete {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  margin: 10px auto;
+  position: relative;
+}
+.imagenes-carrete {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+.imagenes-carrete img {
+  width: 100%;
+  height: auto;
+}
+.botones-carrete {
+  display: none;
+}
+.posicion {
+  display: none;
+}
+/*Novedades*/
+.novedades {
+  width: 90vw;
+  /*border: 1px solid var(--gris-oscuro);*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 10px auto;
+}
+.noticias,
+.destacados {
+  display: flex;
+  /*width: inherit;*/
+  justify-content: space-around;
+  flex-direction: column;
+  border-top: 1px var(--gris-oscuro) solid;
+  background-color: var(--negro-humo);
+  margin: 10px auto;
+}
+.foto {
+  /*width: inherit;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.foto img {
+  width: 100%;
+}
+.foto,
+.texto {
+  padding: 10px;
+}
+/*Manejar la barra con display flex queda mejor.*/
+footer {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+  border-top: 2px var(--negro-humo) solid;
+}
+/*iconos a las redes.*/
+
+.pie-pagina {
+  display: flex;
+  justify-content: space-around;
+}
+.pie-pagina p {
+  padding: 2px;
+}
+
+/*links de contactos.*/
+
+.pie-navegacion ul {
+  display: none;
+}
+/*desarrolladores*/
+.desarrolladores {
+  display: none;
+}
+
+/*Dispositivos tabletas*/
+@media (min-width: 480px) {
+  header {
+    height: 105px;
+  }
+
+  /*------------------------------------------*/
+  .top-header {
+    height: 90px;
+  }
+  .brand {
+    position: fixed;
+    top: 0px;
+    right: 10%;
+  }
+  .brand-logo {
+    display: flex;
+    justify-content: center;
+    height: 75px;
+    margin: auto;
+  }
+  .brand-name,
+  .brand-type,
+  .hamburger-menu,
+  .buy-cart,
+  .close-nav {
+    display: none;
+  }
+  .bottom-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+  }
+  .users,
+  .buy {
+    display: flex;
+  }
+  .header-bar {
+    position: fixed;
+    top: 5px;
+    left: 0px;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+    transition: unset;
+  }
+  .nav-bar {
+    background-color: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px;
+    width: 78%;
+    max-width: 450px;
+    margin-top: 72px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu-bar li {
+    margin: 0px 2px;
+  }
+  .users-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 120px;
+    padding: 0px;
+    margin-bottom: 1px;
+    margin-right: 20px;
+  }
+  .users,
+  .buy {
+    justify-content: center;
+    background-color: var(--amarillo);
+    border: 2px var(--negro-carbon) solid;
+    border-radius: 15px;
+    margin: 2px auto;
+    padding: 2px;
+    width: 110px;
+  }
+  .users-text,
+  .buy-text {
+    color: var(--negro-carbon);
+  }
+
+  .users-text:hover,
+  .buy-text:hover,
+  .pedi:hover {
+    box-shadow: 0 0 11px #e8eddf;
+    font-weight: 600;
+    color: var(--gris-claro);
+  }
+  .menu-text:hover {
+    font-weight: 600;
+    color: var(--amarillo);
+    text-shadow: var(--gris-oscuro) 0px 0px 16px;
+    border-bottom: 2px solid var(--gris-claro);
+  }
+
+  /*------------------------------------------*/
+
+  main {
+    margin-top: 105px;
+  }
+  button {
+    background-color: var(--amarillo);
+    border: 2px var(--negro-carbon) solid;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+  }
+
+  button a {
+    text-decoration: none;
+    color: var(--negro-carbon);
+  }
+
+  .pedi:hover {
+    box-shadow: 0 0 11px #e8eddf;
+    font-weight: 600;
+  }
+
+  .imagenes-carrete {
+    height: 300px;
+  }
+  .botones-carrete {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+  }
+  .izquierda {
+    position: absolute;
+    left: 5vw;
+    top: 50%;
+    font-size: 30px;
+    color: var(--gris-claro);
+  }
+  .derecha {
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    font-size: 30px;
+    color: var(--gris-claro);
+  }
+  .pedi {
+    position: absolute;
+    right: 1vw;
+    top: 30%;
+    border: 2px var(--negro-carbon) solid;
+    border-radius: 15px;
+    background-color: var(--amarillo);
+    padding: 10px;
+  }
+  .pedi a {
+    text-decoration: none;
+    color: var(--negro-carbon);
+  }
+  .posicion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    padding: 2px;
+  }
+  .bolas {
+    margin: 0px 2px;
+    font-size: 10px;
+  }
+  /*novedades*/
+  .noticias {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .destacados {
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+  .foto {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  /*footer mejorado*/
+  footer {
+    justify-content: space-around;
+  }
+
+  /*links de contactos.*/
+
+  .pie-navegacion ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pie-navegacion ul li {
+    margin: 0px 5px;
+  }
+  /*desarrolladores*/
+  .desarrolladores {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .desarrolladores p {
+    font-size: 0.5em;
+  }
+}
+
+/*Dispositivos laptop*/
+/*Dispositivos tabletas*/
+@media (min-width: 840px) {
+  header,
+  body,
+  footer,
+  .carrete,
+  .novedades,
+  .noticias,
+  .destacados {
+    max-width: 1200px;
+  }
+
+  /*------------------------------------------*/
+  .top-header {
+    justify-content: flex-start;
+  }
+  .brand {
+    position: static;
+    width: fit-content;
+    height: 70px;
+  }
+
+  .brand-max {
+    display: flex;
+    justify-content: flex-start;
+    margin: auto 88px;
+    height: 100%;
+    z-index: 3;
+  }
+  .brand-name,
+  .brand-type {
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+  }
+
+  .brand-logo {
+    display: none;
+  }
+  .brand-logo-max {
+    height: 100%;
+    width: 100%;
+  }
+  .nav-bar {
+    margin-left: 30%;
+  }
+  /*------------------------------------------*/
+  .imagenes-carrete {
+    height: 400px;
+  }
+  .barra-navegacion ul li {
+    padding: 2px 7px;
+  }
+  .izquierda,
+  .derecha {
+    font-size: 50px;
+  }
+  .pedi {
+    padding: 10px;
+  }
+}

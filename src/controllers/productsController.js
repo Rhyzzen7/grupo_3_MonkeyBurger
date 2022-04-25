@@ -1,5 +1,15 @@
+const fs = require("fs");
 const path = require("path");
-const products = require("../../models/data");
+
+const productsFilePath = path.join(__dirname, "../../models/products.json");
+const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+//Funtion to update products.json
+function storeProducts(products) {
+  const productTransformer = JSON.stringify(products);
+  fs.writeFileSync(productsFilePath, productTransformer);
+}
+
 
 const productsController = {
   productDetail: function (req, res) {
@@ -9,16 +19,21 @@ const productsController = {
     const chips = products.filter((item) => item.category === "chips");
     res.render("./products/productDetail", { comboc, burgers, drinks, chips });
   },
-  menu: function (req, res) {
+  products: function (req, res) {
     const comboc = products.filter((item) => item.category === "comboc");
     const burgers = products.filter((item) => item.category === "burgers");
     const drinks = products.filter((item) => item.category === "drinks");
     const chips = products.filter((item) => item.category === "chips");
+<<<<<<< HEAD
     res.render("./products/menu", { comboc, burgers, drinks, chips });},
   
   userChoice: function (req, res) {{
    res.send(req.body.userChoice)
 
+=======
+    res.render("./products/products", { comboc, burgers, drinks, chips });
+  },
+>>>>>>> 4a986d7e36f9737afb8373913a25eee74c75288b
   order: function (req, res) {
     // const comboc = products.filter((item) => item.category === "comboc");
     // const burgers = products.filter((item) => item.category === "burgers");
@@ -29,11 +44,43 @@ const productsController = {
     res.render("./products/order", { product });
   },
   editProduct: function (req, res) {
-    res.render("./products/editProduct");
+    const productEdit = products.find((item) => item.id == req.params.id);
+    res.render("./products/editProduct", { productEdit });
   },
-  newProduct: function (req, res) {
-    res.render("./products/newProduct");
+  create: function (req, res) {
+    res.render("./products/create");
+  },
+  store: function(req,res){
+    console.log('req.body', req.body);
+    let nuevoProducto = {
+      id: products.length + 1,
+      image: "./img/menu/default-img.jpg",
+      colors: "",
+      ...req.body,
+    };
+    products.push(nuevoProducto);
+    storeProducts(products);
+    res.redirect("/products");
+  },
+  update: (req, res) => {
+    console.log(req.body);
+    let productIndex = products.findIndex(
+      (product) => product.id == req.params.productId
+    );
+    let infoActualizada = req.body;
+    products[productIndex] = { ...products[productIndex], ...infoActualizada };
+    storeProducts(products);
+    res.redirect(`/order/${req.params.productId}`);
+  },
+  delete:(req, res) => {
+    let productIndex = products.findIndex(
+      (product) => product.id == req.params.productId
+    );
+    products.splice(productIndex,1)
+    storeProducts(products);
+    res.redirect("/products");
   },
 };
+  
 
 module.exports = productsController;

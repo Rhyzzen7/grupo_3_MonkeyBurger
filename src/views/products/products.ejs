@@ -34,13 +34,7 @@
           <div><%=burger.description%></div>
           <h4>$ <%=burger.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
-
-           <a href="order/<%=product.id%>"> <button type="submit" class="boton-hace-tu-pedido" >
-            HACE TU PEDIDO 
-          </button></a>
-          
-
-        </form>
+            <a class="boton-hace-tu-pedido" href="/order/<%=burger.id %>">HACÉ TU PEDIDO</a>
           </div>
         </div>
         <img
@@ -59,7 +53,7 @@
           <div><%=chip.description%></div>
           <h4>$ <%=chip.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
-            <a class="boton-hace-tu-pedido" href="/order">HACÉ TU PEDIDO</a>
+            <a class="boton-hace-tu-pedido" href="/order/<%=chip.id %>">HACÉ TU PEDIDO</a>
           </div>
         </div>
         <img
@@ -84,7 +78,7 @@
             <div class="precio-boton-bebidas">
               <h4>$ 250</h4>
               <div class="contenedor-boton-hace-tu-pedido">
-                <a class="boton-hace-tu-pedido" href="/order">HACÉ TU PEDIDO</a>
+                <a class="boton-hace-tu-pedido" href="/order/<%=drink.id %>">HACÉ TU PEDIDO</a>
               </div>
             </div>
           </div>
@@ -100,7 +94,7 @@
           <div><%=combo.description%></div>
           <h4>$ <%=combo.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
-            <a class="boton-hace-tu-pedido" href="/order">HACÉ TU PEDIDO</a>
+            <a class="boton-hace-tu-pedido" href="/order/<%=combo.id %>">HACÉ TU PEDIDO</a>
           </div>
         </div>
         <img
