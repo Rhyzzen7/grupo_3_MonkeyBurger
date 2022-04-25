@@ -14,7 +14,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Inconvenientes generales con GIT, resueltos_
 
-3. ¿Qué hare mañana?
+3. ¿Qué haré mañana?
 
 - _Modificación de vinculación a links (productCart) por modificación de nombre, traspaso de documentos HTML a extensión EJS, verificación de Template tanto en clase como individualmente para comenzar a dar funcionalidad a la pagina con JS._
 
@@ -28,7 +28,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Manejo de variables desde el frontend y uso del DOM_
 
-3. ¿Qué hare mañana?
+3. ¿Qué haré mañana?
 
 - _Implementación de menú y hacé tu pedido de forma dinámica_
 
@@ -42,7 +42,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Según la estructura recomendada en Playground, las carpetas de controllers, routes y views estaban dentro de la carpeta src, lo que hizo que algunas rutas sean diferentes a los ejercicios prácticos de la clase. Pude resolverlo._
 
-3. ¿Qué hare mañana?
+3. ¿Qué haré mañana?
 
 - _Voy a trabajar en el punto 7 de este sprint: formularios para crear y editar nuevos productos_
 
@@ -60,7 +60,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 -
 
-3. ¿Qué hare mañana?
+3. ¿Qué haré mañana?
 
 -
 
@@ -74,7 +74,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Implementación de botones, lo cual se resuelve incluyéndolos en los formularios_
 
-3. ¿Qué hare mañana?
+3. ¿Qué haré mañana?
 
 - _Manejo de información dinámica desde archivos JSON_
 
@@ -82,12 +82,12 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
--
+- _Sección funcional con listado, detalle, alta, modificación y baja de productos._
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
--
+- _Varios estilos están rotos_
 
-3. ¿Qué hare mañana?
+3. ¿Qué haré mañana?
 
--
+- _Revisar las secciones que creé para asegurarme de que funcionen_
