@@ -13,6 +13,7 @@ router.get("/about", aboutController.about);
 router.get("/contact", contactController.contact);
 router.get("/menu", productsController.menu);
 router.get("/order/:id", productsController.order);
+router.post("/menu", productsController.userChoice);
 router.get("/productDetail", productsController.productDetail);
 router.get("/cart", cartController.cart);
 router.get("/login", sessionController.login);

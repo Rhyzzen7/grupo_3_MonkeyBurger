@@ -24,16 +24,23 @@
           <a class="borrarlink" href="/menu#combos">COMBOS DEL MES</a>
         </li>
       </ul>
-
+      
       <h2 id="hamburguesas">HAMBURGUESAS</h2>
       <div class="contenedor-producto">
+        <form action="/order/userChoice" name="userChoise" method="POST">
         <% burgers.forEach(burger => { %>
         <div class="subcontenedor-infoproducto">
           <h3><%=burger.name%></h3>
           <div><%=burger.description%></div>
           <h4>$ <%=burger.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
-            <a class="boton-hace-tu-pedido" href="/order">HACÉ TU PEDIDO</a>
+
+           <a href="order/<%=product.id%>"> <button type="submit" class="boton-hace-tu-pedido" >
+            HACE TU PEDIDO 
+          </button></a>
+          
+
+        </form>
           </div>
         </div>
         <img

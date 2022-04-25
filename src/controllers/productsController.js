@@ -14,8 +14,11 @@ const productsController = {
     const burgers = products.filter((item) => item.category === "burgers");
     const drinks = products.filter((item) => item.category === "drinks");
     const chips = products.filter((item) => item.category === "chips");
-    res.render("./products/menu", { comboc, burgers, drinks, chips });
-  },
+    res.render("./products/menu", { comboc, burgers, drinks, chips });},
+  
+  userChoice: function (req, res) {{
+   res.send(req.body.userChoice)
+
   order: function (req, res) {
     // const comboc = products.filter((item) => item.category === "comboc");
     // const burgers = products.filter((item) => item.category === "burgers");
