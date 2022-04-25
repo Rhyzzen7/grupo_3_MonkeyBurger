@@ -88,6 +88,10 @@
             <button type="submit" class="boton-agregar-al-carrito">
               AGREGAR AL CARRITO
             </button>
+
+            <button type="submit" class="boton-agregar-al-carrito">
+              <a href="/edit/<%= product.id%>"> EDITAR PRODUCTO </a>
+            </button>
           </div>
         </div>
         <!--Botones de acción mas y menos-->
@@ -115,6 +119,9 @@
             }
           });
         </script>
+      </form>
+      <form action="/order/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+        <button type="submit" class="boton-agregar-al-carrito">ELIMINAR</button>
       </form>
     </main>
     <%- include("../partials/footer.ejs") %>
