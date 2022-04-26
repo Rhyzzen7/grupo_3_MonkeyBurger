@@ -9,7 +9,7 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <form action="/cart/?_method=PUT" name="cartAdding" method="POST">
+      <form action="/cart/cart/?_method=PUT" name="cartAdding" method="POST">
         <h1 class="head-1"><%=product.name%></h1>
         <div class="products">
           <!--esta clase corresponde a productos-->
@@ -29,8 +29,20 @@
           </div>
           <input
             type="hidden"
-            name="product"
-            value="<%=product%>"
+            name="name"
+            value="<%=product.name%>"
+            for="cartAdding"
+          />
+          <input
+            type="hidden"
+            name="price"
+            value="<%=product.price%>"
+            for="cartAdding"
+          />
+          <input
+            type="hidden"
+            name="category"
+            value="<%=product.category%>"
             for="cartAdding"
           />
         </div>
@@ -100,13 +112,6 @@
                 />
               </div>
             </div>
-            <input
-              type="hidden"
-              name="product"
-              value="<%=product%>"
-              for="cartAdding"
-            />
-
             <button type="submit" class="boton-agregar-al-carrito">
               AGREGAR AL CARRITO
             </button>

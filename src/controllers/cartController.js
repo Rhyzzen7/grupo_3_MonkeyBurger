@@ -5,8 +5,8 @@ const cartController = {
     res.render("./products/cart");
   },
   addCart: function (req, res) {
-    console.log("agregado al carrito" + req.body);
-    res.redirect("./products/cart");
+    console.log(req.body);
+    res.render("./products/cart");
   },
 };
 
