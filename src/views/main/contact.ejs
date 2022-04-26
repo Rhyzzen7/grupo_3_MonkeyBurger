@@ -8,7 +8,7 @@
     <%- include("../partials/header.ejs") %>
     <main>
       <h1 class="contacto">CONTACTO</h1>
-      <ul>
+      <form method="POST" action="/contact">
         <li class="input-nombre">
           <label for="nombre"></label>
           <input type="text" name="nombre" placeholder="Nombre" />
@@ -47,10 +47,10 @@
           <label for="mensaje"></label>
           <input type="text" name="Mensaje" placeholder="Mensaje" />
         </li>
-      </ul>
-      <div class="boton">
-        <button type="submit" id="boton">Enviar</button>
-      </div>
+        <div class="boton">
+          <button type="submit" id="boton">Enviar</button>
+        </div>
+      </form>
     </main>
     <%- include("../partials/footer.ejs") %>
   </body>

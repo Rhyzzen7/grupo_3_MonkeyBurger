@@ -9,7 +9,7 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <form action="/cart/:id?_method=PUT" name="cartAdding" method="POST">
+      <form action="/cart/?_method=PUT" name="cartAdding" method="POST">
         <h1 class="head-1"><%=product.name%></h1>
         <div class="products">
           <!--esta clase corresponde a productos-->
@@ -157,7 +157,11 @@
           });
         </script>
       </form>
-      <form action="/order/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+      <form
+        action="/order/<%= product.id %>?_method=DELETE"
+        method="POST"
+        style="display: inline-flex"
+      >
         <button type="submit" class="boton-agregar-al-carrito">ELIMINAR</button>
       </form>
     </main>
