@@ -1,67 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include("../partials/head.ejs") %>
-    <%- include("../partials/letras.ejs") %>
+    <%- include("../partials/head.ejs") %> <%- include("../partials/letras.ejs")
+    %>
     <title>Editar Producto</title>
     <link rel="stylesheet" href="/css/estilo-editproduct.css" />
   </head>
   <body>
     <%- include("../partials/header.ejs") %>
     <h1>EDITAR PRODUCTOS</h1>
-    <div class="nuevo-producto">
-      <button class="button" type="submit">
-        <h4><a href="newProduct">NUEVO PRODUCTO</a></h4>
-      </button>
-    </div>
-    <form action="" method="POST">
+    <form action="/order/<%= productEdit.id  %>?_method=PUT" method="POST">
       <div class="editar-producto">
         <div class="campo">
-          <label>Categoría del producto a editar:</label>
-          <select class="campo-completar" name="categoria">
-            <option value="hamburguesas">Hamburguesas</option>
-            <option value="Tapas">Tapas</option>
-            <option value="bebidas">Bebidas</option>
-            <option value="combos">Combos</option>
-          </select>
-        </div>
-        <div class="campo">
-          <label>Producto a editar:</label>
-          <select class="campo-completar" name="categoria">
-            <option value="product1">Product 1</option>
-            <option value="product2">Product 2</option>
-            <option value="product3">Product 3</option>
-            <option value="product4">Product 4</option>
-          </select>
-        </div>
-        <div class="campo">
-          <label for="nombre">Nombre:</label>
+          <label for="name">Nombre:</label>
           <input
             class="campo-completar"
             type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="nombre-actual"
+            name="name"
+            id="name"
+            value="<%= productEdit.name  %>"
           />
         </div>
         <div class="campo">
-          <label for="descripcion">Descripción:</label>
-          <textarea
-            class="campo-completar"
-            name="descripcion"
-            id="descripcion"
-            placeholder="descripcion-actual"
-          >
-          </textarea>
+          <label>Categoría:</label>
+          <select class="campo-completar" name="category">
+            <option value="burgers">Hamburguesas</option>
+            <option value="chips">Tapas</option>
+            <option value="drinks">Bebidas</option>
+            <option value="comboc">Combos</option>
+          </select>
         </div>
         <div class="campo">
-          <label for="precio">Precio:</label>
+          <label for="description">Descripción:</label>
+          <input
+            type="textarea"
+            class="campo-completar"
+            name="description"
+            id="description"
+            value="<%= productEdit.description  %>"
+          />
+        </div>
+        <div class="campo">
+          <label for="price">Precio:</label>
           <input
             class="campo-completar"
             type="text"
-            name="precio"
-            id="precio"
-            placeholder="precio-actual"
+            name="price"
+            id="price"
+            value="<%= productEdit.price %>"
           />
         </div>
         <div class="campo">
@@ -71,17 +57,12 @@
         <div class="button-container">
           <div>
             <button class="button" type="submit">
-              <h4><a href="">ACTUALIZAR PRODUCTO</a></h4>
-            </button>
-          </div>
-          <div>
-            <button class="button" type="reset">
-              <h4><a href="">BORRAR ACTUALIZACIÓN</a></h4>
+              ACTUALIZAR PRODUCTO
             </button>
           </div>
           <div>
             <button class="button" type="submit">
-              <h4><a href="">ELIMINAR PRODUCTO</a></h4>
+              ELIMINAR PRODUCTO
             </button>
           </div>
         </div>

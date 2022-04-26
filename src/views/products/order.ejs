@@ -89,6 +89,31 @@
                 />
               </div>
             </div>
+            <div class="contenedor-notas">
+              <h3>Notas del pedido</h3>
+              <div class="selector-notas">
+                <input
+                  type="textarea"
+                  name="notes"
+                  placeholder="Agregar"
+                  for="cartAdding"
+                />
+              </div>
+            </div>
+            <input
+              type="hidden"
+              name="product"
+              value="<%=product%>"
+              for="cartAdding"
+            />
+
+            <button type="submit" class="boton-agregar-al-carrito">
+              AGREGAR AL CARRITO
+            </button>
+
+            <button type="submit" class="boton-agregar-al-carrito">
+              <a href="/edit/<%= product.id%>"> EDITAR PRODUCTO </a>
+            </button>
           </div>
           <div class="notes-container">
             <h3 class="head-3">Notas del pedido</h3>
@@ -131,6 +156,9 @@
             }
           });
         </script>
+      </form>
+      <form action="/order/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+        <button type="submit" class="boton-agregar-al-carrito">ELIMINAR</button>
       </form>
     </main>
     <%- include("../partials/footer.ejs") %>
