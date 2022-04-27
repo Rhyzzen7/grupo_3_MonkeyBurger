@@ -24,16 +24,8 @@ const productsController = {
     const burgers = products.filter((item) => item.category === "burgers");
     const drinks = products.filter((item) => item.category === "drinks");
     const chips = products.filter((item) => item.category === "chips");
-<<<<<<< HEAD
-    res.render("./products/menu", { comboc, burgers, drinks, chips });},
-  
-  userChoice: function (req, res) {{
-   res.send(req.body.userChoice)
-
-=======
     res.render("./products/products", { comboc, burgers, drinks, chips });
   },
->>>>>>> 4a986d7e36f9737afb8373913a25eee74c75288b
   order: function (req, res) {
     // const comboc = products.filter((item) => item.category === "comboc");
     // const burgers = products.filter((item) => item.category === "burgers");
@@ -43,6 +35,11 @@ const productsController = {
     const product = products.find((item) => item.id == req.params.id);
     res.render("./products/order", { product });
   },
+    orderChoice: function (req, res) {
+      let userChoise = req.body
+      res.render ("./order/:id", { userChoise });
+    },
+
   editProduct: function (req, res) {
     const productEdit = products.find((item) => item.id == req.params.id);
     res.render("./products/editProduct", { productEdit });

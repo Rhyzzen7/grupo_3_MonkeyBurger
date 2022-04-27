@@ -10,8 +10,9 @@ app.set ("views", path.join(__dirname, "./views"));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method")); 
+app.use(express.json());
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4002;
 
 app.use("/", router);
 

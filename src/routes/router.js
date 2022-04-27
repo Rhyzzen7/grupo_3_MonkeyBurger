@@ -16,6 +16,7 @@ router.get("/products", productsController.products);
 
 // Product Detail
 router.get("/order/:id", productsController.order);
+router.post("/order/:id", productsController.orderChoice);
 
 // Create a new Product
 router.get("/create", productsController.create);
@@ -26,10 +27,11 @@ router.get("/edit/:id", productsController.editProduct);
 router.put('/order/:productId', productsController.update);
 
 // Delete a product
-router.delete('/order/:productId', productsController.delete)
+router.delete('/order/:productId', productsController.delete);
 
 //Users
 router.get("/login", sessionController.login);
+router.post("/login/", sessionController.login);
 router.get("/register", sessionController.register);
 router.get("/user", userController.userProfile);
 

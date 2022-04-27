@@ -24,45 +24,48 @@
           <a class="borrarlink" href="/menu#combos">COMBOS DEL MES</a>
         </li>
       </ul>
-      
+
+      <form action="/order/:id" for= "userChoice" name="userChoice" method="POST">
       <h2 id="hamburguesas">HAMBURGUESAS</h2>
       <div class="contenedor-producto">
-        <form action="/order/userChoice" name="userChoise" method="POST">
         <% burgers.forEach(burger => { %>
         <div class="subcontenedor-infoproducto">
-          <h3><%=burger.name%></h3>
-          <div><%=burger.description%></div>
-          <h4>$ <%=burger.price%></h4>
+          <input type="hidden" for="userChoice" name="productname" id="idProduct"/><h3><%=burger.name%></h3>
+          <input type="hidden" for="userChoice" name="productdescription" id="idProduct"/> <div><%=burger.description%></div> 
+          <input type="hidden" for="userChoice" name="productprice" id="idProduct"/><h4>$ <%=burger.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
-            <a class="boton-hace-tu-pedido" href="/order/<%=burger.id %>">HACÉ TU PEDIDO</a>
+           <button type="submit" for="userChoice" class="boton-hace-tu-pedido"> <a href="/order/<%=burger.id %>"> HACÉ TU PEDIDO </a> </button>
           </div>
         </div>
-        <img
+        <label for="userChoice" name="productimage"id="idProduct"><img
           class="subcontenedor-fotoproducto"
           src="<%=burger.image%>"
           alt="foto de <%=burger.name%>"
-        />
+        /></label>
         <% }) %>
       </div>
+      </form>
 
       <h2 id="tapas">TAPAS</h2>
       <div class="contenedor-producto">
+        <form action="/order/:id" for= "userChoice" name="userChoice" method="POST"></form>
         <% chips.forEach(chip => { %>
         <div class="subcontenedor-infoproducto">
-          <h3><%=chip.name%></h3>
-          <div><%=chip.description%></div>
-          <h4>$ <%=chip.price%></h4>
+          <input type="hidden" for="userChoice" name="productname" id="idProduct"/><h3><%=chip.name%></h3>
+          <input type="hidden" for="userChoice" name="productdescription" id="idProduct"/> <div><%=chip.description%></div> 
+          <input type="hidden" for="userChoice" name="productprice" id="idProduct"/><h4>$ <%=chip.price%></h4>
           <div class="contenedor-boton-hace-tu-pedido">
-            <a class="boton-hace-tu-pedido" href="/order/<%=chip.id %>">HACÉ TU PEDIDO</a>
+           <button type="submit" for="userChoice" class="boton-hace-tu-pedido"> <a href="/order/<%=chip.id %>"> HACÉ TU PEDIDO </a> </button>
           </div>
         </div>
-        <img
+        <label for="userChoice" name="productimage"id="idProduct"><img
           class="subcontenedor-fotoproducto"
           src="<%=chip.image%>"
           alt="foto de <%=chip.name%>"
-        />
+        /></label>
         <% }) %>
       </div>
+    </form>
 
       <h2 id="bebidas">BEBIDAS</h2>
       <div class="bebidas">
