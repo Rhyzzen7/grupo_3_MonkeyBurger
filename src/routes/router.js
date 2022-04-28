@@ -5,7 +5,7 @@ const multer = require("multer");
 const homeController = require("../controllers/homeController");
 const contactController = require("../controllers/contactController");
 const aboutController = require("../controllers/aboutController");
-//const productsController = require("../controllers/productsController");
+const productsController = require("../controllers/productsController");
 //const cartController = require("../controllers/cartController");
 //const sessionController = require("../controllers/sessionController");
 //const userController = require("../controllers/userController");
@@ -26,8 +26,9 @@ router.get("/", homeController.home);
 // // All Products
 // router.get("/products", productsController.products);
 
-// // Product Detail
-// router.get("/order/:id", productsController.order);
+// Product Detail
+router.get("/order/:id", productsController.order);
+router.post("/order/:id", productsController.orderChoice);
 
 // // Create a new Product
 // router.get("/create", productsController.create);

@@ -12,21 +12,21 @@
       <h2 class="novedades">INICIAR SESIÓN</h2>
       <!--acá es necesario generar un formulario-->
       <div class="mosaico-login">
-        <form class="formulario" action="/LOGIN.HTML" method="POST">
+        <form class="formulario" action="/login" method="POST">
           <label for="usuario"
             ><h5>
               Nombre de usuario/Correo electrónico
               <i class="fa-solid fa-user"></i></h5
           ></label>
-          <input type="text" id="usuario" />
+          <input type="text" id="usuario" name="username" />
           <label for="contrasena"
             ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
           ></label>
-          <input type="password" id="contrasena" />
+          <input type="password" id="contrasena" name="pass"/>
         </form>
         <div class="ingresar">
           <button name="ingresar" type="submit">
-            <h4><a href="usuario">INGRESAR</a></h4>
+            <h4><a href= <% "/user-profile" %> >INGRESAR</a></h4>
           </button>
         </div>
         <nav class="acciones">
