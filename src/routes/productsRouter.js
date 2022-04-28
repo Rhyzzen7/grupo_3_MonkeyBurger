@@ -1,4 +1,5 @@
 const express = require("express");
+const { products } = require("../controllers/productsController");
 const productsRouter = express.Router();
 
 const productsController = require("../controllers/productsController");
@@ -8,6 +9,7 @@ productsRouter.get("/products", productsController.products);
 
 // Product Detail
 productsRouter.get("/order/:id", productsController.order);
+productsRouter.post("order/:id", productsController.orderChoice);
 
 // Create a new Product
 productsRouter.get("/create", productsController.create);
