@@ -91,3 +91,49 @@ Seguimiento de avances y oportunidades de mejora:
 3. ¿Qué haré mañana?
 
 - _Revisar las secciones que creé para asegurarme de que funcionen_
+
+## 30/04/2022 ##
+## Lourdes Celli
+
+1.  ¿Qué hice hoy?
+
+-
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+-
+
+3. ¿Qué haré mañana?
+
+-
+
+## Victor Celedón
+
+1.  ¿Qué hice hoy?
+
+- _Implementación de manejo de method required en order.ejs_
+- _Mejoras para comportameinto responsive en order.ejs_
+- _Renombrado de clases en varias vistas_
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- _Implementación de acciones a partir de campos div e input_
+- _Implementación de acciones a partir de campos div e input_
+
+3. ¿Qué haré mañana?
+
+- _Verificación de rutas y controladores para el manejo del sitio_
+
+## Melody Ferraro
+
+1.  ¿Qué hice hoy?
+
+-
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+-
+
+3. ¿Qué haré mañana?
+
+-
