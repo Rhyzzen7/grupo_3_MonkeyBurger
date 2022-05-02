@@ -54,15 +54,15 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
--
+- Revisión de vinculación entre las paginas para correcto funcionamiento. 
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
--
+- Se modificaron algunos links, todo ok.
 
 3. ¿Qué haré mañana?
 
--
+- Revisiòn de formularios y aplicaciòn/modificaciòn en formularios de login / register.
 
 ## Victor Celedón
 
@@ -97,15 +97,15 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
--
+- Implementaciòn de POST para enviar información del producto desde "products" a "order"
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
--
+- Inconvenientes de practica con la implementaciòn del CRUD, pude resolverlo
 
 3. ¿Qué haré mañana?
 
--
+- Continuar trabajando en el login/register y el correcto funcionamiento de la implementación del crud.
 
 ## Victor Celedón
 

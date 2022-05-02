@@ -4,4 +4,42 @@
 "email":"lourdes.celli@gmail.com",
 "pass":"12345678",
 "rol":"admin",
-"image": null}]
+"image": null
+},
+{   "id":2,
+    "firstname":"Paula",
+    "lastname":"Rodriguez",
+    "email":"pau@gmail.com",
+    "pass":"12345678",
+    "rol":"user",
+    "image": null
+
+},
+{"id":3,
+    "firstname":"Sofia",
+    "lastname":"Vecchio",
+    "email":"Sofi@gmail.com",
+    "pass":"12345678",
+    "rol":"user",
+    "image": null
+
+},
+{"id":4,
+    "firstname":"Pablo",
+    "lastname":"Marcovech",
+    "email":"Paul@gmail.com",
+    "pass":"12345678",
+    "rol":"admin",
+    "image": null
+
+},
+{"id":5,
+    "firstname":"Carlos",
+    "lastname":"Perez",
+    "email":"cp@gmail.com",
+    "pass":"12345678",
+    "rol":"admin",
+    "image": null
+
+}
+]
