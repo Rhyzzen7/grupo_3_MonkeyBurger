@@ -2,7 +2,7 @@ const models = require("../models/data");
 const fs = require("fs");
 const path = require("path");
 
-const modelsJSON = {
+const productsJSON = {
   write: function (product = "") {
     fs.writeFileSync(
       path.join(__dirname, "../data/products.json"),
@@ -18,4 +18,4 @@ const modelsJSON = {
   },
 };
 
-module.exports = modelsJSON;
+module.exports = productsJSON;
