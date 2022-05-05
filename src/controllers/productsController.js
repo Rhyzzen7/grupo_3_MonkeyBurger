@@ -35,8 +35,8 @@ const productsController = {
     res.render("./products/order", { product });
   },
   orderChoice: function (req, res) {
-    let userChoise = req.body;
-    res.render("./order/:id", { userChoise });
+    const product = req.body;
+    res.render("./order/:id", { product });
   },
 
   editProduct: function (req, res) {

@@ -9,7 +9,14 @@ productsRouter.get("/menu", productsController.products);
 
 // Product Detail
 productsRouter.get("/order/:id", productsController.order);
-productsRouter.post("order/:id", productsController.orderChoice);
+//productsRouter.post("order/:id", productsController.orderChoice);
+
+/* El método post no está funcionando, ya fue arreglado en la vista menu los formularios
+Debe modificarse todos los inputs
+Debe respetarse lo declarado en el JSON
+Debe cargarse con los valores provisto por la variable burgers
+
+Mejor decisión, pasarlo por GET*/
 
 // Create a new Product
 productsRouter.get("/create", productsController.create);
