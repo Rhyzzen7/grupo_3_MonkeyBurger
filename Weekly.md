@@ -54,7 +54,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
-- Revisión de vinculación entre las paginas para correcto funcionamiento. 
+- Revisión de vinculación entre las paginas para correcto funcionamiento.
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
@@ -92,7 +92,8 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Revisar las secciones que creé para asegurarme de que funcionen_
 
-## 30/04/2022 ##
+## 30/04/2022
+
 ## Lourdes Celli
 
 1.  ¿Qué hice hoy?
@@ -119,6 +120,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Implementación de acciones a partir de campos div e input_
 - _Implementación de acciones a partir de campos div e input_
+- _Revisar el manejo de rutas y definir rutas absolutas como opcion_
 
 3. ¿Qué haré mañana?
 

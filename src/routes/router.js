@@ -27,8 +27,8 @@ router.get("/", homeController.home);
 // router.get("/products", productsController.products);
 
 // Product Detail
-router.get("/order/:id", productsController.order);
-router.post("/order/:id", productsController.orderChoice);
+// router.get("/order/:id", productsController.order);
+// router.post("/order/:id", productsController.orderChoice);
 
 // // Create a new Product
 // router.get("/create", productsController.create);

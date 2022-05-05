@@ -5,7 +5,7 @@ const productsRouter = express.Router();
 const productsController = require("../controllers/productsController");
 
 // All Products
-productsRouter.get("/products", productsController.products);
+productsRouter.get("/menu", productsController.products);
 
 // Product Detail
 productsRouter.get("/order/:id", productsController.order);
