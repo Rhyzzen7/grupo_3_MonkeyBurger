@@ -99,3 +99,25 @@ En base a la metodología de estrella, verificamos los puntos a mejorar como equ
 - No tener miedo a los conflictos que devengan del trabajo colaborativo.
 - No solicitar apoyo siempre que se requiera.
 - No darle el tiempo suficiente al desarrollo del sitio.
+
+## Retrospectiva sprint 4 - Monkey Burger
+
+1.  **Comenzar a hacer:**
+
+-
+
+2. **Hacer más:**
+
+-
+
+3. **Continuar haciendo:**
+
+-
+
+4. **Hacer menos:**
+
+-
+
+5. **Dejar de hacer:**
+
+-

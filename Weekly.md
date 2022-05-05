@@ -139,3 +139,47 @@ Seguimiento de avances y oportunidades de mejora:
 3. ¿Qué haré mañana?
 
 -
+
+## 05/05/2022
+
+## Lourdes Celli
+
+1.  ¿Qué hice hoy?
+
+-
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+-
+
+3. ¿Qué haré mañana?
+
+-
+
+## Victor Celedón
+
+1.  ¿Qué hice hoy?
+
+- Revisión de requisitos junto al equipo de trabajo
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- Reiteración de métodos asignados a la misma tarea. Se seleccionó un solo método.
+
+3. ¿Qué haré mañana?
+
+- Implementación de definiciones
+
+## Melody Ferraro
+
+1.  ¿Qué hice hoy?
+
+-
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+-
+
+3. ¿Qué haré mañana?
+
+-
