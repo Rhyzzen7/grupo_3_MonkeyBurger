@@ -104,20 +104,27 @@ En base a la metodología de estrella, verificamos los puntos a mejorar como equ
 
 1.  **Comenzar a hacer:**
 
--
+- Replicar comportamiento Mobile para todas las páginas.
+- Implementación de rutas y controladores para cuatro entidades.
+- Verificación de otro miembre del equipo de nuestro desarrollo para determinar si los objetivos se cumplieron.
 
 2. **Hacer más:**
 
--
+- Establecer días y horarios para mantener una weekly.
+- Revisar avances en cada weekly y hacer seguimiento mediante whatsapp.
+- Mejorar desarrollo para alcanzar en tiempo y forma la entrega.
 
 3. **Continuar haciendo:**
 
--
+- Asignación de tareas para alcanzar los objetivos.
+- Mejorar las entregas pasadas para una mejor respuesta del sitio.
+- Comunicación de tareas, inconvenientes y resolución en conjunto.
 
 4. **Hacer menos:**
 
--
+- Trabajar menos en forma individualista.
+- Revisiones profundas que impliquen un rediseño del sitio.
 
 5. **Dejar de hacer:**
 
--
+- Postergar weekly.

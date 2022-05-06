@@ -168,7 +168,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 3. ¿Qué haré mañana?
 
-- Implementación de definiciones
+- Implementación de definiciones para el manejo de las vistas
 
 ## Melody Ferraro
 
