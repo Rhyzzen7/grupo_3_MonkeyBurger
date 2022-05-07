@@ -155,7 +155,10 @@ header {
 .buy {
   display: none;
 }
-
+.order-visibility,
+.create-visibility {
+  visibility: hidden;
+}
 /*Manejar la barra con display flex queda mejor.*/
 main {
   display: flex;

@@ -9,7 +9,7 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <form action="/cart/cart/?_method=PUT" name="cartAdding" method="POST">
+      <form action="/cart/items/?_method=PUT" name="cartAdding" method="POST">
         <h1 class="head-1"><%=product.name%></h1>
         <div class="products">
           <!--esta clase corresponde a productos-->
@@ -101,7 +101,7 @@
                 />
               </div>
             </div>
-            <div class="contenedor-notas">
+            <!-- <div class="contenedor-notas">
               <h3>Notas del pedido</h3>
               <div class="selector-notas">
                 <input
@@ -118,7 +118,7 @@
 
             <button type="submit" class="boton-agregar-al-carrito">
               <a href="/edit/<%= product.id%>"> EDITAR PRODUCTO </a>
-            </button>
+            </button> -->
           </div>
           <div class="notes-container">
             <h3 class="head-3">Notas del pedido</h3>
@@ -134,6 +134,9 @@
           </div>
           <button type="submit" class="boton-agregar-al-carrito">
             AGREGAR AL CARRITO
+          </button>
+          <button type="submit" class="boton-agregar-al-carrito">
+            <a href="/edit/<%= product.id%>"> EDITAR PRODUCTO </a>
           </button>
         </div>
         <!--Botones de acción mas y menos-->

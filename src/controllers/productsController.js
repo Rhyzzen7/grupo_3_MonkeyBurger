@@ -34,10 +34,10 @@ const productsController = {
     const product = products.find((item) => item.id == req.params.id);
     res.render("./products/order", { product });
   },
-  orderChoice: function (req, res) {
-    const product = req.body;
-    res.render("./order/:id", { product });
-  },
+  // orderChoice: function (req, res) {
+  //   const product = req.body;
+  //   res.render("./order/:id", { product });
+  // },
 
   editProduct: function (req, res) {
     const productEdit = products.find((item) => item.id == req.params.id);
