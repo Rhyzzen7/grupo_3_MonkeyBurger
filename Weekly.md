@@ -160,15 +160,19 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
-- Revisión de requisitos junto al equipo de trabajo
+- Revisión de requisitos junto al equipo de trabajo.
+- Mejoras en las rutas y controladores de products y cart
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
 - Reiteración de métodos asignados a la misma tarea. Se seleccionó un solo método.
+- Generación de los archivos json vacíos a partir de modelos de arrays.
 
 3. ¿Qué haré mañana?
 
-- Implementación de definiciones para el manejo de las vistas
+- Implementación de definiciones para el manejo de las vistas.
+- Revisión de comportamiento responsive de todas las vistas.
+- Revisión de las vistas, rutas y controladores de users.
 
 ## Melody Ferraro
 
