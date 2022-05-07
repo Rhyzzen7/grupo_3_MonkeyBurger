@@ -126,7 +126,13 @@ h4 {
   box-shadow: 0 0 11px #e8eddf;
   font-weight: 600;
 }
-
+.boton-continuar-carrito a,
+.boton-agregarmas-carrito a {
+  text-decoration: none;
+  color: #242423;
+  margin-bottom: 1px;
+  background-color: #ffc000;
+}
 .totalproducto-carrito {
   display: flex;
   margin-bottom: 5px;
@@ -157,11 +163,11 @@ header h3 .gourmet {
 header h4,
 header .boton h4 a {
   background-color: #ffc000;
-  color: #242423;;
+  color: #242423;
 }
 
 h2.brand-type,
-h1.brand-logo  {
+h1.brand-logo {
   padding: 0px, 0px;
   background: none;
 }
@@ -177,17 +183,16 @@ li h4 a {
 }
 
 .buy-text,
-.users-text{
+.users-text {
   color: var(--negro-carbon);
   margin-bottom: 1px;
   background-color: #ffc000;
 }
 
 .buy-text:hover,
-.users-text:hover{ 
+.users-text:hover {
   font-weight: 600px;
   color: var(--gris-claro);
   text-shadow: var(--gris-claro) 0px 0px 16px;
   background-color: #ffc000;
 }
-

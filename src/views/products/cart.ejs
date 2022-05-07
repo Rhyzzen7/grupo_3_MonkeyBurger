@@ -26,12 +26,13 @@
     <main>
       <h1 class="titulo-carrito">MI CARRITO</h1>
       <!--Productos seleccionados-->
+      <% items.forEach(item => { %>
       <section class="contenedor-carrito">
         <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
         <div class="foto-producto-carrito">
           <!--Necesito traer la imagen mediante un multer-->
           <img
-            src="/img/menu/aros1.jpg"
+            src="../../<%=item.image%>"
             alt="foto de Aros de Cebolla"
             width="150px"
           />
@@ -48,8 +49,10 @@
           <i class="fa-solid fa-trash"></i>
         </article>
       </section>
-      <section class="contenedor-carrito">
-        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
+      <% }) %>
+
+      <!-- <section class="contenedor-carrito">
+        Serán mostradas sólo 3 selecciones en el ejemplo
         <div class="foto-producto-carrito">
           <img src="\img\menu\mono1.jpg" alt="Hamburguesa Mono" width="150px" />
           <h4 class="nombre-producto-carrito">Hamburguesa Mono</h4>
@@ -60,9 +63,9 @@
           <div class="total-compra-carrito">Precio total: $ 1.800</div>
           <i class="fa-solid fa-trash"></i>
         </article>
-      </section>
-      <section class="contenedor-carrito">
-        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
+      </section> -->
+      <!-- <section class="contenedor-carrito">
+        Serán mostradas sólo 3 selecciones en el ejemplo
         <div class="foto-producto-carrito">
           <img
             src="/img/menu/combomonita1.jpg"
@@ -77,12 +80,17 @@
           <div class="total-compra-carrito">Precio total: $ 7.500</div>
           <i class="fa-solid fa-trash"></i>
         </article>
-      </section>
+      </section> -->
       <section class="totalproducto-carrito">
-        <div class="totales-carrito">TOTAL COMPRA: $ 10.300</div>
+        <div class="totales-carrito">
+          TOTAL COMPRA: $ <%= items.reduce((acc, item) => acc + item.total, 0)
+          %>
+        </div>
       </section>
       <section class="contenedor-botones-carrito">
-        <h4 class="boton-agregarmas-carrito">AGREGAR MAS PRODUCTOS</h4>
+        <h4 class="boton-agregarmas-carrito">
+          <a href="/cart/menu">AGREGAR MAS PRODUCTOS</a>
+        </h4>
         <h4 class="boton-continuar-carrito">CONTINUAR</h4>
       </section>
     </main>
