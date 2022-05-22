@@ -12,7 +12,8 @@
       <h2 class="novedades">CREAR CUENTA</h2>
       <!--Crear un formulario a partir de esta instancia-->
       <div class="mosaico-login">
-        <form class="formulario" action="" method="POST">
+        <form class="formulario" action="/user-profile" method="POST" 
+        enctype="multipart/form-data">
           <label for="nombre"
             ><h5>Nombre <i class="fa-solid fa-id-card"></i></h5
           ></label>
@@ -47,6 +48,8 @@
             ><h5>Código Postal <i class="fa-solid fa-envelope"></i></h5
           ></label>
           <input type="number" id="postal" />
+          <label for="imagenPerfil"><h5>Imagen de perfil:</h5></label>
+          <input type="file" id="userimage" name="userimage">
           <label for="contrasena"
             ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
           ></label>
@@ -59,7 +62,7 @@
       </div>
       <div class="ingresar">
         <button name="enviar" type="submit">
-          <h4><a href="usuario">ENVIAR</a></h4>
+          <h4><a href= <%= "/user-profile/:id"  %> > ENVIAR</h4>
         </button>
       </div>
     </main>
