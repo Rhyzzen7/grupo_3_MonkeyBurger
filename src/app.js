@@ -29,3 +29,9 @@ app.use("/users", usersRouter);
 app.use("/cart", cartRouter);
 
 app.listen(PORT, () => console.log(`Server up and running on PORT ${PORT}`));
+
+app.use((req, res, next) => {
+  //res.status(404).render("404-page");
+  res.status(404).send("Página web no encontrada.");
+  next();
+});
