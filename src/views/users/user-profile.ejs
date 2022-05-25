@@ -10,7 +10,7 @@
   <body>
       <%- include("../partials/header.ejs") %>
     <main>
-      <h1>PERFIL DE USUARIO</h1>
+      <h1>HOLA, <%= locals.usuario ? `${usuario.firstname} ${usuario.lastname}` : "USUARIO" %>!</h1>
       <ul class="navbar">
         <li class="lista">
           <a class="borrarlink" href="/usuario#pedidos">PEDIDOS</a>
