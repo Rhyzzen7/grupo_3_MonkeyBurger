@@ -115,6 +115,18 @@ h1.sesion{
     margin: 10px 25px 25px;
 }
 
+.input-domicilio input{
+    background-color: white;
+    width:45%;
+    height: 30px;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+.input-domicilio{
+    text-align: center;
+    margin: 10px 25px 25px;
+}
+
 .input-contraseña input{
     background-color: white;
     width:45%;
@@ -135,6 +147,18 @@ h1.sesion{
     border-radius: 10px;
 }
 .input-confirmarContra{
+    text-align: center;
+    margin: 10px 25px 25px;
+}
+
+.input-userimage input{
+    background-color: white;
+    width:45%;
+    height: 30px;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+.input-userimage{
     text-align: center;
     margin: 10px 25px 25px;
 }

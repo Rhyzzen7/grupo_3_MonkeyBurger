@@ -1,7 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 let carts = require("../../models/cart");
-fs.writeFileSync(path.join(__dirname, "../../data/cart.json"), "", "utf8");
+// Esto no deja que nodemon funcione correctamente.
+// fs.writeFileSync(path.join(__dirname, "../../data/cart.json"), "", "utf8");
 
 const productsFilePath = path.join(__dirname, "../../data/products.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));

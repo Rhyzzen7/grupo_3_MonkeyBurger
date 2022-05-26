@@ -12,55 +12,68 @@
       <h2 class="novedades">CREAR CUENTA</h2>
       <!--Crear un formulario a partir de esta instancia-->
       <div class="mosaico-login">
-        <form class="formulario" action="" method="POST">
-          <label for="nombre"
+        <form
+          class="formulario"
+          action="/users/register"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <label for="firstname"
             ><h5>Nombre <i class="fa-solid fa-id-card"></i></h5
           ></label>
-          <input type="text" id="nombre" />
-          <label for="apellido"
+          <input
+            type="text"
+            name="firstname"
+            value="<%= locals.old && old.firstname %>"
+          />
+          <% if (locals.firstname && errors.firstname && errors.firstname.msg) {
+          %>
+          <p class="feedback"><%= errors.firstname.msg %></p>
+          <% } %>
+          <label for="lastname"
             ><h5>Apellido <i class="fa-solid fa-id-card"></i></h5
           ></label>
-          <input type="text" id="apellido" />
-          <label for="correo"
+          <input
+            type="text"
+            name="lastname"
+            value="<%= locals.old && old.lastname %>"
+          />
+          <% if (locals.errors && errors.lastname && errors.lastname.msg) { %>
+          <p class="feedback"><%= errors.lastname.msg %></p>
+          <% } %>
+          <label for="email"
             ><h5>Correo electrónico <i class="fa-solid fa-at"></i></h5
           ></label>
-          <input type="email" id="correo" />
-          <label for="usuario"
-            ><h5>Nombre de usuario <i class="fa-solid fa-user"></i></h5
-          ></label>
-          <input type="text" id="usuario" />
-          <label for="telefono"
-            ><h5>Número de teléfono <i class="fa-solid fa-phone"></i></h5
-          ></label>
-          <input type="number" id="telefono" />
-          <label for="domicilio"
-            ><h5>Domicilio <i class="fa-solid fa-earth-americas"></i></h5
-          ></label>
-          <input type="text" id="domicilio" />
-          <label for="provincia"
-            ><h5>
-              Localidad / Provincia
-              <i class="fa-solid fa-earth-americas"></i></h5
-          ></label>
-          <input type="text" id="provincia" />
-          <label for="postal"
-            ><h5>Código Postal <i class="fa-solid fa-envelope"></i></h5
-          ></label>
-          <input type="number" id="postal" />
-          <label for="contrasena"
+          <input
+            type="email"
+            name="email"
+            value="<%= locals.old && old.email %>"
+          />
+          <% if (locals.errors && errors.email && errors.email.msg) { %>
+          <p class="feedback"><%= errors.email.msg %></p>
+          <% } %>
+          <label for="imagenPerfil"><h5>Imagen de perfil:</h5></label>
+          <input type="file" id="userimage" name="userimage" />
+          <label for="password"
             ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
           ></label>
-          <input type="password" id="contrasena" />
-          <label for="confirmar"
+          <input type="password" name="password" />
+          <% if (locals.errors && errors.password && errors.password.msg) { %>
+          <p class="feedback"><%= errors.password.msg %></p>
+          <% } %>
+          <label for="confirm"
             ><h5>Confirmar contraseña <i class="fa-solid fa-key"></i></h5
           ></label>
-          <input type="password" id="confirmar" />
+          <input type="password" name="confirm" />
+          <% if (locals.errors && errors.confirm && errors.confirm.msg) { %>
+          <p class="feedback"><%= errors.confirm.msg %></p>
+          <% } %>
+          <div class="ingresar">
+            <button type="submit">
+              <h4>ENVIAR</h4>
+            </button>
+          </div>
         </form>
-      </div>
-      <div class="ingresar">
-        <button name="enviar" type="submit">
-          <h4><a href="usuario">ENVIAR</a></h4>
-        </button>
       </div>
     </main>
     <%- include("../partials/footer.ejs") %>

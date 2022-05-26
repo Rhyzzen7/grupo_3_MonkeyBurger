@@ -51,3 +51,20 @@ button a {
 .acciones ul li {
   padding: 10px;
 }
+
+.rememberme{
+  color: var(--gris-oscuro);
+  font-family: antonio;
+}
+
+h4 {
+  color:  var(--negro-carbon)
+}
+
+.feedback-login {
+  margin: 6px 0;
+  padding: 6px 0;
+  text-align: center;
+  border-radius: 4px;
+  background-color: red;
+}
