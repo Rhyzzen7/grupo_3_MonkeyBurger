@@ -54,15 +54,15 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
-- Revisión de vinculación entre las paginas para correcto funcionamiento.
+- _Revisión de vinculación entre las paginas para correcto funcionamiento._
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
-- Se modificaron algunos links, todo ok.
+- _Se modificaron algunos links, todo ok._
 
 3. ¿Qué haré mañana?
 
-- Revisiòn de formularios y aplicaciòn/modificaciòn en formularios de login / register.
+- _Revisiòn de formularios y aplicaciòn/modificaciòn en formularios de login / register._
 
 ## Victor Celedón
 
@@ -98,15 +98,15 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
-- Implementaciòn de POST para enviar información del producto desde "products" a "order"
+- _Implementaciòn de POST para enviar información del producto desde "products" a "order"_
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
-- Inconvenientes de practica con la implementaciòn del CRUD, pude resolverlo
+- _Inconvenientes de practica con la implementaciòn del CRUD, pude resolverlo_
 
 3. ¿Qué haré mañana?
 
-- Continuar trabajando en el login/register y el correcto funcionamiento de la implementación del crud.
+- _Continuar trabajando en el login/register y el correcto funcionamiento de la implementación del crud._
 
 ## Victor Celedón
 
@@ -130,15 +130,15 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
--
+- _Implementación de rutas_
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
--
+- _Esperé hasta último momento_
 
 3. ¿Qué haré mañana?
 
--
+- _Revisar puntos de mejora_
 
 ## 05/05/2022
 
@@ -178,12 +178,12 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
--
+- _Implementación del login del usuario, función de recordar usuario, rutas de huéspedes y usuarios._
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
--
+- _Necesité volver a mirar las 300 horas de video porque no tenía los conocimientos bien asentados._
 
 3. ¿Qué haré mañana?
 
--
+- _Ver si puedo darles una mano a los chicos con el formualrio de registro de usuarios y descansar antes de la entrega._

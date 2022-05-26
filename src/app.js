@@ -1,10 +1,31 @@
 const express = require("express");
-const app = express();
 const path = require("path");
+const session = require("express-session");
+const cookies = require("cookie-parser");
 const router = require("./routes/router");
 const productsRouter = require("./routes/productsRouter");
 const usersRouter = require("./routes/usersRouter");
 const cartRouter = require("./routes/cartRouter");
+const userMiddleware = require('./middlewares/userMiddleware');
+
+const app = express();
+
+// Implementando session y cookieparser
+app.use(
+  session({
+    secret: "Monkey Burger",
+    resave: false,
+    saveUninitialized: false,
+    rolling: true,
+    cookie: {
+      maxAge: 1000 * 60 * 5,
+    },
+  })
+);
+
+app.use(cookies());
+
+app.use(userMiddleware);
 
 // Pasar poder usar los métodos PUT, PATCH y DELETE
 const methodOverride = require("method-override");
