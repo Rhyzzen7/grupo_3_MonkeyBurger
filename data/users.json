@@ -2,7 +2,7 @@
 "firstname":"Lourdes",
 "lastname":"Celli",
 "email":"lourdes.celli@gmail.com",
-"pass":"12345678",
+"password":"12345678",
 "rol":"admin",
 "image": null
 },
@@ -10,7 +10,7 @@
     "firstname":"Paula",
     "lastname":"Rodriguez",
     "email":"pau@gmail.com",
-    "pass":"12345678",
+    "password":"12345678",
     "rol":"user",
     "image": null
 
@@ -19,7 +19,7 @@
     "firstname":"Sofia",
     "lastname":"Vecchio",
     "email":"Sofi@gmail.com",
-    "pass":"12345678",
+    "password":"12345678",
     "rol":"user",
     "image": null
 
@@ -28,7 +28,7 @@
     "firstname":"Pablo",
     "lastname":"Marcovech",
     "email":"Paul@gmail.com",
-    "pass":"12345678",
+    "password":"12345678",
     "rol":"admin",
     "image": null
 
@@ -37,7 +37,7 @@
     "firstname":"Carlos",
     "lastname":"Perez",
     "email":"cp@gmail.com",
-    "pass":"12345678",
+    "passwordword":"12345678",
     "rol":"admin",
     "image": null
 
