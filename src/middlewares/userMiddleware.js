@@ -7,6 +7,7 @@ function userMiddleware(req, res, next) {
     req.session.usuario = userFromCookie;
   }
   res.locals.tieneSesion = !!req.session.usuario;
+  res.locals.usuario = req.session.usuario || null;
   next();
 }
 
