@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/style-login.css" />
+    <title>Bienvenidos a Monkey Burger</title>
+    <link rel="icon" href="/img/icono.png" />
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <h2 class="novedades">INICIAR SESIÓN</h2>
+      <!--acá es necesario generar un formulario-->
+      <div class="mosaico-login">
+        <form class="formulario" action="/users/login" method="POST">
+          <label for="usuario"
+            ><h5>
+              Correo electrónico
+              <i class="fa-solid fa-user"></i></h5
+          ></label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            value="<%= locals.old && old.email %>"
+          />
+          <% if (locals.errors && errors.email && errors.email.msg) { %>
+          <p class="feedback"><%= errors.email.msg %></p>
+          <% } %>
+          <label for="contrasena">
+            <h5>Contraseña <i class="fa-solid fa-key"></i></h5>
+          </label>
+          <input type="password" id="password" name="password" />
+          <% if (locals.errors && errors.password && errors.password.msg) { %>
+          <p class="feedback"><%= errors.password.msg %></p>
+          <% } %>
+          <nav>
+            <input type="checkbox" name="rememberme" />
+            <label class="rememberme" for="rememberme">Recordar usuario</label>
+          </nav>
+          <% if (locals.errors && errors.login) { %>
+          <p class="feedback-login"><%= errors.login %></p>
+          <% } %>
+          <div class="ingresar">
+            <button name="ingresar" type="submit">
+              <h4>INGRESAR</h4>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

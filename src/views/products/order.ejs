@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/estilo-producto.css" />
+    <%- include("../partials/letras.ejs") %>
+    <title>Producto</title>
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <form action="/cart/items/?_method=PUT" name="cartAdding" method="POST">
+        <h1 class="head-1"><%=product.name%></h1>
+        <div class="products">
+          <!--esta clase corresponde a productos-->
+          <div class="photo">
+            <!--intercambio de clases entre foto y foto-precio-->
+            <img
+              class="photo-price"
+              src="../../<%=product.image%>"
+              alt="Foto producto elegido"
+            />
+            <h3 class="head-3 price">$ <%=product.price%></h3>
+          </div>
+          <!--esta clase corresponde a info-producto-->
+          <div class="info-products">
+            <!--cambio del tipo de caja p en lugar de div-->
+            <p class="description-products"><%=product.description%></p>
+          </div>
+          <input
+            type="hidden"
+            name="name"
+            value="<%=product.name%>"
+            for="cartAdding"
+          />
+          <input
+            type="hidden"
+            name="image"
+            value="<%=product.image%>"
+            for="cartAdding"
+          />
+          <input
+            type="hidden"
+            name="price"
+            value="<%=product.price%>"
+            for="cartAdding"
+          />
+          <input
+            type="hidden"
+            name="category"
+            value="<%=product.category%>"
+            for="cartAdding"
+          />
+        </div>
+        <div class="buy-products">
+          <div class="quantity-container">
+            <h3 class="head-3">Unidades</h3>
+            <div class="quantity-selector">
+              <div class="buttons less-items">
+                <i class="fa-solid fa-minus"></i>
+              </div>
+              <div class="quantity-viewer">
+                <input
+                  type="text"
+                  name="quantity"
+                  value="1"
+                  for="cartAdding"
+                  class="quantity-viewer"
+                />
+              </div>
+              <div class="buttons more-items">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <div class="extras-container">
+            <h3 class="head-3">Ingredientes Extras</h3>
+            <div class="extras-selector">
+              <div>
+                <label for="extras-1">Papas fritas monkey</label>
+                <input
+                  type="checkbox"
+                  id="extras-1"
+                  name="extras-1"
+                  value="Papas fritas monkey"
+                  for="cartAdding"
+                />
+              </div>
+              <div>
+                <label for="extras-2">Bastones de muzzarella</label>
+                <input
+                  type="checkbox"
+                  id="extras-2"
+                  name="extras-2"
+                  value="Bastones de muzzarella"
+                  for="cartAdding"
+                />
+              </div>
+              <div>
+                <label for="extras-3">Salsa especial</label>
+                <input
+                  type="checkbox"
+                  id="extras-3"
+                  name="extras-3"
+                  value="Salsa especial"
+                  for="cartAdding"
+                />
+              </div>
+            </div>
+            <!-- <div class="contenedor-notas">
+              <h3>Notas del pedido</h3>
+              <div class="selector-notas">
+                <input
+                  type="textarea"
+                  name="notes"
+                  placeholder="Agregar"
+                  for="cartAdding"
+                />
+              </div>
+            </div>
+            <button type="submit" class="boton-agregar-al-carrito">
+              AGREGAR AL CARRITO
+            </button>
+
+            <button type="submit" class="boton-agregar-al-carrito">
+              <a href="/edit/<%= product.id%>"> EDITAR PRODUCTO </a>
+            </button> -->
+          </div>
+          <div class="notes-container">
+            <h3 class="head-3">Notas del pedido</h3>
+            <div class="notes-selector">
+              <input
+                type="textarea"
+                name="notes"
+                placeholder="Agregar"
+                for="cartAdding"
+                wrap="hard"
+              />
+            </div>
+          </div>
+          <button type="submit" class="boton-agregar-al-carrito">
+            AGREGAR AL CARRITO
+          </button>
+          <button type="submit" class="boton-agregar-al-carrito">
+            <a href="/edit/<%= product.id%>"> EDITAR PRODUCTO </a>
+          </button>
+        </div>
+        <!--Botones de acción mas y menos-->
+        <script>
+          let itemsContent = document.querySelector(".quantity-selector");
+          itemsContent.addEventListener("click", (e) => {
+            let items = document.querySelector(".quantity-viewer input");
+            let value = parseInt(items.attributes.value.textContent);
+            let plus = document.querySelector(".more-items i");
+            let minus = document.querySelector(".less-items i");
+            let tgt = e.target;
+            if (value != 0) {
+              if (tgt == plus) {
+                items.attributes.value.textContent = value + 1;
+              } else if (tgt == minus) {
+                items.attributes.value.textContent = value - 1;
+              } else {
+                console.log("click out of action buttons");
+              }
+            } else {
+              if (tgt == plus) {
+                items.attributes.value.textContent = value + 1;
+                console.log(items.textContent);
+              }
+            }
+          });
+        </script>
+      </form>
+      <form
+        action="/order/<%= product.id %>?_method=DELETE"
+        method="POST"
+        style="display: inline-flex"
+      >
+        <button type="submit" class="boton-agregar-al-carrito">ELIMINAR</button>
+      </form>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

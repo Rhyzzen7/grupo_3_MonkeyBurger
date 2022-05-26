@@ -129,12 +129,29 @@ main h2 {
 }
 
 /* Para que funcionen el header y footer */
-h1.monkey {
-  padding: 0;
-  margin: 0;
+
+h2.brand-type  {
+  padding-left:0px;
+  background: none;
 }
 
-header h4,
-.gourmet {
-  color: #e8eddf;
+.menu-bar,
+.menu-text
+ {
+  color: var(--gris-claro);
+  margin-bottom: 1px;
+  background-color: #242423;
+  font-weight: bold;
 }
+
+
+.menu-text:hover{ 
+  font-weight: 600px;
+  color: var(--amarillo);
+  text-shadow: var(--gris-claro) 0px 0px 16px;
+}
+
+
+
+  
+

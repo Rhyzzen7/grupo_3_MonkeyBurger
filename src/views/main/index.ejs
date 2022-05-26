@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Cabecera de la página principal e inicio-->
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <title>Bienvenidos a Monkey Burger</title>
+  </head>
+  <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
+  <body>
+    <!--Encabezado de la página web.
+    En este espacio deberá colocarse: 
+    - El logo de la empresa.
+    - Nombre de la empresa.
+    - Menú de navegación.
+    - Sección para el carrito y Login.-->
+    <%- include("../partials/header.ejs") %>
+    <!--Principal de cuerpo de la página web.
+    En este espacio deberá colocarse:
+    - Carrete de promociones.
+    - Mosaicos con productos destacados.
+    - Mosaicos con actividades varias de la empresa.
+    - Novedades.-->
+    <main>
+      <!--Carrete de promociones-->
+      <section class="wheel">
+        <!--Serán mostradas sólo 5 promociones-->
+        <div class="images-wheel">
+          <img src="/img/producto/combomonkey2.jpg" alt="carrete" />
+          <div class="left"><i class="fa-solid fa-caret-left"></i></div>
+          <div class="right"><i class="fa-solid fa-caret-right"></i></div>
+        </div>
+        <script src="/js/carousel.js"></script>
+        <!--Inicio implementación Bootstrap-->
+
+        <!--Fin implementación Bootstrap-->
+        <!--Botones de acción-->
+        <div class="button-wheel">
+          <div class="pedi">
+            <h4><a href="cart">PEDÍ AHORA</a></h4>
+          </div>
+        </div>
+        <!--posición en el carrete
+        <div class="posicion">
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+          <div class="bolas"><i class="fa-solid fa-circle"></i></div>
+        </div>-->
+      </section>
+
+      <!--Mosaicos de destacados y novedades-->
+      <section class="news">
+        <h2>NUESTRAS NOVEDADES</h2>
+        <!--Destacados-->
+        <% proms.forEach(prom => { %>
+        <article class="highlighted">
+          <div class="photo">
+            <img src="<%=prom.image%>" alt="destacados" />
+          </div>
+          <div class="text">
+            <h4><%=prom.name%></h4>
+            <p><%=prom.description%></p>
+          </div>
+        </article>
+        <% }) %>
+        <!--Novedades-->
+        <% news.forEach(notice => { %>
+        <article class="proms">
+          <div class="photo">
+            <img src="<%=notice.image%>" alt="novedades" />
+          </div>
+          <div class="text">
+            <h4><%=notice.name%></h4>
+            <p><%=notice.description%></p>
+          </div>
+        </article>
+        <% }) %>
+      </section>
+    </main>
+    <!--Pie de página de la web.
+    En este espacio deberá colocarse:
+    - Enlace a redes sociales.
+    - Enlaces de interés.
+    - Contacto.
+    - Referencia a desarrolladores.-->
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

@@ -7,7 +7,6 @@ Negro Claro: #333533
 */
 
 * {
-  background-color: #242423;
   color: #e8eddf;
   font-family: "Antonio";
 }
@@ -372,7 +371,6 @@ header .boton h4 a {
 }
 
 li h4 {
-  background-color: #242423;
   padding: 0px;
 }
 

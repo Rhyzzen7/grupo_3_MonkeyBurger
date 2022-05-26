@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %> <%- include("../partials/letras.ejs")
+    %>
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="/css/estilo-editproduct.css" />
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <h1>EDITAR PRODUCTOS</h1>
+    <form action="/order/<%= productEdit.id  %>?_method=PUT" method="POST">
+      <div class="editar-producto">
+        <div class="campo">
+          <label for="name">Nombre:</label>
+          <input
+            class="campo-completar"
+            type="text"
+            name="name"
+            id="name"
+            value="<%= productEdit.name  %>"
+          />
+        </div>
+        <div class="campo">
+          <label>Categoría:</label>
+          <select class="campo-completar" name="category">
+            <option value="burgers">Hamburguesas</option>
+            <option value="chips">Tapas</option>
+            <option value="drinks">Bebidas</option>
+            <option value="comboc">Combos</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="description">Descripción:</label>
+          <input
+            type="textarea"
+            class="campo-completar"
+            name="description"
+            id="description"
+            value="<%= productEdit.description  %>"
+          />
+        </div>
+        <div class="campo">
+          <label for="price">Precio:</label>
+          <input
+            class="campo-completar"
+            type="text"
+            name="price"
+            id="price"
+            value="<%= productEdit.price %>"
+          />
+        </div>
+        <div class="campo">
+          <label>Actualizar foto:</label>
+          <input type="file" name="foto-producto" accept="image/*" />
+        </div>
+        <div class="button-container">
+          <div>
+            <button class="button" type="submit">
+              ACTUALIZAR PRODUCTO
+            </button>
+          </div>
+          <div>
+            <button class="button" type="submit">
+              ELIMINAR PRODUCTO
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

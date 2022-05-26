@@ -1,0 +1,171 @@
+/* Colores:
+Gris oscuro: #CFDBD5 
+Gris claro: #E8EDDF 
+Amarillo: #FFC000 
+Negro: #242423
+Negro claro: #333533 */
+
+* {
+  color: #e8eddf;
+  font-family: "Antonio";
+  font-style: normal;
+}
+
+main {
+  background-color: #242423;
+}
+
+
+h1,
+h2 {
+  font-family: "marvel";
+  font-weight: bold;
+  color: #e8eddf;
+  padding: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.lista {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffc000;
+  color: #242423;
+  text-decoration: none;
+  border: solid 2px #242423;
+  border-radius: 15px;
+  padding: 10px;
+  width: 130px;
+  text-align: center;
+}
+
+.lista:hover {
+  box-shadow: 0 0 11px #e8eddf;
+  font-weight: 600;
+}
+
+.borrarlink {
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+}
+
+main h3,
+main h4 {
+  font-family: "marvel";
+  font-weight: bold;
+  color: #ffc000;
+  margin: 15px
+}
+
+.subcontenedor-infoproducto {
+  display: flex;
+  flex-direction: column;
+  border: solid 10px #333533;
+  background: #333533;
+  padding: 5px;
+  max-width: 500px;
+  min-width: 100px;
+}
+
+.subcontenedor-fotoproducto {
+  background: #333533;
+  border: solid 10px #333533;
+  padding: 10px;
+  max-width: 500px;
+  min-width: 100px;
+  align-self: stretch;
+  justify-content: space-around;
+}
+
+.contenedor-producto {
+  background-color: #242423;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.info-a-la-derecha {
+  order: 1;
+}
+
+.boton-hace-tu-pedido {
+  background-color: #ffc000;
+  color: #242423;
+  text-decoration: none;
+  border: solid 2px #242423;
+  border-radius: 15px;
+  padding: 10px;
+  max-width: 150px;
+}
+
+.boton-hace-tu-pedido:hover {
+  box-shadow: 0 0 11px #e8eddf;
+  font-weight: 600;
+}
+
+.contenedor-boton-hace-tu-pedido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.precio-boton-bebidas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.info-bebidas {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.contenedor-bebida {
+  display: flex;
+  flex-direction: row;
+  background-color: #333533;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  align-items: center;
+}
+
+.foto-bebida {
+  width: 75px;
+  height: 75px;
+  flex-grow: 0;
+}
+
+.bebidas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Para que funcionen el header y footer */
+h1.monkey {
+  padding: 0;
+}
+
+header h4, .gourmet{
+  color: #e8eddf;
+}

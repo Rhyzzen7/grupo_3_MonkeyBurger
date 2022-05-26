@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Cabecera de la página principal e inicio-->
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/estiloproductCart.css" />
+    <%- include("../partials/letras.ejs") %>
+    <title>Bienvenidos a Monkey Burger</title>
+    <link rel="icon" href="/img/icono-blanco.png" />
+  </head>
+  <!--Cuerpo del archivo html correspondiente al inicio del e-commerce-->
+  <body>
+    <!--Encabezado de la página web.
+    En este espacio deberá colocarse: 
+    - El logo de la empresa.
+    - Nombre de la empresa.
+    - Menú de navegación.
+    - Sección para el carrito y Login.-->
+    <%- include("../partials/header.ejs") %>
+    <!--Principal de cuerpo de la página web.
+    En este espacio deberá colocarse:
+    - Carrete de promociones.
+    - Mosaicos con productos destacados.
+    - Mosaicos con actividades varias de la empresa.
+    - Novedades.-->
+    <main>
+      <h1 class="titulo-carrito">MI CARRITO</h1>
+      <!--Productos seleccionados-->
+      <% items.forEach(item => { %>
+      <section class="contenedor-carrito">
+        <!--Serán mostradas sólo 3 selecciones en el ejemplo-->
+        <div class="foto-producto-carrito">
+          <!--Necesito traer la imagen mediante un multer-->
+          <img
+            src="../../<%=item.image%>"
+            alt="foto de Aros de Cebolla"
+            width="150px"
+          />
+          <h4 class="nombre-producto-carrito"><%=item.name%></h4>
+        </div>
+        <article class="info-compra-carrito">
+          <div class="unidades-carrito">Unidades: <%=item.quantity%></div>
+          <div class="precio-producto-carrito">
+            Precio unitario: $ <%=item.price%>
+          </div>
+          <div class="total-compra-carrito">
+            Precio total: $ <%=item.total%>%>
+          </div>
+          <i class="fa-solid fa-trash"></i>
+        </article>
+      </section>
+      <% }) %>
+
+      <!-- <section class="contenedor-carrito">
+        Serán mostradas sólo 3 selecciones en el ejemplo
+        <div class="foto-producto-carrito">
+          <img src="\img\menu\mono1.jpg" alt="Hamburguesa Mono" width="150px" />
+          <h4 class="nombre-producto-carrito">Hamburguesa Mono</h4>
+        </div>
+        <article class="info-compra-carrito">
+          <div class="unidades-carrito">Unidades: 2</div>
+          <div class="precio-producto-carrito">Precio unitario: $ 900</div>
+          <div class="total-compra-carrito">Precio total: $ 1.800</div>
+          <i class="fa-solid fa-trash"></i>
+        </article>
+      </section> -->
+      <!-- <section class="contenedor-carrito">
+        Serán mostradas sólo 3 selecciones en el ejemplo
+        <div class="foto-producto-carrito">
+          <img
+            src="/img/menu/combomonita1.jpg"
+            alt="Combo Monita"
+            width="150px"
+          />
+          <h4 class="nombre-producto-carrito">Combo Monita</h4>
+        </div>
+        <article class="info-compra-carrito">
+          <div class="unidades-carrito">Unidades: 1</div>
+          <div class="precio-producto-carrito">Precio unitario: $ 7.500</div>
+          <div class="total-compra-carrito">Precio total: $ 7.500</div>
+          <i class="fa-solid fa-trash"></i>
+        </article>
+      </section> -->
+      <section class="totalproducto-carrito">
+        <div class="totales-carrito">
+          TOTAL COMPRA: $ <%= items.reduce((acc, item) => acc + item.total, 0)
+          %>
+        </div>
+      </section>
+      <section class="contenedor-botones-carrito">
+        <h4 class="boton-agregarmas-carrito">
+          <a href="/cart/menu">AGREGAR MAS PRODUCTOS</a>
+        </h4>
+        <h4 class="boton-continuar-carrito">CONTINUAR</h4>
+      </section>
+    </main>
+    <!--Pie de página de la web.
+    En este espacio deberá colocarse:
+    - Enlace a redes sociales.
+    - Enlaces de interés.
+    - Contacto.
+    - Referencia a desarrolladores.-->
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <h1 class="contacto">CONTACTO</h1>
+      <form method="POST" action="/contact">
+        <li class="input-nombre">
+          <label for="nombre"></label>
+          <input type="text" name="nombre" placeholder="Nombre" />
+        </li>
+        <li class="input-apellido">
+          <label for="apellido"></label>
+          <input type="text" name="apellido" placeholder="Apellido" />
+        </li>
+        <li class="input-email">
+          <label for="email"></label>
+          <input type="email" name="email" placeholder="Correo Electronico" />
+        </li>
+        <li class="input-telefono">
+          <label for="telefono"></label>
+          <input type="tel" name="telefono" placeholder="Teléfono" />
+        </li>
+        <li class="input-domicilio">
+          <label for="domicilio"></label>
+          <input type="text" name="domicilio" placeholder="Domicilio" />
+        </li>
+        <li class="input-asunto">
+          <!-- <label for="asunto"></label> !-->
+          <div>
+            <select name="opciones" class="select-opciones">
+              <option value="Problemas">Problemas</option>
+              <option value="Problemas">Consultas</option>
+              <option value="Problemas">Preguntas</option>
+              <option value="Problemas">Mala Facturación</option>
+              <option value="Problemas">El producto no llegó</option>
+              <option value="Problemas">Otros</option>
+            </select>
+          </div>
+          <!-- <input  type="text" name="asunto" placeholder="Asunto"></input> !-->
+        </li>
+        <li class="input-mensaje">
+          <label for="mensaje"></label>
+          <input type="text" name="Mensaje" placeholder="Mensaje" />
+        </li>
+        <div class="boton">
+          <button type="submit" id="boton">Enviar</button>
+        </div>
+      </form>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

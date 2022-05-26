@@ -1,0 +1,45 @@
+[{"id":1,
+"firstname":"Lourdes",
+"lastname":"Celli",
+"email":"lourdes.celli@gmail.com",
+"password":"12345678",
+"rol":"admin",
+"image": null
+},
+{   "id":2,
+    "firstname":"Paula",
+    "lastname":"Rodriguez",
+    "email":"pau@gmail.com",
+    "password":"12345678",
+    "rol":"user",
+    "image": null
+
+},
+{"id":3,
+    "firstname":"Sofia",
+    "lastname":"Vecchio",
+    "email":"Sofi@gmail.com",
+    "password":"12345678",
+    "rol":"user",
+    "image": null
+
+},
+{"id":4,
+    "firstname":"Pablo",
+    "lastname":"Marcovech",
+    "email":"Paul@gmail.com",
+    "password":"12345678",
+    "rol":"admin",
+    "image": null
+
+},
+{"id":5,
+    "firstname":"Carlos",
+    "lastname":"Perez",
+    "email":"cp@gmail.com",
+    "passwordword":"12345678",
+    "rol":"admin",
+    "image": null
+
+}
+]
