@@ -23,6 +23,7 @@ productsRouter.get("/create", productsController.create);
 productsRouter.post("/create", productsController.store);
 
 // Edit a product
+productsRouter.get("/edit", productsController.selectProduct);
 productsRouter.get("/edit/:id", productsController.editProduct);
 productsRouter.put("/order/:productId", productsController.update);
 

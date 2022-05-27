@@ -32,11 +32,16 @@ const productsController = {
     const product = products.find((item) => item.id == req.params.id);
     res.render("./products/order", { product });
   },
-  // orderChoice: function (req, res) {
-  //   const product = req.body;
-  //   res.render("./order/:id", { product });
-  // },
+  selectProduct: function (req, res) {
+    const comboc = products.filter((item) => item.category === "comboc");
+    const burgers = products.filter((item) => item.category === "burgers");
+    const drinks = products.filter((item) => item.category === "drinks");
+    const chips = products.filter((item) => item.category === "chips");
 
+    // fs.writeFileSync(path.join(__dirname, "../../data/cart.json"), "", "utf8");
+    console.log("pase para editar productos");
+    res.render("./products/menuEdit", { comboc, burgers, drinks, chips });
+  },
   editProduct: function (req, res) {
     const productEdit = products.find((item) => item.id == req.params.id);
     res.render("./products/editProduct", { productEdit });
