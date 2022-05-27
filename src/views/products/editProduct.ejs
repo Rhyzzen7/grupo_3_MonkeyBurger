@@ -9,7 +9,10 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <h1>EDITAR PRODUCTOS</h1>
-    <form action="/order/<%= productEdit.id  %>?_method=PUT" method="POST">
+    <form
+      action="/products/order/<%= productEdit.id  %>?_method=PUT"
+      method="POST"
+    >
       <div class="editar-producto">
         <div class="campo">
           <label for="name">Nombre:</label>
@@ -56,14 +59,10 @@
         </div>
         <div class="button-container">
           <div>
-            <button class="button" type="submit">
-              ACTUALIZAR PRODUCTO
-            </button>
+            <button class="button" type="submit">ACTUALIZAR PRODUCTO</button>
           </div>
           <div>
-            <button class="button" type="submit">
-              ELIMINAR PRODUCTO
-            </button>
+            <button class="button" type="submit">ELIMINAR PRODUCTO</button>
           </div>
         </div>
       </div>

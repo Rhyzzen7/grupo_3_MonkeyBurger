@@ -38,8 +38,6 @@ const productsController = {
     const drinks = products.filter((item) => item.category === "drinks");
     const chips = products.filter((item) => item.category === "chips");
 
-    // fs.writeFileSync(path.join(__dirname, "../../data/cart.json"), "", "utf8");
-    console.log("pase para editar productos");
     res.render("./products/menuEdit", { comboc, burgers, drinks, chips });
   },
   editProduct: function (req, res) {
@@ -62,14 +60,15 @@ const productsController = {
     res.redirect("/products/menu");
   },
   update: (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     let productIndex = products.findIndex(
       (product) => product.id == req.params.productId
     );
     let infoActualizada = req.body;
     products[productIndex] = { ...products[productIndex], ...infoActualizada };
     storeProducts(products);
-    res.redirect(`/order/${req.params.productId}`);
+    // res.redirect(`/order/${req.params.productId}`);
+    res.redirect("/products/edit");
   },
   delete: (req, res) => {
     let productIndex = products.findIndex(
