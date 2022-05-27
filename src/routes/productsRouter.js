@@ -20,7 +20,7 @@ Mejor decisión, pasarlo por GET*/
 
 // Create a new Product
 productsRouter.get("/create", productsController.create);
-//productsRouter.post("/create", productsController.store);
+productsRouter.post("/create", productsController.store);
 
 // Edit a product
 productsRouter.get("/edit/:id", productsController.editProduct);

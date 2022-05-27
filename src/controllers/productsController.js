@@ -54,7 +54,7 @@ const productsController = {
     };
     products.push(nuevoProducto);
     storeProducts(products);
-    res.redirect("/products");
+    res.redirect("/products/menu");
   },
   update: (req, res) => {
     console.log(req.body);
