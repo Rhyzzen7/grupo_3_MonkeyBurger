@@ -76,7 +76,8 @@ const productsController = {
     );
     products.splice(productIndex, 1);
     storeProducts(products);
-    res.redirect("/products");
+    console.log("pase por delete");
+    res.redirect("/products/menu");
   },
 };
 

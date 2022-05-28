@@ -44,6 +44,7 @@ const usersController = {
   },
   processLogout: function (req, res) {
     res.clearCookie("userEmail");
+    delete admin;
     req.session.destroy();
     res.redirect("/");
   },

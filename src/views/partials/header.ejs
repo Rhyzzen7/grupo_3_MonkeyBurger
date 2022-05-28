@@ -46,6 +46,7 @@
           <li>
             <h3 class="menu-text"><a href="/products/menu">MENÚ</a></h3>
           </li>
+          <% if (locals.admin) { %>
           <li>
             <h3 class="menu-text order-visibility">
               <a href="/products/edit">EDITAR PRODUCTO</a>
@@ -56,6 +57,7 @@
               <a href="/products/create">CREAR PRODUCTO</a>
             </h3>
           </li>
+          <% } %>
           <li>
             <h3 class="menu-text"><a href="/contact">CONTACTO</a></h3>
           </li>

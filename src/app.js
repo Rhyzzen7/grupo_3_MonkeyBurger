@@ -6,7 +6,8 @@ const router = require("./routes/router");
 const productsRouter = require("./routes/productsRouter");
 const usersRouter = require("./routes/usersRouter");
 const cartRouter = require("./routes/cartRouter");
-const userMiddleware = require('./middlewares/userMiddleware');
+const userMiddleware = require("./middlewares/userMiddleware");
+const authAdmin = require("./middlewares/authAdmin");
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(
 app.use(cookies());
 
 app.use(userMiddleware);
+app.use(authAdmin);
 
 // Pasar poder usar los métodos PUT, PATCH y DELETE
 const methodOverride = require("method-override");

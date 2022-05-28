@@ -158,6 +158,7 @@ header {
 /* .order-visibility,
 .create-visibility {
   visibility: hidden;
+  display: none;
 } */
 /*Manejar la barra con display flex queda mejor.*/
 main {

@@ -61,12 +61,16 @@
           <div>
             <button class="button" type="submit">ACTUALIZAR PRODUCTO</button>
           </div>
-          <div>
-            <button class="button" type="submit">ELIMINAR PRODUCTO</button>
-          </div>
         </div>
       </div>
     </form>
+    <form
+      action="/products/order/<%= productEdit.id  %>?_method=delete"
+      method="post"
+    >
+      <button class="button" type="submit">ELIMINAR PRODUCTO</button>
+    </form>
+
     <%- include("../partials/footer.ejs") %>
   </body>
 </html>
