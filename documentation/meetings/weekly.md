@@ -92,8 +92,8 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Revisar las secciones que creé para asegurarme de que funcionen_
 
+**Fecha reunión 30/04/2022 - Sprint 5**
 
-**Fecha reunión 30/04/2022 - Sprint 5** 
 ## Lourdes Celli
 
 1.  ¿Qué hice hoy?
@@ -140,7 +140,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Revisar puntos de mejora_
 
-**Fecha reunión 05/05/2022 - Sprint 5** 
+**Fecha reunión 05/05/2022 - Sprint 5**
 
 ## Lourdes Celli
 
@@ -188,7 +188,7 @@ Seguimiento de avances y oportunidades de mejora:
 
 - _Ver si puedo darles una mano a los chicos con el formualrio de registro de usuarios y descansar antes de la entrega._
 
-**Fecha reunión 07/06/2022 - Sprint 6** 
+**Fecha reunión 07/06/2022 - Sprint 6**
 
 ## Lourdes Celli
 
@@ -206,17 +206,21 @@ Seguimiento de avances y oportunidades de mejora:
 
 ## Victor Celedón
 
+## Victor Celedón
+
 1.  ¿Qué hice hoy?
 
-- _texto_
+- Revisión las tareas pendientes.
+- Carga de datos en la base de datos de la aplicación.
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
-- _texto_
+- Realización de la carga de la base de datos en workbench desde el archivoSQL. Resuelto, falta de práctica.
+- Creación de ERM a partir de la base de datos en workbench. Resuelto, falta de práctica.
 
 3. ¿Qué haré mañana?
 
-- _texto_
+- Continuar con las tareas asignadas de CRUD de la aplicación.
 
 ## Melody Ferraro
 
@@ -231,4 +235,3 @@ Seguimiento de avances y oportunidades de mejora:
 3. ¿Qué haré mañana?
 
 - _Repasar Sequelize para los siguientes puntos del sprint_
-
