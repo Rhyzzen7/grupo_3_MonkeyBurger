@@ -128,3 +128,34 @@ En base a la metodología de estrella, verificamos los puntos a mejorar como equ
 5. **Dejar de hacer:**
 
 - Postergar weekly.
+
+## Retrospectiva sprint 5 - Monkey Burger
+
+1.  **Comenzar a hacer:**
+
+- Replicar comportamiento Mobile para todas las páginas.
+- Creación de la base de datos para comenzar a persistirlos.
+- Manejo de las peticiones de la base de datos.
+- Implementación en todas las vistas que soliciten recursos a la base de datos.
+
+2. **Hacer más:**
+
+- Establecer días y horarios para mantener una weekly.
+- Revisar avances en cada weekly y hacer seguimiento mediante whatsapp.
+- Mejorar desarrollo para alcanzar en tiempo y forma la entrega.
+
+3. **Continuar haciendo:**
+
+- Asignación de tareas para alcanzar los objetivos.
+- Mejorar las entregas pasadas para una mejor respuesta del sitio.
+- Comunicación de tareas, inconvenientes y resolución en conjunto.
+
+4. **Hacer menos:**
+
+- Revisiones profundas que impliquen un rediseño del sitio.
+- ASignar menos tiempo a las reuniones.
+
+5. **Dejar de hacer:**
+
+- Postergar weekly.
+- Postergar las tareas para el fin de semana.

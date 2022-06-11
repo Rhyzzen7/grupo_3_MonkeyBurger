@@ -187,3 +187,51 @@ Seguimiento de avances y oportunidades de mejora:
 3. ¿Qué haré mañana?
 
 - _Ver si puedo darles una mano a los chicos con el formualrio de registro de usuarios y descansar antes de la entrega._
+
+
+## 11/06/2022
+
+## Lourdes Celli
+
+1.  ¿Qué hice hoy?
+
+-
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+-
+
+3. ¿Qué haré mañana?
+
+-
+
+## Victor Celedón
+
+1.  ¿Qué hice hoy?
+
+- Revisión las tareas pendientes.
+- Carga de datos en la base de datos de la aplicación.  
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- Realización de la carga de la base de datos en workbench desde el archivoSQL. Resuelto, falta de práctica.
+- Creación de ERM a partir de la base de datos en workbench. Resuelto, falta de práctica.
+
+3. ¿Qué haré mañana?
+
+- Continuar con las tareas asignadas de CRUD de la aplicación.
+
+## Melody Ferraro
+
+1.  ¿Qué hice hoy?
+
+- 
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- 
+
+3. ¿Qué haré mañana?
+
+- 
+
