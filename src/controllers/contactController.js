@@ -1,6 +1,8 @@
 const path = require("path");
 const fs = require("fs");
-let contact = require("../../models/contact");
+
+let contact = require("../../models/contact")
+
 
 const contactController = {
   contact: function (req, res) {

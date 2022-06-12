@@ -1,5 +1,7 @@
 const path = require("path");
 const fs = require("fs");
+const sequelize = require("sequelize");
+const db = require("../../database/models");
 let carts = require("../../models/cart");
 // Esto no deja que nodemon funcione correctamente.
 // fs.writeFileSync(path.join(__dirname, "../../data/cart.json"), "", "utf8");

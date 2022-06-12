@@ -1,4 +1,6 @@
 const path = require("path");
+const sequelize = require("sequelize");
+const db = require("../../database/models");
 
 const sessionController = {
   login: function (req, res) {

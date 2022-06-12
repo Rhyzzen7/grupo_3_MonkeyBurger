@@ -1,5 +1,7 @@
 const path = require("path");
 const products = require("../../models/data");
+const sequelize = require("sequelize");
+const db = require("../../database/models");
 
 const homeController = {
   home: function (req, res) {
