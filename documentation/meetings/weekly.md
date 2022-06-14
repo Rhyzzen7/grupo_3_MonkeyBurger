@@ -235,3 +235,54 @@ Seguimiento de avances y oportunidades de mejora:
 3. ¿Qué haré mañana?
 
 - _Repasar Sequelize para los siguientes puntos del sprint_
+
+**Fecha reunión 14/06/2022 - Sprint 6**
+
+## Lourdes Celli
+
+1.  ¿Qué hice hoy?
+
+- _texto_
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- _texto_
+
+3. ¿Qué haré mañana?
+
+- _texto_
+
+## Victor Celedón
+
+1.  ¿Qué hice hoy?
+
+- Revisión de modelos sequelize
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- Tipo de dato reconocido para fecha: DATE
+- Agregado del objeto config a cada modelo:
+  {
+  timestamps: true,
+  createdAt: false,
+  updatedAt: false,
+  deletedAt: false,
+  }
+
+3. ¿Qué haré mañana?
+
+- _texto_
+
+## Melody Ferraro
+
+1.  ¿Qué hice hoy?
+
+- _texto_
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- _texto_
+
+3. ¿Qué haré mañana?
+
+- _texto_

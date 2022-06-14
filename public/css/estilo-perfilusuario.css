@@ -10,7 +10,7 @@ Negro Claro: #333533
   color: #e8eddf;
   font-family: "Antonio";
 }
-
+/* 
 h1,
 h2,
 h3,
@@ -39,14 +39,14 @@ h6 {
 h5,
 h6 {
   font-style: normal;
-}
+} */
 
 h4 {
   color: #ffc000;
 }
 .titulo-pedido {
   background-color: #242423;
-  margin:30px;
+  margin: 30px;
 }
 
 .item-pedido {
@@ -227,12 +227,12 @@ h4 {
   margin: 15px;
 }
 
-.contenedor-cargar-foto{
+.contenedor-cargar-foto {
   display: flex;
   flex-direction: column;
   padding: 30px;
 }
-.texto-cargar-foto{
+.texto-cargar-foto {
   margin: 15px;
 }
 
@@ -316,7 +316,7 @@ p {
 
 .custom-file-input {
   color: transparent;
-  margin:15px;
+  margin: 15px;
 }
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;

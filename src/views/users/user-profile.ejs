@@ -8,9 +8,12 @@
     <%- include("../partials/letras.ejs") %>
   </head>
   <body>
-      <%- include("../partials/header.ejs") %>
+    <%- include("../partials/header.ejs") %>
     <main>
-      <h1>HOLA, <%= locals.usuario ? `${usuario.firstname} ${usuario.lastname}` : "USUARIO" %>!</h1>
+      <h1>
+        HOLA, <%= locals.usuario ? `${usuario.firstname} ${usuario.lastname}` :
+        "USUARIO" %>!
+      </h1>
       <ul class="navbar">
         <li class="lista">
           <a class="borrarlink" href="/usuario#pedidos">PEDIDOS</a>
@@ -30,6 +33,11 @@
         <li class="lista-pedido">
           <a class="borrarlink" href="/haceTuPedido">NUEVO PEDIDO</a>
         </li>
+        <% if (locals.admin) {%>
+        <li class="lista-pedido">
+          <a class="borrarlink" href="/users/reset">RESET DB</a>
+        </li>
+        <%}%>
       </ul>
       <div class="seccion-pedidos">
         <h2 id="pedidos">MIS PEDIDOS</h2>
@@ -234,11 +242,9 @@
         <div class="datos-personales">
           <div class="campo">
             <div class="fondo-negroclaro">
-              <img
-                class="fondo-negroclaro"
-                src="/img/usuarios/<%= locals.usuario.image ? usuario.image : "default.jpg" %>"
-                alt="foto de perfil de usuario 1"
-              />
+              <img class="fondo-negroclaro" src="/img/usuarios/<%=
+              locals.usuario.image ? usuario.image : "default.jpg" %>" alt="foto
+              de perfil de usuario 1" />
             </div>
             <div class="fondo-negroclaro">
               <form class="fondo-negroclaro contenedor-cargar-foto">
@@ -621,6 +627,6 @@
         </p>
       </div>
     </main>
-    <%- include("../partials/footer.ejs") %> 
+    <%- include("../partials/footer.ejs") %>
   </body>
 </html>

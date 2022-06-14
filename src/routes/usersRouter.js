@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const sinLoginMiddleware = require("../middlewares/sinLoginMiddleware");
 const conLoginMiddleware = require("../middlewares/conLoginMiddleware");
+const resetDbMiddleware = require("../middlewares/resetDbMiddleware");
 const multer = require("multer");
 const userController = require("../controllers/userController");
 const { check } = require("express-validator");
@@ -67,5 +68,8 @@ usersRouter.post(
   userController.procesarFormulario
 );
 usersRouter.get("/", conLoginMiddleware, userController.userProfile);
+usersRouter.get("/reset", resetDbMiddleware, (req, res) => {
+  res.send("Base de datos inicializada.");
+});
 
 module.exports = usersRouter;

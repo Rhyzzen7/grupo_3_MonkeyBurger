@@ -12,19 +12,19 @@ Negro claro: #333533 */
   background-color: #242423;
 }
 
-h1,
+/* h1,
 h2 {
   font-family: "marvel";
   font-weight: bold;
   color: #e8eddf;
   padding: 30px;
-}
+} */
 
 h1 {
   text-align: center;
-  margin: 30px;
+  /* margin: 30px; */
   padding: 0px;
-  margin-top:50px;
+  /* margin-top:50px; */
 }
 
 h2 {
@@ -33,13 +33,13 @@ h2 {
   padding-left: 30px;
 }
 
-h3 {
+/* h3 {
   font-family: "marvel";
   font-style: normal;
   margin: 0px;
   color: #ffc000;
   background-color: #333533;
-}
+} */
 
 .nuestra-historia,
 .nuestros-objetivos,
@@ -62,6 +62,10 @@ h3 {
   text-align: left;
   background-color: #333533;
   margin-top: 15px;
+}
+
+.foto-historia {
+  width: 100%;
 }
 
 .mision {
@@ -97,9 +101,9 @@ h3 {
 
 .lista-sucursales {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
   background-color: #333533;
 }
 
@@ -111,8 +115,16 @@ h3 {
   background-color: #333533;
   padding: 15px;
 }
-
-@media (min-width: 700px) {
+@media (min-width: 480px) {
+  .lista-sucursales {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #333533;
+  }
+}
+@media (min-width: 840px) {
   .historia {
     flex-direction: row;
   }
@@ -130,28 +142,21 @@ main h2 {
 
 /* Para que funcionen el header y footer */
 
-h2.brand-type  {
-  padding-left:0px;
+h2.brand-type {
+  padding-left: 0px;
   background: none;
 }
 
 .menu-bar,
-.menu-text
- {
+.menu-text {
   color: var(--gris-claro);
   margin-bottom: 1px;
   background-color: #242423;
   font-weight: bold;
 }
 
-
-.menu-text:hover{ 
+.menu-text:hover {
   font-weight: 600px;
   color: var(--amarillo);
   text-shadow: var(--gris-claro) 0px 0px 16px;
 }
-
-
-
-  
-

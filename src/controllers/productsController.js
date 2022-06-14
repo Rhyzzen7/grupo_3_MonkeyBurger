@@ -3,8 +3,10 @@ const path = require("path");
 const sequelize = require("sequelize");
 const db = require("../../database/models");
 
+//Lectura de datos para la carga inicial de la db
 const productsFilePath = path.join(__dirname, "../../data/products.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
 
 //Funtion to update products.json
 function storeProducts(products) {
@@ -39,6 +41,10 @@ const productsController = {
     const burgers = products.filter((item) => item.category === "burgers");
     const drinks = products.filter((item) => item.category === "drinks");
     const chips = products.filter((item) => item.category === "chips");
+
+    db.User.findAll().then((u) => {
+      console.log(u);
+    });
 
     res.render("./products/menuEdit", { comboc, burgers, drinks, chips });
   },

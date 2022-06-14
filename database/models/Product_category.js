@@ -1,19 +1,16 @@
 module.exports = (sequelize, dataTypes) => {
-  const Order_product = sequelize.define(
-    "Order_product",
+  const Product_category = sequelize.define(
+    "Product_category",
     {
-      order_id: {
+      id: {
+        primaryKey: true,
         type: dataTypes.INTEGER,
-      },
-      product_id: {
-        type: dataTypes.INTEGER,
-      },
-      quantity: {
+        autoIncrement: true,
         allowNull: false,
-        type: dataTypes.INTEGER,
       },
-      client_comments: {
+      name: {
         type: dataTypes.STRING,
+        allowNull: false,
       },
     },
     {
@@ -23,5 +20,5 @@ module.exports = (sequelize, dataTypes) => {
       deletedAt: false,
     }
   );
-  return Order_product;
+  return Product_category;
 };
