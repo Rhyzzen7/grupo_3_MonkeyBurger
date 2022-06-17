@@ -19,36 +19,36 @@ const cart = JSON.parse(
 );
 // Declaracion del middleware
 function resetDbMiddleware(req, res, next) {
-  users.forEach((user) => {
-    db.User.create({
-      first_name: user.firstname,
-      last_name: user.lastname,
-      email: user.email,
-      phone: 1234567890,
-      role: user.role,
-      image: user.image,
-      password: user.password,
-    }).then(() => {
-      console.log("Done it users!");
-    });
-  });
-  db.Product_category.create({
-    name: "burgers",
-  }).then(() => {
-    console.log("Done it category!");
-    products.forEach((product) => {
-      db.Product.create({
-        name: product.name,
-        description: product.description,
-        price: product.price,
-        image: product.image,
-        colors: product.colors,
-        category_id: 1,
-      }).then(() => {
-        console.log("Done it products!");
-      });
-    });
-  });
+  // users.forEach((user) => {
+  //   db.User.create({
+  //     first_name: user.firstname,
+  //     last_name: user.lastname,
+  //     email: user.email,
+  //     phone: 1234567890,
+  //     role: user.role,
+  //     image: user.image,
+  //     password: user.password,
+  //   }).then(() => {
+  //     console.log("Done it users!");
+  //   });
+  // });
+  // db.Product_category.create({
+  //   name: "burgers",
+  // }).then(() => {
+  //   console.log("Done it category!");
+  //   products.forEach((product) => {
+  //     db.Product.create({
+  //       name: product.name,
+  //       description: product.description,
+  //       price: product.price,
+  //       image: product.image,
+  //       //colors: product.colors,
+  //       category_id: 1,
+  //     }).then(() => {
+  //       console.log("Done it products!");
+  //     });
+  //   });
+  // });
 
   //   console.log(contacts);
   //   console.log(products);

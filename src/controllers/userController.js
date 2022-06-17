@@ -24,29 +24,54 @@ const usersController = {
       });
     }
 
-    const usuario = users.find(
-      (u) =>
-        u.email === req.body.email &&
-        bcryptjs.compareSync(req.body.password, u.password)
-    );
+    // const usuario = users.find(
+    //   (u) =>
+    //     u.email === req.body.email &&
+    //     bcryptjs.compareSync(req.body.password, u.password)
+    // );
+    // if (!usuario) {
+    //   return res.render("./users/login", {
+    //     errors: { login: "Usuario y contraseña inválidos." },
+    //     old: req.body,
+    //   });
+    // }
 
-    if (!usuario) {
-      return res.render("./users/login", {
-        errors: { login: "Usuario y contraseña inválidos." },
-        old: req.body,
-      });
-    }
+    // req.session.usuario = usuario;
+    // if (req.body.rememberme) {
+    //   res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
+    // }
 
-    req.session.usuario = usuario;
-    if (req.body.rememberme) {
-      res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
-    }
+    // res.redirect("./");
 
-    res.redirect("./");
+    db.User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    }).then((usuario) => {
+      if (
+        usuario &&
+        bcryptjs.compareSync(req.body.password, usuario.password)
+      ) {
+        req.session.usuario = {
+          firstname: usuario.first_name,
+          lastname: usuario.last_name,
+        };
+        if (req.body.rememberme) {
+          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
+        }
+        res.redirect("./");
+      } else {
+        return res.render("./users/login", {
+          errors: { login: "Usuario y contraseña inválidos." },
+          old: req.body,
+        });
+      }
+    });
   },
   processLogout: function (req, res) {
     res.clearCookie("userEmail");
     delete admin;
+    delete user;
     req.session.destroy();
     res.redirect("/");
   },
@@ -55,6 +80,8 @@ const usersController = {
   },
   userProfile: function (req, res) {
     const usuario = req.session.usuario;
+    console.log(req.session.usuario);
+
     res.render("./users/user-profile", { usuario });
   },
   userCreate: (req, res) => {

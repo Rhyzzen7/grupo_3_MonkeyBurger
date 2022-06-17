@@ -73,6 +73,7 @@ CREATE TABLE `products` (
   `description` text COLLATE utf8mb4_general_ci,
   `price` decimal(10,0) NOT NULL,
   `category_id` int unsigned NOT NULL,
+  `image` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`category_id`),
   CONSTRAINT `products_FK` FOREIGN KEY (`category_id`) REFERENCES `product_categories` (`id`)
@@ -92,7 +93,8 @@ CREATE TABLE `users` (
   `role` varchar(100) COLLATE utf8mb4_general_ci DEFAULT 'user',
   `image` varchar(100) COLLATE utf8mb4_general_ci DEFAULT 'default.jpg',
   `password` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 

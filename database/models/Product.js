@@ -24,9 +24,10 @@ module.exports = (sequelize, dataTypes) => {
       image: {
         type: dataTypes.TEXT,
       },
-      colors: {
-        type: dataTypes.TEXT,
-      },
+      // eliminar columna colors
+      // colors: {
+      //   type: dataTypes.TEXT,
+      // },
       category_id: {
         type: dataTypes.INTEGER,
         allowNull: false,

@@ -16,9 +16,11 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.STRING,
         allowNull: false,
       },
+      //agregado de UNIQUE KEY
       email: {
         type: dataTypes.STRING,
         allowNull: false,
+        unique: true,
       },
       phone: {
         type: dataTypes.INTEGER,

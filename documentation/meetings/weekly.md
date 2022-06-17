@@ -268,6 +268,10 @@ Seguimiento de avances y oportunidades de mejora:
   updatedAt: false,
   deletedAt: false,
   }
+  - ¿Será necesario crear la tabla about y markets?
+  - ¿Será necesario separar de la tabla Products a News y Proms?
+  - No se como visualizar las variables de locales
+  - No se como visualizar el contenido de session
 
 3. ¿Qué haré mañana?
 
