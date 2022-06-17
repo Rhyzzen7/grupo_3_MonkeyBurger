@@ -52,10 +52,11 @@ const usersController = {
         usuario &&
         bcryptjs.compareSync(req.body.password, usuario.password)
       ) {
-        req.session.usuario = {
-          firstname: usuario.first_name,
-          lastname: usuario.last_name,
-        };
+        req.session.usuario = usuario;
+        // {
+        //   firstname: usuario.first_name,
+        //   lastname: usuario.last_name,
+        // };
         if (req.body.rememberme) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
         }

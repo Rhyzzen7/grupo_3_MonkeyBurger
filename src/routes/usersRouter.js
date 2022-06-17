@@ -68,8 +68,8 @@ usersRouter.post(
   userController.procesarFormulario
 );
 usersRouter.get("/", conLoginMiddleware, userController.userProfile);
-usersRouter.get("/reset", resetDbMiddleware, (req, res) => {
-  res.send("Base de datos inicializada.");
-});
+// usersRouter.get("/reset", resetDbMiddleware, (req, res) => {
+//   res.send("Base de datos inicializada.");
+// });
 
 module.exports = usersRouter;

@@ -11,8 +11,8 @@
     <%- include("../partials/header.ejs") %>
     <main>
       <h1>
-        HOLA, <%= locals.usuario ? `${usuario.firstname} ${usuario.lastname}` :
-        "USUARIO" %>!
+        HOLA, <%= locals.usuario ? `${usuario.first_name} ${usuario.last_name}`
+        : "USUARIO" %>!
       </h1>
       <ul class="navbar">
         <li class="lista">
@@ -33,11 +33,11 @@
         <li class="lista-pedido">
           <a class="borrarlink" href="/haceTuPedido">NUEVO PEDIDO</a>
         </li>
-        <% if (locals.admin) {%>
+        <!-- <% if (locals.admin) {%>
         <li class="lista-pedido">
           <a class="borrarlink" href="/users/reset">RESET DB</a>
         </li>
-        <%}%>
+        <%}%> -->
       </ul>
       <div class="seccion-pedidos">
         <h2 id="pedidos">MIS PEDIDOS</h2>
