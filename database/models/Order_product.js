@@ -23,5 +23,15 @@ module.exports = (sequelize, dataTypes) => {
       deletedAt: false,
     }
   );
+  Order_product.associate = function (models) {
+    Order_product.belongsToMany(models.Order, {
+      as: "detalle_pedido_producto",
+      foreignKey: "order_id",
+    });
+    Order_product.belongsToMany(models.Product, {
+      as: "detalle_producto_pedido",
+      foreignKey: "product_id",
+    });
+  };
   return Order_product;
 };

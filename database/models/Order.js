@@ -43,5 +43,20 @@ module.exports = (sequelize, dataTypes) => {
       deletedAt: false,
     }
   );
+  /* Introducción de asociociaciones hasta que Lourdes indique como requerir el archivo asociations.js en cada models y seguidamente en cada controlador solo se requiera el model*/
+  Order.asociate = function (models) {
+    Order.belongsTo(models.User, {
+      as: "usuario",
+      foreignKey: "user_id",
+    });
+    Order.belongsToMany(models.Product, {
+      // models.Actor -> Actors es el valor de alias en actor.js
+      as: "detalle_producto",
+      through: "order_product",
+      foreignKey: "order_id",
+      otherKey: "product_id",
+      timestamps: false,
+    });
+  };
   return Order;
 };
