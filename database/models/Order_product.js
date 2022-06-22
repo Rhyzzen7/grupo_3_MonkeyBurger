@@ -24,11 +24,11 @@ module.exports = (sequelize, dataTypes) => {
     }
   );
   Order_product.associate = function (models) {
-    Order_product.belongsToMany(models.Order, {
+    Order_product.belongsTo(models.Order, {
       as: "detalle_pedido_producto",
       foreignKey: "order_id",
     });
-    Order_product.belongsToMany(models.Product, {
+    Order_product.belongsTo(models.Product, {
       as: "detalle_producto_pedido",
       foreignKey: "product_id",
     });

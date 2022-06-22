@@ -81,7 +81,7 @@ const usersController = {
   },
   userProfile: function (req, res) {
     const usuario = req.session.usuario;
-    console.log(req.session.usuario);
+    //  console.log(req.session.usuario);
 
     res.render("./users/user-profile", { usuario });
   },
@@ -97,19 +97,28 @@ const usersController = {
         old: req.body,
       });
     }
-
-    let newUser = {
-      ...req.body,
-      id: users.length + 1,
+    // let newUser = {
+    //   ...req.body,
+    //   id: users.length + 1,
+    //   image: req?.file?.filename || "default.jpg",
+    //   password: bcryptjs.hashSync(req.body.password, 12),
+    //   role: "user",
+    // };
+    // console.log(newUser);
+    // delete newUser.confirm;
+    // users.push(newUser);
+    // fs.writeFileSync(usersFilePath, JSON.stringify(users));
+    db.User.create({
+      first_name: req.body.firstname,
+      last_name: req.body.lastname,
+      email: req.body.email,
+      phone: 1234567890,
+      role: "user",
       image: req?.file?.filename || "default.jpg",
       password: bcryptjs.hashSync(req.body.password, 12),
-      role: "user",
-    };
-    delete newUser.confirm;
-    users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users));
-
-    res.redirect("/users/login");
+    }).then(() => {
+      res.redirect("/users/login");
+    });
   },
 };
 

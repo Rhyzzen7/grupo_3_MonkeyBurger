@@ -8,7 +8,7 @@ const usersRouter = require("./routes/usersRouter");
 const cartRouter = require("./routes/cartRouter");
 const userMiddleware = require("./middlewares/userMiddleware");
 const authAdmin = require("./middlewares/authAdmin");
-const asociations = require("./database/models/asociations");
+// const asociations = require("./database/models/asociations");
 
 const app = express();
 
