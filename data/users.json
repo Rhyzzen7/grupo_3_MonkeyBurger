@@ -1,1 +1,74 @@
-[{"firstname":"Esteban","lastname":"Quito","email":"esteban@monkeyburger.com","password":"$2a$12$ZUklGkdffpmEE9ig6KVMJ.pvPL06if0zgQEs2XDclpkXF/G2fVOTO","id":1,"image":"1653537990374-usuario1.jpg","role":"admin"},{"firstname":"Estella","lastname":"Drillazo","email":"estella@monkeyburger.com","password":"$2a$12$QFKFt1rz4KHHHaQ/tbe3eus.avVC8mVvvUrFSSGICQgnoKndSiEFm","id":2,"image":"1653538134130-usuario2.jpg","role":"admin"},{"firstname":"Dolores D.","lastname":"Panza","email":"dolores@aol.com","password":"$2a$12$sR/kRsW8dYA6HZnGtx7aAenTLyh0QyCWvrLEGU0VzK89hg9jJiFQa","id":3,"image":"1653538172285-usuario3.jpg","role":"user"},{"firstname":"Benito","lastname":"Catodo","email":"benito@hotmail.com","password":"$2a$12$3TgcLPfsToxKEiNbAo7X8OgQTaEGxzrtRCT/oBlGXEjA4KvcKNoj6","id":4,"image":"1653538203956-usuario4.jpg","role":"user"},{"firstname":"Elena","lastname":"Nito","email":"elena@live.com","password":"$2a$12$92sy5TyRvMeYyaNSWo07iO5EdjZoRzhnS7YXAVvT1Rzk8BUFlLX8u","id":5,"image":"1653538239047-usuario5.jpg","role":"user"},{"firstname":"Monica","lastname":"Galindo","email":"monica@gmail.com","password":"$2a$12$cpa7PsHYoV0Z7TsblHaC4O2I0XolXwKxcXtdGs/suFXJV2voMPpbu","id":6,"image":"1653538272023-usuario6.jpg","role":"user"},{"firstname":"Pepe","lastname":"Argento","email":"pepe@argento.com","password":"$2a$12$UJTQLbjxguTHcwlWkffwsONCS9VDVEdp7QZDaNnla978vjVJjK54u","id":7,"image":"1653611478385-pepe.jfif","role":"user"},{"firstname":"admin","lastname":"admin","email":"admin@admin.com","password":"$2a$12$5jV.TPBV6FsJj/AbuvE.zu9d4h0yvjkZZXOVizoT2/33sqybpjaGq","id":8,"image":"default.jpg","role":"admin"},{"firstname":"pepito","lastname":"tableta","email":"pepe@pipon.com","password":"$2a$12$X2oSoj0WwtqEnVboG.AhGO/ag4gyy76JsKvZTRTE49oEZS4Qflq5.","id":9,"image":"default.jpg","role":"user"},{"firstname":"pepe","lastname":"pepe","email":"pepe@pepe.com","password":"$2a$12$q2pAZ87Ci2MtxKeNkBfVye4JmGruAYU5uq/kg6qiOxjTaAmmYhOpC","id":10,"image":"default.jpg","role":"user"}]
+[
+  {
+    "firstname": "Esteban",
+    "lastname": "Quito",
+    "email": "esteban@monkeyburger.com",
+    "password": "$2a$12$ZUklGkdffpmEE9ig6KVMJ.pvPL06if0zgQEs2XDclpkXF/G2fVOTO",
+    "id": 1,
+    "image": "1653537990374-usuario1.jpg",
+    "role": "admin"
+  },
+  {
+    "firstname": "Estella",
+    "lastname": "Drillazo",
+    "email": "estella@monkeyburger.com",
+    "password": "$2a$12$QFKFt1rz4KHHHaQ/tbe3eus.avVC8mVvvUrFSSGICQgnoKndSiEFm",
+    "id": 2,
+    "image": "1653538134130-usuario2.jpg",
+    "role": "admin"
+  },
+  {
+    "firstname": "Dolores D.",
+    "lastname": "Panza",
+    "email": "dolores@aol.com",
+    "password": "$2a$12$sR/kRsW8dYA6HZnGtx7aAenTLyh0QyCWvrLEGU0VzK89hg9jJiFQa",
+    "id": 3,
+    "image": "1653538172285-usuario3.jpg",
+    "role": "user"
+  },
+  {
+    "firstname": "Benito",
+    "lastname": "Catodo",
+    "email": "benito@hotmail.com",
+    "password": "$2a$12$3TgcLPfsToxKEiNbAo7X8OgQTaEGxzrtRCT/oBlGXEjA4KvcKNoj6",
+    "id": 4,
+    "image": "1653538203956-usuario4.jpg",
+    "role": "user"
+  },
+  {
+    "firstname": "Elena",
+    "lastname": "Nito",
+    "email": "elena@live.com",
+    "password": "$2a$12$92sy5TyRvMeYyaNSWo07iO5EdjZoRzhnS7YXAVvT1Rzk8BUFlLX8u",
+    "id": 5,
+    "image": "1653538239047-usuario5.jpg",
+    "role": "user"
+  },
+  {
+    "firstname": "Monica",
+    "lastname": "Galindo",
+    "email": "monica@gmail.com",
+    "password": "$2a$12$cpa7PsHYoV0Z7TsblHaC4O2I0XolXwKxcXtdGs/suFXJV2voMPpbu",
+    "id": 6,
+    "image": "1653538272023-usuario6.jpg",
+    "role": "user"
+  },
+  {
+    "firstname": "Pepe",
+    "lastname": "Argento",
+    "email": "pepe@argento.com",
+    "password": "$2a$12$UJTQLbjxguTHcwlWkffwsONCS9VDVEdp7QZDaNnla978vjVJjK54u",
+    "id": 7,
+    "image": "1653611478385-pepe.jfif",
+    "role": "user"
+  },
+  {
+    "firstname": "admin",
+    "lastname": "admin",
+    "email": "admin@admin.com",
+    "password": "$2a$12$5jV.TPBV6FsJj/AbuvE.zu9d4h0yvjkZZXOVizoT2/33sqybpjaGq",
+    "id": 8,
+    "image": "default.jpg",
+    "role": "admin"
+  }
+]

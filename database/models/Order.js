@@ -50,8 +50,7 @@ module.exports = (sequelize, dataTypes) => {
       foreignKey: "user_id",
     });
     Order.belongsToMany(models.Product, {
-      // models.Actor -> Actors es el valor de alias en actor.js
-      as: "detalle_producto",
+      as: "productos",
       through: "order_product",
       foreignKey: "order_id",
       otherKey: "product_id",

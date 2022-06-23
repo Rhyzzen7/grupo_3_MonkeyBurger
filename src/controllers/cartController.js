@@ -61,14 +61,14 @@ const cartController = {
     // console.log(product);
     res.render("./products/cart", { items: carts });
   },
-  // menu: function (req, res) {
-  //   const comboc = products.filter((item) => item.category === "comboc");
-  //   const burgers = products.filter((item) => item.category === "burgers");
-  //   const drinks = products.filter((item) => item.category === "drinks");
-  //   const chips = products.filter((item) => item.category === "chips");
+  menu: function (req, res) {
+    const comboc = products.filter((item) => item.category === "comboc");
+    const burgers = products.filter((item) => item.category === "burgers");
+    const drinks = products.filter((item) => item.category === "drinks");
+    const chips = products.filter((item) => item.category === "chips");
 
-  //   res.render("./products/menu", { comboc, burgers, drinks, chips });
-  // },
+    res.render("./products/menu", { comboc, burgers, drinks, chips });
+  },
 };
 
 module.exports = cartController;

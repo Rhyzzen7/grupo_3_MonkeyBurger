@@ -12,7 +12,7 @@ function authAdmin(req, res, next) {
   } else if (req.session.usuario && req.session.usuario.role === "user") {
     // console.log("pase por: " + req.session.usuario.role);
     res.locals.user = true;
-  } 
+  }
 
   next();
 }
