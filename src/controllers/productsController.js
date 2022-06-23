@@ -56,7 +56,7 @@ const productsController = {
   order: function (req, res) {
     // const product = products.find((item) => item.id == req.params.id);
     // res.render("./products/order", { product });
-
+    console.log("hola");
     db.Product.findByPk(req.params.id).then((product) => {
       res.render("./products/order", { product });
     });
