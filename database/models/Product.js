@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
       },
       // Por qué name sería PK?
       name: {
-        primaryKey: true,
+        //  primaryKey: true,
         type: dataTypes.STRING,
         allowNull: false,
       },
@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
       },
       // Por qué price sería PK?
       price: {
-        primaryKey: true,
+        //  primaryKey: true,
         type: dataTypes.DECIMAL,
         // allowNull: false,
       },
@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) => {
   );
   /* Introducción de asociociaciones hasta que Lourdes indique como requerir el archivo asociations.js en cada models y seguidamente en cada controlador solo se requiera el model*/
   Product.associate = function (models) {
-    Product.hasOne(models.Product_category, {
+    Product.belongsTo(models.Product_category, {
       as: "categoria",
       foreignKey: "category_id",
     });
