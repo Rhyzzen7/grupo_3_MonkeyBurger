@@ -98,18 +98,29 @@ const usersController = {
       });
     }
 
-    let newUser = {
-      ...req.body,
-      id: users.length + 1,
+    // let newUser = {
+    //   ...req.body,
+    //   id: users.length + 1,
+    //   image: req?.file?.filename || "default.jpg",
+    //   password: bcryptjs.hashSync(req.body.password, 12),
+    //   role: "user",
+    // };
+    // delete newUser.confirm;
+    // users.push(newUser);
+    // fs.writeFileSync(usersFilePath, JSON.stringify(users));
+
+    // res.redirect("/users/login");
+    db.User.create({
+      first_name: req.body.firstname,
+      last_name: req.body.lastname,
+      email: req.body.email,
+      phone: 1234567890,
+      role: "user",
       image: req?.file?.filename || "default.jpg",
       password: bcryptjs.hashSync(req.body.password, 12),
-      role: "user",
-    };
-    delete newUser.confirm;
-    users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users));
-
-    res.redirect("/users/login");
+    }).then(() => {
+      res.redirect("/users/login");
+    });
   },
 };
 

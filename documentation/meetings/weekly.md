@@ -290,3 +290,52 @@ Seguimiento de avances y oportunidades de mejora:
 3. ¿Qué haré mañana?
 
 - _texto_
+
+**Fecha reunión 22/06/2022 - Sprint 6**
+
+## Lourdes Celli
+
+1.  ¿Qué hice hoy?
+
+- _texto_
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- _texto_
+
+3. ¿Qué haré mañana?
+
+- _texto_
+
+## Victor Celedón
+
+1.  ¿Qué hice hoy?
+
+- Continuación de revisión de modelos e Implementación de SCRUM
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- Corrección de asociociaciones
+- Resolución de acceso a páginas directamente mediante middlewares adicionales.
+- Modificación de views create para que las opciones sean números.
+- Modificación de views editProduct para que las opciones sean números.
+- No funciona multer para la carga de imagenes desde crear producto.
+- No funciona multer para la carga de imagenes desde edit producto.
+
+3. ¿Qué haré mañana?
+
+- Presentación del avance del sprint 6
+
+## Melody Ferraro
+
+1.  ¿Qué hice hoy?
+
+- _texto_
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- _texto_
+
+3. ¿Qué haré mañana?
+
+- _texto_
