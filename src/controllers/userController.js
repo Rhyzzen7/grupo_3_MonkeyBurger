@@ -73,6 +73,8 @@ const usersController = {
     res.clearCookie("userEmail");
     delete admin;
     delete user;
+    req.app.locals.admin = false;
+    req.app.locals.user = false;
     req.session.destroy();
     res.redirect("/");
   },
@@ -81,7 +83,7 @@ const usersController = {
   },
   userProfile: function (req, res) {
     const usuario = req.session.usuario;
-    console.log(req.session.usuario);
+    // console.log(req.session.usuario);
 
     res.render("./users/user-profile", { usuario });
   },

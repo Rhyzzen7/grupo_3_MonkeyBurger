@@ -74,6 +74,7 @@ const productsController = {
     // const drinks = db.Product.findAll({ where: { category_id: 2 } });
     // const chips = db.Product.findAll({ where: { category_id: 3 } });
     // const comboc = db.Product.findAll({ where: { category_id: 4 } });
+    // console.log();
 
     const burgers = db.Product.findAll({
       include: [
@@ -126,7 +127,7 @@ const productsController = {
   order: function (req, res) {
     // const product = products.find((item) => item.id == req.params.id);
     // res.render("./products/order", { product });
-    console.log("hola");
+    // console.log("hola");
     db.Product.findByPk(req.params.id).then((product) => {
       res.render("./products/order", { product });
     });

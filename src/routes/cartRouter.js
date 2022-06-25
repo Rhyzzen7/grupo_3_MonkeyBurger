@@ -1,13 +1,15 @@
 const express = require("express");
 const cartRouter = express.Router();
+const userOrderMiddleware = require("../middlewares/userOrderMiddleware");
 
 const cartController = require("../controllers/cartController");
 
-//cartRouter.get("/items", cartController.cart);
-cartRouter.put("/items", cartController.addCart);
+cartRouter.get("/items", cartController.cart);
 
-cartRouter.get("/menu", cartController.menu);
+cartRouter.put("/items", userOrderMiddleware, cartController.addCart);
 
-cartRouter.get("/purchase", cartController.purchase);
+// cartRouter.get("/menu", cartController.menu);
+
+cartRouter.get("/purchase", userOrderMiddleware, cartController.purchase);
 
 module.exports = cartRouter;

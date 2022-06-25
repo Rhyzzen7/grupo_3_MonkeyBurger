@@ -14,6 +14,11 @@ const homeController = {
     Promise.all([news, proms]).then(([news, proms]) => {
       // console.log(proms1.length);
       // console.log(news1.length);
+      /* ----------------- */
+      // Establecimiento de variables globales //
+      req.app.locals.admin = false;
+      req.app.locals.user = false;
+      /* ----------------- */
       res.render("./main/index", { news, proms });
     });
   },
