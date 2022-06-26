@@ -82,10 +82,81 @@ const usersController = {
     res.render("./users/register");
   },
   userProfile: function (req, res) {
+    req.session.usuario.address = [];
+    req.session.usuario.ordered = [];
     const usuario = req.session.usuario;
-    // console.log(req.session.usuario);
+    /*Búsqueda en base de datos de las direcciones del usuario*/
+    // db.Order.findAll({
+    //   include: [
+    //     {
+    //       model: db.User,
+    //       as: "usuario",
+    //       where: { email: req.session.usuario.email },
+    //     },
+    //   ],
+    // })
+    //   .then((order) => {
+    //     order.forEach((orderAddress) => {
+    //       usuario.address.push(orderAddress.shipping_address);
+    //       console.log(usuario.address);
+    //     });
+    //     console.log(usuario.address.length);
+    //     console.log(usuario);
+    //     res.render("./users/user-profile", { usuario });
+    //   })
+    //   .catch((err) => console.log(err));
+    const order = db.Order.findAll({
+      include: [
+        {
+          model: db.User,
+          as: "usuario",
+          where: { email: req.session.usuario.email },
+        },
+      ],
+    });
+    /*Pedidos*/
+    const items = db.Order_product.findAll({
+      include: [
+        {
+          model: db.Order,
+          as: "detalle_pedido_producto",
+          include: {
+            model: db.User,
+            as: "usuario",
+            where: { email: usuario.email },
+            required: true,
+          },
+          required: true,
+        },
+        {
+          model: db.Product,
+          as: "detalle_producto_pedido",
+          required: true,
+        },
+      ],
+    });
+    /*Fin pedidos*/
 
-    res.render("./users/user-profile", { usuario });
+    Promise.all([order, items])
+      .then(([order, items]) => {
+        order.forEach((orderAddress) => {
+          usuario.address.push(orderAddress.shipping_address);
+        });
+        items.forEach((productOrdered) => {
+          usuario.ordered.push(productOrdered);
+        });
+        // console.log(usuario);
+        console.log(
+          "\nDirecciones encontradas para el usuario: " + usuario.email
+        );
+        console.log(usuario.address.length);
+        console.log("\nPedidos encontrados para el usuario: " + usuario.email);
+        console.log(usuario.ordered.length);
+        res.render("./users/user-profile", { usuario });
+      })
+      .catch((err) => console.log(err));
+
+    /*Fin de la busqueda de direcciones*/
   },
   userCreate: (req, res) => {
     res.render("/register");

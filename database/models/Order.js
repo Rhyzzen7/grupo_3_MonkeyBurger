@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false,
         type: dataTypes.INTEGER,
       },
-      user_id: {
+      users_id: {
         allowNull: false,
         type: dataTypes.INTEGER,
       },
@@ -44,15 +44,15 @@ module.exports = (sequelize, dataTypes) => {
     }
   );
   /* Introducción de asociociaciones hasta que Lourdes indique como requerir el archivo asociations.js en cada models y seguidamente en cada controlador solo se requiera el model*/
-  Order.asociate = function (models) {
+  Order.associate = function (models) {
     Order.belongsTo(models.User, {
       as: "usuario",
-      foreignKey: "user_id",
+      foreignKey: "users_id",
     });
     Order.belongsToMany(models.Product, {
       as: "productos",
       through: "order_product",
-      foreignKey: "order_id",
+      foreignKey: "orders_id",
       otherKey: "product_id",
       timestamps: false,
     });

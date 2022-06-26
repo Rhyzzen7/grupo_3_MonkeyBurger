@@ -47,10 +47,10 @@ module.exports = (sequelize, dataTypes) => {
     }
   );
   /* Introducción de asociociaciones hasta que Lourdes indique como requerir el archivo asociations.js en cada models y seguidamente en cada controlador solo se requiera el model*/
-  User.asociate = function (models) {
+  User.associate = function (models) {
     User.hasMany(models.Order, {
       as: "pedidos",
-      foreignKey: "user_id",
+      foreignKey: "users_id",
     });
   };
   return User;

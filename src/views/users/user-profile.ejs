@@ -40,8 +40,40 @@
         <%}%> -->
       </ul>
       <div class="seccion-pedidos">
-        <h2 id="pedidos">MIS PEDIDOS</h2>
+        <h2 id="pedidos">MIS PEDIDOS: <%= usuario.ordered.length %> </h2>
         <div class="pedidos-actuales">
+          <h3 class="titulo-pedido">Pedidos Realizados: </h3>
+        <% for (let i = 0; i < usuario.ordered.length; i++) { %>
+
+          <div class="pedido">
+            <h4>Pedido Nro <%= usuario.ordered[i].id%></h4>
+            <div class="info-detalle">
+              <div class="info-pedido">
+                <!-- <h5>Fecha: <%= usuario.ordered[i].detalle_pedido_producto.date%></h5> -->
+                <h5>Dirección de envío: <%= usuario.ordered[i].detalle_pedido_producto.shipping_address%></h5>
+                <h5>Total Pedido: $ <%= usuario.ordered[i].quantity * usuario.ordered[i].detalle_producto_pedido.price%></h5>
+                <h5>Forma de Pago: <%= usuario.ordered[i].detalle_pedido_producto.credit_card_number%></h5>
+                <h5>Fecha y horario de entrega estimada: <br><%= usuario.ordered[i].detalle_pedido_producto.date%></h5>
+              </div>
+              <div class="detalle-pedido">
+                <h5>Detalle</h5>
+                <div class="item-pedido">
+                  <img class="foto-item" src="../<%= usuario.ordered[i].detalle_producto_pedido.image%>" />
+                  <h6>Cantidad: <%= usuario.ordered[i].quantity%></h6>
+                  <h6>Item: <%= usuario.ordered[i].detalle_producto_pedido.name%></h6>
+                  <h6>Precio Unitario $<%= usuario.ordered[i].detalle_producto_pedido.price%></h6>
+                </div>
+              </div>
+            </div>
+            <div class="contenedor-botones-modificar-cancelar">
+              <button class="botones-opniar-repetir">Modificar</button>
+              <button class="botones-opniar-repetir">Cancelar</button>
+            </div>
+          </div>
+        <%}%>
+        </div>
+
+        <!-- <div class="pedidos-actuales">
           <h3 class="titulo-pedido">Pedidos Actuales</h3>
           <div class="pedido">
             <h4>Pedido Nro ####</h4>
@@ -170,15 +202,25 @@
               <button class="botones-opniar-repetir">Repetir Pedido</button>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="seccion-direcciones">
         <h2 id="direcciones">MIS DIRECCIONES</h2>
         <div class="contenedor-direcciones">
+          <% for (let i = 0; i < usuario.address.length; i++) { %>
           <div class="direccion">
             <i class="fa-solid fa-map-location-dot"></i>
             <div class="detalle-direccion">
-              <h4>Dirección CASA</h4>
+              <h4>Dirección <%=i+1%></h4></h4>
+              <h3><%=usuario.address[i]%></h3>
+              <h4>Seleccionar dirección de envío</h4>
+            </div>
+          </div>
+          <%}%>
+          <!-- <div class="direccion">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <div class="detalle-direccion">
+              <h4>Dirección Principal</h4>
               <h3>Calle ABC, 123, CPxxx</h3>
               <h3>Entre calles DEF y GHI</h3>
             </div>
@@ -186,7 +228,7 @@
           <div class="direccion">
             <i class="fa-solid fa-map-location-dot"></i>
             <div class="detalle-direccion">
-              <h4>Dirección TRABAJO</h4>
+              <h4>Dirección Alternativa 1</h4>
               <h3>Calle ABC, 123, CPxxx</h3>
               <h3>Entre calles DEF y GHI</h3>
             </div>
@@ -194,7 +236,7 @@
           <div class="direccion">
             <i class="fa-solid fa-map-location-dot"></i>
             <div class="detalle-direccion">
-              <h4>Dirección ABU</h4>
+              <h4>Dirección Alternativa 2</h4>
               <h3>Calle ABC, 123, CPxxx</h3>
               <h3>Entre calles DEF y GHI</h3>
             </div>
@@ -202,11 +244,11 @@
           <div class="direccion">
             <i class="fa-solid fa-map-location-dot"></i>
             <div class="detalle-direccion">
-              <h4>Dirección CASA JUANCHO</h4>
+              <h4>Dirección Alternativa 3</h4>
               <h3>Calle ABC, 123, CPxxx</h3>
               <h3>Entre calles DEF y GHI</h3>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="botones-direcciones">
           <button class="botones-opniar-repetir">AGREGAR DIRECCIONES</button>

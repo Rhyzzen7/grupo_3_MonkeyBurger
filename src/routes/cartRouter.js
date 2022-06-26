@@ -4,7 +4,7 @@ const userOrderMiddleware = require("../middlewares/userOrderMiddleware");
 
 const cartController = require("../controllers/cartController");
 
-cartRouter.get("/items", cartController.cart);
+cartRouter.get("/items", userOrderMiddleware, cartController.cart);
 
 cartRouter.put("/items", userOrderMiddleware, cartController.addCart);
 
