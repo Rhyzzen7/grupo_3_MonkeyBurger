@@ -115,22 +115,22 @@ const usersController = {
       ],
     });
     /*Pedidos*/
-    const items = db.Order_product.findAll({
+    const items = db.Order.findAll({
       include: [
         {
-          model: db.Order,
-          as: "detalle_pedido_producto",
-          include: {
-            model: db.User,
-            as: "usuario",
-            where: { email: usuario.email },
-            required: true,
-          },
+          model: db.User,
+          as: "usuario",
+          where: { email: usuario.email },
           required: true,
         },
         {
-          model: db.Product,
-          as: "detalle_producto_pedido",
+          model: db.Order_product,
+          as: "pedido_solicitado",
+          include: {
+            model: db.Product,
+            as: "detalle_producto_pedido",
+            required: true,
+          },
           required: true,
         },
       ],
@@ -145,7 +145,7 @@ const usersController = {
         items.forEach((productOrdered) => {
           usuario.ordered.push(productOrdered);
         });
-        // console.log(usuario);
+        console.log(usuario);
         console.log(
           "\nDirecciones encontradas para el usuario: " + usuario.email
         );

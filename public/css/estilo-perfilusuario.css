@@ -71,10 +71,20 @@ h4 {
   justify-content: space-around;
 }
 
-.info-detalle {
+.info-detalle,
+.info-total {
   display: flex;
   flex-direction: row;
   background: #333533;
+}
+.pedido > h4 {
+  margin: 2%;
+}
+.info-detalle {
+  margin-left: 3%;
+}
+.info-total {
+  margin-left: 70%;
 }
 .foto-item {
   width: 50px;

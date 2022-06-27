@@ -6,6 +6,7 @@ module.exports = (sequelize, dataTypes) => {
         primaryKey: true,
         allowNull: false,
         type: dataTypes.INTEGER,
+        autoIncrement: true,
       },
       users_id: {
         allowNull: false,
@@ -35,6 +36,10 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false,
         type: dataTypes.STRING,
       },
+      cart: {
+        allowNull: false,
+        type: dataTypes.BOOLEAN,
+      },
     },
     {
       timestamps: true,
@@ -48,6 +53,10 @@ module.exports = (sequelize, dataTypes) => {
     Order.belongsTo(models.User, {
       as: "usuario",
       foreignKey: "users_id",
+    });
+    Order.hasMany(models.Order_product, {
+      as: "pedido_solicitado",
+      foreignKey: "order_id",
     });
     Order.belongsToMany(models.Product, {
       as: "productos",
