@@ -28,6 +28,7 @@ const cartController = {
         {
           model: db.Order,
           as: "detalle_pedido_producto",
+          where: { cart: false },
           include: {
             model: db.User,
             as: "usuario",
@@ -77,20 +78,20 @@ const cartController = {
     //   "utf-8"
     // );
     // Cargar los datos provenientes de la vista order
-    let product = {
-      name: "",
-      image: "",
-      price: "",
-      category: "",
-      quantity: "",
-      extras1: "",
-      extras2: "",
-      extras3: "",
-      notes: "",
-      total: 0,
-      ...req.body,
-    };
-    product.total = parseInt(product.price) * parseInt(product.quantity);
+    // let product = {
+    //   name: "",
+    //   image: "",
+    //   price: "",
+    //   category: "",
+    //   quantity: "",
+    //   extras1: "",
+    //   extras2: "",
+    //   extras3: "",
+    //   notes: "",
+    //   total: 0,
+    //   ...req.body,
+    // };
+    // product.total = parseInt(product.price) * parseInt(product.quantity);
     // Evaluar si existe archivo de carrito
     // // if (data === "") {
     //   carts.push({ id: "1", ...product });
@@ -124,19 +125,41 @@ const cartController = {
       .then(([id_product, id_order]) => {
         if (id_order == null) {
           console.log("\n\n\nCrear nuevo pedido!!!\n\n\n");
-          res.redirect("/cart/items");
-        }
-        db.Order_product.create({
-          order_id: id_order.id,
-          product_id: id_product.id,
-          quantity: Number(req.body.quantity),
-          client_comments: `${req.body.extras1}; ${req.body.extras2}; ${req.body.extras3}; ${req.body.notes}.`,
-        })
-          .then(() => {
-            console.log("Creación exitosa");
-            res.redirect("/cart/items");
+          db.Order.create({
+            users_id: req.session.usuario.id,
+            date: Date.now(),
+            shipping_address: "",
+            credit_card_number: "",
+            credit_card_owner: "",
+            credit_card_expiration: "",
+            credit_card_security_number: "",
+            cart: false,
+          }).then((id_order) => {
+            db.Order_product.create({
+              order_id: id_order.id,
+              product_id: id_product.id,
+              quantity: Number(req.body.quantity),
+              client_comments: `${req.body.extras1}; ${req.body.extras2}; ${req.body.extras3}; ${req.body.notes}.`,
+            })
+              .then(() => {
+                console.log("Creación exitosa");
+                res.redirect("/cart/items");
+              })
+              .catch((err) => console.log(err));
+          });
+        } else {
+          db.Order_product.create({
+            order_id: id_order.id,
+            product_id: id_product.id,
+            quantity: Number(req.body.quantity),
+            client_comments: `${req.body.extras1}; ${req.body.extras2}; ${req.body.extras3}; ${req.body.notes}.`,
           })
-          .catch((err) => console.log(err));
+            .then(() => {
+              console.log("Creación exitosa");
+              res.redirect("/cart/items");
+            })
+            .catch((err) => console.log(err));
+        }
       })
       .catch((err) => console.log(err));
 
