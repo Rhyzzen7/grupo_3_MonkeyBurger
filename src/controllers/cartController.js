@@ -188,18 +188,28 @@ const cartController = {
   // },
   purchase: function (req, res) {
     // Acá es necesario utilizar el modelo Order para completar la compra
-    db.Order_product.findAll({
-      include: [
-        { model: db.Product, as: "detalle_producto_pedido", where: { id: 2 } },
-      ],
+
+    db.Order.findOne({
+      where: { cart: false },
+      include: {
+        model: db.User,
+        as: "usuario",
+        where: { email: req.session.usuario.email },
+      },
     })
-      .then((items) => {
-        console.log("Pase por purchase");
-        console.log(items.length);
+      .then((item) => {
+        db.Order.update({ cart: true }, { where: { id: item.id } })
+          .then(() => {
+            console.log("Pase por purchase");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       })
       .catch((err) => {
         console.log(err);
       });
+    res.redirect("/products/menu");
   },
 };
 

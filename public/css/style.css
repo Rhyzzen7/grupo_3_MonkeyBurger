@@ -41,6 +41,10 @@ h6 {
   color: var(--gris-claro);
 }
 
+a {
+  text-decoration: none;
+}
+
 /*Antonio Thin – Eta fuente se utilizará para los textos.*/
 
 p {
