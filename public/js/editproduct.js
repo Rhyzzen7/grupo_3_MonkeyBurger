@@ -3,8 +3,6 @@
 window.addEventListener("load", function () {
   let formulario = document.querySelector(".formulario");
   formulario.addEventListener("submit", function (e) {
-    e.preventDefault();
-
     let errores = [];
 
     let fieldName = document.querySelector("input[name=name]");
@@ -15,7 +13,6 @@ window.addEventListener("load", function () {
     }
 
     let fieldDescription = document.querySelector('textarea.campo-completar');
-    console.log(fieldDescription.value)
     if (fieldDescription.value.length < 20) {
       errores.push("La DESCRIPCIÓN debe tener, al menos, 20 caracteres.");
     }
