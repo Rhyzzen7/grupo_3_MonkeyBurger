@@ -6,8 +6,8 @@ let images = [
 let cont = 0;
 function carousel(contenedor) {
   contenedor.addEventListener("click", (e) => {
-    let atras = contenedor.querySelector(".izquierda i");
-    let adelante = contenedor.querySelector(".derecha i");
+    let atras = contenedor.querySelector(".left i");
+    let adelante = contenedor.querySelector(".right i");
     let img = contenedor.querySelector("img");
     let tgt = e.target;
 
@@ -29,9 +29,20 @@ function carousel(contenedor) {
       }
     }
   });
+  let interval = setInterval(() => {
+    let img = contenedor.querySelector("img");
+    if (cont < images.length) {
+      img.src = images[cont];
+      cont++;
+    } else {
+      img.src = images[0];
+      cont = 0;
+    }
+  }, 2000);
+  console.log("Cambio de imágenes: " + interval);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  let contenedor = document.querySelector(".imagenes-carrete");
+  let contenedor = document.querySelector(".images-wheel");
   carousel(contenedor);
 });

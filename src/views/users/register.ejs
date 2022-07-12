@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/style-login.css" />
+    <title>Bienvenidos a Monkey Burger</title>
+    <link rel="icon" href="/img/icono.png" />
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <h2 class="novedades">CREAR CUENTA</h2>
+      <!--Crear un formulario a partir de esta instancia-->
+      <div class="mosaico-login">
+        <form
+          class="formulario"
+          action="/users/register"
+          method="POST"
+          enctype="multipart/form-data"
+          novalidate
+        >
+          <ul class="erroresFront"></ul>
+          <label for="firstname"
+            ><h5>Nombre <i class="fa-solid fa-id-card"></i></h5
+          ></label>
+          <input
+            type="text"
+            name="firstname"
+            value="<%= locals.old && old.firstname %>"
+          />
+          <% if (locals.firstname && errors.firstname && errors.firstname.msg) {
+          %>
+          <p class="feedback"><%= errors.firstname.msg %></p>
+          <% } %>
+          <label for="lastname"
+            ><h5>Apellido <i class="fa-solid fa-id-card"></i></h5
+          ></label>
+          <input
+            class="apellido"
+            type="text"
+            name="lastname"
+            value="<%= locals.old && old.lastname %>"
+          />
+          <% if (locals.errors && errors.lastname && errors.lastname.msg) { %>
+          <p class="feedback"><%= errors.lastname.msg %></p>
+          <% } %>
+          <label for="email"
+            ><h5>Correo electrónico <i class="fa-solid fa-at"></i></h5
+          ></label>
+          <input
+            type="email"
+            name="email"
+            value="<%= locals.old && old.email %>"
+          />
+          <% if (locals.errors && errors.email && errors.email.msg) { %>
+          <p class="feedback"><%= errors.email.msg %></p>
+          <% } %>
+          <label for="imagenPerfil"><h5>Imagen de perfil:</h5></label>
+          <input
+            type="file"
+            id="userimage"
+            name="userimage"
+            accept="image/png, image/jpg, image/jpeg, image/gif"
+          />
+          <label for="password"
+            ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
+          ></label>
+          <input type="password" name="password" />
+          <% if (locals.errors && errors.password && errors.password.msg) { %>
+          <p class="feedback"><%= errors.password.msg %></p>
+          <% } %>
+          <label for="confirm"
+            ><h5>Confirmar contraseña <i class="fa-solid fa-key"></i></h5
+          ></label>
+          <input type="password" name="confirm" />
+          <% if (locals.errors && errors.confirm && errors.confirm.msg) { %>
+          <p class="feedback"><%= errors.confirm.msg %></p>
+          <% } %>
+          <div class="ingresar">
+            <button type="submit">
+              <h4>ENVIAR</h4>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+    <script src="/js/register.js"></script>
+  </body>
+</html>

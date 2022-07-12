@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %> <%- include("../partials/letras.ejs")
+    %>
+    <title>Nuevo Producto</title>
+    <link rel="stylesheet" href="/css/estilo-editproduct.css" />
+  </head>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <h1>NUEVO PRODUCTO</h1>
+    <form action="/products/create" method="POST" class="formulario" novalidate>
+      <ul class="erroresFront"></ul>
+      <div class="editar-producto">
+        <div class="campo">
+          <label required>Categoría del producto:</label>
+          <select class="campo-completar" name="category" required>
+            <option value="1">Hamburguesas</option>
+            <option value="3">Tapas</option>
+            <option value="2">Bebidas</option>
+            <option value="4">Combos</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="name">Nombre:</label>
+          <input
+            class="campo-completar"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Ingresá el nombre"
+            required
+          />
+        </div>
+        <div class="campo">
+          <label for="description">Descripción:</label>
+          <textarea
+            class="campo-completar"
+            name="description"
+            id="description"
+            placeholder="Descripción del nuevo producto"
+            required
+          ></textarea>
+        </div>
+        <div class="campo">
+          <label for="precio">Precio:</label>
+          <input
+            class="campo-completar"
+            type="text"
+            name="price"
+            id="price"
+            placeholder="Ingreesá el precio"
+            required
+          />
+        </div>
+        <div class="campo">
+          <label>Foto:</label>
+          <input type="file" name="image" accept="image/*" />
+        </div>
+        <div class="button-container">
+          <div class="button-container">
+            <div>
+              <button class="button" type="submit">CREAR PRODUCTO</button>
+            </div>
+            <div>
+              <button class="button" type="reset">BORRAR TODO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <%- include("../partials/footer.ejs") %>
+    <script src="/js/createproduct.js"></script>
+  </body>
+</html>

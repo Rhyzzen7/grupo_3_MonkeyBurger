@@ -18,8 +18,8 @@ main {
   background-color: #242423;
 }
 
-h1,
-h2 {
+main.h1,
+main.h2 {
   font-family: "marvel";
   font-weight: bold;
   color: #e8eddf;
@@ -41,6 +41,11 @@ h3 {
   font-family: "Antonio";
   font-style: normal;
   margin: 0px;
+}
+
+h4 {
+  color: #242423;
+  background-color: #ffc000;
 }
 
 .contenedor-carrito {
@@ -121,7 +126,13 @@ h3 {
   box-shadow: 0 0 11px #e8eddf;
   font-weight: 600;
 }
-
+.boton-continuar-carrito a,
+.boton-agregarmas-carrito a {
+  text-decoration: none;
+  color: #242423;
+  margin-bottom: 1px;
+  background-color: #ffc000;
+}
 .totalproducto-carrito {
   display: flex;
   margin-bottom: 5px;
@@ -147,10 +158,41 @@ h1.monkey {
 
 header h3 .gourmet {
   color: #e8eddf;
-  background-color: #333533;
 }
 
 header h4,
 header .boton h4 a {
+  background-color: #ffc000;
+  color: #242423;
+}
+
+h2.brand-type,
+h1.brand-logo {
+  padding: 0px, 0px;
+  background: none;
+}
+
+#modal-nav.header-bar {
+  border-bottom: solid 1px #333533;
+}
+
+li h4 a {
+  color: #242423;
+  margin-bottom: 1px;
+  background-color: #ffc000;
+}
+
+.buy-text,
+.users-text {
+  color: var(--negro-carbon);
+  margin-bottom: 1px;
+  background-color: #ffc000;
+}
+
+.buy-text:hover,
+.users-text:hover {
+  font-weight: 600px;
+  color: var(--gris-claro);
+  text-shadow: var(--gris-claro) 0px 0px 16px;
   background-color: #ffc000;
 }

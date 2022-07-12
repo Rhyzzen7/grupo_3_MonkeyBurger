@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/estilo-menu.css" />
+    <%- include("../partials/letras.ejs") %>
+    <title>Menú</title>
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <h1 id="title">INFARTATE CON NUESTRO MENÚ</h1>
+      <ul class="navbar">
+        <li class="lista">
+          <a class="borrarlink" href="#hamburguesas">HAMBURGUESAS</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="#tapas">TAPAS</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="#bebidas">BEBIDAS</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="#combos">COMBOS DEL MES</a>
+        </li>
+      </ul>
+
+      <h2 id="hamburguesas">HAMBURGUESAS</h2>
+      <div class="contenedor-producto">
+        <% burgers.forEach(burger => { %>
+        <div class="subcontenedor-infoproducto">
+          <h3><%=burger.name%></h3>
+          <div><%=burger.description%></div>
+          <h4>$ <%=burger.price%></h4>
+          <div class="contenedor-boton-hace-tu-pedido">
+            <button type="submit" for="userChoice" class="boton-hace-tu-pedido">
+              <a href="/products/order/<%=burger.id %>"> HACÉ TU PEDIDO </a>
+            </button>
+          </div>
+        </div>
+        <label for="userChoice" name="productimage" id="idProduct"
+          ><img
+            class="subcontenedor-fotoproducto"
+            src="../<%=burger.image%>"
+            alt="foto de <%=burger.name%>"
+        /></label>
+        <% }) %>
+      </div>
+
+      <h2 id="tapas">TAPAS</h2>
+      <div class="contenedor-producto">
+        <% chips.forEach(chip => { %>
+        <div class="subcontenedor-infoproducto">
+          <h3><%=chip.name%></h3>
+          <div><%=chip.description%></div>
+          <h4>$ <%=chip.price%></h4>
+          <div class="contenedor-boton-hace-tu-pedido">
+            <button type="submit" for="userChoice" class="boton-hace-tu-pedido">
+              <a href="/products/order/<%=chip.id %>"> HACÉ TU PEDIDO </a>
+            </button>
+          </div>
+        </div>
+        <label for="userChoice" name="productimage" id="idProduct"
+          ><img
+            class="subcontenedor-fotoproducto"
+            src="../<%=chip.image%>"
+            alt="foto de <%=chip.name%>"
+        /></label>
+        <% }) %>
+      </div>
+
+      <h2 id="bebidas">BEBIDAS</h2>
+      <div class="bebidas">
+        <% drinks.forEach(drink => { %>
+        <div class="contenedor-bebida">
+          <img
+            class="foto-bebida"
+            src="../<%=drink.image%>"
+            alt="logo <%=drink.name%>"
+          />
+          <div class="info-bebidas">
+            <h3><%=drink.name%> - <%=drink.description%></h3>
+            <div class="precio-boton-bebidas">
+              <h4>$ 250</h4>
+              <div class="contenedor-boton-hace-tu-pedido">
+                <a
+                  class="boton-hace-tu-pedido"
+                  href="/products/order/<%=drink.id %>"
+                  >HACÉ TU PEDIDO</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+
+      <h2 id="combos">COMBOS DEL MES</h2>
+      <div class="contenedor-producto">
+        <% comboc.forEach(combo => { %>
+        <div class="subcontenedor-infoproducto info-a-la-derecha">
+          <h3><%=combo.name%></h3>
+          <div><%=combo.description%></div>
+          <h4>$ <%=combo.price%></h4>
+          <div class="contenedor-boton-hace-tu-pedido">
+            <a
+              class="boton-hace-tu-pedido"
+              href="/products/order/<%=combo.id %>"
+              >HACÉ TU PEDIDO</a
+            >
+          </div>
+        </div>
+        <img
+          class="subcontenedor-fotoproducto"
+          src="../<%=combo.image%>"
+          alt="foto combo <%=combo.name%>"
+        />
+        <% }) %>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

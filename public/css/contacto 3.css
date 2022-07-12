@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  background-color: #242423;
+}
+
+h1.contacto {
+  
+  text-align: center;
+}
+
+.input-nombre input {
+  background-color: white;
+  width: 45%;
+  height: 30px;
+  border: 3px black solid;
+  border-radius: 10px;
+}
+
+.input-nombre {
+  text-align: center;
+  margin: 10px 25px 25px;
+}
+
+.input-apellido input {
+  background-color: white;
+  width: 45%;
+  height: 30px;
+  border: 3px black solid;
+  border-radius: 10px;
+}
+.input-apellido {
+  text-align: center;
+  margin: 10px 25px 25px;
+}
+
+.input-email input {
+  background-color: white;
+  width: 45%;
+  height: 30px;
+  border: 3px black solid;
+  border-radius: 10px;
+}
+
+.input-email {
+  text-align: center;
+  margin: 10px 25px 25px;
+}
+
+.input-telefono input {
+  background-color: white;
+  width: 45%;
+  height: 30px;
+  border: 3px black solid;
+  border-radius: 10px;
+}
+
+.input-telefono {
+  text-align: center;
+  margin: 10px 25px 25px;
+}
+
+.input-domicilio input {
+  background-color: white;
+  width: 45%;
+  height: 30px;
+  border: 3px black solid;
+  border-radius: 10px;
+}
+.input-domicilio {
+  text-align: center;
+  margin: 10px 25px 25px;
+}
+
+/*.input-asunto input{
+    background-color: white;
+    width:45%;
+    height: 30px;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+.input-asunto{
+    text-align: center;
+    margin: 10px 25px 25px;
+}
+
+.select-opciones{
+    margin-left: -11.5%;
+    background-color: #ffc000;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+*/
+.input-asunto select {
+  background-color: white;
+  width: 45%;
+  height: 30px;
+  border: 3px black solid;
+  border-radius: 10px;
+}
+.input-asunto {
+  text-align: center;
+  margin: 10px 25px 25px;
+}
+
+.input-mensaje input {
+  background-color: white;
+  width: 45%;
+  height: 90px;
+  border: 3px black solid;
+  border-radius: 10px;
+  text-align: start;
+}
+.input-mensaje {
+  text-align: center;
+  margin: 10px 25px 25px;
+}
+
+#boton {
+  background-color: #ffc000;
+  width: 150px;
+  height: 30px;
+  border: black 2px solid;
+  border-radius: 10px;
+}
+div.boton {
+  text-align: center;
+  margin: 15px 25px;
+}
+
+/* Para que funcionen el header y footer */
+h1.monkey {
+  padding: 0;
+  margin: 0px;
+}
+
+header h4,
+.gourmet {
+  color: #e8eddf;
+  background-color: #333533;
+}
+header h4,
+header .boton h4 a {
+  background-color: #ffc000;
+}
+
+li h4 {
+  background-color: #242423;
+  padding: 0px;
+}
+
+header h4 {
+  padding: 0px;
+}
+
+main h1 {
+  padding: 50px;
+}

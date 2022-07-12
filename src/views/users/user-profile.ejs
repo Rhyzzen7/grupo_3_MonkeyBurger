@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head.ejs") %>
+    <link href="/css/estilo-perfilusuario.css" rel="stylesheet" />
+    <link rel="icon" href="/img/icono.png" />
+    <title>Perfil Usuario</title>
+    <%- include("../partials/letras.ejs") %>
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <h1>
+        HOLA, <%= locals.usuario ? `${usuario.first_name} ${usuario.last_name}`
+        : "USUARIO" %>!
+      </h1>
+      <ul class="navbar">
+        <li class="lista">
+          <a class="borrarlink" href="/usuario#pedidos">PEDIDOS</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="/usuario#direcciones">DIRECCIONES</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="/usuario#tarjetas">TARJETAS</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="/usuario#cuenta">CUENTA</a>
+        </li>
+        <li class="lista">
+          <a class="borrarlink" href="/usuario#terminos">T Y C</a>
+        </li>
+        <li class="lista-pedido">
+          <a class="borrarlink" href="/haceTuPedido">NUEVO PEDIDO</a>
+        </li>
+        <!-- <% if (locals.admin) {%>
+        <li class="lista-pedido">
+          <a class="borrarlink" href="/users/reset">RESET DB</a>
+        </li>
+        <%}%> -->
+      </ul>
+      <div class="seccion-cuenta">
+        <h2 id="cuenta">MI CUENTA</h2>
+        <h3 class="titulo-datospersonales">DATOS PERSONALES</h3>
+        <div class="datos-personales">
+          <div class="campo">
+            <div class="fondo-negroclaro">
+              <img class="fondo-negroclaro" src="/img/usuarios/<%=
+              locals.usuario.image ? usuario.image : "default.jpg" %>" alt="foto
+              de perfil de usuario 1" />
+            </div>
+            <div class="fondo-negroclaro">
+              <form class="fondo-negroclaro contenedor-cargar-foto">
+                <label class="fondo-negroclaro texto-cargar-foto">
+                  Seleccionar una foto de perfil:
+                </label>
+                <input
+                  type="file"
+                  name="avatar"
+                  accept=".jpg"
+                  class="custom-file-input fondo-negroclaro"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="campo">
+            <div class="nombre-campo">Nombre:</div>
+            <div class="info-usuario"><%= usuario.first_name%></div>
+          </div>
+          <div class="campo">
+            <div class="nombre-campo">Apellido:</div>
+            <div class="info-usuario"><%= usuario.last_name%></div>
+          </div>
+          <div class="campo">
+            <div class="nombre-campo">Email:</div>
+            <div class="info-usuario"><%= usuario.email%></div>
+          </div>
+          <div class="campo">
+            <div class="nombre-campo">Usuario:</div>
+            <div class="info-usuario"><%= usuario.email%></div>
+          </div>
+          <div class="campo">
+            <div class="nombre-campo">Teléfono:</div>
+            <div class="info-usuario"><%= usuario.phone%></div>
+          </div>
+        </div>
+        <div class="botones-editar-tarjetas">
+          <button class="boton-tarjeta">MODIFICAR DATOS PERSONALES</button>
+        </div>
+        <div class="seccion-direcciones">
+          <h2 id="direcciones">MIS DIRECCIONES</h2>
+          <div class="contenedor-direcciones">
+            <% for(let k = 0; k < usuario.address.length; k++) { %>
+            <div class="direccion">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <div class="detalle-direccion">
+                <h4>Dirección <%=k+1%></h4></h4>
+                <h3><%=usuario.address[k]%></h3>
+                <h4>Seleccionar dirección de envío</h4>
+              </div>
+            </div>
+            <% } %>
+          </div>
+          <div class="botones-direcciones">
+            <button class="botones-opniar-repetir">AGREGAR DIRECCIONES</button>
+            <button class="botones-opniar-repetir">EDITAR DIRECCIONES</button>
+          </div>
+        </div>
+        <h3 class="titulo-datospersonales">CONTRASEÑA</h3>
+        <div class="contrasena">
+          <div class="fondo-negroclaro">
+            Aquí podrás modificar tus contraseña
+          </div>
+          <div class="botones-editar-tarjetas fondo-negroclaro">
+            <button class="boton-tarjeta">CAMBIAR CONTRASEÑA</button>
+          </div>
+        </div>
+        <h3 class="titulo-datospersonales">CERRAR CUENTA</h3>
+        <div class="contrasena">
+          <div class="fondo-negroclaro">Aquí podrás cerrar tu cuenta:</div>
+          <div class="botones-editar-tarjetas fondo-negroclaro">
+            <button class="boton-tarjeta">CERRAR CUENTA</button>
+          </div>
+        </div>
+      </div>
+      <div class="seccion-tarjetas">
+        <h2 id="tarjetas">MIS TARJETAS</h2>
+        <div class="contenedor-tarjetas">
+          <div class="tarjeta">
+            <i class="fab fa-cc-visa"></i>
+            <div class="info-tarjeta">
+              <div class="fondo-negroclaro">**** **** **** 1234</div>
+              <div class="fondo-negroclaro">Débito</div>
+            </div>
+          </div>
+          <div class="tarjeta">
+            <i class="fab fa-cc-visa"></i>
+            <div class="info-tarjeta">
+              <div class="fondo-negroclaro">**** **** **** 5678</div>
+              <div class="fondo-negroclaro">Crébito</div>
+            </div>
+          </div>
+        </div>
+        <div class="botones-editar-tarjetas">
+          <button class="boton-tarjeta">EDITAR TARJETAS</button>
+        </div>
+      </div>
+      <div class="seccion-pedidos">
+        <h2 id="pedidos">MIS PEDIDOS: <%= usuario.ordered.length %> </h2>
+        <div class="pedidos-actuales">
+          <h3 class="titulo-pedido">Pedidos Realizados: </h3>
+          <% for(let i = 0; i < usuario.ordered.length; i++) { %>
+          <% let total = 0; %>
+          <div class="pedido">
+            <h4>Pedido Nro <%= usuario.ordered[i].id%></h4>
+            <div class="info-detalle">
+              <div class="info-pedido">
+                <h5>Dirección de envío: <%= usuario.ordered[i].shipping_address%></h5>
+                <h5>Forma de Pago: <%= usuario.ordered[i].credit_card_number%></h5>
+                <h5>Fecha y horario de entrega estimada: <br><%= usuario.ordered[i].date%></h5>
+              </div>
+              <!-- Bucle para agregado de items del pedido -->
+              <div class="detalle-pedido">
+                <h5>Detalle:</h5>
+                <% for(let j = 0; j < usuario.ordered[i].pedido_solicitado.length; j++) { %>
+                <div class="item-pedido">
+                  <img class="foto-item" src="../<%= usuario.ordered[i].pedido_solicitado[j].detalle_producto_pedido.image%>" />
+                  <h6>Cantidad: <%= usuario.ordered[i].pedido_solicitado[j].quantity%>---</h6>
+                  <h6>Item: <%= usuario.ordered[i].pedido_solicitado[j].detalle_producto_pedido.name%>---</h6>
+                  <h6>Precio Unitario $<%= usuario.ordered[i].pedido_solicitado[j].detalle_producto_pedido.price%></h6>
+                  <% total += usuario.ordered[i].pedido_solicitado[j].detalle_producto_pedido.price * usuario.ordered[i].pedido_solicitado[j].quantity%>
+                </div>
+                <% } %>
+              </div>
+            </div>
+              <div class="info-total">
+                <h4>Total Pedido: $ <%= total%></h4>
+              </div>
+            <div class="contenedor-botones-modificar-cancelar">
+              <button class="botones-opniar-repetir">Modificar</button>
+              <button class="botones-opniar-repetir">Cancelar</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="seccion-terminos">
+        <h2 id="terminos">TÉRMINOS Y CONDICIONES</h2>
+        <p>Última actualización: 24/03/2022</p>
+
+        <h4 class="subtitulo-termino">GENERAL</h4>
+
+        <p>
+          A continuación se encuentran los Términos y Condiciones (en adelante,
+          los “Términos y Condiciones”) sobre los cuales se basará la relación
+          entre MONKEY BURGER S.A. (en adelante, “MONKEY BURGER”) y toda persona
+          que utilice los servicios de MONKEY BURGER (en adelante, el
+          “Usuario”).
+        </p>
+        <p>
+          Cualquier persona que no acepte estos Términos y Condiciones, los
+          cuales tienen un carácter obligatorio y vinculante, deberá abstenerse
+          de utilizar los servicios de MONKEY BURGER.
+        </p>
+        <p>
+          Al momento de registrarse, los Usuarios deben manifestar su
+          aceptación, expresa e inequívoca de los Términos y Condiciones.
+        </p>
+        <p>
+          Si los Usuarios tienen dudas respecto a estos Términos y Condiciones
+          pueden comunicarse con nuestro equipo de Atención al Cliente a través
+          del chat disponible en nuestro Portal o al correo electrónico
+          contacto@Mmonkeyburger.com.ar .
+        </p>
+
+        <h4 class="subtitulo-termino">DEFINICIONES</h4>
+
+        <p>
+          "Aplicación", hace referencia a la aplicación web “MONKEY BURGER”
+          disponible.
+        </p>
+        <p>
+          "Bienes", son los bienes, productos o servicios que pueden llegar a
+          ser ofrecidos por los MONKEY BURGER a través del Portal e integran el
+          Pedido del Usuario. Los Bienes son suministrados por los Oferentes,
+          siendo responsables de los mismos ante los Usuarios.
+        </p>
+        <p>
+          "Nosotros", "Nuestro", y "MONKEY BURGER", siempre que se haga
+          referencia a los vocablos, se está haciendo referencia directa a la
+          sociedad MONKEY BURGER S.A., identificación fiscal 30-71198576-6, con
+          domicilio en Av. del Libertador 7208, Piso 20, Ciudad de Buenos Aires,
+          República Argentina y sus sociedades vinculadas
+        </p>
+        <p>
+          "Pedido" hace referencia a la solicitud del Usuario a través del
+          Portal de los Bienes de Oferentes.
+        </p>
+        <p>
+          “Portal” hace referencia nuestra Aplicación y/o al Sitio Web a través
+          de las cuales, en calidad de intermediarios, facilitamos el contacto
+          entre Oferentes, Usuarios y repartidores.
+        </p>
+        <p>
+          "Usuario" hace referencia a todas las personas humanas o jurídicas que
+          accedan a nuestro Portal y realizan Pedidos sea a través del Sitio Web
+          o de la Aplicación.
+        </p>
+        <p>
+          "Servicio" hace referencia al servicio de intermediación solicitado
+          por el Usuario a través del Portal.
+        </p>
+        <p>"Sitio Web" hace referencia al sitio web www.MONKEYBURGER.com.ar.</p>
+        <p>
+          En caso de utilizarse alguna de estas palabras definidas en plural,
+          tendrán el mismo significado que el indicado en el presente.
+        </p>
+
+        <h4 class="subtitulo-termino">CAPACIDAD</h4>
+
+        <p>
+          Los Servicios solo están disponibles para Usuarios que tengan
+          capacidad legal para contratar y sean mayores de edad.
+        </p>
+        <p>
+          Para registrar una persona jurídica como Usuario, se deberá contar con
+          la representación legal suficiente como para contratar a nombre y
+          representación de la misma como así también de obligar a la misma
+          según estos Términos y Condiciones.
+        </p>
+        <p>
+          En caso de desear adquirir bebidas alcohólicas y/o tabaco y/o
+          medicamentos, en pleno cumplimiento de las normas aplicables, el
+          Usuario deberá acreditar ser mayor de 18 años, exhibiendo una
+          identificación al momento de la entrega. Asimismo, en el caso de venta
+          de bebidas alcohólicas pueden resultar aplicables restricciones
+          horarias en función de la normativa local del lugar de residencia del
+          Usuario, adicionalmente, se le podrá pedir una fotografía de la
+          identificación con la cual se acreditó la mayoría de edad.
+        </p>
+
+        <h4 class="subtitulo-termino">DERECHOS DE AUTOR</h4>
+        <p>
+          El contenido del Portal, incluyendo, pero sin limitarse a los textos,
+          gráficas, imágenes, logotipos, íconos, software y cualquier otro
+          material, al cual en adelante se hará referencia como el “Material”,
+          está protegido bajo las leyes aplicables de propiedad industrial y
+          propiedad intelectual. Todo el Material es de propiedad de MONKEY
+          BURGER.
+        </p>
+        <p>
+          Queda prohibido modificar, copiar, reutilizar, extraer, explotar,
+          reproducir, comunicar al público, hacer segundas o posteriores
+          publicaciones, cargar o descargar archivos, enviar por correo,
+          transmitir, usar, tratar o distribuir de cualquier forma la totalidad
+          o parte de los contenidos incluidos en el Portal.
+        </p>
+        <p>
+          El uso no autorizado del Material puede constituir una violación de
+          las leyes sobre derechos de autor, leyes de propiedad industrial u
+          otras leyes. Ningún Usuario podrá vender o modificar el Material de
+          manera alguna, ni ejecutar o anunciar públicamente el Material, ni
+          distribuirlo para propósitos comerciales.
+        </p>
+        <p>
+          Tampoco se permitirá copiar o adaptar el código HTML que MONKEY BURGER
+          crea para generar su página web o plataforma, ya que el mismo está
+          protegido por los derechos de autor.
+        </p>
+
+        <h4 class="subtitulo-termino">MARCAS COMERCIALES</h4>
+
+        <p>
+          MONKEY BURGER, el logotipo de MONKEY BURGER, y otras marcas indicadas
+          en el Portal son marcas comerciales de MONKEY BURGER. Otros gráficos,
+          logotipos, encabezados de página, íconos de botones, guiones y nombres
+          de servicio de MONKEY BURGER son marcas comerciales o imágenes
+          comerciales de MONKEY BURGER. Las marcas comerciales e imagen
+          comercial MONKEY BURGER no podrán ser utilizadas en relación con
+          cualquier producto o servicio que no sea de MONKEY BURGER, en su caso,
+          de ninguna manera que pueda causar confusión entre los Usuarios o que
+          desestime o desacredite a MONKEY BURGER.
+        </p>
+
+        <h4 class="subtitulo-termino">USO AUTORIZADO DEL PORTAL</h4>
+
+        <p>
+          El Portal tiene como fin principal la intermediación entre Usuarios y
+          Oferentes para realizar Pedidos en las ciudades de Argentina que
+          posean el servicio, facilitando las relaciones y transacciones entre
+          Usuarios y Oferentes adheridos al Portal y brindando el servicio de
+          envío en los supuestos que así sea indicado al Usuario. MONKEY BURGER
+          contacta al Oferente, redirecciona el pedido, informar respecto de su
+          disponibilidad o no al Usuario de conformidad con la información que
+          le haya proporcionado el Oferente y a gestionar el envío del mismo al
+          Usuario en aquellos casos que así sea informado. A través del Portal
+          se centralizan y otorgan a los Usuarios, todas las herramientas
+          necesarias para que éste realice un Pedido.
+        </p>
+
+        <h4 class="subtitulo-termino">CREACIÓN DE CUENTA</h4>
+
+        <p>
+          Para el uso del Portal, los Usuarios deberán crear una cuenta de
+          usuario (en adelante, la “Cuenta”) donde se le solicitarán ciertos
+          datos personales tales como: nombre y apellido, fecha de nacimiento,
+          dirección, teléfono, correo electrónico y datos para procesar los
+          pagos online (en adelante, los “Datos”). Los Usuarios garantizan y
+          responden, en cualquier caso, de la veracidad, exactitud, vigencia,
+          autenticidad y actualización de sus Datos. En ningún caso MONKEY
+          BURGER se responsabiliza por la actualización y certeza de los Datos
+          de los Usuarios.
+        </p>
+        <p>
+          Si los Usuarios tuvieran cuenta en Facebook o en Google, se le podrá
+          ofrecer la posibilidad de crear su Cuenta con la utilización de las
+          credenciales allí incluidas.
+        </p>
+        <p>
+          MONKEY BURGER podrá requerir alguna información o documentación
+          adicional a los efectos de comprobar o corroborar los Datos, pudiendo
+          suspender temporal o definitivamente a aquellos Usuarios cuyos Datos
+          no hayan podido ser confirmados.
+        </p>
+        <p>
+          Para acceder a su Cuenta personal, el Usuario deberá ingresar su
+          correo electrónico y una contraseña la cual deberá mantener siempre de
+          manera confidencial. Si el Usuario olvida su contraseña, podrá
+          restablecerla haciendo clic en “Olvidé mi contraseña”.
+        </p>
+        <p>
+          La Cuenta es única e intransferible, estando prohibido que un Usuario
+          registre o tenga más de una Cuenta por correo electrónico o por
+          celular validado, por lo que de detectarse tal incumplimiento, MONKEY
+          BURGER se reserva el derecho de cancelar, suspender o inhabilitar las
+          cuentas.
+        </p>
+        <p>
+          El Usuario es responsable del resguardo de sus datos de registro y
+          contraseña, así como de todas las transacciones realizadas en su
+          Cuenta, debiendo notificar a MONKEY BURGER inmediatamente, de forma
+          fehaciente, cualquier uso no autorizado de la misma, así como
+          cualquier sustracción, divulgación o pérdida de sus datos de acceso al
+          Portal. MONKEY BURGER vela por la protección de los datos de los
+        </p>
+        <p>
+          Usuarios. Sin embargo, no será responsable del uso fraudulento que
+          puedan hacer terceros de la Cuenta del Usuario, incluidos usos
+          indebidos de sus datos asociados a los pagos online.
+        </p>
+        <p>
+          Los Usuarios tienen la facultad de ejercer el derecho de acceso, en
+          cualquier momento y sin restricciones, de sus datos personales. MONKEY
+          BURGER tiene la atribución de atender las denuncias y reclamos que se
+          interpongan con relación al incumplimiento de las normas sobre
+          protección de datos personales.
+        </p>
+
+        <h4 class="subtitulo-termino">REGLAS GENERALES</h4>
+
+        <p>
+          Los Usuarios no pueden usar el Portal ni la App con el fin de
+          transmitir, distribuir, almacenar o destruir material (i) en violación
+          de cualquier ley aplicable o regulación, (ii) de manera que se
+          infrinjan las leyes sobre derechos de autor, propiedad industrial,
+          secretos comerciales o cualquier otro derecho de propiedad intelectual
+          de terceros o de manera que viole la privacidad, publicidad u otros
+          derechos personales de terceros, o (iii) en forma que sea difamatoria,
+          obscena, amenazante o abusiva. Esto sin perjuicio de normas
+          particulares sobre la materia que sean imperativas en cada uno de los
+          ordenamientos jurídicos correspondientes a los territorios en los
+          cuales MONKEY BURGER prestará su servicio.
+        </p>
+
+        <h4 class="subtitulo-termino">REGLAS DE SEGURIDAD</h4>
+
+        <p>
+          A los Usuarios les está prohibido violar o intentar violar la
+          seguridad del Portal. Específicamente los Usuarios, a modo de ejemplo
+          y sin que implique limitación, no podrán (i) acceder a información que
+          no esté dirigida o autorizada a dicho Usuario o acceder a servidores o
+          cuentas a los cuales el Usuario no está autorizado a acceder; (ii)
+          intentar probar la vulnerabilidad de un sistema o red sin la debida
+          autorización o violar las medidas de seguridad o autenticación; (iii)
+          intentar interferir con los servicios prestados a un Usuario, servidor
+          o red, incluyendo pero sin limitarse al envío de virus a través del
+          Portal o sobre carga de tráfico para denegación del servicio; (iv)
+          enviar correo electrónico no solicitado, incluyendo promociones y/o
+          publicidad de productos o servicios. La violación de cualquier sistema
+          o red de seguridad puede resultar en responsabilidades civiles y
+          penales. MONKEY BURGER investigará la ocurrencia de hechos que puedan
+          constituir violaciones a lo anterior y cooperará con cualquier
+          autoridad competente en la persecución de los Usuarios que estén
+          envueltos en tales violaciones; (v) suplantar la identidad de otros
+          usuarios o de personas naturales o jurídicas de cualquier índole; (vi)
+          proporcionar información de identidad incorrecta, incompleta o falsa;
+          y (vii) bajo ninguna circunstancia se tolerará la acción de hacer
+          pedidos falsos o crear usuarios con fines fraudulentos, actuar que
+          será denunciado y estará sujeto a las prosecuciones legales
+          aplicables.
+        </p>
+
+        <p>
+          El Portal puede ser usado únicamente para propósitos legales. Se
+          prohíbe su uso en cualquiera de las siguientes formas:
+        </p>
+
+        <h4 class="subtitulo-termino">TERMINACIÓN</h4>
+
+        <p>
+          En los casos de sospecha de fraude o de comisión de algún delito por
+          parte de los Usuarios, MONKEY BURGER podrá suspender o cancelar la
+          registración del Usuario.
+        </p>
+
+        <p>
+          Por su parte, en cualquier momento de la relación, el Usuario podrá
+          dar de baja su cuenta registrada.
+        </p>
+
+        <h4 class="subtitulo-termino">INFORMACIÓN ADICIONAL</h4>
+
+        <p>
+          MONKEY BURGER garantiza contar con las medidas de seguridad
+          suficientes para que el Portal opere libre de errores y que su
+          servidor se encuentre libre de virus. Si los dispositivos propios de
+          los Usuarios requieren mantenimiento y/o actualizaciones, será
+          responsabilidad exclusiva de los Usuarios realizar las actualizaciones
+          del Portal que se indiquen y verificar antes de realizar un pedido que
+          no hay actualizaciones pendiente en la app.
+        </p>
+
+        <p>
+          El Portal y el Material se ponen a disposición de los usuarios en el
+          estado en que se encuentren y tal como fuera informado por los
+          oferentes.
+        </p>
+
+        <h4 class="subtitulo-termino">
+          MODIFICACIÓN Y ACTUALIZACIONES DE LOS TÉRMINOS Y CONDICIONES
+        </h4>
+        <p>
+          MONKEY BURGER podrá realizar modificaciones y actualizaciones a estos
+          Términos y Condiciones, para lo cual, se solicitará el consentimiento
+          por parte de los Usuarios como requisito para poder seguir utilizando
+          el Portal.
+        </p>
+
+        <h4 class="subtitulo-termino">LEY APLICABLE Y JURISDICCIÓN</h4>
+
+        <p>
+          La relación entre el Usuario y MONKEY BURGER, así como la
+          interpretación y aplicación de estos Términos y Condiciones se regirá
+          de conformidad con la legislación de la República Argentina. Serán
+          competentes los tribunales ordinarios de la Ciudad de Buenos Aires o
+          los del domicilio del Usuario, pudiendo los Usuarios optar por alguna
+          de esas opciones.
+        </p>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

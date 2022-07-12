@@ -7,11 +7,10 @@ Negro Claro: #333533
 */
 
 * {
-  background-color: #242423;
   color: #e8eddf;
   font-family: "Antonio";
 }
-
+/* 
 h1,
 h2,
 h3,
@@ -40,14 +39,14 @@ h6 {
 h5,
 h6 {
   font-style: normal;
-}
+} */
 
 h4 {
   color: #ffc000;
 }
 .titulo-pedido {
   background-color: #242423;
-  margin:30px;
+  margin: 30px;
 }
 
 .item-pedido {
@@ -72,10 +71,20 @@ h4 {
   justify-content: space-around;
 }
 
-.info-detalle {
+.info-detalle,
+.info-total {
   display: flex;
   flex-direction: row;
   background: #333533;
+}
+.pedido > h4 {
+  margin: 2%;
+}
+.info-detalle {
+  margin-left: 3%;
+}
+.info-total {
+  margin-left: 70%;
 }
 .foto-item {
   width: 50px;
@@ -228,12 +237,12 @@ h4 {
   margin: 15px;
 }
 
-.contenedor-cargar-foto{
+.contenedor-cargar-foto {
   display: flex;
   flex-direction: column;
   padding: 30px;
 }
-.texto-cargar-foto{
+.texto-cargar-foto {
   margin: 15px;
 }
 
@@ -317,7 +326,7 @@ p {
 
 .custom-file-input {
   color: transparent;
-  margin:15px;
+  margin: 15px;
 }
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
@@ -372,7 +381,6 @@ header .boton h4 a {
 }
 
 li h4 {
-  background-color: #242423;
   padding: 0px;
 }
 
