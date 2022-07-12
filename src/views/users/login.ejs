@@ -13,6 +13,7 @@
       <!--acá es necesario generar un formulario-->
       <div class="mosaico-login">
         <form class="formulario" action="/users/login" method="POST">
+          <ul class="erroresFront"></ul>
           <label for="usuario"
             ><h5>
               Correo electrónico
@@ -50,5 +51,6 @@
       </div>
     </main>
     <%- include("../partials/footer.ejs") %>
+    <script src="/js/login.js"></script>
   </body>
 </html>

@@ -17,7 +17,9 @@
           action="/users/register"
           method="POST"
           enctype="multipart/form-data"
+          novalidate
         >
+          <ul class="erroresFront"></ul>
           <label for="firstname"
             ><h5>Nombre <i class="fa-solid fa-id-card"></i></h5
           ></label>
@@ -34,6 +36,7 @@
             ><h5>Apellido <i class="fa-solid fa-id-card"></i></h5
           ></label>
           <input
+            class="apellido"
             type="text"
             name="lastname"
             value="<%= locals.old && old.lastname %>"
@@ -53,7 +56,12 @@
           <p class="feedback"><%= errors.email.msg %></p>
           <% } %>
           <label for="imagenPerfil"><h5>Imagen de perfil:</h5></label>
-          <input type="file" id="userimage" name="userimage" />
+          <input
+            type="file"
+            id="userimage"
+            name="userimage"
+            accept="image/png, image/jpg, image/jpeg, image/gif"
+          />
           <label for="password"
             ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
           ></label>
@@ -77,5 +85,6 @@
       </div>
     </main>
     <%- include("../partials/footer.ejs") %>
+    <script src="/js/register.js"></script>
   </body>
 </html>

@@ -10,7 +10,8 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <h1>NUEVO PRODUCTO</h1>
-    <form action="/products/create" method="POST">
+    <form action="/products/create" method="POST" class="formulario" novalidate>
+      <ul class="erroresFront"></ul>
       <div class="editar-producto">
         <div class="campo">
           <label required>Categoría del producto:</label>
@@ -40,8 +41,7 @@
             id="description"
             placeholder="Descripción del nuevo producto"
             required
-          >
-          </textarea>
+          ></textarea>
         </div>
         <div class="campo">
           <label for="precio">Precio:</label>
@@ -71,5 +71,6 @@
       </div>
     </form>
     <%- include("../partials/footer.ejs") %>
+    <script src="/js/createproduct.js"></script>
   </body>
 </html>

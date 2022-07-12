@@ -151,3 +151,26 @@ En base a la metodología de estrella, verificamos los puntos a mejorar como equ
 5. **Dejar de hacer:**
 
 - Postergar weekly.
+
+## Retrospectiva sprint 6 - Monkey Burger
+
+1.  **Comenzar a hacer:**
+
+- Implementar code reviews y pull requests antes de mergear el código.
+
+2. **Hacer más:**
+
+- Comunicarnos por el grupo de Whatsapp para mantenernos al día de lo que está haciendo el resto.
+
+3. **Continuar haciendo:**
+
+- El equipo se organiza bien para cubrirse entre los diferentes miembros
+- La división de tareas se hace rápido.
+
+4. **Hacer menos:**
+
+- Evitar deuda técnica.
+
+5. **Dejar de hacer:**
+
+- Postergar weekly y retrospectiva.

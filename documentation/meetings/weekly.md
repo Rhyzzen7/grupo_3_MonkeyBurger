@@ -330,6 +330,23 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
+- Diagrama ER
+- Script de base de datos en DBeaver
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- Se me complicó hacer el dump de la base de datos. Pedimos ayuda a Facu. Lo solucioné buscando alternativas en Google y YouTube.
+
+3. ¿Qué haré mañana?
+
+- Actualizar estructura de base de datos
+
+**Fecha reunión 05/07/2022 - Sprint 7**
+
+## Lourdes Celli
+
+1.  ¿Qué hice hoy?
+
 - _texto_
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
@@ -339,3 +356,33 @@ Seguimiento de avances y oportunidades de mejora:
 3. ¿Qué haré mañana?
 
 - _texto_
+
+## Victor Celedón
+
+1.  ¿Qué hice hoy?
+
+- _texto_
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- _texto_
+
+3. ¿Qué haré mañana?
+
+- _texto_
+
+## Melody Ferraro
+
+1.  ¿Qué hice hoy?
+
+- Validaciones del Front-End
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- No tuve inconvenientes. Me gustó
+
+3. ¿Qué haré mañana?
+
+- Ver si puedo dar una mano al resto del equipo.
+
+

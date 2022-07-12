@@ -12,7 +12,9 @@
     <form
       action="/products/order/<%= productEdit.id  %>?_method=PUT"
       method="POST"
+      class="formulario"
     >
+      <ul class="erroresFront"></ul>
       <div class="editar-producto">
         <div class="campo">
           <label for="name">Nombre:</label>
@@ -35,13 +37,12 @@
         </div>
         <div class="campo">
           <label for="description">Descripción:</label>
-          <input
-            type="textarea"
-            class="campo-completar"
-            name="description"
-            id="description"
-            value="<%= productEdit.description  %>"
-          />
+          <textarea  
+            class="campo-completar" 
+            name="description" 
+            id="description">
+              <%= productEdit.description  %>
+          </textarea>
         </div>
         <div class="campo">
           <label for="price">Precio:</label>
@@ -72,5 +73,6 @@
     </form>
 
     <%- include("../partials/footer.ejs") %>
+    <script src="/js/editproduct.js"></script>
   </body>
 </html>
