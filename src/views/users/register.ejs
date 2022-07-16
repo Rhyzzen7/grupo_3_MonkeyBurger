@@ -24,12 +24,12 @@
             ><h5>Nombre <i class="fa-solid fa-id-card"></i></h5
           ></label>
           <input
+            class="nombre"
             type="text"
             name="firstname"
             value="<%= locals.old && old.firstname %>"
           />
-          <% if (locals.firstname && errors.firstname && errors.firstname.msg) {
-          %>
+          <% if (locals.errors && errors.firstname && errors.firstname.msg) { %>
           <p class="feedback"><%= errors.firstname.msg %></p>
           <% } %>
           <label for="lastname"
@@ -62,6 +62,9 @@
             name="userimage"
             accept="image/png, image/jpg, image/jpeg, image/gif"
           />
+          <% if (locals.errors && errors.userimage && errors.userimage.msg) { %>
+          <p class="feedback"><%= errors.userimage.msg %></p>
+          <% } %>
           <label for="password"
             ><h5>Contraseña <i class="fa-solid fa-key"></i></h5
           ></label>

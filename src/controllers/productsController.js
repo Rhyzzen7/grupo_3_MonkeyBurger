@@ -1,7 +1,10 @@
 const fs = require("fs");
+const { join } = require("path");
 const path = require("path");
 const sequelize = require("sequelize");
 const db = require("../../database/models");
+
+const { validationResult } = require("express-validator");
 
 //Lectura de datos para la carga inicial de la db
 const productsFilePath = path.join(__dirname, "../../data/products.json");
@@ -204,11 +207,22 @@ const productsController = {
     // products.push(nuevoProducto);
     // storeProducts(products);
     // res.redirect("/products/menu");
+    // console.log(req.file);
+
+    let errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.render("./products/create", {
+        errors: errors.mapped(),
+        old: req.body,
+      });
+    }
+
     db.Product.create({
       name: req.body.name,
       description: req.body.description,
       price: req.body.price,
-      image: req?.file?.filename || "./img/menu/default-img.jpg",
+      image: "./img/menu/" + (req?.file?.filename || "default-img.png"),
       category_id: req.body.category,
     }).then(() => {
       res.redirect("/products/menu");
@@ -223,16 +237,28 @@ const productsController = {
     // storeProducts(products);
     // // res.redirect(`/order/${req.params.productId}`);
     // res.redirect("/products/edit");
+    const idEdit = Number(req.params.productId);
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return db.Product.findByPk(idEdit).then((productEdit) => {
+        res.render("./products/editProduct", {
+          productEdit,
+          errors: errors.mapped(),
+          old: req.body,
+        });
+      });
+    }
+
     db.Product.update(
       {
         name: req.body.name,
         description: req.body.description,
         price: req.body.price,
-        image: req?.file?.filename || "./img/menu/default-img.jpg",
+        image: "./img/menu/" + (req?.file?.filename || "default-img.png"),
         category_id: req.body.category,
       },
       {
-        where: { id: Number(req.params.productId) },
+        where: { id: idEdit },
       }
     ).then(() => {
       res.redirect("/products/edit");

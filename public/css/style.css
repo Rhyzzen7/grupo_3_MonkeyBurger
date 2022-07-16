@@ -243,6 +243,10 @@ main {
 .info-products {
   padding: 10px;
 }
+.feedback {
+  text-align: center;
+  color: salmon;
+}
 /*Manejar la barra con display flex queda mejor.*/
 footer {
   display: flex;
@@ -555,6 +559,6 @@ footer {
   }
 }
 
-.erroresFront{
-  color: salmon
+.erroresFront {
+  color: salmon;
 }

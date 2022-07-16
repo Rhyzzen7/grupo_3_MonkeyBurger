@@ -9,36 +9,38 @@ const { check } = require("express-validator");
 
 const usersRouter = express.Router();
 
-let validateLogin = [
-  check("email")
-    .notEmpty()
-    .withMessage("Email inválido")
-    .bail()
-    .isEmail()
-    .withMessage("Email inválido"),
-  check("password").notEmpty().withMessage("Debe especificar una contraseña"),
-];
+const validateLogin = require("../validations/userLoginValidator");
+const validateRegister = require("../validations/userRegisterValidator");
+// let validateLogin = [
+//   check("email")
+//     .notEmpty()
+//     .withMessage("Email inválido")
+//     .bail()
+//     .isEmail()
+//     .withMessage("Email inválido"),
+//   check("password").notEmpty().withMessage("Debe especificar una contraseña"),
+// ];
 
-let validateRegister = [
-  check("firstname").notEmpty().withMessage("Campo obligatorio"),
-  check("lastname").notEmpty().withMessage("Campo obligatorio"),
-  check("email")
-    .notEmpty()
-    .withMessage("Campo obligatorio")
-    .bail()
-    .isEmail()
-    .withMessage("Email inválido"),
-  check("password").notEmpty().withMessage("Campo obligatorio"),
-  check("confirm")
-    .notEmpty()
-    .withMessage("Campo obligatorio")
-    .custom((confirm, { req }) => {
-      if (confirm !== req.body.password) {
-        throw new Error("La confirmación no coincide");
-      }
-      return true;
-    }),
-];
+// let validateRegister = [
+//   check("firstname").notEmpty().withMessage("Campo obligatorio"),
+//   check("lastname").notEmpty().withMessage("Campo obligatorio"),
+//   check("email")
+//     .notEmpty()
+//     .withMessage("Campo obligatorio")
+//     .bail()
+//     .isEmail()
+//     .withMessage("Email inválido"),
+//   check("password").notEmpty().withMessage("Campo obligatorio"),
+//   check("confirm")
+//     .notEmpty()
+//     .withMessage("Campo obligatorio")
+//     .custom((confirm, { req }) => {
+//       if (confirm !== req.body.password) {
+//         throw new Error("La confirmación no coincide");
+//       }
+//       return true;
+//     }),
+// ];
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -49,7 +51,19 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + "-" + file.originalname);
   },
 });
-const upload = multer({ storage });
+const upload = multer({
+  storage,
+  fileFilter: function (req, file, cb) {
+    let filetypes = /jpg|jpeg|png|gif/;
+    let mimetype = filetypes.test(file.mimetype);
+    let extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    if (mimetype && extname) {
+      return cb(null, true);
+    }
+    // cb(new Error("Invalid IMAGE Type"));
+    cb((null, false));
+  },
+});
 
 //Users
 usersRouter.get("/login", sinLoginMiddleware, userController.showLogin);
