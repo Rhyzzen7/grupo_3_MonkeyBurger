@@ -7,6 +7,8 @@ const multer = require("multer");
 const userController = require("../controllers/userController");
 const { check } = require("express-validator");
 
+const userAPI = require("../API/userAPI");
+
 const usersRouter = express.Router();
 
 const validateLogin = require("../validations/userLoginValidator");
@@ -85,5 +87,6 @@ usersRouter.get("/", conLoginMiddleware, userController.userProfile);
 // usersRouter.get("/reset", resetDbMiddleware, (req, res) => {
 //   res.send("Base de datos inicializada.");
 // });
+usersRouter.get("/api", userAPI.whoAmI);
 
 module.exports = usersRouter;

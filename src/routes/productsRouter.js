@@ -8,6 +8,8 @@ const path = require("path");
 const productsController = require("../controllers/productsController");
 const validateProduct = require("../validations/productValidator");
 
+const productAPI = require("../API/productAPI");
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, "../../public/img/menu"));
@@ -79,4 +81,7 @@ productsRouter.delete(
   adminMiddleware,
   productsController.delete
 );
+
+productsRouter.get("/api", productAPI.whoAmI);
+
 module.exports = productsRouter;
