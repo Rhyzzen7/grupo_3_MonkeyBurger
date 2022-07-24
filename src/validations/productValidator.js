@@ -22,6 +22,9 @@ const productValidator = [
     .withMessage("Inserte un valór válido"),
   check("image")
     .custom((value, { req }) => {
+      if (req.body.hasFile == undefined) {
+        return true;
+      }
       const validExt = ["gif", "jpg", "png", "jpeg"];
       const ext = req.file.originalname.split(".").pop();
       if (validExt.indexOf(ext.toLowerCase()) == -1) {

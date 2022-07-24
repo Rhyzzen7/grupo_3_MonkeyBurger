@@ -15,13 +15,14 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname, "../../public/img/menu"));
   },
   filename: (req, file, cb) => {
-    console.log(file);
+    //console.log(file);
     cb(null, Date.now() + "-" + file.originalname);
   },
 });
 const upload = multer({
   storage,
   fileFilter: function (req, file, cb) {
+    req.body.hasFile = true;
     let filetypes = /jpg|jpeg|png|gif/;
     let mimetype = filetypes.test(file.mimetype);
     let extname = filetypes.test(path.extname(file.originalname).toLowerCase());
