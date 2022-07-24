@@ -174,3 +174,27 @@ En base a la metodología de estrella, verificamos los puntos a mejorar como equ
 5. **Dejar de hacer:**
 
 - Postergar weekly y retrospectiva.
+
+## Retrospectiva sprint 7 - Monkey Burger
+
+1.  **Comenzar a hacer:**
+
+- Implementar code reviews y pull requests antes de mergear el código.
+- Empezar a arreglar el css que tenemos pendiente
+
+2. **Hacer más:**
+
+- Meterle pilas en estos últimos días
+
+3. **Continuar haciendo:**
+
+- El equipo se organiza bien para cubrirse entre los diferentes miembros
+- La división de tareas se hace rápido.
+
+4. **Hacer menos:**
+
+- Evitar deuda técnica.
+
+5. **Dejar de hacer:**
+
+- Postergar weekly y retrospectiva.
