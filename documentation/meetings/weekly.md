@@ -386,3 +386,49 @@ Seguimiento de avances y oportunidades de mejora:
 - Ver si puedo dar una mano al resto del equipo.
 
 
+**Fecha reunión 23/07/2022 - Sprint 8**
+
+## Lourdes Celli
+
+1.  ¿Qué hice hoy?
+
+- _texto_
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- _texto_
+
+3. ¿Qué haré mañana?
+
+- _texto_
+
+## Victor Celedón
+
+1.  ¿Qué hice hoy?
+
+- _texto_
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- _texto_
+
+3. ¿Qué haré mañana?
+
+- _texto_
+
+## Melody Ferraro
+
+1.  ¿Qué hice hoy?
+
+- Api products con paginado
+
+2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
+
+- Me costó mucho poder hacer las queries con Sequelize, tuve que googlear bastante y probar.
+
+3. ¿Qué haré mañana?
+
+- Ver teoría de React que tengo pendiente para ver lo del dashboard.
+- Ver si llego a arreglar algo de la deuda técnica.
+
+

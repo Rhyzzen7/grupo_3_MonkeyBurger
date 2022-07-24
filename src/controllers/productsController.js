@@ -277,6 +277,61 @@ const productsController = {
       res.redirect("/products/menu");
     });
   },
+  api_list_products: async (req, res) => {
+    const { page } = req.query;
+
+    const productsQueryConfig = page
+      ? {
+          offset: 10 * page,
+          limit: 10,
+          subQuery: false,
+        }
+      : {};
+    const products = await db.Product.findAll({
+      ...productsQueryConfig,
+      raw: true,
+    });
+    let productsWithDetails = products.map((product) => ({
+      ...product,
+      detail: `${req.protocol}://${req.get("host")}/products/order/${
+        product.id
+      }`,
+    }));
+    const categories = await db.Product.findAll({
+      attributes: [
+        [sequelize.col("categoria.name"), "category_name"],
+        [
+          sequelize.fn("COUNT", sequelize.col("categoria.id")),
+          "total_products",
+        ],
+      ],
+      include: [
+        {
+          model: db.Product_category,
+          as: "categoria",
+          attributes: [],
+        },
+      ],
+      group: "category_name",
+    });
+
+    return res.status(200).json({
+      count: productsWithDetails.length,
+      countByCategory: categories,
+      products: productsWithDetails,
+    });
+  },
+  api_product_details: async (req, res) => {
+    const product = await db.Product.findByPk(req.params.id, { raw: true });
+    const imagen = product.image;
+    const productDetail = {
+      ...product,
+      url_imagen: `${req.protocol}://${req.get("host")}/${imagen}`,
+    };
+    return res.status(200).json({
+      data: productDetail,
+    });
+  },
 };
 
 module.exports = productsController;

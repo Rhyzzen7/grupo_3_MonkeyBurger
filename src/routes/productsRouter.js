@@ -79,4 +79,9 @@ productsRouter.delete(
   adminMiddleware,
   productsController.delete
 );
+
+//API Products
+productsRouter.get('/api/products', productsController.api_list_products);
+productsRouter.get('/api/products/:id', productsController.api_product_details);
+
 module.exports = productsRouter;
