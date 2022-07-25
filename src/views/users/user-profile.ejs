@@ -87,6 +87,9 @@
         <div class="botones-editar-tarjetas">
           <button class="boton-tarjeta">MODIFICAR DATOS PERSONALES</button>
         </div>
+
+        <% if (usuario.address && usuario.ordered) { %>
+         
         <div class="seccion-direcciones">
           <h2 id="direcciones">MIS DIRECCIONES</h2>
           <div class="contenedor-direcciones">
@@ -497,6 +500,9 @@
           de esas opciones.
         </p>
       </div>
+
+      <% } %>
+
     </main>
     <%- include("../partials/footer.ejs") %>
   </body>

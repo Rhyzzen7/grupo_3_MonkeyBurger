@@ -7,6 +7,8 @@ const multer = require("multer");
 const userController = require("../controllers/userController");
 const { check } = require("express-validator");
 
+const userAPI = require("../API/userAPI");
+
 const usersRouter = express.Router();
 
 const validateLogin = require("../validations/userLoginValidator");
@@ -54,6 +56,7 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage,
   fileFilter: function (req, file, cb) {
+    req.body.hasFile = true;
     let filetypes = /jpg|jpeg|png|gif/;
     let mimetype = filetypes.test(file.mimetype);
     let extname = filetypes.test(path.extname(file.originalname).toLowerCase());
@@ -85,5 +88,13 @@ usersRouter.get("/", conLoginMiddleware, userController.userProfile);
 // usersRouter.get("/reset", resetDbMiddleware, (req, res) => {
 //   res.send("Base de datos inicializada.");
 // });
+// User Detail
+usersRouter.get("/profile/:id", userController.viewProfile);
+
+
+//API Users
+usersRouter.get("/api/users", userController.api_list_users);
+usersRouter.get("/api/users/:id", userController.api_user_details);
+usersRouter.get("/api", userAPI.whoAmI);
 
 module.exports = usersRouter;

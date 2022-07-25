@@ -8,18 +8,21 @@ const path = require("path");
 const productsController = require("../controllers/productsController");
 const validateProduct = require("../validations/productValidator");
 
+const productAPI = require("../API/productAPI");
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, "../../public/img/menu"));
   },
   filename: (req, file, cb) => {
-    console.log(file);
+    //console.log(file);
     cb(null, Date.now() + "-" + file.originalname);
   },
 });
 const upload = multer({
   storage,
   fileFilter: function (req, file, cb) {
+    req.body.hasFile = true;
     let filetypes = /jpg|jpeg|png|gif/;
     let mimetype = filetypes.test(file.mimetype);
     let extname = filetypes.test(path.extname(file.originalname).toLowerCase());
@@ -83,5 +86,6 @@ productsRouter.delete(
 //API Products
 productsRouter.get('/api/products', productsController.api_list_products);
 productsRouter.get('/api/products/:id', productsController.api_product_details);
+productsRouter.get("/api", productAPI.whoAmI);
 
 module.exports = productsRouter;
