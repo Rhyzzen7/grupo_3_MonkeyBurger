@@ -293,7 +293,7 @@ const productsController = {
     });
     let productsWithDetails = products.map((product) => ({
       ...product,
-      image: `${req.protocol}://${req.get("host")}/img/menu/${product.image}`,
+      image: `${req.protocol}://${req.get("host")}/${product.image}`,
       detail: `${req.protocol}://${req.get("host")}/products/order/${
         product.id
       }`,
