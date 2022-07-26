@@ -30,20 +30,23 @@
         <% burgers.forEach(burger => { %>
         <div class="subcontenedor-infoproducto">
           <h3><%=burger.name%></h3>
-          <div><%=burger.description%></div>
+          <div class="description-product"><%=burger.description%></div>
           <h4>$ <%=burger.price%></h4>
+
+          <div class="productimage">
+            <img
+              class="subcontenedor-fotoproducto"
+              src="../<%=burger.image%>"
+              alt="foto de <%=burger.name%>"
+            />
+          </div>
+
           <div class="contenedor-boton-hace-tu-pedido">
             <button type="submit" for="userChoice" class="boton-hace-tu-pedido">
               <a href="/products/order/<%=burger.id %>"> HACÉ TU PEDIDO </a>
             </button>
           </div>
         </div>
-        <label for="userChoice" name="productimage" id="idProduct"
-          ><img
-            class="subcontenedor-fotoproducto"
-            src="../<%=burger.image%>"
-            alt="foto de <%=burger.name%>"
-        /></label>
         <% }) %>
       </div>
 
@@ -52,20 +55,21 @@
         <% chips.forEach(chip => { %>
         <div class="subcontenedor-infoproducto">
           <h3><%=chip.name%></h3>
-          <div><%=chip.description%></div>
+          <div class="description-product"><%=chip.description%></div>
           <h4>$ <%=chip.price%></h4>
+          <div class="productimage">
+            <img
+              class="subcontenedor-fotoproducto"
+              src="../<%=chip.image%>"
+              alt="foto de <%=chip.name%>"
+            />
+          </div>
           <div class="contenedor-boton-hace-tu-pedido">
             <button type="submit" for="userChoice" class="boton-hace-tu-pedido">
               <a href="/products/order/<%=chip.id %>"> HACÉ TU PEDIDO </a>
             </button>
           </div>
         </div>
-        <label for="userChoice" name="productimage" id="idProduct"
-          ><img
-            class="subcontenedor-fotoproducto"
-            src="../<%=chip.image%>"
-            alt="foto de <%=chip.name%>"
-        /></label>
         <% }) %>
       </div>
 
@@ -100,8 +104,15 @@
         <% comboc.forEach(combo => { %>
         <div class="subcontenedor-infoproducto info-a-la-derecha">
           <h3><%=combo.name%></h3>
-          <div><%=combo.description%></div>
+          <div class="description-product"><%=combo.description%></div>
           <h4>$ <%=combo.price%></h4>
+          <div class="productimage">
+            <img
+              class="subcontenedor-fotoproducto"
+              src="../<%=combo.image%>"
+              alt="foto combo <%=combo.name%>"
+            />
+          </div>
           <div class="contenedor-boton-hace-tu-pedido">
             <a
               class="boton-hace-tu-pedido"
@@ -110,11 +121,6 @@
             >
           </div>
         </div>
-        <img
-          class="subcontenedor-fotoproducto"
-          src="../<%=combo.image%>"
-          alt="foto combo <%=combo.name%>"
-        />
         <% }) %>
       </div>
     </main>
