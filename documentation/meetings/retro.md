@@ -129,7 +129,6 @@ En base a la metodología de estrella, verificamos los puntos a mejorar como equ
 
 - Postergar weekly.
 
-
 ## Retrospectiva sprint 5 - Monkey Burger
 
 1.  **Comenzar a hacer:**
@@ -194,6 +193,28 @@ En base a la metodología de estrella, verificamos los puntos a mejorar como equ
 4. **Hacer menos:**
 
 - Evitar deuda técnica.
+
+5. **Dejar de hacer:**
+
+- Postergar weekly y retrospectiva.
+
+## Retrospectiva sprint 8 - Monkey Burger
+
+1.  **Comenzar a hacer:**
+
+- Administrar mejor el tiempo
+
+2. **Hacer más:**
+
+- Dividir tareas en objetivos pequeños y alcanzables
+
+3. **Continuar haciendo:**
+
+- Desarrollo colaborativo apoyándonos en el resto del grupo cuando se complica el código.
+
+4. **Hacer menos:**
+
+- Discutir temas ya resueltos.
 
 5. **Dejar de hacer:**
 

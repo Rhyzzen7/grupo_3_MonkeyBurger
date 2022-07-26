@@ -385,7 +385,6 @@ Seguimiento de avances y oportunidades de mejora:
 
 - Ver si puedo dar una mano al resto del equipo.
 
-
 **Fecha reunión 23/07/2022 - Sprint 8**
 
 ## Lourdes Celli
@@ -406,15 +405,15 @@ Seguimiento de avances y oportunidades de mejora:
 
 1.  ¿Qué hice hoy?
 
-- _texto_
+- Desarrollo API de users
 
 2. ¿Qué inconveniente tuve?, ¿pude resolverlo?
 
-- _texto_
+- Uso de características asincrónicas de la db
 
 3. ¿Qué haré mañana?
 
-- _texto_
+- Reescribir completamente el proyecto siguiendo esta meodología y también aplicando React.
 
 ## Melody Ferraro
 
@@ -430,5 +429,3 @@ Seguimiento de avances y oportunidades de mejora:
 
 - Ver teoría de React que tengo pendiente para ver lo del dashboard.
 - Ver si llego a arreglar algo de la deuda técnica.
-
-
