@@ -10,7 +10,7 @@ const { validationResult } = require("express-validator");
 const usersFilePath = path.join(__dirname, "../../data/users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
-const usersController = {
+const userAPI = {
   showLogin: function (req, res) {
     res.render("./users/login");
   },
@@ -84,7 +84,6 @@ const usersController = {
   userProfile: function (req, res) {
     req.session.usuario.address = [];
     req.session.usuario.ordered = [];
-    const user = db.User.findByPk(req.params.id);
     const usuario = req.session.usuario;
     /*Búsqueda en base de datos de las direcciones del usuario*/
     // db.Order.findAll({
@@ -147,86 +146,18 @@ const usersController = {
           usuario.ordered.push(productOrdered);
         });
         console.log(usuario);
-        // console.log(
-        //   "\nDirecciones encontradas para el usuario: " + usuario.email
-        // );
-        // console.log(usuario.address.length);
-        // console.log("\nPedidos encontrados para el usuario: " + usuario.email);
-        // console.log(usuario.ordered.length);
+        console.log(
+          "\nDirecciones encontradas para el usuario: " + usuario.email
+        );
+        console.log(usuario.address.length);
+        console.log("\nPedidos encontrados para el usuario: " + usuario.email);
+        console.log(usuario.ordered.length);
         res.render("./users/user-profile", { usuario });
       })
       .catch((err) => console.log(err));
 
     /*Fin de la busqueda de direcciones*/
   },
-  //view details
-  viewProfile: async function (req, res) {
-    const id = req.params.id;
-    console.log(id);
-    const usuario = await db.User.findByPk(req.params.id);
-    // usuario.address = [];
-    // usuario.ordered = [];
-
-    const order = await db.Order.findAll({
-      include: [
-        {
-          model: db.User,
-          as: "usuario",
-          where: { email: usuario.email },
-        },
-      ],
-    });
-    /*Pedidos*/
-    const items = await db.Order.findAll({
-      include: [
-        {
-          model: db.User,
-          as: "usuario",
-          where: { email: usuario.email },
-          required: true,
-        },
-        {
-          model: db.Order_product,
-          as: "pedido_solicitado",
-          include: {
-            model: db.Product,
-            as: "detalle_producto_pedido",
-            required: true,
-          },
-          required: true,
-        },
-      ],
-    });
-    /*Fin pedidos*/
-
-    // order.forEach((orderAddress) => {
-    //   //      console.log("\n Address: " + orderAddress);
-    //   usuario.address.push(orderAddress.shipping_address);
-    // });
-    // items.forEach((productOrdered) => {
-    //   //    console.log("\n Ordered: " + productOrdered);
-    //   usuario.ordered.push(productOrdered);
-    // });
-
-    // console.log(
-    //   "\nDirecciones encontradas para el usuario: " + usuario.email
-    // );
-    // console.log(usuario.address.length);
-    // console.log(
-    //   "\nPedidos encontrados para el usuario: " + usuario.email
-    // );
-    // console.log(usuario.ordered.length);
-
-    // console.log(usuario);
-    // console.log(order);
-    // console.log(items);
-    // res.send(usuario);
-    // res.send(order);
-    // res.send(items);
-    res.render("./users/user-profile", { usuario });
-    // /*Fin de la busqueda de direcciones*/
-  },
-  //view details
   userCreate: (req, res) => {
     res.render("/register");
   },
@@ -264,65 +195,9 @@ const usersController = {
       res.redirect("/users/login");
     });
   },
-  api_list_users: async (req, res) => {
-    const { page } = req.query;
-
-    const usersQueryConfig = page
-      ? {
-          offset: 10 * page,
-          limit: 10,
-          subQuery: false,
-        }
-      : {};
-    const users = await db.User.findAll({
-      ...usersQueryConfig,
-      raw: true,
-    });
-    let usersWithDetails = users.map((user) => ({
-      id: user.id,
-      name: `${user.first_name} ${user.last_name}`,
-      email: user.email,
-      detail: `${req.protocol}://${req.get("host")}/users/profile/${user.id}`,
-    }));
-    // const categories = await db.Product.findAll({
-    //   attributes: [
-    //     [sequelize.col("categoria.name"), "category_name"],
-    //     [
-    //       sequelize.fn("COUNT", sequelize.col("categoria.id")),
-    //       "total_products",
-    //     ],
-    //   ],
-    //   include: [
-    //     {
-    //       model: db.Product_category,
-    //       as: "categoria",
-    //       attributes: [],
-    //     },
-    //   ],
-    //   group: "category_name",
-    // });
-
-    return res.status(200).json({
-      count: usersWithDetails.length,
-      // countByCategory: categories,
-      users: usersWithDetails,
-    });
-  },
-  api_user_details: async (req, res) => {
-    const user = await db.User.findByPk(req.params.id, { raw: true });
-    const imagen = user.image;
-    const userDetail = {
-      id: user.id,
-      first_name: user.first_name,
-      last_name: user.last_name,
-      email: user.email,
-      phone: user.phone,
-      url_imagen: `${req.protocol}://${req.get("host")}/${imagen}`,
-    };
-    return res.status(200).json({
-      data: userDetail,
-    });
+  whoAmI: function (req, res) {
+    res.json("I am user API data");
   },
 };
 
-module.exports = usersController;
+module.exports = userAPI;

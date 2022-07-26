@@ -23,9 +23,12 @@
             type="text"
             name="name"
             id="name"
-            value="<%= productEdit.name  %>"
+            value="<%= locals.old && old.name? locals.old.name : productEdit.name%>"
           />
         </div>
+        <% if (locals.errors && errors.name && errors.name.msg) { %>
+        <p class="feedback"><%= errors.name.msg %></p>
+        <% } %>
         <div class="campo">
           <label>Categoría:</label>
           <select class="campo-completar" name="category">
@@ -37,13 +40,15 @@
         </div>
         <div class="campo">
           <label for="description">Descripción:</label>
-          <textarea  
-            class="campo-completar" 
-            name="description" 
-            id="description">
-              <%= productEdit.description  %>
-          </textarea>
+          <textarea class="campo-completar" name="description" id="description">
+            <%= locals.old && old.description? locals.old.description : productEdit.description%>
+            </textarea
+          >
         </div>
+        <% if (locals.errors && errors.description && errors.description.msg) {
+        %>
+        <p class="feedback"><%= errors.description.msg %></p>
+        <% } %>
         <div class="campo">
           <label for="price">Precio:</label>
           <input
@@ -51,13 +56,19 @@
             type="text"
             name="price"
             id="price"
-            value="<%= productEdit.price %>"
+            value="<%= locals.old && old.price? locals.old.price : productEdit.price%>"
           />
         </div>
+        <% if (locals.errors && errors.price && errors.price.msg) { %>
+        <p class="feedback"><%= errors.price.msg %></p>
+        <% } %>
         <div class="campo">
           <label>Actualizar foto:</label>
           <input type="file" name="foto-producto" accept="image/*" />
         </div>
+        <% if (locals.errors && errors.image && errors.image.msg) { %>
+        <p class="feedback"><%= errors.image.msg %></p>
+        <% } %>
         <div class="button-container">
           <div>
             <button class="button" type="submit">ACTUALIZAR PRODUCTO</button>

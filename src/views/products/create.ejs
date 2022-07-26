@@ -10,7 +10,13 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <h1>NUEVO PRODUCTO</h1>
-    <form action="/products/create" method="POST" class="formulario" novalidate>
+    <form
+      action="/products/create"
+      method="POST"
+      class="formulario"
+      enctype="multipart/form-data"
+      novalidate
+    >
       <ul class="erroresFront"></ul>
       <div class="editar-producto">
         <div class="campo">
@@ -30,9 +36,13 @@
             name="name"
             id="name"
             placeholder="Ingresá el nombre"
+            value="<%= locals.old && old.name%>"
             required
           />
         </div>
+        <% if (locals.errors && errors.name && errors.name.msg) { %>
+        <p class="feedback"><%= errors.name.msg %></p>
+        <% } %>
         <div class="campo">
           <label for="description">Descripción:</label>
           <textarea
@@ -41,8 +51,14 @@
             id="description"
             placeholder="Descripción del nuevo producto"
             required
-          ></textarea>
+          >
+            <%= locals.old && old.description%>
+          </textarea>
         </div>
+        <% if (locals.errors && errors.description && errors.description.msg) {
+        %>
+        <p class="feedback"><%= errors.description.msg %></p>
+        <% } %>
         <div class="campo">
           <label for="precio">Precio:</label>
           <input
@@ -51,13 +67,20 @@
             name="price"
             id="price"
             placeholder="Ingreesá el precio"
+            value="<%= locals.old && old.price%>"
             required
           />
         </div>
+        <% if (locals.errors && errors.price && errors.price.msg) { %>
+        <p class="feedback"><%= errors.price.msg %></p>
+        <% } %>
         <div class="campo">
           <label>Foto:</label>
           <input type="file" name="image" accept="image/*" />
         </div>
+        <% if (locals.errors && errors.image&& errors.image.msg) { %>
+        <p class="feedback"><%= errors.image.msg %></p>
+        <% } %>
         <div class="button-container">
           <div class="button-container">
             <div>

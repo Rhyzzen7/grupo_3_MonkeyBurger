@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
     }
 
     let fieldImage = document.querySelector("input[name=userimage]");
-    var validExt = ["gif", "jpg", "png", "jpge"];
+    var validExt = ["gif", "jpg", "png", "jpeg"];
     var ext = fieldImage.value.split(".").pop();
     if (validExt.indexOf(ext.toLowerCase()) == -1) {
       errores.push("La IMAGEN debe tener extensión GIF, JPG, PNG o JPGE.");

@@ -8,8 +8,33 @@ const usersRouter = require("./routes/usersRouter");
 const cartRouter = require("./routes/cartRouter");
 const userMiddleware = require("./middlewares/userMiddleware");
 const authAdmin = require("./middlewares/authAdmin");
+const cors = require("cors");
 
 const app = express();
+//Implementar uso de cors
+app.use(cors());
+// --------------------------------------------------- //
+
+let whitelist = ["http://localhost:3000", "http://localhost:4000"];
+// --------------------------------------------------- //
+let corsOptions = {
+  origin: function (origin, callback) {
+    console.log(origin);
+    console.log(whitelist.indexOf(origin));
+    if (whitelist.indexOf(origin) !== -1) {
+      console.log("lista blanca");
+      callback(null, true);
+    } else {
+      console.log("lista negra");
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+// --------------------------------------------------- //
+app.get("/api", cors(corsOptions), (req, res) => {
+  res.json({ mensaje: "ok" });
+});
+// --------------------------------------------------- //
 
 // Implementando session y cookieparser
 app.use(

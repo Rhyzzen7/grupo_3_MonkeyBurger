@@ -1,10 +1,38 @@
 const express = require("express");
-const { products } = require("../controllers/productsController");
 const productsRouter = express.Router();
 const adminMiddleware = require("../middlewares/adminMiddleware");
 const userOrderMiddleware = require("../middlewares/userOrderMiddleware");
+const multer = require("multer");
+const path = require("path");
 
 const productsController = require("../controllers/productsController");
+const validateProduct = require("../validations/productValidator");
+
+const productAPI = require("../API/productAPI");
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, "../../public/img/menu"));
+  },
+  filename: (req, file, cb) => {
+    //console.log(file);
+    cb(null, Date.now() + "-" + file.originalname);
+  },
+});
+const upload = multer({
+  storage,
+  fileFilter: function (req, file, cb) {
+    req.body.hasFile = true;
+    let filetypes = /jpg|jpeg|png|gif/;
+    let mimetype = filetypes.test(file.mimetype);
+    let extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    if (mimetype && extname) {
+      return cb(null, true);
+    }
+    // cb(new Error("Invalid IMAGE Type"));
+    cb((null, false));
+  },
+});
 
 // All Products
 productsRouter.get("/menu", productsController.products);
@@ -22,7 +50,13 @@ Mejor decisión, pasarlo por GET*/
 
 // Create a new Product
 productsRouter.get("/create", adminMiddleware, productsController.create);
-productsRouter.post("/create", adminMiddleware, productsController.store);
+productsRouter.post(
+  "/create",
+  adminMiddleware,
+  upload.single("image"),
+  validateProduct,
+  productsController.store
+);
 
 // Edit a product
 // productsRouter.get("/edit", productsController.selectProduct);
@@ -37,6 +71,8 @@ productsRouter.get(
 productsRouter.put(
   "/order/:productId",
   adminMiddleware,
+  upload.single("productimage"),
+  validateProduct,
   productsController.update
 );
 // Delete a product
@@ -46,4 +82,10 @@ productsRouter.delete(
   adminMiddleware,
   productsController.delete
 );
+
+//API Products
+productsRouter.get('/api/products', productsController.api_list_products);
+productsRouter.get('/api/products/:id', productsController.api_product_details);
+productsRouter.get("/api", productAPI.whoAmI);
+
 module.exports = productsRouter;
