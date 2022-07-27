@@ -222,7 +222,7 @@ const productsController = {
       name: req.body.name,
       description: req.body.description,
       price: req.body.price,
-      image: "./img/menu/" + (req?.file?.filename || "default-img.png"),
+      image: "/img/menu/" + (req?.file?.filename || "default-img.png"),
       category_id: req.body.category,
     }).then(() => {
       res.redirect("/products/menu");
@@ -254,7 +254,7 @@ const productsController = {
         name: req.body.name,
         description: req.body.description,
         price: req.body.price,
-        image: "./img/menu/" + (req?.file?.filename || "default-img.png"),
+        image: "/img/menu/" + (req?.file?.filename || "default-img.png"),
         category_id: req.body.category,
       },
       {
