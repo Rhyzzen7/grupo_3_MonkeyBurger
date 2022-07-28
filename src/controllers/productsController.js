@@ -248,7 +248,8 @@ const productsController = {
         });
       });
     }
-
+    console.log("viene file");
+    console.log(req.file);
     db.Product.update(
       {
         name: req.body.name,
